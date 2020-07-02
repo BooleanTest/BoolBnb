@@ -23,23 +23,23 @@ class AddForeignKeys extends Migration
 
         Schema::table('apartments', function (Blueprint $table) {
 
-            $table -> foreign('consumer_id', 'consumer')
+            $table -> foreign('user_id', 'user')
              -> references('id')
-             -> on('consumers')
+             -> on('users')
              -> onDelete('cascade');
           });
 
-          Schema::table('apartment_service', function (Blueprint $table) {
+        Schema::table('apartment_service', function (Blueprint $table) {
 
-            $table -> foreign('apartment_id', 'apartment_')
-                   -> references('id')
-                   -> on('apartments')
-                   -> onDelete('cascade');
+          $table -> foreign('apartment_id', 'apartment_')
+                 -> references('id')
+                 -> on('apartments')
+                 -> onDelete('cascade');
 
-            $table -> foreign('service_id', 'service')
-                   -> references('id')
-                   -> on('services')
-                   -> onDelete('cascade');
+          $table -> foreign('service_id', 'service')
+                 -> references('id')
+                 -> on('services')
+                 -> onDelete('cascade');
 
     });
 
@@ -61,7 +61,7 @@ class AddForeignKeys extends Migration
         });
       Schema::table('apartments', function (Blueprint $table) {
 
-        $table -> dropForeign('consumer');
+        $table -> dropForeign('user');
 
         });
 
