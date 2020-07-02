@@ -4,7 +4,7 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 
-class Consumer extends Model
+class Service extends Model
 {
     //
 }
