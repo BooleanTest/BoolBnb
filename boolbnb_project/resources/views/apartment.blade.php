@@ -11,5 +11,8 @@
   <b>longitude: </b>{{$apartments -> longitude }} <br>
   <b>image: </b>{{$apartments -> image }} <br>
   <b>user_id: </b>{{$apartments -> user_id }} <br>
+  <br>
+  {{-- <a href="{{ route('edit-apartment', $apartments -> id }}> EDIT ME </a> --}}
+  <a href="{{ route('edit-apartment', $apartments -> id ) }}"> EDIT ME </a>
 
 @endsection

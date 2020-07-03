@@ -20,4 +20,12 @@ class apartmentController extends Controller
 
       return view('apartment', compact('apartments'));
   }
+
+  public function edit($id){
+      $apartments = Apartment::findOrFail($id);
+
+
+      return view('edit-apartment', compact('apartments'));
+  }
+
 }
