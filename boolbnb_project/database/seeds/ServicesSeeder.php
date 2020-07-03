@@ -14,9 +14,9 @@ class ServicesSeeder extends Seeder
      */
     public function run()
     {
-      factory(Service::class, 15) -> create() -> each(function($service){
+      factory(Service::class, 8) -> create() -> each(function($service){
 
-        $apartments = Apartment::inRandomOrder() -> take(rand(1, 5)) -> get();
+        $apartments = Apartment::inRandomOrder() -> take(rand(1,5)) -> get();
         $service -> apartments() -> attach($apartments);
 
       });

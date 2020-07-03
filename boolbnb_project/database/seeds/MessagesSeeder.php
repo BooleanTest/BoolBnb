@@ -15,12 +15,13 @@ class MessagesSeeder extends Seeder
      */
     public function run()
     {
-      factory(Message::class, 30)
+      factory(Message::class, 25)
                         ->make()
                         ->each(function ($message){
           $apartment = Apartment::inRandomOrder()-> first();
           $message -> apartment() -> associate($apartment);
           $message -> save();
     });
+
   }
 }

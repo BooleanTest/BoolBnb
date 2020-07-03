@@ -6,3 +6,20 @@
 
 // Bootstrap
 @import '~bootstrap/scss/bootstrap';
+
+
+header{
+  .ciao{
+    padding: 30px;
+  }
+  .logo{
+
+  }
+  .login{
+
+  }
+  position: fixed;
+  height: 140px;
+  background-color: blue;
+  width: 100%;
+}

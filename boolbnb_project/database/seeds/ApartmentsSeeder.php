@@ -2,6 +2,7 @@
 
 use App\User;
 use App\Apartment;
+use App\Service;
 
 use Illuminate\Database\Seeder;
 
@@ -20,7 +21,6 @@ class ApartmentsSeeder extends Seeder
             $user = User::inRandomOrder()-> first();
             $apartment -> user() -> associate($user);
             $apartment -> save();
-
         });
     }
 }

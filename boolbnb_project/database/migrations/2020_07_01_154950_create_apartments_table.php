@@ -24,7 +24,7 @@ class CreateApartmentsTable extends Migration
           $table->float('latitude', 8, 5);
           $table->float('longitude', 8, 5);
           $table->string('image');
-          $table->bigInteger('user_id') -> nullable () -> unsigned() -> index();
+          $table->bigInteger('user_id') -> unsigned() -> index();
 
           $table->timestamps();
         });

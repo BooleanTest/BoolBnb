@@ -10928,3 +10928,14 @@ a.text-dark:focus {
   }
 }
 
+header {
+  position: fixed;
+  height: 140px;
+  background-color: blue;
+  width: 100%;
+}
+
+header .ciao {
+  padding: 30px;
+}
+
