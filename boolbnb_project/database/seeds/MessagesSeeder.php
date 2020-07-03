@@ -2,6 +2,10 @@
 
 use Illuminate\Database\Seeder;
 
+use App\Apartment;
+use App\Message;
+
+
 class MessagesSeeder extends Seeder
 {
     /**
@@ -11,6 +15,12 @@ class MessagesSeeder extends Seeder
      */
     public function run()
     {
-        //
-    }
+      factory(Message::class, 30)
+                        ->make()
+                        ->each(function ($message){
+          $apartment = Apartment::inRandomOrder()-> first();
+          $message -> apartment() -> associate($apartment);
+          $message -> save();
+    });
+  }
 }
