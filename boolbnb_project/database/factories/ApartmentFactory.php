@@ -12,6 +12,8 @@ $factory->define(Apartment::class, function (Faker $faker) {
       'bathrooms' => $faker -> randomDigit(),
       'meters' => $faker -> randomDigit(),
       'address' => $faker -> address(),
+      'nation' => $faker -> state(),
+      'city' => $faker -> city(),
       'number' => $faker -> randomDigit(),
       'latitude' => $faker -> randomFloat($nbMaxDecimal=5, $min=0, $max=999),
       'longitude' => $faker -> randomFloat($nbMaxDecimal=5, $min=0, $max=999),

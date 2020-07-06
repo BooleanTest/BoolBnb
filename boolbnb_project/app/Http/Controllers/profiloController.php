@@ -39,14 +39,16 @@ class profiloController extends Controller
 
       $validateData = $request -> validate([
         "title" => "required",
-        "rooms" => "required",
-        "bathrooms" => "required",
-        "meters" => "required",
+        "rooms" => "required|integer|min:0",
+        "bathrooms" => "required|integer|min:0",
+        "meters" => "required|integer|min:0",
         "address" => "required",
         "number" => "required",
-        "latitude" => "required",
-        "longitude" => "required",
+        'city' => 'required',
+        'nation' => 'required',
         "image" => "required"
+        // 'latitude' => 'required',
+        // 'longitude' => 'required'
       ]);
 
       Apartment::whereId($id) -> update($validateData);
@@ -78,16 +80,19 @@ class profiloController extends Controller
 
       $validateData = $request -> validate([
         "title" => "required",
-        "rooms" => "required",
-        "bathrooms" => "required",
-        "meters" => "required",
+        "rooms" => "required|integer|min:0",
+        "bathrooms" => "required|integer|min:0",
+        "meters" => "required|integer|min:0",
         "address" => "required",
         "number" => "required",
-        "latitude" => "required",
-        "longitude" => "required",
-        "image" => "required"
+        "image" => "required",
+        "nation" => 'required',
+        "city" => 'required'
+        // 'latitude' => 'required',
+        // 'longitude' => 'required'
       ]);
 
+      // TODO: sistemare con TomTom latitudine e longitudine
 
       $apartments = new Apartment;
 
@@ -97,9 +102,11 @@ class profiloController extends Controller
       $apartments -> meters  = $validateData["meters"];
       $apartments -> address  = $validateData["address"];
       $apartments -> number  = $validateData["number"];
-      $apartments -> latitude  = $validateData["latitude"];
-      $apartments -> longitude  = $validateData["longitude"];
+      $apartments -> latitude  = '111.11111';
+      $apartments -> longitude  = '111.11111';
       $apartments -> image  = $validateData["image"];
+      $apartments -> city  = $validateData["city"];
+      $apartments -> nation  = $validateData["nation"];
       $apartments -> user_id = $userId;
 
 
