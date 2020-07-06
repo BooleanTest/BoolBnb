@@ -19,8 +19,11 @@ class CreateApartmentsTable extends Migration
           $table->integer('rooms');
           $table->integer('bathrooms');
           $table->integer('meters');
+          $table->string('nation');
+          $table->string('city');
           $table->string('address');
           $table->string('number');
+
           $table->float('latitude', 8, 5);
           $table->float('longitude', 8, 5);
           $table->string('image');

@@ -34,27 +34,29 @@
 
     <br>
 
+    <label for="nation">Nazione</label>
+    <input type="text" name="nation" value="{{ old('nation')}}">
+
+    <br>
+
+    <label for="city">Città</label>
+    <input type="text" name="city" value="{{ old('city')}}">
+
+    <br>
+
     <label for="address">Indirizzo</label>
     <input type="text" name="address" value="{{ old('address')}}">
 
     <br>
 
     <label for="number">Numero civico</label>
-    <input type="number" name="number" value="{{ old('number')}}">
+    <input type="text" name="number" value="{{ old('number')}}">
 
-    <br>
-
-    <label for="latitude">Latitudine</label>
-    <input type="text" name="latitude" value="{{ old('latitude')}}">
-
-    <br>
-
-    <label for="longitude">Longitudine</label>
-    <input type="text" name="longitude" value="{{ old('longitude')}}">
     <br>
 
     <label for="image">Immagine</label>
-    <input type="text" name="image" value="{{ old('image')}}">
+    <input type="text " name="image" value="{{ old('image')}}">
+
     <br> <br>
 
     <a href="{{route('home')}}"><button type="button" name="button">Indietro</button></a>

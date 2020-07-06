@@ -33,23 +33,25 @@
 
     <br>
 
+    <label for="nation">Nazione</label>
+    <input type="text" name="nation" value="{{ old('nation', $apartments -> nation)}}">
+
+    <br>
+
+    <label for="city">Città</label>
+    <input type="text" name="city" value="{{ old('city', $apartments -> city)}}">
+
+    <br>
+
+
     <label for="address">Indirizzo</label>
     <input type="text" name="address" value="{{ old('address', $apartments -> address) }}">
 
     <br>
 
     <label for="number">Numero civico</label>
-    <input type="number" name="number" value="{{ old('number', $apartments -> number) }}">
+    <input type="text" name="number" value="{{ old('number', $apartments -> number) }}">
 
-    <br>
-
-    <label for="latitude">Latitudine</label>
-    <input type="text" name="latitude" value="{{ old('latitude', $apartments -> latitude) }}">
-
-    <br>
-
-    <label for="longitude">Longitudine</label>
-    <input type="text" name="longitude" value="{{ old('longitude', $apartments -> longitude) }}">
     <br>
 
     <label for="image">Immagine</label>
