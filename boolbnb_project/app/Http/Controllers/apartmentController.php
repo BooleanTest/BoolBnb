@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Apartment;
 use App\User;
 use Illuminate\Http\Request;
+use Auth;
 
 class apartmentController extends Controller
 {
@@ -61,12 +62,17 @@ class apartmentController extends Controller
 
   // nuovo appartamento
   public function create(){
+
+
     $apartments = Apartment::all();
     return view('create-apartment', compact("apartments"));
   }
 
   // per nuovo appartamento
   public function store(Request $request){
+
+    $userId = Auth::id();
+
     $validateData = $request -> validate([
       "title" => "required",
       "rooms" => "required",
@@ -79,6 +85,8 @@ class apartmentController extends Controller
       "image" => "required"
     ]);
 
+
+
     $apartments = new Apartment;
 
     $apartments -> title  = $validateData["title"];
@@ -90,10 +98,12 @@ class apartmentController extends Controller
     $apartments -> latitude  = $validateData["latitude"];
     $apartments -> longitude  = $validateData["longitude"];
     $apartments -> image  = $validateData["image"];
+    $apartments -> user_id = $userId;
+
 
     $apartments -> save();
 
     return redirect() -> route("home")
-                      -> withSuccess("Appartamento " . $apartment["title"] . " correttamente aggiunto");
+                      -> withSuccess("Appartamento " . $apartments["title"] . " correttamente aggiunto");
   }
 }
