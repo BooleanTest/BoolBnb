@@ -6,6 +6,7 @@ namespace App\Http\Controllers;
 use Auth;
 use App\User;
 use App\Apartment;
+use App\Service;
 
 use Illuminate\Http\Request;
 
@@ -24,8 +25,6 @@ class profiloController extends Controller
 
       return view('profilo', compact('user'));
     }
-
-
 
     // modifica appartamento
     public function edit($id){
@@ -68,9 +67,9 @@ class profiloController extends Controller
     // nuovo appartamento (create)
     public function create(){
 
-
+      $services = Service::all();
       $apartments = Apartment::all();
-      return view('create-apartment', compact("apartments"));
+      return view('create-apartment', compact("apartments", 'services'));
     }
 
     // per nuovo appartamento (store)
@@ -87,10 +86,13 @@ class profiloController extends Controller
         "number" => "required",
         "image" => "required",
         "nation" => 'required',
-        "city" => 'required'
+        "city" => 'required',
+        'services' => 'nullable'
         // 'latitude' => 'required',
         // 'longitude' => 'required'
       ]);
+
+      // dd($validateData);
 
       // TODO: sistemare con TomTom latitudine e longitudine
 
@@ -111,6 +113,9 @@ class profiloController extends Controller
 
 
       $apartments -> save();
+
+
+      $apartments -> services() -> attach($validateData['services']);
 
       return redirect() -> route("home")
                         -> withSuccess("Appartamento " . $apartments["title"] . " correttamente aggiunto");

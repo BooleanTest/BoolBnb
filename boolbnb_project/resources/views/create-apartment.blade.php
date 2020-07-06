@@ -59,6 +59,13 @@
 
     <br> <br>
 
+    <label for="services[]">Servizi</label> <br>
+      @foreach ($services as $service)
+        {{$service -> name}}
+        <input  type="checkbox" name="services[]" value="{{$service -> id}}"> <br>
+      @endforeach
+
+
     <a href="{{route('home')}}"><button type="button" name="button">Indietro</button></a>
 
     <button type="submit" name="submit">Salva</button>
