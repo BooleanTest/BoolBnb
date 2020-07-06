@@ -5,7 +5,7 @@
 
   Auth::routes();
 
-  Route::get('/', 'apartmentController@index')->name('home');
+  Route::get('/home', 'apartmentController@index')->name('home');
 
   Route::get('/show-apartment/{id}', 'apartmentController@show')->name('show-apartment');
 
@@ -19,3 +19,7 @@
   // nuovo appartamento
   Route::get('/create-apartment', 'apartmentController@create')->name("create-apartment");
   Route::post('/store-apartment', 'apartmentController@store')->name("store-apartment");
+
+  Route::get('/', function(){
+    return view('welcome');
+  });
