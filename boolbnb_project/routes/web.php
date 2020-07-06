@@ -5,7 +5,7 @@
 
   Auth::routes();
 
-  Route::get('/', 'apartmentController@index')->name('home');
+  Route::get('/home', 'apartmentController@index')->name('home');
 
   Route::get('/show-apartment/{id}', 'apartmentController@show')->name('show-apartment');
 
@@ -17,6 +17,7 @@
   Route::get('/delete-apartment/{id}', 'profiloController@delete')->name("delete-apartment");
 
   // nuovo appartamento
+<<<<<<< HEAD
   Route::get('/create-apartment', 'profiloController@create')->name("create-apartment");
   Route::post('/store-apartment', 'profiloController@store')->name("store-apartment");
 
@@ -25,3 +26,11 @@
 
   // statistiche appartamento
   Route::get('/stats_apartment/{id}', 'profiloController@stats')->name('stats');
+=======
+  Route::get('/create-apartment', 'apartmentController@create')->name("create-apartment");
+  Route::post('/store-apartment', 'apartmentController@store')->name("store-apartment");
+
+  Route::get('/', function(){
+    return view('welcome');
+  });
+>>>>>>> master
