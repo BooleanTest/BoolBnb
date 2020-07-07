@@ -32,6 +32,20 @@
   </ul>
 
 
+  <form  action="{{route('store-messagge', $apartments -> id)}}" method="post">
+    @csrf
+    @method('POST')
+
+    <label for="mail">Inserire email: </label>
+    <input type="text" name="mail" value="" placeholder="Inserire mail">
+    <br>
+    <label for="text">Inserisci messaggio</label>
+    <input type="text" name="text" value="" placeholder="Inserire messaggio..">
+    <button type="submit" name="submit">Invia Messaggio</button>
+
+  </form>
+
+
 
   {{-- controllo per far vedere i comandi --}}
 

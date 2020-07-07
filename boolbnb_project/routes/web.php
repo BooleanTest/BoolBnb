@@ -25,3 +25,6 @@
 
   // statistiche appartamento
   Route::get('/stats_apartment/{id}', 'profiloController@stats')->name('stats');
+
+  // invio messaggio
+  Route::post('/store-messagge/{id}', 'profiloController@messagges')->name('store-messagge');

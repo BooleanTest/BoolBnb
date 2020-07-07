@@ -7,6 +7,7 @@ use Auth;
 use App\User;
 use App\Apartment;
 use App\Service;
+use App\Message;
 
 use Illuminate\Http\Request;
 
@@ -147,6 +148,25 @@ class profiloController extends Controller
       $apartments = Apartment::findOrFail($id);
 
       return view('stats_apartment', compact('apartments'));
+
+    }
+
+    //rotta per salvare i messaggio
+    public function messagges(Request $request, $id){
+
+      $validateData = $request -> validate([
+        'mail' => 'required',
+        'text' => 'required'
+
+      ]);
+
+      $messagge = new Message;
+
+      $messagge -> mail = $validateData['mail'];
+      $messagge -> text = $validateData['text'];
+      $messagge -> apartment_id = $id;
+
+      $messagge -> save();
 
     }
 
