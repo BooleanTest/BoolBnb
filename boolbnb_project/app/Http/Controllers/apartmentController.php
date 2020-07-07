@@ -1,11 +1,13 @@
 <?php
 
 namespace App\Http\Controllers;
-
-use App\Apartment;
-use App\User;
 use Illuminate\Http\Request;
-use Auth;
+
+
+use App\User;
+use App\Apartment;
+use App\Service;
+use App\Message;
 
 class apartmentController extends Controller
 {
@@ -27,6 +29,27 @@ class apartmentController extends Controller
 
 
       return view('show-apartment', compact('apartments'));
+  }
+
+  //rotta per salvare i messaggio
+  public function messagges(Request $request, $id){
+
+    $validateData = $request -> validate([
+      'mail' => 'required',
+      'text' => 'required'
+
+    ]);
+
+    $messagge = new Message;
+
+    $messagge -> mail = $validateData['mail'];
+    $messagge -> text = $validateData['text'];
+    $messagge -> apartment_id = $id;
+
+    $messagge -> save();
+
+    // redirect
+
   }
 
 

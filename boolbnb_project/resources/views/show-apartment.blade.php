@@ -48,6 +48,7 @@
 
 
   {{-- controllo per far vedere i comandi --}}
+@auth
 
   @if (Auth::user() -> id === $apartments -> user -> id)
 
@@ -55,13 +56,14 @@
 
     <a href="{{route("delete-apartment", $apartments["id"])}}"><button type="button" name="button">Elimina</button></a>
 
-    <a href="{{url()->previous()}}"><button type="button" name="button">Indietro</button></a>
 
-  @else
-
-    <a href="{{ url()->previous()}}"><button type="button" name="button">Indietro</button></a>
 
   @endif
+@endauth
+
+  
+
+    <a href="{{ url()->previous()}}"><button type="button" name="button">Indietro</button></a>
 
 
 
