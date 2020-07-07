@@ -28,7 +28,7 @@
     <div class="table">
       <div class="dati">
         <h2>DATI APPARTAMENTO</h2>
-        <h3>Appartamento di {{$apartments -> meters }} mq², affittato da {{$apartments -> user_name}} </h3>
+        <h3>Appartamento di {{$apartments -> meters }} mq², affittato da {{$apartments -> user -> name}} {{$apartments -> user -> lastname}}</h3>
         <h3>N° stanze: {{$apartments -> rooms }}</h3>
         <h3>Numero bagni:  {{$apartments -> bathrooms }}</h3>
       </div>
