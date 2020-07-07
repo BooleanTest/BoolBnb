@@ -8,8 +8,8 @@
       @if (Route::has('login'))
         <div class="links">
           @auth
-            <a href="{{route('profilo', Auth::user()->id)}}">{{Auth::user()->name}}</a>
-            <a href="{{ route('logout') }}"
+            <a class="h-username" href="{{route('profilo', Auth::user()->id)}}">{{Auth::user()->name}}</a>
+            <a class="h-logout" href="{{ route('logout') }}"
                onclick="event.preventDefault();
                              document.getElementById('logout-form').submit();">
                 {{ __('Logout') }}
@@ -18,9 +18,9 @@
                 @csrf
             </form>
           @else
-            <a href="{{ route('login') }}">Accedi</a>
+            <a class="h-logout" href="{{ route('login') }}">Accedi</a>
             @if (Route::has('register'))
-              <a href="{{ route('register') }}">Registrati</a>
+              <a class="h-logout" href="{{ route('register') }}">Registrati</a>
             @endif
           @endauth
         </div>
@@ -28,8 +28,18 @@
     </div>
   </div>
 
-  <div class="search-bar">
-    Fantastica barra di ricerca
+  {{-- h sta per header --}}
+
+  <div class="search-h-bar">
+    <form class="search-h-form" action="" method="post">
+
+      <div class="search-h-box">
+        <label for="">
+          <input type="text" name="" value="" placeholder="Dove vuoi andare?">
+        </label>
+      </div>
+
+    </form>
   </div>
 
 </div>

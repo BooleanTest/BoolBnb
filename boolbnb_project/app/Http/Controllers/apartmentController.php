@@ -15,12 +15,6 @@ class apartmentController extends Controller
     return view('welcome', compact('apartments'));
   }
 
-  // DEBUG:
-  public function welcome(){
-    $apartments = Apartment::all();
-
-    return view('welcome', compact('apartments'));
-  }
 
   public function show($id){
       $apartments = Apartment::findOrFail($id);

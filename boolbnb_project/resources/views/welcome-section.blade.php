@@ -9,12 +9,13 @@
     @foreach ($apartments as $apartment)
       <div class="w-apartment">
 
-        <div class="img-w-apartment">
-          <img src="{{ $apartment -> image }}" alt="Immagine">
-        </div>
-        <div class="title-w-apartment">
-          <h3>{{ $apartment -> title }}</h3>
-        </div>
+        <a href="{{ route('show-apartment', $apartment -> id ) }}">
+          <img src="{{ $apartment -> image }}" alt="Immagine_Appartamento">
+          <div class="title-w-apartment">
+            <h3>{{ $apartment -> title }}</h3>
+            <p>{{ $apartment -> address }}</p>
+          </div>
+        </a>
 
       </div>
     @endforeach
