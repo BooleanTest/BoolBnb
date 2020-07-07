@@ -30,6 +30,7 @@
 
   <div class="search-bar">
     Fantastica barra di ricerca
+    <a href="{{route('profilo', Auth::user()->id)}}">{{Auth::user()->name}}</a>
   </div>
 
 </div>
