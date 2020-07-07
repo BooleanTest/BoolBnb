@@ -92,8 +92,6 @@ class profiloController extends Controller
         // 'longitude' => 'required'
       ]);
 
-      // dd($validateData);
-
       // TODO: sistemare con TomTom latitudine e longitudine
 
       $apartments = new Apartment;
@@ -112,12 +110,14 @@ class profiloController extends Controller
       $apartments -> user_id = $userId;
 
 
+
       $apartments -> save();
 
+      if (isset($validateData['services'])) {
+        $apartments -> services() -> attach($validateData['services']);
+      }
 
-      $apartments -> services() -> attach($validateData['services']);
-
-      return redirect() -> route("home")
+      return redirect() -> route("profilo", $userId)
                         -> withSuccess("Appartamento " . $apartments["title"] . " correttamente aggiunto");
     }
 
