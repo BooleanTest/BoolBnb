@@ -8,7 +8,7 @@
       @if (Route::has('login'))
         <div class="links">
           @auth
-            <a href="{{route('profilo', Auth::user()->id)}}">{{Auth::user()->name}}</a>
+            <a href="{{route('profilo', Auth::user()->id)}}">{{Auth::user()->name}} </a>
             <a href="{{ route('logout') }}"
                onclick="event.preventDefault();
                              document.getElementById('logout-form').submit();">

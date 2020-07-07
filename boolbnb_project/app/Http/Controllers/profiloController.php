@@ -28,9 +28,10 @@ class profiloController extends Controller
 
     // modifica appartamento
     public function edit($id){
+        $services = Service::all();
         $apartments = Apartment::findOrFail($id);
 
-        return view('edit-apartment', compact('apartments'));
+        return view('edit-apartment', compact('apartments', 'services'));
     }
 
     // per modifica appartamento
@@ -45,12 +46,32 @@ class profiloController extends Controller
         "number" => "required",
         'city' => 'required',
         'nation' => 'required',
-        "image" => "required"
+        "image" => "required",
+        'services' => 'nullable'
         // 'latitude' => 'required',
         // 'longitude' => 'required'
       ]);
 
-      Apartment::whereId($id) -> update($validateData);
+      $apartments = Apartment::findOrFail($id);
+
+      $apartments -> title  = $validateData["title"];
+      $apartments -> rooms  = $validateData["rooms"];
+      $apartments -> bathrooms  = $validateData["bathrooms"];
+      $apartments -> meters  = $validateData["meters"];
+      $apartments -> address  = $validateData["address"];
+      $apartments -> number  = $validateData["number"];
+      $apartments -> latitude  = '111.11111';
+      $apartments -> longitude  = '111.11111';
+      $apartments -> image  = $validateData["image"];
+      $apartments -> city  = $validateData["city"];
+      $apartments -> nation  = $validateData["nation"];
+
+      $apartments -> save();
+
+      if (isset($validateData['services'])) {
+        $apartments -> services() -> sync($validateData['services']);
+      }
+      // Apartment::whereId($id) -> update($validateData);
 
       return redirect() -> route("show-apartment", $id)
                         -> withSuccess("Appartamento " . $validateData["title"] . " correttamente aggiornato");
