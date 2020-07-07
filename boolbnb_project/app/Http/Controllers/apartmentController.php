@@ -15,6 +15,13 @@ class apartmentController extends Controller
     return view('index', compact('apartments', 'user'));
   }
 
+  // DEBUG:
+  public function welcome(){
+    $apartments = Apartment::all();
+
+    return view('welcome', compact('apartments'));
+  }
+
   public function show($id){
       $apartments = Apartment::findOrFail($id);
 

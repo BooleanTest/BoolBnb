@@ -1,19 +1,35 @@
 <div class="header">
-  <div class="logo">
-    <h1 class="ciao">BoolBNB</h1>
-  </div>
-  <div class="login">
-    @if (Route::has('login'))
-        <div class="top-right links">
-            @auth
-                <a href="{{ url('/') }}">Home</a>
-            @else
-                <a href="{{ route('login') }}">Login</a>
-                @if (Route::has('register'))
-                    <a href="{{ route('register') }}">Register</a>
-                @endif
-            @endauth
+
+  <div class="nav-bar">
+    <div class="logo">
+      <h1 class="">BoolBnB</h1>
+    </div>
+    <div class="login">
+      @if (Route::has('login'))
+        <div class="links">
+          @auth
+            <a href="{{ url('/') }}">Benvenuto</a>
+            <a href="{{ route('logout') }}"
+               onclick="event.preventDefault();
+                             document.getElementById('logout-form').submit();">
+                {{ __('Logout') }}
+            </a>
+            <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                @csrf
+            </form>
+          @else
+            <a href="{{ route('login') }}">Accedi</a>
+            @if (Route::has('register'))
+              <a href="{{ route('register') }}">Registrati</a>
+            @endif
+          @endauth
         </div>
-    @endif
+      @endif
+    </div>
   </div>
+
+  <div class="search-bar">
+    Fantastica barra di ricerca
+  </div>
+
 </div>

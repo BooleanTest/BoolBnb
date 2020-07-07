@@ -8,5 +8,11 @@
   <body>
     @include ('header')
 
+
+    @include('welcome-section')
+
+
+    @include('footer')
+
   </body>
 </html>
