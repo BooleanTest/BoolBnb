@@ -7,6 +7,7 @@ use Auth;
 use App\User;
 use App\Apartment;
 use App\Service;
+use App\Message;
 
 use Illuminate\Http\Request;
 
@@ -28,9 +29,10 @@ class profiloController extends Controller
 
     // modifica appartamento
     public function edit($id){
+        $services = Service::all();
         $apartments = Apartment::findOrFail($id);
 
-        return view('edit-apartment', compact('apartments'));
+        return view('edit-apartment', compact('apartments', 'services'));
     }
 
     // per modifica appartamento
@@ -45,12 +47,32 @@ class profiloController extends Controller
         "number" => "required",
         'city' => 'required',
         'nation' => 'required',
-        "image" => "required"
+        "image" => "required",
+        'services' => 'nullable'
         // 'latitude' => 'required',
         // 'longitude' => 'required'
       ]);
 
-      Apartment::whereId($id) -> update($validateData);
+      $apartments = Apartment::findOrFail($id);
+
+      $apartments -> title  = $validateData["title"];
+      $apartments -> rooms  = $validateData["rooms"];
+      $apartments -> bathrooms  = $validateData["bathrooms"];
+      $apartments -> meters  = $validateData["meters"];
+      $apartments -> address  = $validateData["address"];
+      $apartments -> number  = $validateData["number"];
+      $apartments -> latitude  = '111.11111';
+      $apartments -> longitude  = '111.11111';
+      $apartments -> image  = $validateData["image"];
+      $apartments -> city  = $validateData["city"];
+      $apartments -> nation  = $validateData["nation"];
+
+      $apartments -> save();
+
+      if (isset($validateData['services'])) {
+        $apartments -> services() -> sync($validateData['services']);
+      }
+      // Apartment::whereId($id) -> update($validateData);
 
       return redirect() -> route("show-apartment", $id)
                         -> withSuccess("Appartamento " . $validateData["title"] . " correttamente aggiornato");
@@ -92,8 +114,6 @@ class profiloController extends Controller
         // 'longitude' => 'required'
       ]);
 
-      // dd($validateData);
-
       // TODO: sistemare con TomTom latitudine e longitudine
 
       $apartments = new Apartment;
@@ -112,12 +132,14 @@ class profiloController extends Controller
       $apartments -> user_id = $userId;
 
 
+
       $apartments -> save();
 
+      if (isset($validateData['services'])) {
+        $apartments -> services() -> attach($validateData['services']);
+      }
 
-      $apartments -> services() -> attach($validateData['services']);
-
-      return redirect() -> route("home")
+      return redirect() -> route("profilo", $userId)
                         -> withSuccess("Appartamento " . $apartments["title"] . " correttamente aggiunto");
     }
 
@@ -126,6 +148,25 @@ class profiloController extends Controller
       $apartments = Apartment::findOrFail($id);
 
       return view('stats_apartment', compact('apartments'));
+
+    }
+
+    //rotta per salvare i messaggio
+    public function messagges(Request $request, $id){
+
+      $validateData = $request -> validate([
+        'mail' => 'required',
+        'text' => 'required'
+
+      ]);
+
+      $messagge = new Message;
+
+      $messagge -> mail = $validateData['mail'];
+      $messagge -> text = $validateData['text'];
+      $messagge -> apartment_id = $id;
+
+      $messagge -> save();
 
     }
 

@@ -19,6 +19,16 @@
 
       </div>
     @endforeach
+
+    @foreach ($apartments as $apartment)
+      <li>
+        <a href="{{route('show-apartment', $apartment -> id)}}">
+          {{$apartment -> address}} {{$apartment -> number}}
+        </a>
+
+        {{$apartment -> user -> name}}
+      </li>
+    @endforeach
   </div>
 
 </main>

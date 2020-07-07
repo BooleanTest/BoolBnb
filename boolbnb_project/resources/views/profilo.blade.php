@@ -9,6 +9,7 @@
     @foreach ($user -> apartments as $apartment)
       <li>
         {{$apartment -> image}} {{$apartment -> title}} -> <a href="{{route('stats', $apartment -> id)}}">Statistiche</a>
+        <a href="{{route('show-apartment', $apartment -> id)}}">mio apartment</a>
       </li>
     @endforeach
   </ul>

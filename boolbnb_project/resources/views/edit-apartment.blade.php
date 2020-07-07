@@ -58,6 +58,23 @@
     <input type="text" name="image" value="{{ old('image', $apartments -> image) }}">
     <br> <br>
 
+    {{-- {{dd($apartments -> services)}} --}}
+
+    <label for="services[]">Servizi</label> <br>
+      @foreach ($services as $service)
+        {{$service -> name}}
+        <input
+
+         type="checkbox" name="services[]" value="{{$service -> id}}"
+        
+         @foreach ($apartments -> services as $service_apartment)
+           @if ($service_apartment -> id == $service -> id )
+             checked
+           @endif
+         @endforeach
+         > <br>
+      @endforeach
+
     <a href="{{route('show-apartment', $apartments["id"])}}"><button type="button" name="button">Indietro</button></a>
 
     <button type="submit" name="submit">Salva</button>
