@@ -24,7 +24,7 @@
 
         <!-- Checkbox ricordami -->
         <div class="remember">
-          <label class="form-check-label" for="remember">{{ __('Remember Me') }}</label>
+          <label class="form-check-label" for="remember">{{ __('Ricordami') }}</label>
           <input class="" type="checkbox" name="remember" id="remember" {{ old('remember') ? 'checked' : '' }}>
         </div>
 

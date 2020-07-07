@@ -13,6 +13,10 @@
         }
         form{
           .input_group{
+            h3{
+              margin-left: 15px;
+              margin-bottom: 10px;
+            }
             input{
               width: calc(100% - 36px);
               margin: 15px;
@@ -35,8 +39,8 @@
           }
           .errors{
             a{
-              padding-left: 20px;
-              padding-top: 30px;
+              margin-left: 20px;
+              margin-top: 30px;
             }
             span{
               padding-left: 20px;
