@@ -19,11 +19,6 @@
 
       </div>
     @endforeach
-<<<<<<< Updated upstream
-    
-
-=======
->>>>>>> Stashed changes
   </div>
 
 </main>
