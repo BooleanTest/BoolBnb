@@ -17,7 +17,6 @@ class apartmentController extends Controller
     return view('welcome', compact('apartments'));
   }
 
-
   public function welcome(){
     $apartments = Apartment::all();
 
@@ -25,10 +24,10 @@ class apartmentController extends Controller
   }
 
   public function show($id){
-      $apartments = Apartment::findOrFail($id);
+    $apartments = Apartment::findOrFail($id);
 
 
-      return view('show-apartment', compact('apartments'));
+    return view('show-apartment', compact('apartments'));
   }
 
   //rotta per salvare i messaggio
