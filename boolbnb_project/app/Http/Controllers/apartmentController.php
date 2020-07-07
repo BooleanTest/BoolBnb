@@ -11,8 +11,8 @@ class apartmentController extends Controller
 {
   public function index(){
     $apartments = Apartment::all();
-
-    return view('index', compact('apartments'));
+  
+    return view('index', compact('apartments', 'user'));
   }
 
   public function show($id){
