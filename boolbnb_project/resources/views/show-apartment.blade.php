@@ -6,64 +6,71 @@
     <p>{{session("success")}}</p>
   @endif
 
-  <h2>Dettagli</h2>
+<div class="container_show">
+  <div class="margin">
+    <div class="immagine">
+      <h1>{{$apartments -> title }}</h1>
+      <p>{{$apartments -> city }} , {{$apartments -> nation }} , {{$apartments -> address }}</p>
+      <img src="{{$apartments -> image }}" alt="">
+    </div>
+    <div class="modifica">
+      {{-- controllo per far vedere i comandi --}}
+      @auth
 
-  <ul>
-    <b>title: </b>{{$apartments -> title }} <br>
-    <b>rooms: </b>{{$apartments -> rooms }} <br>
-    <b>bathrooms: </b>{{$apartments -> bathrooms }} <br>
-    <b>meters: </b>{{$apartments -> meters }} <br>
-    <b>address: </b>{{$apartments -> address }} <br>
-    <b>number: </b>{{$apartments -> number }} <br>
-    <b>latitude: </b>{{$apartments -> latitude }} <br>
-    <b>longitude: </b>{{$apartments -> longitude }} <br>
-    <b>image: </b>{{$apartments -> image }} <br>
-    <b>user_id: </b>{{$apartments -> user_id }} <br>
-    <br>
-    <ul>
+      @if (Auth::user() -> id === $apartments -> user -> id)
 
-      @foreach ($apartments -> services as $service)
-      <li>
-        {{$service -> name}}
-      </li>
-      @endforeach
-    </ul>
+      <a href="{{ route('edit-apartment', $apartments -> id ) }}"><button type="button" name="button">Modifica</button></a>
 
-  </ul>
+      <a href="{{route("delete-apartment", $apartments["id"])}}"><button type="button" name="button">Elimina</button></a>
+      @endif
+      @endauth
+    </div>
+    <div class="table">
+      <div class="dati">
+        <h2>DATI APPARTAMENTO</h2>
+        <h3>Appartamento di {{$apartments -> meters }} mq², affittato da {{$apartments -> user_name}} </h3>
+        <h3>N° stanze: {{$apartments -> rooms }}</h3>
+        <h3>Numero bagni:  {{$apartments -> bathrooms }}</h3>
+      </div>
+      <div class="servizi">
+        <h2>SERVIZI</h2>
+        <ul>
+          @foreach ($apartments -> services as $service)
+          <li>
+            {{$service -> name}}
+          </li>
+          @endforeach
+        </ul>
+      </div>
+    </div>
+    <div class="messaggio table">
+      <h2>Scrivi al proprietario</h2>
+      <form  action="{{route('store-messagge', $apartments -> id)}}" method="post">
+        @csrf
+        @method('POST')
+
+        <label for="mail"></label>
+        <input type="text" id="mail" name="mail" value="" placeholder="Inserisci email">
+        <br>
+        <label for="text"></label>
+        <input type="text" id="text" name="text" value="" placeholder="Inserire messaggio..">
+        <br>
+        <button type="submit" name="submit">Invia Messaggio</button>
+
+      </form>
+    </div>
+
+    <a href="{{ url()->previous()}}"><button type="button" name="button" id="indietro">Indietro</button></a>
+  </div>
+
+</div>
 
 
-  <form  action="{{route('store-messagge', $apartments -> id)}}" method="post">
-    @csrf
-    @method('POST')
-
-    <label for="mail">Inserire email: </label>
-    <input type="text" name="mail" value="" placeholder="Inserire mail">
-    <br>
-    <label for="text">Inserisci messaggio</label>
-    <input type="text" name="text" value="" placeholder="Inserire messaggio..">
-    <button type="submit" name="submit">Invia Messaggio</button>
-
-  </form>
 
 
 
-  {{-- controllo per far vedere i comandi --}}
-@auth
-
-  @if (Auth::user() -> id === $apartments -> user -> id)
-
-    <a href="{{ route('edit-apartment', $apartments -> id ) }}"><button type="button" name="button">Modifica</button></a>
-
-    <a href="{{route("delete-apartment", $apartments["id"])}}"><button type="button" name="button">Elimina</button></a>
 
 
-
-  @endif
-@endauth
-
-  
-
-    <a href="{{ url()->previous()}}"><button type="button" name="button">Indietro</button></a>
 
 
 

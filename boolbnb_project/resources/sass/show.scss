@@ -1,0 +1,106 @@
+.container_show{
+  .margin{
+    #indietro{
+      margin-top: 10px;
+      padding: 5px 10px;
+      border-radius: 5px;
+      border: solid black 1px;
+    }
+    .immagine{
+      h1{
+        margin-bottom: 7px;
+      }
+      p{
+        margin-bottom: 12px;
+      }
+      img{
+        border-radius: 10px;
+      }
+    }
+    .table{
+      &::after{
+        content: "";
+        display: table;
+        clear: both;
+      }
+      .dati{
+        h2{
+          margin-bottom: 7px;
+        }
+        h3{
+          margin-bottom: 5px;
+        }
+        width: 50%;
+        margin-top: 10px;
+        float: left;
+      }
+      .servizi{
+        h2{
+          margin-bottom: 7px;
+          text-align: center;
+        }
+        ul{
+          li{
+            font-size: 18px;
+            float: left;
+            width: 50%;
+            text-align: center;
+          }
+          list-style-type: none;
+        }
+        margin-top: 10px;
+        float: left;
+        width: 50%;
+      }
+      margin-top: 15px;
+      border: 1px solid black;
+      border-radius: 8px;
+      padding: 10px 25px;
+    }
+    .messaggio{
+      h2{
+
+      }
+      #mail{
+        width: 100%;
+        padding: 6px 10px;
+        border-radius: 5px;
+        border: solid 1px grey;
+        margin-bottom: 10px;
+        margin-top: 15px;
+        font-size: 18px;
+      }
+      #text{
+        width: 100%;
+        padding: 6px 10px;
+        margin-bottom: 10px;
+        border-radius: 5px;
+        border: solid 1px grey;
+      }
+      button{
+        &:hover{
+          cursor: pointer;
+          background-color: #dc0e63;
+          border: 2px solid black;
+          color: white;
+          transition: ease-in-out 0.4s;
+        }
+        margin: 15px 0;
+        float: right;
+        padding: 10px 25px;
+        border: 2px solid #dc0e63;
+        border-radius: 10px;
+        font-size: 20px;
+        background-color: #ffcce1;
+        transition: ease-in-out 0.4s;
+      }
+    }
+  width: 90%;
+  margin: auto;
+  padding: 30px 0;
+  }
+  border: 3px solid black;
+  border-radius: 15px;
+  width: 80%;
+  margin: auto;
+}
