@@ -8,12 +8,8 @@
       @if (Route::has('login'))
         <div class="links">
           @auth
-            <a class="h-username" href="{{route('profilo', Auth::user()->id)}}">{{Auth::user()->name}}</a>
-            <a class="h-logout" href="{{ route('logout') }}"
-
-            <a href="{{route('profilo', Auth::user()->id)}}">{{Auth::user()->name}} </a>
-
-            <a href="{{route('profilo', Auth::user()->id)}}">{{Auth::user()->name}}</a>
+            <a class="nav-button" href="{{route('profilo', Auth::user()->id)}}">{{Auth::user()->name}}</a>
+            <a class="nav-button" href="{{ route('logout') }}"
 
             <a href="{{ route('logout') }}"
 
@@ -25,9 +21,9 @@
                 @csrf
             </form>
           @else
-            <a class="h-logout" href="{{ route('login') }}">Accedi</a>
+            <a class="nav-button" href="{{ route('login') }}">Accedi</a>
             @if (Route::has('register'))
-              <a class="h-logout" href="{{ route('register') }}">Registrati</a>
+              <a class="nav-button-register" href="{{ route('register') }}">Registrati</a>
             @endif
           @endauth
         </div>

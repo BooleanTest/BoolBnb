@@ -115,8 +115,30 @@
   height: 20%;
 }
 
-.nav-bar .login .links > * {
-  border: 1px solid black;
+.nav-bar .login .links .nav-button {
+  text-decoration: none;
+  padding: 15px;
+  text-align: center;
+  text-decoration: none;
+  border-radius: 20px;
+}
+
+.nav-bar .login .links .nav-button:hover {
+  transition: 1s;
+  background-color: lightgrey;
+}
+
+.nav-bar .login .links .nav-button-register {
+  text-decoration: none;
+  padding: 15px;
+  text-align: center;
+  text-decoration: none;
+  border-radius: 20px;
+}
+
+.nav-bar .login .links .nav-button-register:hover {
+  transition: 1s;
+  background-color: pink;
 }
 
 .search-h-bar {
