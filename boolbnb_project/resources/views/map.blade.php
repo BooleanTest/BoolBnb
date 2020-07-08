@@ -20,13 +20,18 @@
  <!-- Replace version in the URL with desired library version -->
     <script src='https://api.tomtom.com/maps-sdk-for-web/cdn/5.x/5.59.0/maps/maps-web.min.js'></script>
     <script>
-      tt.map({
+      var map = tt.map({
           key: 'HPIuQNQKJvFfEyPKVEciiGGYx8Fs3ptB',
           container: 'map',
-          style: 'tomtom://vector/1/basic-main'
+          style: 'tomtom://vector/1/basic-main',
+          zoom: 10,
+          center: [-3.34829 , 40.28482],
+          basePath: 'sdk/',
+          source: 'vector'
       });
-      map.addControl(new tt.FullscreenControl());
-      map.addControl(new tt.NavigationControl());
+      var marker = new tt.Marker()
+      .setLngLat([-3.34829 , 40.28482])
+      .addTo(map);
     </script>
 </body>
 </html>
