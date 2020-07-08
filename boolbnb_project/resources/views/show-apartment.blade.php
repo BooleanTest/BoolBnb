@@ -13,6 +13,24 @@
       <p>{{$apartments -> city }} , {{$apartments -> nation }} , {{$apartments -> address }}</p>
       <img src="{{$apartments -> image }}" alt="">
     </div>
+    <div class="mappa">
+      <div id='map' class='map'></div>
+    <!-- <script>
+    var map = tt.map({
+      key: 'zXtmHviiU0hA6JwSZhqTZ8zIXTvpJQWD',
+      container: 'map',
+      style: 'tomtom://vector/1/basic-main',
+      zoom: 15,
+      center: [{{$apartments -> longitude}} , {{$apartments -> latitude}}],
+      basePath: 'sdk/',
+      source: 'vector',
+      dragPan: !isMobileOrTablet(),
+    });
+    map.addControl(new tt.FullscreenControl());
+    map.addControl(new tt.NavigationControl());
+    var marker = new tt.Marker().setLngLat([{{$apartments -> longitude}} , {{$apartments -> latitude}}]).addTo(map)
+    </script> -->
+    </div>
     <div class="modifica">
       {{-- controllo per far vedere i comandi --}}
       @auth
@@ -53,7 +71,7 @@
         <input type="text" id="mail" name="mail" value="" placeholder="Inserisci email">
         <br>
         <label for="text"></label>
-        <input type="text" id="text" name="text" value="" placeholder="Inserire messaggio..">
+        <input type="text" id="text" name="text" value="" placeholder="Inserire messaggio.." style="HEIGHT:1px;">
         <br>
         <button type="submit" name="submit">Invia Messaggio</button>
 
