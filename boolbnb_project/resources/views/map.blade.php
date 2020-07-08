@@ -20,17 +20,18 @@
  <!-- Replace version in the URL with desired library version -->
     <script src='https://api.tomtom.com/maps-sdk-for-web/cdn/5.x/5.59.0/maps/maps-web.min.js'></script>
     <script>
+      var position = [{{$apartments -> longitude}}, {{$apartments -> latitude}}];
       var map = tt.map({
           key: 'HPIuQNQKJvFfEyPKVEciiGGYx8Fs3ptB',
           container: 'map',
           style: 'tomtom://vector/1/basic-main',
           zoom: 10,
-          center: [-3.34829 , 40.28482],
+          center: position,
           basePath: 'sdk/',
           source: 'vector'
       });
       var marker = new tt.Marker()
-      .setLngLat([-3.34829 , 40.28482])
+      .setLngLat(position)
       .addTo(map);
     </script>
 </body>
