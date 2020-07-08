@@ -85,12 +85,18 @@
       }
 
       input{
+        &:focus{
+          width: 80%;
+          transition: width 1s;
+        }
         padding-left: 20px;
-        width: 50%;
+        width: 280px;
         height: 60px;
         border-radius: 8px;
-        outline: none;
+        // outline: none;
         font-size: 30px;
+        border: none;
+        transition: width 1s;
       }
     }
   }

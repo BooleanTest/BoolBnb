@@ -9,10 +9,7 @@
     <!-- Replace version in the URL with desired library version -->
     <link rel='stylesheet' type='text/css' href='https://api.tomtom.com/maps-sdk-for-web/cdn/5.x/5.59.0/maps/maps.css'/>
     <style>
-       #map {
-           width: 50vw;
-           height: 50vh;
-       }
+       
     </style>
 </head>
 <body>

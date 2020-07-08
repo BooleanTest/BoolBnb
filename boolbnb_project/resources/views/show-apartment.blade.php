@@ -1,3 +1,4 @@
+@include('header')
 @extends('layouts.app')
 
 @section('content')
@@ -8,43 +9,34 @@
 
 <div class="container_show">
   <div class="margin">
-    <div class="immagine">
-      <h1>{{$apartments -> title }}</h1>
-      <p>{{$apartments -> city }} , {{$apartments -> nation }} , {{$apartments -> address }}</p>
-      <img src="{{$apartments -> image }}" alt="">
-    </div>
-      <div id='map' class='map'>
-        @include ('map');
+    <div class="nave">
+      <div class="scritte">
+        <h1>{{$apartments -> title }}</h1>
+        <p>{{$apartments -> city }} , {{$apartments -> nation }} , {{$apartments -> address }}</p>
       </div>
-      
-      {{-- <div class="mappa"> --}}
-    {{-- <!-- <script>
-    var map = tt.map({
-      key: 'zXtmHviiU0hA6JwSZhqTZ8zIXTvpJQWD',
-      container: 'map',
-      style: 'tomtom://vector/1/basic-main',
-      zoom: 15,
-      center: [{{$apartments -> longitude}} , {{$apartments -> latitude}}],
-      basePath: 'sdk/',
-      source: 'vector',
-      dragPan: !isMobileOrTablet(),
-    });
-    map.addControl(new tt.FullscreenControl());
-    map.addControl(new tt.NavigationControl());
-    var marker = new tt.Marker().setLngLat([{{$apartments -> longitude}} , {{$apartments -> latitude}}]).addTo(map)
-    </script> -->
-    </div> --}}
-    <div class="modifica">
-      {{-- controllo per far vedere i comandi --}}
-      @auth
+      <div class="modifica">
+        {{-- controllo per far vedere i comandi --}}
+        @auth
 
-      @if (Auth::user() -> id === $apartments -> user -> id)
+        @if (Auth::user() -> id === $apartments -> user -> id)
 
-      <a href="{{ route('edit-apartment', $apartments -> id ) }}"><button type="button" name="button">Modifica</button></a>
+        <a href="{{ route('edit-apartment', $apartments -> id ) }}"><button type="button" name="button">Modifica</button></a>
 
-      <a href="{{route("delete-apartment", $apartments["id"])}}"><button type="button" name="button">Elimina</button></a>
-      @endif
-      @endauth
+        <a href="{{route("delete-apartment", $apartments["id"])}}"><button type="button" name="button">Elimina</button></a>
+        @endif
+        @endauth
+      </div>
+    </div>
+    <div class="nave">
+      <div class="immagine">
+        <img src="{{$apartments -> image }}" alt="">
+      </div>
+      <div class="mappa">
+        <div id='map' class='map'>
+          @include ('map');
+        </div>
+      </div>
+
     </div>
     <div class="table">
       <div class="dati">

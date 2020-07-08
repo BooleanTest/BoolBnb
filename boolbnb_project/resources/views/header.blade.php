@@ -2,7 +2,8 @@
 
   <div class="nav-bar">
     <div class="logo">
-      <h1 class="">BoolBnB</h1>
+      <a href="{{route ('home')}}"><h1 class="">BoolBnB</h1></a>
+
     </div>
     <div class="login">
       @if (Route::has('login'))
