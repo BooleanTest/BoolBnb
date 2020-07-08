@@ -13,9 +13,12 @@
       <p>{{$apartments -> city }} , {{$apartments -> nation }} , {{$apartments -> address }}</p>
       <img src="{{$apartments -> image }}" alt="">
     </div>
-    <div class="mappa">
-      <div id='map' class='map'></div>
-    <!-- <script>
+      <div id='map' class='map'>
+        @include ('map');
+      </div>
+      
+      {{-- <div class="mappa"> --}}
+    {{-- <!-- <script>
     var map = tt.map({
       key: 'zXtmHviiU0hA6JwSZhqTZ8zIXTvpJQWD',
       container: 'map',
@@ -30,7 +33,7 @@
     map.addControl(new tt.NavigationControl());
     var marker = new tt.Marker().setLngLat([{{$apartments -> longitude}} , {{$apartments -> latitude}}]).addTo(map)
     </script> -->
-    </div>
+    </div> --}}
     <div class="modifica">
       {{-- controllo per far vedere i comandi --}}
       @auth

@@ -124,8 +124,8 @@
 }
 
 .nav-bar .login .links .nav-button:hover {
-  transition: 1s;
-  background-color: lightgrey;
+  transition: 0.8s;
+  background-color: Aliceblue;
 }
 
 .nav-bar .login .links .nav-button-register {
@@ -137,8 +137,8 @@
 }
 
 .nav-bar .login .links .nav-button-register:hover {
-  transition: 1s;
-  background-color: pink;
+  transition: 0.8s;
+  background-color: LightCoral;
 }
 
 .search-h-bar {
