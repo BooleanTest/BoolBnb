@@ -61,8 +61,8 @@ class profiloController extends Controller
       $apartments -> meters  = $validateData["meters"];
       $apartments -> address  = $validateData["address"];
       $apartments -> number  = $validateData["number"];
-      $apartments -> latitude  = '42.11111';
-      $apartments -> longitude  = '12.11111';
+      $apartments -> latitude  = '41.90223';
+      $apartments -> longitude  = '12.45735';
       $apartments -> image  = $validateData["image"];
       $apartments -> city  = $validateData["city"];
       $apartments -> nation  = $validateData["nation"];
@@ -124,8 +124,8 @@ class profiloController extends Controller
       $apartments -> meters  = $validateData["meters"];
       $apartments -> address  = $validateData["address"];
       $apartments -> number  = $validateData["number"];
-      $apartments -> latitude  = '42.1111';
-      $apartments -> longitude  = '12.111';
+      $apartments -> latitude  = '41.90223';
+      $apartments -> longitude  = '12.45735';
       $apartments -> image  = $validateData["image"];
       $apartments -> city  = $validateData["city"];
       $apartments -> nation  = $validateData["nation"];

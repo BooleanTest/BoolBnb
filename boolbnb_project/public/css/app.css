@@ -250,6 +250,40 @@
   width: 50%;
 }
 
+.container_show .margin .nave .modifica .eliminatasto:active .eliminazione {
+  display: block;
+}
+
+.container_show .margin .nave .modifica .eliminatasto .eliminazione {
+  display: none;
+  position: fixed;
+  padding: 15px;
+  z-index: 0;
+  top: 12%;
+  left: 40%;
+  width: 20%;
+  text-align: center;
+  border: 2px solid black;
+  border-radius: 10px;
+  background-color: red;
+}
+
+.container_show .margin .nave .modifica .eliminatasto .eliminazione button {
+  margin: 9px;
+}
+
+.container_show .margin .nave .modifica .right {
+  float: right;
+  margin: 5px;
+}
+
+.container_show .margin .nave .modifica .red:hover {
+  cursor: pointer;
+  background-color: #f73628;
+  color: black;
+  border: 1px solid grey;
+}
+
 .container_show .margin .nave .mappa {
   float: left;
   width: 40%;
@@ -281,11 +315,18 @@
   clear: both;
 }
 
-.container_show .margin #indietro {
+.container_show .margin button {
   margin-top: 10px;
-  padding: 5px 10px;
+  padding: 8px 13px;
   border-radius: 5px;
   border: solid black 1px;
+}
+
+.container_show .margin button:hover {
+  cursor: pointer;
+  background-color: lightblue;
+  color: black;
+  border: 1px solid grey;
 }
 
 .container_show .margin .table {
@@ -340,10 +381,8 @@
 .container_show .margin .messaggio #mail {
   width: 100%;
   padding: 6px 10px;
-  outline: none;
   border-radius: 5px;
-  border: solid 1px white;
-  background-color: lightblue;
+  border: solid 1px grey;
   margin-bottom: 10px;
   margin-top: 15px;
   font-size: 18px;
@@ -356,7 +395,6 @@
   border-radius: 5px;
   border: solid 1px grey;
   font-size: 18px;
-  height: 200px;
 }
 
 .container_show .margin .messaggio button {

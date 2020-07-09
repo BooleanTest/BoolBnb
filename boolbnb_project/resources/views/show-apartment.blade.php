@@ -12,17 +12,25 @@
     <div class="nave">
       <div class="scritte">
         <h1>{{$apartments -> title }}</h1>
-        <p>{{$apartments -> city }} , {{$apartments -> nation }} , {{$apartments -> address }}</p>
+        <p>{{$apartments -> city }} , {{$apartments -> nation }} , {{$apartments -> address }} n° {{$apartments -> number}}</p>
       </div>
       <div class="modifica">
         {{-- controllo per far vedere i comandi --}}
         @auth
-
         @if (Auth::user() -> id === $apartments -> user -> id)
+        <div class="eliminatasto">
+          <button type="button" name="button" class="right red ">Elimina</button>
+          <div class="eliminazione">
+            <h3>Sei sicuro di volere eliminare l'appartamento?</h3>
+            <h4>Una volta persi i dati non potranno più essere recuperati!</h4>
+            <button type="button" name="button">Indietro</button>
+            <a href="{{route("delete-apartment", $apartments["id"])}}"><button type="button" name="button" class="right red">Elimina</button></a>
+          </div>
+        </div>
+        <a href="{{ route('edit-apartment', $apartments -> id ) }}"><button type="button" name="button" class="right ">Modifica</button></a>
 
-        <a href="{{ route('edit-apartment', $apartments -> id ) }}"><button type="button" name="button">Modifica</button></a>
 
-        <a href="{{route("delete-apartment", $apartments["id"])}}"><button type="button" name="button">Elimina</button></a>
+
         @endif
         @endauth
       </div>
@@ -66,7 +74,7 @@
         <input type="text" id="mail" name="mail" value="" placeholder="Inserisci email">
         <br>
         <label for="text"></label>
-        <input type="text" id="text" name="text" value="" placeholder="Inserire messaggio.." style="HEIGHT:1px;">
+        <textarea name="text" id="text" cols="40" rows="15" placeholder= "Inserisci il testo..."></textarea>
         <br>
         <button type="submit" name="submit">Invia Messaggio</button>
 
@@ -75,6 +83,8 @@
 
     <a href="{{ url()->previous()}}"><button type="button" name="button" id="indietro">Indietro</button></a>
   </div>
+
+
 
 </div>
 

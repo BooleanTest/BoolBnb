@@ -17,6 +17,41 @@
         width: 50%;
       }
       .modifica{
+        .eliminatasto{
+          &:active{
+            .eliminazione{
+              display: block;
+            }
+          }
+          .eliminazione{
+            button{
+              margin: 9px;
+            }
+            display: none;
+            position: fixed;
+            padding: 15px;
+            z-index: 0;
+            top: 12%;
+            left: 40%;
+            width: 20%;
+            text-align: center;
+            border: 2px solid black;
+            border-radius: 10px;
+            background-color: red;
+          }
+        }
+        .right{
+          float: right;
+          margin: 5px;
+        }
+        .red{
+          &:hover{
+            cursor: pointer;
+            background-color: #f73628;
+            color: black;
+            border: 1px solid grey;
+          }
+        }
         float: left;
         width: 50%;
       }
@@ -48,9 +83,15 @@
       display: table;
       clear: both;
     }
-    #indietro{
+    button{
+      &:hover{
+        cursor: pointer;
+        background-color: lightblue;
+        color: black;
+        border: 1px solid grey;
+      }
       margin-top: 10px;
-      padding: 5px 10px;
+      padding: 8px 13px;
       border-radius: 5px;
       border: solid black 1px;
     }
@@ -101,10 +142,9 @@
       #mail{
         width: 100%;
         padding: 6px 10px;
-        outline: none;
+        // outline: none;
         border-radius: 5px;
-        border: solid 1px white;
-        background-color: lightblue;
+        border: solid 1px grey;
         margin-bottom: 10px;
         margin-top: 15px;
         font-size: 18px;
@@ -116,7 +156,6 @@
         border-radius: 5px;
         border: solid 1px grey;
         font-size: 18px;
-        height: 200px;
       }
       button{
         &:hover{

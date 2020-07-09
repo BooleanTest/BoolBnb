@@ -3,7 +3,7 @@
 
 @section('content')
 
-  <h2>Nuovo appartamento</h2>
+  <h2>Inserisci Appartamento</h2>
 
   @if ($errors->any())
     @foreach ($errors->all() as $error)
