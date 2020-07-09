@@ -12,6 +12,9 @@
     @include ('header')
 
 
+    @include('searchbar')
+
+
     @include('welcome-section')
 
 
