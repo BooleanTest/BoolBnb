@@ -6,6 +6,11 @@
         <label for="">
           <input type="text" name="" value="" placeholder="Dove vuoi andare?">
         </label>
+        <div id="search-button">
+          <a href="#">
+            <i class="fas fa-plane fa-4x"></i>
+          </a>
+        </div>
       </div>
 
     </form>

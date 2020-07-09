@@ -77,21 +77,29 @@
       text-align: center;
 
       label{
-      }
 
-      input{
-        &:focus{
-          width: 80%;
+        input{
+          &:focus{
+            width: 94%;
+            transition: width 1s;
+          }
+          float: left;
+          padding-left: 20px;
+          width: 280px;
+          height: 60px;
+          border-radius: 8px;
+          font-size: 30px;
+          border: none;
           transition: width 1s;
         }
-        padding-left: 20px;
-        width: 280px;
-        height: 60px;
-        border-radius: 8px;
-        // outline: none;
-        font-size: 30px;
-        border: none;
-        transition: width 1s;
+      }
+
+      #search-button{
+        float: left;
+        background-color: white;
+      }
+      a{
+
       }
     }
   }

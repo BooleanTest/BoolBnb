@@ -158,7 +158,8 @@
   text-align: center;
 }
 
-.search-h-bar .search-h-form .search-h-box input {
+.search-h-bar .search-h-form .search-h-box label input {
+  float: left;
   padding-left: 20px;
   width: 280px;
   height: 60px;
@@ -168,9 +169,14 @@
   transition: width 1s;
 }
 
-.search-h-bar .search-h-form .search-h-box input:focus {
-  width: 80%;
+.search-h-bar .search-h-form .search-h-box label input:focus {
+  width: 94%;
   transition: width 1s;
+}
+
+.search-h-bar .search-h-form .search-h-box #search-button {
+  float: left;
+  background-color: white;
 }
 
 .heading-w-apartments {
