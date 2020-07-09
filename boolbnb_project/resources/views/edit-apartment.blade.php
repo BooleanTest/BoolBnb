@@ -1,3 +1,4 @@
+@include('header')
 @extends('layouts.app')
 
 @section('content')
@@ -66,7 +67,7 @@
         <input
 
          type="checkbox" name="services[]" value="{{$service -> id}}"
-        
+
          @foreach ($apartments -> services as $service_apartment)
            @if ($service_apartment -> id == $service -> id )
              checked
