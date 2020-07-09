@@ -49,8 +49,6 @@ class profiloController extends Controller
         'nation' => 'required',
         "image" => "required",
         'services' => 'nullable'
-        // 'latitude' => 'required',
-        // 'longitude' => 'required'
       ]);
 
       $apartments = Apartment::findOrFail($id);
@@ -61,8 +59,8 @@ class profiloController extends Controller
       $apartments -> meters  = $validateData["meters"];
       $apartments -> address  = $validateData["address"];
       $apartments -> number  = $validateData["number"];
-      $apartments -> latitude  = '41.90223';
-      $apartments -> longitude  = '12.45735';
+      $apartments -> latitude  = '41.00'; // $validateData["latitude"];
+      $apartments -> longitude  = '12.00'; // $validateData["longitude"];
       $apartments -> image  = $validateData["image"];
       $apartments -> city  = $validateData["city"];
       $apartments -> nation  = $validateData["nation"];
@@ -110,8 +108,6 @@ class profiloController extends Controller
         "nation" => 'required',
         "city" => 'required',
         'services' => 'nullable'
-        // 'latitude' => 'required',
-        // 'longitude' => 'required'
       ]);
 
       // TODO: sistemare con TomTom latitudine e longitudine
@@ -124,8 +120,8 @@ class profiloController extends Controller
       $apartments -> meters  = $validateData["meters"];
       $apartments -> address  = $validateData["address"];
       $apartments -> number  = $validateData["number"];
-      $apartments -> latitude  = '41.90223';
-      $apartments -> longitude  = '12.45735';
+      $apartments -> latitude  = '41.00'; // $validateData["latitude"];
+      $apartments -> longitude  = '12.00'; // $validateData["longitude"];
       $apartments -> image  = $validateData["image"];
       $apartments -> city  = $validateData["city"];
       $apartments -> nation  = $validateData["nation"];
