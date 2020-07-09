@@ -160,12 +160,16 @@
 
 .search-h-bar .search-h-form .search-h-box label input {
   float: left;
+  outline: none;
   padding-left: 20px;
   width: 280px;
   height: 60px;
   border-radius: 8px;
   font-size: 30px;
-  border: none;
+  border-right: 1px solid white;
+  border-left: 1px solid white;
+  border-top: 3px solid black;
+  border-bottom: 3px solid black;
   transition: width 1s;
 }
 
