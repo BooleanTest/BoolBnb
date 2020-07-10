@@ -95,6 +95,7 @@ class profiloController extends Controller
 
     // per nuovo appartamento (store)
     public function store(Request $request){
+
       $userId = Auth::id();
 
       $validateData = $request -> validate([
@@ -127,6 +128,7 @@ class profiloController extends Controller
       $apartments -> user_id = $userId;
 
       $apartments -> save();
+
       if (isset($validateData['services'])) {
         $apartments -> services() -> attach($validateData['services']);
       }
