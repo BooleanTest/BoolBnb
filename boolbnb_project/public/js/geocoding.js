@@ -122,7 +122,7 @@ $(document).ready(function () {
 
     var route = $('#form').data('route');
     var form_data = $(this);
-    setTimeout($.ajax({
+    $.ajax({
       headers: {
         'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
       },
@@ -133,7 +133,8 @@ $(document).ready(function () {
       error: function error(_error2) {
         console.log('errore controller');
       }
-    }), 3000); // $.ajax({
+    }); // setTimeout(, 3000);
+    // $.ajax({
     //   headers: {
     //     'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
     //   } ,
