@@ -79,15 +79,14 @@
 
     <a href="{{route('home')}}"><button type="button" name="button">Indietro</button></a>
 
-    <button  type="submit" name="submit">Salva</button>
+    <button  id='button' type="submit" name="submit">Salva</button>
 
 
 
   </form>
 
-{{--
-  <script type="text/javascript" src="js/geocoding.js">
-  </script> --}}
+  <script src="{{ asset('js/geocoding.js') }}" defer></script>
+
 
 
 @endsection

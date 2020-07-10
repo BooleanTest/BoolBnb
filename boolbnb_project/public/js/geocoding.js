@@ -112,15 +112,14 @@ $(document).ready(function () {
         var latitude = data.results[0].position.lat;
         var position = [longitude, latitude]; // document.getElementById("latitude").innerHTML =  latitude ;
 
-      $('#latitude').val(latitude);
-      $('#longitude').val(longitude);
-    },
-    error: function error(_error) {
-      console.log('Ciao sono un errore');
-    }
-  });
-  $('#form').submit(function (e) {
-    // console.log('ecco i dati');
+        $('#latitude').val(latitude);
+        $('#longitude').val(longitude);
+      },
+      error: function error(_error) {
+        console.log('errore dati');
+      }
+    }); // console.log('ecco i dati');
+
     var route = $('#form').data('route');
     var form_data = $(this);
     $.ajax({
@@ -132,7 +131,7 @@ $(document).ready(function () {
       method: "post",
       success: function success(Response) {},
       error: function error(_error2) {
-        console.log('cè un errore');
+        console.log('errore controller');
       }
     }); // setTimeout(, 3000);
     // $.ajax({
@@ -165,7 +164,7 @@ $(document).ready(function () {
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! D:\Booleans\BoolBnb\boolbnb_project\resources\js\geocoding.js */"./resources/js/geocoding.js");
+module.exports = __webpack_require__(/*! D:\Progetti\Boolean\BoolBnb\boolbnb_project\resources\js\geocoding.js */"./resources/js/geocoding.js");
 
 
 /***/ })
