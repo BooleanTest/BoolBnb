@@ -1,12 +1,6 @@
 $(document).ready(function(){
 
-
-
-
-
-
-
-     $('#form').submit(function(e){
+     $('#calcolo').click(function(e){
 
        var streetName = $(".streetName").val();
        var streetNumber = $(".streetNumber").val();
@@ -36,9 +30,10 @@ $(document).ready(function(){
 
            console.log('errore dati');
          }
-       })
+       });
+     });
 
-       // console.log('ecco i dati');
+     $('#form').submit(function(e){
        var route = $('#form').data('route');
        var form_data = $(this);
 
@@ -57,9 +52,9 @@ $(document).ready(function(){
            console.log('errore controller');
          }
        })
-
+     })
+       // console.log('ecco i dati');
        // setTimeout(, 3000);
-
        // $.ajax({
        //   headers: {
        //     'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
@@ -77,6 +72,4 @@ $(document).ready(function(){
        //   }
        // })
        e.preventDefault();
-
-     });
    });

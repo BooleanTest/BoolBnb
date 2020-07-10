@@ -57,12 +57,14 @@
     <br>
 
     <label for="image">Immagine</label>
-    <input type="text " name="image" value="{{ old('image')}}">
+    <input type="text " name="image" value="{{ old('image')}}"><br>
+
+    <button type="button" id="calcolo" name="calcolo">Calcola</button><br>
 
     <label for="latitude">latitude</label>
-    <input id="latitude" type="text" name="latitude" value="">
+    <input id="latitude" type="text" name="latitude" value=""><br>
 
-    <label for="longitude"></label>
+    <label for="longitude">longitude</label>
     <input id="longitude" type="text" name="longitude" value="">
     <br> <br>
 

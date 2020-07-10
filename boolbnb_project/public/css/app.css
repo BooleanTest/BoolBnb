@@ -561,6 +561,40 @@
   transition: ease-in-out 0.4s;
 }
 
+.containeredit {
+  border: 2px solid black;
+  border-radius: 10px;
+  padding: 25px;
+  width: 75%;
+  margin: auto;
+}
+
+.containeredit .dati {
+  margin-top: 20px;
+}
+
+.containeredit .dati .valore {
+  padding: 5px;
+}
+
+.containeredit .dati .valore label {
+  font-size: 18px;
+}
+
+.containeredit .dati .valore input {
+  font-size: 18px;
+  outline: none;
+  border: none;
+  border-top: 2px solid black;
+  border-bottom: 2px solid black;
+  padding: 3px;
+  border-radius: 5px;
+}
+
+.containeredit .dati h3 {
+  padding-bottom: 15px;
+}
+
 * {
   font-family: "Fira Sans", sans-serif;
 }

@@ -94,7 +94,7 @@
 /***/ (function(module, exports) {
 
 $(document).ready(function () {
-  $('#form').submit(function (e) {
+  $('#calcolo').click(function (e) {
     var streetName = $(".streetName").val();
     var streetNumber = $(".streetNumber").val();
     var municipality = $(".municipality").val();
@@ -118,8 +118,9 @@ $(document).ready(function () {
       error: function error(_error) {
         console.log('errore dati');
       }
-    }); // console.log('ecco i dati');
-
+    });
+  });
+  $('#form').submit(function (e) {
     var route = $('#form').data('route');
     var form_data = $(this);
     $.ajax({
@@ -133,26 +134,27 @@ $(document).ready(function () {
       error: function error(_error2) {
         console.log('errore controller');
       }
-    }); // setTimeout(, 3000);
-    // $.ajax({
-    //   headers: {
-    //     'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
-    //   } ,
-    //   url: route,
-    //   data: form_data.serialize(),
-    //   method: "post",
-    //   success: function (Response){
-    //
-    //     console.log(Response);
-    //
-    //   },
-    //   error: function(error){
-    //     console.log('errore controller');
-    //   }
-    // })
+    });
+  }); // console.log('ecco i dati');
+  // setTimeout(, 3000);
+  // $.ajax({
+  //   headers: {
+  //     'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+  //   } ,
+  //   url: route,
+  //   data: form_data.serialize(),
+  //   method: "post",
+  //   success: function (Response){
+  //
+  //     console.log(Response);
+  //
+  //   },
+  //   error: function(error){
+  //     console.log('errore controller');
+  //   }
+  // })
 
-    e.preventDefault();
-  });
+  e.preventDefault();
 });
 
 /***/ }),
