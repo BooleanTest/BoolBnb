@@ -1,3 +1,138 @@
+.container {
+  border: 2px solid black;
+  border-radius: 10px;
+  padding: 25px;
+  width: 75%;
+  margin: auto;
+}
+
+.container:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.container .profilo .top {
+  margin-bottom: 20px;
+}
+
+.container .profilo .top:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.container .profilo .top .floatl {
+  float: left;
+  width: 80%;
+}
+
+.container .profilo .top .floatl h1 {
+  padding: 8px;
+  font-size: 22px;
+}
+
+.container .profilo .top .floatr {
+  float: right;
+  width: 20%;
+  margin-bottom: 20px;
+}
+
+.container .profilo .top .floatr a {
+  float: right;
+}
+
+.container .profilo .top .floatr a button {
+  border: none;
+  border-top: 2px solid black;
+  border-bottom: 2px solid black;
+  border-radius: 8px;
+  background-color: white;
+  padding: 13px 20px;
+}
+
+.container .profilo .top .floatr a button:hover {
+  background-color: #44fc66;
+  cursor: pointer;
+}
+
+.container .profilo .appartamento {
+  float: left;
+  width: calc(50% - 10px);
+  border: 2px solid black;
+  border-radius: 10px;
+  padding: 30px;
+  margin: 5px;
+}
+
+.container .profilo .appartamento .titolo {
+  width: 100%;
+  border-top: 2px solid black;
+  border-bottom: 2px solid black;
+  border-radius: 8px;
+  margin-bottom: 15px;
+}
+
+.container .profilo .appartamento .titolo h2 {
+  margin: 10px;
+}
+
+.container .profilo .appartamento .immagine {
+  float: left;
+  width: 50%;
+}
+
+.container .profilo .appartamento .immagine img {
+  width: 100%;
+  border-radius: 10px;
+}
+
+.container .profilo .appartamento .scritte {
+  padding-left: 10px;
+  float: left;
+  width: 50%;
+}
+
+.container .profilo .appartamento .scritte:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.container .profilo .appartamento .scritte p {
+  text-align: center;
+  padding: 5px;
+}
+
+.container .profilo .appartamento .scritte .bottoni {
+  float: right;
+  height: 70px;
+  width: 100%;
+}
+
+.container .profilo .appartamento .scritte .bottoni a {
+  float: right;
+  margin: 5px;
+}
+
+.container .profilo .appartamento .scritte .bottoni a button {
+  border: none;
+  border-top: 1px solid black;
+  border-bottom: 1px solid black;
+  border-radius: 3px;
+  padding: 3px 5px;
+}
+
+.container .profilo .appartamento .scritte .bottoni a button:hover {
+  background-color: lightblue;
+  cursor: pointer;
+}
+
+.container .profilo .appartamento .scritte .bottoni a .red:hover {
+  background-color: #f73628;
+  cursor: pointer;
+}
+
 * {
   box-sizing: border-box;
   margin: 0;

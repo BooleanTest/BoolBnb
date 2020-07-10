@@ -1,0 +1,117 @@
+.container{
+  &:after{
+    content: "";
+    display: table;
+    clear: both;
+  }
+  .profilo{
+    .top{
+      &:after{
+        content: "";
+        display: table;
+        clear: both;
+      }
+      .floatl{
+        h1{
+          padding: 8px;
+          font-size: 22px;
+        }
+        float: left;
+        width: 80%;
+      }
+      .floatr{
+        a{
+          button{
+            &:hover{
+              background-color: #44fc66;
+              cursor: pointer;
+            }
+            border: none;
+            border-top: 2px solid black;
+            border-bottom: 2px solid black;
+            border-radius: 8px;
+            background-color: white;
+            padding: 13px 20px;
+          }
+          float: right;
+        }
+        float: right;
+        width: 20%;
+        margin-bottom: 20px;
+      }
+      margin-bottom: 20px;
+    }
+    .appartamento{
+      .titolo{
+        h2{
+          margin: 10px;
+        }
+        width: 100%;
+        border-top: 2px solid black;
+        border-bottom: 2px solid black;
+        border-radius: 8px;
+        margin-bottom: 15px;
+
+      }
+      .immagine{
+        img{
+          width: 100%;
+          border-radius: 10px;
+        }
+        float: left;
+        width: 50%;
+      }
+      .scritte{
+        &:after{
+          content: "";
+          display: table;
+          clear: both;
+        }
+        p{
+          text-align: center;
+          padding: 5px;
+        }
+        .bottoni{
+          a{
+            button{
+              &:hover{
+                background-color: lightblue;
+                cursor: pointer;
+              }
+              border: none;
+              border-top: 1px solid black;
+              border-bottom: 1px solid black;
+              border-radius: 3px;
+              padding: 3px 5px;
+            }
+            .red{
+              &:hover{
+                background-color: #f73628;
+                cursor: pointer;
+              }
+            }
+            float: right;
+            margin: 5px;
+          }
+          float: right;
+          height: 70px;
+          width: 100%;
+        }
+        padding-left: 10px;
+        float: left;
+        width: 50%;
+      }
+      float: left;
+      width: calc(50% - 10px);
+      border: 2px solid black;
+      border-radius: 10px;
+      padding: 30px;
+      margin: 5px;
+    }
+  }
+  border: 2px solid black;
+  border-radius: 10px;
+  padding: 25px;
+  width: 75%;
+  margin: auto;
+}
