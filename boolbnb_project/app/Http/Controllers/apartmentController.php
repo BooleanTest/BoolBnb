@@ -30,7 +30,7 @@ class apartmentController extends Controller
     return view('show-apartment', compact('apartments'));
   }
 
-  //rotta per salvare i messaggio
+  //rotta per salvare il messaggio
   public function messagges(Request $request, $id){
 
     $validateData = $request -> validate([
@@ -47,7 +47,10 @@ class apartmentController extends Controller
 
     $messagge -> save();
 
-    // redirect
+    // redirect 
+    return redirect()->route('show-apartment', [$id]) ->withSuccess("Messaggio correttamente inviato");
+
+    // return back()->withInput()-> withSuccess("Messaggio correttamente inviato");
 
   }
 
