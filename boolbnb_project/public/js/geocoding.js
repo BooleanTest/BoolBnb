@@ -112,14 +112,15 @@ $(document).ready(function () {
         var latitude = data.results[0].position.lat;
         var position = [longitude, latitude]; // document.getElementById("latitude").innerHTML =  latitude ;
 
-        $('#latitude').val(latitude);
-        $('#longitude').val(longitude);
-      },
-      error: function error(_error) {
-        console.log('errore dati');
-      }
-    }); // console.log('ecco i dati');
-
+      $('#latitude').val(latitude);
+      $('#longitude').val(longitude);
+    },
+    error: function error(_error) {
+      console.log('Ciao sono un errore');
+    }
+  });
+  $('#form').submit(function (e) {
+    // console.log('ecco i dati');
     var route = $('#form').data('route');
     var form_data = $(this);
     $.ajax({
@@ -131,7 +132,7 @@ $(document).ready(function () {
       method: "post",
       success: function success(Response) {},
       error: function error(_error2) {
-        console.log('errore controller');
+        console.log('cè un errore');
       }
     }); // setTimeout(, 3000);
     // $.ajax({
