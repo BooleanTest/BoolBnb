@@ -12,7 +12,7 @@
   @endif
 
   <form  action="{{route('store-apartment')}}" method="post">
-    @csrf
+    <!-- @csrf -->
     @method('POST')
 
     <label for="title">Titolo</label>
@@ -41,17 +41,17 @@
     <br>
 
     <label for="city">Città</label>
-    <input type="text" name="city" value="{{ old('city')}}">
+    <input type="text" class="municipality" name="city" value="{{ old('city')}}">
 
     <br>
 
     <label for="address">Indirizzo</label>
-    <input type="text" name="address" value="{{ old('address')}}">
+    <input type="text" class="streetName" name="address" value="{{ old('address')}}">
 
     <br>
 
     <label for="number">Numero civico</label>
-    <input type="text" name="number" value="{{ old('number')}}">
+    <input type="text" class="streetNumber" name="number" value="{{ old('number')}}">
 
     <br>
 
@@ -59,6 +59,10 @@
     <input type="text " name="image" value="{{ old('image')}}">
 
     <br> <br>
+
+
+
+
 
     <label for="services[]">Servizi</label> <br>
       @foreach ($services as $service)
@@ -70,6 +74,8 @@
     <a href="{{route('home')}}"><button type="button" name="button">Indietro</button></a>
 
     <button type="submit" name="submit">Salva</button>
+
+
 
   </form>
 
