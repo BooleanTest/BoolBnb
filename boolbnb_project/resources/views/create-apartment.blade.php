@@ -12,9 +12,15 @@
     @endforeach
   @endif
 
+<<<<<<< Updated upstream
   <form id='form' data-route="{{route('store-apartment')}}" method='post'>
     @csrf
     @method('post')
+=======
+  <form  action="{{route('store-apartment')}}" method="post">
+    @csrf
+    @method('POST')
+>>>>>>> Stashed changes
 
     <label for="title">Titolo</label>
     <input type="text" name="title" value="{{ old('title')}}">
@@ -59,11 +65,20 @@
     <label for="image">Immagine</label>
     <input type="text " name="image" value="{{ old('image')}}">
 
+<<<<<<< Updated upstream
     <label for="latitude">latitude</label>
     <input id="latitude" type="text" name="latitude" value="">
 
     <label for="longitude"></label>
     <input id="longitude" type="text" name="longitude" value="">
+=======
+    <label for="lon"></label>
+    <p>Longitudine: <span id="lon" name="lon">{{('lon')}}</p>
+
+    <label for="lat"></label>
+    <p>Latitudine: <span id="lat" name="lat">{{('lat')}}</p>
+
+>>>>>>> Stashed changes
     <br> <br>
 
 
