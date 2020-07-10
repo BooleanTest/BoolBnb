@@ -14,32 +14,49 @@
        method: 'get',
        success: function (data){
          console.log('sono la latitudine = ' + data.results[0].position.lat + 'sono la longitudine = ' + data.results[0].position.lon);
-         // console.log(data[results][]);
 
-         console.log('funziono!');
          var longitude = data.results[0].position.lon;
          var latitude = data.results[0].position.lat;
          var position = [longitude, latitude];
+
+         // document.getElementById("latitude").innerHTML =  latitude ;
+         $('#latitude').val(latitude);
+         $('#longitude').val(longitude);
+
        },
        error: function(error){
-         // console.error(error);
+         
          console.log('Ciao sono un errore');
        }
      })
 
-     $.ajax({
-       // headers: {
-       //   'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
-       // } ,
-       url: "http://127.0.0.1:8000/store-apartment",
-       method: "post",
-       success: function (data){
-         console.log("funzioniamo entrambi");
-         console.log("longitude");
-       },
-       error: function(error){
-         console.log('cè un errore');
-       }
+     $('#form').submit(function(e){
+       // console.log('ecco i dati');
+       var route = $('#form').data('route');
+
+       var form_data = $(this);
+
+       $.ajax({
+         headers: {
+           'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+         } ,
+         url: route,
+         data: form_data.serialize(),
+         method: "post",
+         success: function (Response){
+
+
+         },
+         error: function(error){
+           console.log('cè un errore');
+         }
+       })
+       e.preventDefault();
+
      })
+
+
+
+
 
    })

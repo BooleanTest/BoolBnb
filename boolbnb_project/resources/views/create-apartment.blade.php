@@ -3,6 +3,7 @@
 
 @section('content')
 
+
   <h2>Inserisci Appartamento</h2>
 
   @if ($errors->any())
@@ -11,9 +12,9 @@
     @endforeach
   @endif
 
-  <form  action="{{route('store-apartment')}}" method="post">
-    <!-- @csrf -->
-    @method('POST')
+  <form id='form' data-route="{{route('store-apartment')}}" method='post'>
+    @csrf
+    @method('post')
 
     <label for="title">Titolo</label>
     <input type="text" name="title" value="{{ old('title')}}">
@@ -58,6 +59,11 @@
     <label for="image">Immagine</label>
     <input type="text " name="image" value="{{ old('image')}}">
 
+    <label for="latitude">latitude</label>
+    <input id="latitude" type="text" name="latitude" value="">
+
+    <label for="longitude"></label>
+    <input id="longitude" type="text" name="longitude" value="">
     <br> <br>
 
 
@@ -73,13 +79,15 @@
 
     <a href="{{route('home')}}"><button type="button" name="button">Indietro</button></a>
 
-    <button type="submit" name="submit">Salva</button>
+    <button  type="submit" name="submit">Salva</button>
 
 
 
   </form>
 
-
+{{--
+  <script type="text/javascript" src="js/geocoding.js">
+  </script> --}}
 
 
 @endsection

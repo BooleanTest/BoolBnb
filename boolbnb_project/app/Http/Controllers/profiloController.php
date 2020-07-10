@@ -95,6 +95,7 @@ class profiloController extends Controller
 
     // per nuovo appartamento (store)
     public function store(Request $request){
+
       $userId = Auth::id();
 
       $validateData = $request -> validate([
@@ -119,14 +120,12 @@ class profiloController extends Controller
       $apartments -> meters  = $validateData["meters"];
       $apartments -> address  = $validateData["address"];
       $apartments -> number  = $validateData["number"];
-      $apartments -> latitude  =  67.37473;  //$validateData["latitude"];
-      $apartments -> longitude  = 34.47384; //$validateData["longitude"];
+      $apartments -> latitude  =  $request['latitude'];  //$validateData["latitude"];
+      $apartments -> longitude  = $request['longitude']; //$validateData["longitude"];
       $apartments -> image  = $validateData["image"];
       $apartments -> city  = $validateData["city"];
       $apartments -> nation  = $validateData["nation"];
       $apartments -> user_id = $userId;
-
-
 
       $apartments -> save();
 
@@ -136,6 +135,7 @@ class profiloController extends Controller
 
       return redirect() -> route("profilo", $userId)
                         -> withSuccess("Appartamento " . $apartments["title"] . " correttamente aggiunto");
+
     }
 
     //rotta per statistiche appartamento
