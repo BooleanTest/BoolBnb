@@ -122,7 +122,7 @@ $(document).ready(function () {
 
     var route = $('#form').data('route');
     var form_data = $(this);
-    setTimeout($.ajax({
+    $.ajax({
       headers: {
         'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
       },
@@ -133,7 +133,8 @@ $(document).ready(function () {
       error: function error(_error2) {
         console.log('errore controller');
       }
-    }), 3000); // $.ajax({
+    }); // setTimeout(, 3000);
+    // $.ajax({
     //   headers: {
     //     'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
     //   } ,
@@ -163,7 +164,7 @@ $(document).ready(function () {
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! C:\Users\alessandro\Desktop\ALESSAND\BOOLEAN\progettone\BoolBnb\boolbnb_project\resources\js\geocoding.js */"./resources/js/geocoding.js");
+module.exports = __webpack_require__(/*! D:\Booleans\BoolBnb\boolbnb_project\resources\js\geocoding.js */"./resources/js/geocoding.js");
 
 
 /***/ })

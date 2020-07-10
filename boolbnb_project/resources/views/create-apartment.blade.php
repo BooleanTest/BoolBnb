@@ -41,18 +41,18 @@
 
     <br>
 
-    <label for="city">Città</label>
     <input type="text" class="municipality" name="city" value="{{ old('city')}}">
+    <label for="city">Città</label>
 
     <br>
 
-    <label for="address">Indirizzo</label>
     <input type="text" class="streetName" name="address" value="{{ old('address')}}">
+    <label for="address">Indirizzo</label>
 
     <br>
 
-    <label for="number">Numero civico</label>
     <input type="text" class="streetNumber" name="number" value="{{ old('number')}}">
+    <label for="number">Numero civico</label>
 
     <br>
 
