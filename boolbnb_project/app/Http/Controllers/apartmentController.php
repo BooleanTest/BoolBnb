@@ -57,4 +57,5 @@ class apartmentController extends Controller
   }
 
 
+  
 }

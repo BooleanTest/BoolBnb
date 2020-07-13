@@ -316,6 +316,7 @@
 .search-h-bar .search-h-form .search-h-box #search-button {
   float: left;
   background-color: white;
+  border: none;
 }
 
 .heading-w-apartments {

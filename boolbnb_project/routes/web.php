@@ -20,6 +20,10 @@
   Route::get('/create-apartment', 'profiloController@create')->name("create-apartment");
   Route::post('/store-apartment', 'profiloController@store')->name("store-apartment");
 
+// TODO: 
+  // ricerca appartamento
+  // Route::post('/search-apartment', 'apartmentController@search')->name("search-apartment");
+
   // profilo utente
   Route::get('/profilo_utente/{id}', 'profiloController@profilo')->name('profilo');
 
