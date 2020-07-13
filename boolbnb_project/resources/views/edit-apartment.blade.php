@@ -91,6 +91,8 @@
 
       <br> <br>
 
+      <p id='plong'>{{ old('number', $apartments -> longitude) }}</p>
+      <p id='plat'>{{ old('number', $apartments -> latitude) }}</p>
 
       <div class="valore">
         <div class="label">

@@ -27,6 +27,9 @@ $(document).ready(function(){
            $('#plong').text(longitude);
            $('#plat').text(latitude);
 
+           $('#plong').text(longitude);
+           $('#plat').text(latitude);
+
          },
          error: function(error){
 
