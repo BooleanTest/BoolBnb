@@ -24,6 +24,8 @@ $(document).ready(function(){
            // document.getElementById("latitude").innerHTML =  latitude ;
            $('#latitude').val(latitude);
            $('#longitude').val(longitude);
+           $('#plong').text(longitude);
+           $('#plat').text(latitude);
 
          },
          error: function(error){
@@ -33,43 +35,31 @@ $(document).ready(function(){
        });
      });
 
-     $('#form').submit(function(e){
-       var route = $('#form').data('route');
-       var form_data = $(this);
+     // $('#form').submit(function(e){
+     //
+     //
+     //   var route = $('#form').data('route');
+     //   var form_data = $(this);
+     //
+     //   $.ajax({
+     //     headers: {
+     //       'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+     //     } ,
+     //     url: route,
+     //     data: form_data.serialize(),
+     //     method: "post",
+     //     success: function (Response){
+     //       console.log(Response);
+     //
+     //     },
+     //     error: function(error){
+     //       console.log('errore controller');
+     //     }
+     //   })
+     //
+     //   e.preventDefault();
+     //
+     // })
 
-       $.ajax({
-         headers: {
-           'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
-         } ,
-         url: route,
-         data: form_data.serialize(),
-         method: "post",
-         success: function (Response){
 
-
-         },
-         error: function(error){
-           console.log('errore controller');
-         }
-       })
-     })
-       // console.log('ecco i dati');
-       // setTimeout(, 3000);
-       // $.ajax({
-       //   headers: {
-       //     'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
-       //   } ,
-       //   url: route,
-       //   data: form_data.serialize(),
-       //   method: "post",
-       //   success: function (Response){
-       //
-       //     console.log(Response);
-       //
-       //   },
-       //   error: function(error){
-       //     console.log('errore controller');
-       //   }
-       // })
-       e.preventDefault();
    });

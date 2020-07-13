@@ -569,15 +569,46 @@
   margin: auto;
 }
 
+.containeredit:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
 .containeredit .dati {
   margin-top: 20px;
+  width: 50%;
+  float: left;
+  border-right: 1px solid black;
+  padding-right: 30px;
 }
 
 .containeredit .dati .valore {
   padding: 5px;
 }
 
-.containeredit .dati .valore label {
+.containeredit .dati .valore .none {
+  display: none;
+}
+
+.containeredit .dati .valore button {
+  float: right;
+  margin: 10px;
+  padding: 7px 10px;
+  border: 1px solid black;
+}
+
+.containeredit .dati .valore button:hover {
+  cursor: pointer;
+}
+
+.containeredit .dati .valore .label {
+  width: 49%;
+  display: inline-block;
+  text-align: center;
+}
+
+.containeredit .dati .valore .label label {
   font-size: 18px;
 }
 
@@ -589,10 +620,63 @@
   border-bottom: 2px solid black;
   padding: 3px;
   border-radius: 5px;
+  display: inline-block;
+  width: 49%;
 }
 
 .containeredit .dati h3 {
   padding-bottom: 15px;
+}
+
+.containeredit .servizi {
+  padding-left: 30px;
+  float: left;
+  width: 50%;
+  height: 500px;
+}
+
+.containeredit .servizi .servizietto {
+  padding: 8px;
+}
+
+.containeredit .servizi .servizietto span {
+  font-size: 22px;
+  padding: 10px;
+}
+
+.containeredit .servizi h2 {
+  font-size: 22px;
+  margin-top: 15px;
+}
+
+.containeredit .servizi label {
+  padding: 5px;
+  font-size: 23px;
+  margin-bottom: 20px;
+}
+
+.containeredit .bottoni {
+  text-align: center;
+}
+
+.containeredit .bottoni button {
+  margin: 10px;
+  padding: 10px 12px;
+  font-size: 18px;
+  border: none;
+  border-radius: 8px;
+  border-top: 2px solid black;
+  border-bottom: 2px solid black;
+}
+
+.containeredit .bottoni button:hover {
+  background-color: lightblue;
+  cursor: pointer;
+}
+
+.containeredit .bottoni .red:hover {
+  background-color: red;
+  cursor: pointer;
 }
 
 * {

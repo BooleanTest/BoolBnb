@@ -48,7 +48,9 @@ class profiloController extends Controller
         'city' => 'required',
         'nation' => 'required',
         "image" => "required",
-        'services' => 'nullable'
+        'services' => 'nullable',
+        'latitude' => 'required',
+        'longitude' => 'required'
       ]);
 
       $apartments = Apartment::findOrFail($id);
@@ -96,6 +98,7 @@ class profiloController extends Controller
     // per nuovo appartamento (store)
     public function store(Request $request){
 
+
       $userId = Auth::id();
 
       $validateData = $request -> validate([
@@ -108,7 +111,9 @@ class profiloController extends Controller
         "image" => "required",
         "nation" => 'required',
         "city" => 'required',
-        'services' => 'nullable'
+        'services' => 'nullable',
+        'latitude' => 'required',
+        'longitude' => 'required'
       ]);
 
       // TODO: sistemare con TomTom latitudine e longitudine
