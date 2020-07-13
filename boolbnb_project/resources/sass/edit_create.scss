@@ -8,6 +8,18 @@
   }
   .dati{
     .valore{
+      .none{
+        display: none;
+      }
+      button{
+        &:hover{
+          cursor: pointer;
+        }
+        float: right;
+        margin: 10px;
+        padding: 7px 10px;
+        border: 1px solid black;
+      }
       .label{
         label{
           font-size: 18px;

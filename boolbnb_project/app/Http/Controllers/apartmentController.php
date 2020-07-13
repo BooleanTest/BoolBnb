@@ -47,10 +47,12 @@ class apartmentController extends Controller
 
     $messagge -> save();
 
-    // redirect 
+    // redirect
     return redirect()->route('show-apartment', [$id]) ->withSuccess("Messaggio correttamente inviato");
 
     // return back()->withInput()-> withSuccess("Messaggio correttamente inviato");
+
+
 
   }
 

@@ -587,6 +587,21 @@
   padding: 5px;
 }
 
+.containeredit .dati .valore .none {
+  display: none;
+}
+
+.containeredit .dati .valore button {
+  float: right;
+  margin: 10px;
+  padding: 7px 10px;
+  border: 1px solid black;
+}
+
+.containeredit .dati .valore button:hover {
+  cursor: pointer;
+}
+
 .containeredit .dati .valore .label {
   width: 49%;
   display: inline-block;

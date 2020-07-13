@@ -24,6 +24,8 @@ $(document).ready(function(){
            // document.getElementById("latitude").innerHTML =  latitude ;
            $('#latitude').val(latitude);
            $('#longitude').val(longitude);
+           $('#plong').text(longitude);
+           $('#plat').text(latitude);
 
          },
          error: function(error){

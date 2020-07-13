@@ -28,3 +28,7 @@
 
   // invio messaggio
   Route::post('/store-messagge/{id}', 'apartmentController@messagges')->name('store-messagge');
+
+  Route::get('/view-messagge/{id}', function () {
+    return view('view-messagge');
+  });

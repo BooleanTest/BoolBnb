@@ -51,28 +51,44 @@
         <br>
       </div>
       <div class="valore">
-        <label for="city">Città : </label>
+        <div class="label">
+          <label for="city">Città : </label>
+        </div>
         <input type="text" class="municipality" name="city" value="{{ old('city', $apartments -> city)}}">
         <br>
       </div>
       <div class="valore">
-        <label for="address">Indirizzo : </label>
+        <div class="label">
+          <label for="address">Indirizzo : </label>
+        </div>
         <input type="text" class="streetName" name="address" value="{{ old('address', $apartments -> address) }}">
         <br>
       </div>
       <div class="valore">
-        <label for="number">Numero civico : </label>
+        <div class="label">
+          <label for="number">Numero civico : </label>
+        </div>
         <input type="text" class="streetNumber" name="number" value="{{ old('number', $apartments -> number) }}">
         <br>
       </div>
+      <div class="valore">
+        <div class="label">
+          <label for="latitude">Latitudine : </label>
+        </div>
+        <span id="plat"></span>
+        <input id="latitude" type="text" name="latitude" value="{{ old('number', $apartments -> latitude) }}" class="none">
+        <br>
+      </div>
+      <div class="valore">
+        <div class="label">
+          <label for="longitude">Longitudine : </label>
+        </div>
+        <span id="plong"></span>
+        <input id="longitude" type="text" name="longitude" value="{{ old('number', $apartments -> longitude) }}" class="none">
+        <br>
+        <button type="button" id="calcolo" name="calcolo">Calcola</button><br>
+      </div>
 
-      <button type="button" id="calcolo" name="calcolo">Calcola</button><br>
-
-      <label for="latitude">latitude</label>
-      <input id="latitude" type="text" name="latitude" value="{{ old('number', $apartments -> latitude) }}"><br>
-
-      <label for="longitude">longitude</label>
-      <input id="longitude" type="text" name="longitude" value="{{ old('number', $apartments -> longitude) }}">
       <br> <br>
 
 
