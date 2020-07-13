@@ -96,6 +96,7 @@ class profiloController extends Controller
     // per nuovo appartamento (store)
     public function store(Request $request){
 
+
       $userId = Auth::id();
 
       $validateData = $request -> validate([

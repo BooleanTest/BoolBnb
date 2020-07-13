@@ -12,7 +12,8 @@
     @endforeach
   @endif
 
-  <form id='form' data-route="{{route('store-apartment')}}" method='post'>
+  <form id='form' data-route="{{route('store-apartment')}}"  method='post'>
+
     @csrf
     @method('post')
 
@@ -41,18 +42,18 @@
 
     <br>
 
-    <input type="text" class="municipality" name="city" value="{{ old('city')}}">
     <label for="city">Città</label>
+    <input type="text" class="municipality" name="city" value="{{ old('city')}}">
 
     <br>
 
-    <input type="text" class="streetName" name="address" value="{{ old('address')}}">
     <label for="address">Indirizzo</label>
+    <input type="text" class="streetName" name="address" value="{{ old('address')}}">
 
     <br>
 
-    <input type="text" class="streetNumber" name="number" value="{{ old('number')}}">
     <label for="number">Numero civico</label>
+    <input type="text" class="streetNumber" name="number" value="{{ old('number')}}">
 
     <br>
 
