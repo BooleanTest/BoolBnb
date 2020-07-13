@@ -1,23 +1,19 @@
 <div class="search-h-bar">
 
-  <form class="search-h-form" action="" method="">
-    {{-- @csrf
-    @method('POST') --}}
 
-    <div class="search-h-box">
-
-      <label for="">
-        <input id="h-search-input" type="text" name="" value="" placeholder="Dove vuoi andare?">
-      </label>
-
-      <button type="" id="search-button">
-        <a href="">
-          <i class="fas fa-plane fa-4x"></i>
-        </a>
-      </button>
-
+<form action="/search" method="POST" role="search">
+    {{ csrf_field() }}
+    <div class="input-group">
+        <input id="query" type="text" class="form-control" name="q"
+            placeholder="Search users">
+        <input id='lat' type="text" name="lat" value="">
+        <input id='long' type="text" name="long" value="">
+            <button type="submit" class="btn btn-default">
+                CERCA
+            </button>
+        </span>
     </div>
-
-  </form>
-
+</form>
 </div>
+
+<p>fdsa</p>

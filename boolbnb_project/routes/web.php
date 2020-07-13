@@ -20,7 +20,7 @@
   Route::get('/create-apartment', 'profiloController@create')->name("create-apartment");
   Route::post('/store-apartment', 'profiloController@store')->name("store-apartment");
 
-// TODO: 
+// TODO:
   // ricerca appartamento
   // Route::post('/search-apartment', 'apartmentController@search')->name("search-apartment");
 
@@ -36,3 +36,6 @@
   Route::get('/view-messagge/{id}', function () {
     return view('view-messagge');
   });
+
+
+  Route::any('/search', 'apartmentController@search')->name('search');

@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 
 
+
 use App\User;
 use App\Apartment;
 use App\Service;
@@ -57,5 +58,41 @@ class apartmentController extends Controller
   }
 
 
-  
+  // rotta search
+  public function search(Request $request){
+
+
+
+
+    $lat = $request -> lat;
+    $lng = $request -> long;
+    $q = $request -> q;
+
+    $apartments = Apartment::selectRaw('id, title, (
+   3959 * acos (
+     cos ( radians(' . $lat . ') )
+     * cos( radians( latitude ) )
+     * cos( radians( longitude ) - radians(' . $lng . ') )
+     + sin ( radians(' . $lat . ') )
+     * sin( radians( latitude ) )
+   )
+ ) AS distance')->orderBy('distance')->having('distance', '<', 100)->paginate(50);
+
+
+
+    if(count($apartments) > 0){
+      // return view('search-apartment')->withDetails('apartments')->withQuery ( $q );
+      return view('search-apartment', compact('apartments'));
+
+
+
+
+    } else {
+      return view ('search-apartment')->withMessage('No Details found. Try to search again !');
+    };
+
+     // return view('search-apartment', compact('apartments'));
+  }
+
+
 }

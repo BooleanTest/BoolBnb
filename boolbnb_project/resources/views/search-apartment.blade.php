@@ -5,7 +5,7 @@
 
 
     <form class="search-h-form" action="" method="post">
-      
+
       <div class="search-h-bar">
 
         <div class="search-filter">
@@ -21,6 +21,7 @@
 
         </div>
 
+      </div>
       <div class="search-h-box">
 
         <label for="">
@@ -58,6 +59,18 @@
 
     </form>
 
-  </div>
+    @if (@isset($apartments))
+      <div class="ciao">
+        @foreach ($apartments as $apartment)
+          <a href="{{route('show-apartment', $apartment -> id)}}">{{$apartment -> title}}</a> <br>
+        @endforeach
+      </div>
+    @else
+      Nessun appartamento presente
+    @endif
+
+
+
+
 
 @endsection
