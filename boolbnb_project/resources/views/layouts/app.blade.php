@@ -27,10 +27,20 @@
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
 </head>
 <body>
+  <div class="sfondo">
+
+  </div>
+  @include ('header')
     <div id="app">
+
         <main class="py-4">
+
             @yield('content')
+
         </main>
+
     </div>
+    @include ('footer')
+
 </body>
 </html>

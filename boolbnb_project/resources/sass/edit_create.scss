@@ -6,6 +6,10 @@
     display: table;
     clear: both;
   }
+  h2{
+    font-size: 30px;
+    margin-bottom: 10px;
+  }
   .dati{
     .valore{
       .none{
@@ -32,8 +36,8 @@
         font-size: 18px;
         outline: none;
         border: none;
-        border-top: 2px solid black;
-        border-bottom: 2px solid black;
+        border-top: 1px solid black;
+        border-bottom: 1px solid black;
         padding: 3px;
         border-radius: 5px;
         display: inline-block;
@@ -44,6 +48,7 @@
     margin-top: 20px;
     h3{
       padding-bottom: 15px;
+      font-size: 22px;
     }
     width: 50%;
     float: left;
@@ -75,8 +80,9 @@
   .bottoni{
     button{
       &:hover{
-        background-color: lightblue;
+        background-color: #30e351;
         cursor: pointer;
+        transition: 1s;
       }
       margin: 10px;
       padding: 10px 12px;
@@ -85,11 +91,13 @@
       border-radius: 8px;
       border-top: 2px solid black;
       border-bottom: 2px solid black;
+      transition: 1s;
     }
     .red{
       &:hover{
-        background-color: red;
+        background-color: #f57878;
         cursor: pointer;
+        transition: 1s;
       }
     }
     text-align: center;
@@ -99,4 +107,8 @@
   padding: 25px;
   width: 75%;
   margin: auto;
+  margin-top: 150px;
+  background-image: url(https://us.123rf.com/450wm/kav777/kav7771503/kav777150300019/37670430-asse-di-legno-di-bamb%C3%B9-trama-sfondo-bianco.jpg?ver=6);
+  background-size: cover;
+  opacity: 0.95;
 }

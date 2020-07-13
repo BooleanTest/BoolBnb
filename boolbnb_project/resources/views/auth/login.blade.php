@@ -1,4 +1,4 @@
-@include('header')
+
 @extends('layouts.app')
 
 @section('content')
@@ -42,9 +42,9 @@
           </span><br>
           @enderror
           @if (Route::has('password.request'))
-          <a class="btn btn-link" href="{{ route('password.request') }}">
+          <!-- <a class="btn btn-link" href="{{ route('password.request') }}">
             {{ __('Password dimenticata?') }}
-          </a>
+          </a> -->
           @endif
         </div>
 

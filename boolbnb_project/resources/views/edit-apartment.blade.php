@@ -1,4 +1,4 @@
-@include('header')
+
 @extends('layouts.app')
 
 @section('content')
@@ -73,9 +73,16 @@
       </div>
       <div class="valore">
         <div class="label">
+          <label for="image">Immagine : </label>
+        </div>
+        <input type="text" name="image" value="{{ old('image', $apartments -> image) }}">
+        <br>
+      </div>
+      <div class="valore">
+        <div class="label">
           <label for="latitude">Latitudine : </label>
         </div>
-        <span id="plat"></span>
+        <span id="plat">{{ old('number', $apartments -> latitude) }}</span>
         <input id="latitude" type="text" name="latitude" value="{{ old('number', $apartments -> latitude) }}" class="none">
         <br>
       </div>
@@ -83,7 +90,7 @@
         <div class="label">
           <label for="longitude">Longitudine : </label>
         </div>
-        <span id="plong"></span>
+        <span id="plong">{{ old('number', $apartments -> longitude) }}</span>
         <input id="longitude" type="text" name="longitude" value="{{ old('number', $apartments -> longitude) }}" class="none">
         <br>
         <button type="button" id="calcolo" name="calcolo">Calcola</button><br>
@@ -91,16 +98,8 @@
 
       <br> <br>
 
-      <p id='plong'>{{ old('number', $apartments -> longitude) }}</p>
-      <p id='plat'>{{ old('number', $apartments -> latitude) }}</p>
 
-      <div class="valore">
-        <div class="label">
-          <label for="image">Immagine </label>
-        </div>
-        <input type="file" name="image" value="{{ old('image', $apartments -> image) }}">
-        <br>
-      </div>
+
     </div>
     <div class="servizi">
       {{-- {{dd($apartments -> services)}} --}}
