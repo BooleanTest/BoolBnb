@@ -12,7 +12,7 @@
     @endforeach
   @endif
 
-  <form id='form' data-route="{{route('store-apartment')}}"  method='post'>
+  <form id='form' action="{{route('store-apartment')}}"  method='post'>
 
     @csrf
     @method('post')

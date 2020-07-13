@@ -93,7 +93,58 @@
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-throw new Error("Module build failed (from ./node_modules/babel-loader/lib/index.js):\nSyntaxError: C:\\Users\\alessandro\\Desktop\\ALESSAND\\BOOLEAN\\progettone\\BoolBnb\\boolbnb_project\\resources\\js\\geocoding.js: Unexpected token (3:0)\n\n\u001b[0m \u001b[90m 1 | \u001b[39m$(document)\u001b[33m.\u001b[39mready(\u001b[36mfunction\u001b[39m(){\u001b[0m\n\u001b[0m \u001b[90m 2 | \u001b[39m\u001b[0m\n\u001b[0m\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 3 | \u001b[39m\u001b[33m<<\u001b[39m\u001b[33m<<\u001b[39m\u001b[33m<<\u001b[39m\u001b[33m<\u001b[39m \u001b[33mUpdated\u001b[39m upstream\u001b[0m\n\u001b[0m \u001b[90m   | \u001b[39m\u001b[31m\u001b[1m^\u001b[22m\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m 4 | \u001b[39m     $(\u001b[32m'#calcolo'\u001b[39m)\u001b[33m.\u001b[39mclick(\u001b[36mfunction\u001b[39m(e){\u001b[0m\n\u001b[0m \u001b[90m 5 | \u001b[39m\u001b[0m\n\u001b[0m \u001b[90m 6 | \u001b[39m       \u001b[36mvar\u001b[39m streetName \u001b[33m=\u001b[39m $(\u001b[32m\".streetName\"\u001b[39m)\u001b[33m.\u001b[39mval()\u001b[33m;\u001b[39m\u001b[0m\n    at Parser._raise (C:\\Users\\alessandro\\Desktop\\ALESSAND\\BOOLEAN\\progettone\\BoolBnb\\boolbnb_project\\node_modules\\@babel\\parser\\lib\\index.js:757:17)\n    at Parser.raiseWithData (C:\\Users\\alessandro\\Desktop\\ALESSAND\\BOOLEAN\\progettone\\BoolBnb\\boolbnb_project\\node_modules\\@babel\\parser\\lib\\index.js:750:17)\n    at Parser.raise (C:\\Users\\alessandro\\Desktop\\ALESSAND\\BOOLEAN\\progettone\\BoolBnb\\boolbnb_project\\node_modules\\@babel\\parser\\lib\\index.js:744:17)\n    at Parser.unexpected (C:\\Users\\alessandro\\Desktop\\ALESSAND\\BOOLEAN\\progettone\\BoolBnb\\boolbnb_project\\node_modules\\@babel\\parser\\lib\\index.js:8834:16)\n    at Parser.parseExprAtom (C:\\Users\\alessandro\\Desktop\\ALESSAND\\BOOLEAN\\progettone\\BoolBnb\\boolbnb_project\\node_modules\\@babel\\parser\\lib\\index.js:10169:20)\n    at Parser.parseExprSubscripts (C:\\Users\\alessandro\\Desktop\\ALESSAND\\BOOLEAN\\progettone\\BoolBnb\\boolbnb_project\\node_modules\\@babel\\parser\\lib\\index.js:9688:23)\n    at Parser.parseMaybeUnary (C:\\Users\\alessandro\\Desktop\\ALESSAND\\BOOLEAN\\progettone\\BoolBnb\\boolbnb_project\\node_modules\\@babel\\parser\\lib\\index.js:9668:21)\n    at Parser.parseExprOps (C:\\Users\\alessandro\\Desktop\\ALESSAND\\BOOLEAN\\progettone\\BoolBnb\\boolbnb_project\\node_modules\\@babel\\parser\\lib\\index.js:9538:23)\n    at Parser.parseMaybeConditional (C:\\Users\\alessandro\\Desktop\\ALESSAND\\BOOLEAN\\progettone\\BoolBnb\\boolbnb_project\\node_modules\\@babel\\parser\\lib\\index.js:9511:23)\n    at Parser.parseMaybeAssign (C:\\Users\\alessandro\\Desktop\\ALESSAND\\BOOLEAN\\progettone\\BoolBnb\\boolbnb_project\\node_modules\\@babel\\parser\\lib\\index.js:9466:21)\n    at Parser.parseExpression (C:\\Users\\alessandro\\Desktop\\ALESSAND\\BOOLEAN\\progettone\\BoolBnb\\boolbnb_project\\node_modules\\@babel\\parser\\lib\\index.js:9418:23)\n    at Parser.parseStatementContent (C:\\Users\\alessandro\\Desktop\\ALESSAND\\BOOLEAN\\progettone\\BoolBnb\\boolbnb_project\\node_modules\\@babel\\parser\\lib\\index.js:11332:23)\n    at Parser.parseStatement (C:\\Users\\alessandro\\Desktop\\ALESSAND\\BOOLEAN\\progettone\\BoolBnb\\boolbnb_project\\node_modules\\@babel\\parser\\lib\\index.js:11203:17)\n    at Parser.parseBlockOrModuleBlockBody (C:\\Users\\alessandro\\Desktop\\ALESSAND\\BOOLEAN\\progettone\\BoolBnb\\boolbnb_project\\node_modules\\@babel\\parser\\lib\\index.js:11778:25)\n    at Parser.parseBlockBody (C:\\Users\\alessandro\\Desktop\\ALESSAND\\BOOLEAN\\progettone\\BoolBnb\\boolbnb_project\\node_modules\\@babel\\parser\\lib\\index.js:11764:10)\n    at Parser.parseBlock (C:\\Users\\alessandro\\Desktop\\ALESSAND\\BOOLEAN\\progettone\\BoolBnb\\boolbnb_project\\node_modules\\@babel\\parser\\lib\\index.js:11748:10)\n    at Parser.parseFunctionBody (C:\\Users\\alessandro\\Desktop\\ALESSAND\\BOOLEAN\\progettone\\BoolBnb\\boolbnb_project\\node_modules\\@babel\\parser\\lib\\index.js:10751:24)\n    at Parser.parseFunctionBodyAndFinish (C:\\Users\\alessandro\\Desktop\\ALESSAND\\BOOLEAN\\progettone\\BoolBnb\\boolbnb_project\\node_modules\\@babel\\parser\\lib\\index.js:10734:10)\n    at C:\\Users\\alessandro\\Desktop\\ALESSAND\\BOOLEAN\\progettone\\BoolBnb\\boolbnb_project\\node_modules\\@babel\\parser\\lib\\index.js:11918:12\n    at Parser.withTopicForbiddingContext (C:\\Users\\alessandro\\Desktop\\ALESSAND\\BOOLEAN\\progettone\\BoolBnb\\boolbnb_project\\node_modules\\@babel\\parser\\lib\\index.js:11078:14)\n    at Parser.parseFunction (C:\\Users\\alessandro\\Desktop\\ALESSAND\\BOOLEAN\\progettone\\BoolBnb\\boolbnb_project\\node_modules\\@babel\\parser\\lib\\index.js:11917:10)\n    at Parser.parseFunctionExpression (C:\\Users\\alessandro\\Desktop\\ALESSAND\\BOOLEAN\\progettone\\BoolBnb\\boolbnb_project\\node_modules\\@babel\\parser\\lib\\index.js:10210:17)\n    at Parser.parseExprAtom (C:\\Users\\alessandro\\Desktop\\ALESSAND\\BOOLEAN\\progettone\\BoolBnb\\boolbnb_project\\node_modules\\@babel\\parser\\lib\\index.js:10093:21)\n    at Parser.parseExprSubscripts (C:\\Users\\alessandro\\Desktop\\ALESSAND\\BOOLEAN\\progettone\\BoolBnb\\boolbnb_project\\node_modules\\@babel\\parser\\lib\\index.js:9688:23)\n    at Parser.parseMaybeUnary (C:\\Users\\alessandro\\Desktop\\ALESSAND\\BOOLEAN\\progettone\\BoolBnb\\boolbnb_project\\node_modules\\@babel\\parser\\lib\\index.js:9668:21)\n    at Parser.parseExprOps (C:\\Users\\alessandro\\Desktop\\ALESSAND\\BOOLEAN\\progettone\\BoolBnb\\boolbnb_project\\node_modules\\@babel\\parser\\lib\\index.js:9538:23)\n    at Parser.parseMaybeConditional (C:\\Users\\alessandro\\Desktop\\ALESSAND\\BOOLEAN\\progettone\\BoolBnb\\boolbnb_project\\node_modules\\@babel\\parser\\lib\\index.js:9511:23)\n    at Parser.parseMaybeAssign (C:\\Users\\alessandro\\Desktop\\ALESSAND\\BOOLEAN\\progettone\\BoolBnb\\boolbnb_project\\node_modules\\@babel\\parser\\lib\\index.js:9466:21)\n    at Parser.parseExprListItem (C:\\Users\\alessandro\\Desktop\\ALESSAND\\BOOLEAN\\progettone\\BoolBnb\\boolbnb_project\\node_modules\\@babel\\parser\\lib\\index.js:10839:18)\n    at Parser.parseCallExpressionArguments (C:\\Users\\alessandro\\Desktop\\ALESSAND\\BOOLEAN\\progettone\\BoolBnb\\boolbnb_project\\node_modules\\@babel\\parser\\lib\\index.js:9882:22)\n    at Parser.parseSubscript (C:\\Users\\alessandro\\Desktop\\ALESSAND\\BOOLEAN\\progettone\\BoolBnb\\boolbnb_project\\node_modules\\@babel\\parser\\lib\\index.js:9782:31)\n    at Parser.parseSubscripts (C:\\Users\\alessandro\\Desktop\\ALESSAND\\BOOLEAN\\progettone\\BoolBnb\\boolbnb_project\\node_modules\\@babel\\parser\\lib\\index.js:9711:19)\n    at Parser.parseExprSubscripts (C:\\Users\\alessandro\\Desktop\\ALESSAND\\BOOLEAN\\progettone\\BoolBnb\\boolbnb_project\\node_modules\\@babel\\parser\\lib\\index.js:9694:17)\n    at Parser.parseMaybeUnary (C:\\Users\\alessandro\\Desktop\\ALESSAND\\BOOLEAN\\progettone\\BoolBnb\\boolbnb_project\\node_modules\\@babel\\parser\\lib\\index.js:9668:21)\n    at Parser.parseExprOps (C:\\Users\\alessandro\\Desktop\\ALESSAND\\BOOLEAN\\progettone\\BoolBnb\\boolbnb_project\\node_modules\\@babel\\parser\\lib\\index.js:9538:23)\n    at Parser.parseMaybeConditional (C:\\Users\\alessandro\\Desktop\\ALESSAND\\BOOLEAN\\progettone\\BoolBnb\\boolbnb_project\\node_modules\\@babel\\parser\\lib\\index.js:9511:23)");
+$(document).ready(function () {
+  $('#calcolo').click(function (e) {
+    var streetName = $(".streetName").val();
+    var streetNumber = $(".streetNumber").val();
+    var municipality = $(".municipality").val();
+    $.ajax({
+      url: 'https://api.tomtom.com/search/2/structuredGeocode.json?key=HPIuQNQKJvFfEyPKVEciiGGYx8Fs3ptB&countryCode=it&streetNumber=<streetNumber>&streetName=<streetName>&municipality=<municipality>',
+      data: {
+        streetNumber: streetName,
+        streetName: streetNumber,
+        municipality: municipality
+      },
+      method: 'get',
+      success: function success(data) {
+        console.log('sono la latitudine = ' + data.results[0].position.lat + 'sono la longitudine = ' + data.results[0].position.lon);
+        var longitude = data.results[0].position.lon;
+        var latitude = data.results[0].position.lat;
+        var position = [longitude, latitude]; // document.getElementById("latitude").innerHTML =  latitude ;
+
+        $('#latitude').val(latitude);
+        $('#longitude').val(longitude);
+      },
+      error: function error(_error) {
+        console.log('errore dati');
+      }
+    });
+  }); // $('#form').submit(function(e){
+  //
+  //
+  //   var route = $('#form').data('route');
+  //   var form_data = $(this);
+  //
+  //   $.ajax({
+  //     headers: {
+  //       'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+  //     } ,
+  //     url: route,
+  //     data: form_data.serialize(),
+  //     method: "post",
+  //     success: function (Response){
+  //       console.log(Response);
+  //
+  //     },
+  //     error: function(error){
+  //       console.log('errore controller');
+  //     }
+  //   })
+  //
+  //   e.preventDefault();
+  //
+  // })
+});
 
 /***/ }),
 

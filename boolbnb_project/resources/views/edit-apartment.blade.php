@@ -42,19 +42,30 @@
       </div>
       <div class="valore">
         <label for="city">Città : </label>
-        <input type="text" name="city" value="{{ old('city', $apartments -> city)}}">
+        <input type="text" class="municipality" name="city" value="{{ old('city', $apartments -> city)}}">
         <br>
       </div>
       <div class="valore">
         <label for="address">Indirizzo : </label>
-        <input type="text" name="address" value="{{ old('address', $apartments -> address) }}">
+        <input type="text" class="streetName" name="address" value="{{ old('address', $apartments -> address) }}">
         <br>
       </div>
       <div class="valore">
         <label for="number">Numero civico : </label>
-        <input type="text" name="number" value="{{ old('number', $apartments -> number) }}">
+        <input type="text" class="streetNumber" name="number" value="{{ old('number', $apartments -> number) }}">
         <br>
       </div>
+
+      <button type="button" id="calcolo" name="calcolo">Calcola</button><br>
+
+      <label for="latitude">latitude</label>
+      <input id="latitude" type="text" name="latitude" value="{{ old('number', $apartments -> latitude) }}"><br>
+
+      <label for="longitude">longitude</label>
+      <input id="longitude" type="text" name="longitude" value="{{ old('number', $apartments -> longitude) }}">
+      <br> <br>
+
+
       <div class="valore">
         <label for="image">Immagine </label>
         <input type="text" name="image" value="{{ old('image', $apartments -> image) }}">
@@ -90,5 +101,7 @@
   </form>
 
 </div>
+
+<script src="{{ asset('js/geocoding.js') }}" defer></script>
 
 @endsection
