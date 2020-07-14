@@ -129,16 +129,18 @@ class apartmentController extends Controller
           * sin( radians( latitude ) )
           )
           ) AS distance')->orderBy('distance')->having('distance', '<', 20)->paginate(50);
-      } else {
+      }
+      // else if(!isset($lat) || !isset($lng))
+      // $apartments = Apartment::selectRaw('id AS apartment_id, title, rooms, bathrooms, service_id, apartment_id')
+      //               ->join('apartment_service', 'apartment_service.apartment_id', '=', 'apartments.id')
+      //               ->where('rooms', $rooms)
+      //               ->where('bathrooms', $bathrooms)
+      //               ->whereIn('service_id', $srvcs );
+
+        else {
           $apartments = [];
         }
 
-        // else if(!isset($lat) || !isset($lng))
-        // $apartments = Apartment::selectRaw('id AS apartment_id, title, rooms, bathrooms, service_id, apartment_id')
-        //               ->join('apartment_service', 'apartment_service.apartment_id', '=', 'apartments.id')
-        //               ->where('rooms', $rooms)
-        //               ->where('bathrooms', $bathrooms)
-        //               ->whereIn('service_id', $srvcs );
 
 
     if(count($apartments) > 0){

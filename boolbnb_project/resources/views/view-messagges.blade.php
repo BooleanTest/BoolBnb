@@ -6,7 +6,11 @@
 <div class="container">
   <h1>Lista Messaggi</h1>
 
-  {{$user -> }}
+@foreach ($messages as $message)
+
+  {{$message -> mail}}
+
+@endforeach
 </div>
 
 

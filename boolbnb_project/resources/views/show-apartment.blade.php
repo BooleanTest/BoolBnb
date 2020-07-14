@@ -29,7 +29,7 @@
           </div>
         </div>
         <a href="{{ route('edit-apartment', $apartments -> id ) }}"><button type="button" name="button" class="right ">Modifica</button></a>
-
+    
 
 
         @endif

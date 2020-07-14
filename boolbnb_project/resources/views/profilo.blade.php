@@ -12,6 +12,7 @@
       </div>
       <div class="floatr">
         <a href="{{route("create-apartment")}}"><button type="button" name="button">INSERISCI APPARTAMENTO</button></a>
+            <a href="{{route('view-messagges', Auth::user() -> id)}}">messaggi</a>
       </div>
 
     </div>
