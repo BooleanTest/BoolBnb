@@ -23,8 +23,9 @@ class profiloController extends Controller
     public function profilo($id){
 
       $user = User::findOrFail($id);
+      $messagge = Message::all();
 
-      return view('profilo', compact('user'));
+      return view('profilo', compact('user', 'messagge'));
     }
 
     // modifica appartamento
@@ -150,6 +151,21 @@ class profiloController extends Controller
       return view('stats_apartment', compact('apartments'));
 
     }
+
+    //messaggi
+    public function view($id){
+
+      $apartments = Apartment::all();
+      // SELECT user_id, mail, text FROM apartments join messages ON messages.apartment_id = apartments.id JOIN users ON users.id = apartments.user_id WHERE user_id = 5
+
+      $messages = Apartment::selectRaw('user_id, mail, text')
+                  ->join('messages', 'messages.apartment_id', '=', 'apartments.id')
+                  ->join('users', 'users.id', '=', 'apartments.user_id')
+                  ->where('user_id', $id) -> get();
+
+      return view('view-messagges', compact('messages'));
+    }
+
 
 
 

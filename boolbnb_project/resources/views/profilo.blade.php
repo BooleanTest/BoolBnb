@@ -11,8 +11,8 @@
         <h1>Benvenuto, ecco la lista degli appartamenti da lei inseriti</h1>
       </div>
       <div class="floatr">
-        <a href="{{route("view-messagges")}}" class="messagge"> <button type="button" name="button"><i class="far fa-envelope"></i></button> </a>
         <a href="{{route("create-apartment")}}"><button type="button" name="button">INSERISCI APPARTAMENTO</button></a>
+            <a href="{{route('view-messagges', Auth::user() -> id)}}">messaggi</a>
       </div>
 
     </div>

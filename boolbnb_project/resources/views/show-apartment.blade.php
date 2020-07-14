@@ -3,11 +3,12 @@
 
 @section('content')
 
-  @if (session("success"))
-    <p>{{session("success")}}</p>
-  @endif
+
 
 <div class="container_show">
+  @if (session("success"))
+    <p class="success">{{session("success")}}</p>
+  @endif
   <div class="margin">
     <div class="nave">
       <div class="scritte">
@@ -28,7 +29,7 @@
           </div>
         </div>
         <a href="{{ route('edit-apartment', $apartments -> id ) }}"><button type="button" name="button" class="right ">Modifica</button></a>
-
+    
 
 
         @endif
