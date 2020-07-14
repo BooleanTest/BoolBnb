@@ -57,13 +57,10 @@ class apartmentController extends Controller
 
   }
 
-
-<<<<<<< Updated upstream
   // rotta search
   public function search(Request $request){
 
-
-
+    $services = Service::all();
 
     $lat = $request -> lat;
     $lng = $request -> long;
@@ -83,19 +80,16 @@ class apartmentController extends Controller
 
     if(count($apartments) > 0){
       // return view('search-apartment')->withDetails('apartments')->withQuery ( $q );
-      return view('search-apartment', compact('apartments'));
+      return view('search-apartment', compact('apartments', 'services'));
 
 
 
 
     } else {
-      return view ('search-apartment')->withMessage('No Details found. Try to search again !');
+      return view ('search-apartment', compact('services'))->withMessage('No Details found. Try to search again !');
     };
 
      // return view('search-apartment', compact('apartments'));
   }
-
-=======
->>>>>>> Stashed changes
 
 }
