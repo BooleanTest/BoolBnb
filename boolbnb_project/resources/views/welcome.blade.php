@@ -14,7 +14,6 @@
     @include ('header')
 
 
-
     @include('searchbar')
 
 

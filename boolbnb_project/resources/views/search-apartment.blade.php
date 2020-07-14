@@ -1,17 +1,19 @@
+@include('header')
+
 @extends('layouts.app')
 @section('content')
   <div class="search-section">
-
-    <form class="" action="" method="post">
-
-      <div class="searchbar">
-        <label for="searchbox"></label>
+    <form class="" action="{{route('search')}}" method="post">
+      {{ csrf_field() }}
+      <div class="searchbar-section">
+        <label for="searchbox">cerca</label>
         <input id="query" type="text" name="searchbox" value="">
-        <button type="submit" name="button">
-          <i class="fas fa-search"></i>
-        </button>
-      </div>
 
+        <button type="submit" name="button">Cerca</button>
+
+        <input id='lat' type="text" name="lat" value="">
+        <input id='long' type="text" name="long" value="">
+      </div>
       <div class="filters-section">
         <div class="filters-number">
           <label for="distance">Distanza</label>
@@ -41,11 +43,13 @@
     @if (@isset($apartments))
       <div class="result-apartment">
         @foreach ($apartments as $apartment)
-          <a href="{{route('show-apartment', $apartment -> id)}}">{{$apartment -> title}}</a> <br>
+          <a href="{{route('show-apartment', $apartment -> apartment_id)}}">{{$apartment -> title}}</a> <br>
         @endforeach
       </div>
     @else
       Nessun appartamento presente
     @endif
   </div>
+
+  <script src="{{ asset('js/search.js') }}" defer></script>
 @endsection

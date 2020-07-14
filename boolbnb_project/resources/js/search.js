@@ -24,9 +24,6 @@ $(document).ready(function(){
             $('#lat').val(latitude);
             $('#long').val(longitude);
 
-            
-
-
         },
         error: function(error){
 
