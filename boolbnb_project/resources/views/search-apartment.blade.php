@@ -1,37 +1,45 @@
 @extends('layouts.app')
 @section('content')
   <div class="search-section">
+
     <form class="" action="" method="post">
-      <div class="searchbar-section">
-        <label for="searchbox">cerca</label>
+
+      <div class="searchbar">
+        <label for="searchbox"></label>
         <input id="query" type="text" name="searchbox" value="">
-        <button type="submit" name="button">Cerca</button>
+        <button type="submit" name="button">
+          <i class="fas fa-search"></i>
+        </button>
       </div>
+
       <div class="filters-section">
         <div class="filters-number">
           <label for="distance">Distanza</label>
           <input type="number" name="distance" value="">
           <label for="bathrooms">Bagni</label>
-          <input type="number" name="bathrooms" min="1" value="0">
+          <input type="number" name="bathrooms" min="0" value="0">
           <label for="rooms">Stanze</label>
-          <input type="number" name="rooms" min="1" value="0">
+          <input type="number" name="rooms" min="0" value="0">
         </div>
+
         <div class="filters-checkbox">
-          <label for="services[]"></label> <br>
+          <label for="services[]"></label>
           @foreach ($services as $service)
           <div class="service">
-            <span>{{$service -> name}}</span>
+            <div>{{$service -> name}}</div>
             <input  type="checkbox" name="services[]" value="{{$service -> id}}"> <br>
           </div>
           @endforeach
-             <br>
         </div>
+
       </div>
+
     </form>
+
   </div>
   <div class="results-section">
     @if (@isset($apartments))
-      <div class="ciao">
+      <div class="result-apartment">
         @foreach ($apartments as $apartment)
           <a href="{{route('show-apartment', $apartment -> id)}}">{{$apartment -> title}}</a> <br>
         @endforeach

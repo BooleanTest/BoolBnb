@@ -256,7 +256,11 @@
   position: fixed;
   top: 0;
   z-index: 2;
-  background-image: url(https://www.crwflags.com/fotw/images/u/us_twl-1.gif);
+  border-right: 1px solid white;
+  border-left: 1px solid white;
+  border-top: 2px solid rgba(0, 0, 0, 0.3);
+  border-bottom: 2px solid rgba(0, 0, 0, 0.3);
+  border-radius: 30px;
   background-size: contain;
 }
 
@@ -722,22 +726,77 @@
   transition: 1s;
 }
 
+.search-section {
+  padding: 30px 160px 30px 160px;
+}
+
+.search-section form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.search-section form .searchbar {
+  padding: 30px 0px;
+}
+
+.search-section form .searchbar #query {
+  outline: none;
+  padding-left: 20px;
+  width: 280px;
+  height: 60px;
+  border-radius: 8px;
+  font-size: 30px;
+  border-right: 1px solid white;
+  border-left: 1px solid white;
+  border-top: 3px solid black;
+  border-bottom: 3px solid black;
+}
+
+.search-section form .filters-section {
+  flex-direction: column;
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+
+.search-section form .filters-section .filters-number {
+  padding: 30px 0px;
+}
+
+.search-section form .filters-section .filters-number input {
+  outline: none;
+  padding-left: 20px;
+  width: 140px;
+  height: 30px;
+  border-radius: 8px;
+  font-size: 15px;
+  border-right: 1px solid white;
+  border-left: 1px solid white;
+  border-top: 3px solid black;
+  border-bottom: 3px solid black;
+}
+
+.search-section form .filters-section .filters-checkbox {
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+}
+
+.search-section form .filters-section .filters-checkbox .service {
+  text-align: center;
+}
+
+.results-section {
+  padding: 30px 160px 30px 160px;
+}
+
 * {
   font-family: "Fira Sans", sans-serif;
 }
 
 a {
   text-decoration: none;
-}
-
-.sfondo {
-  background-image: url(https://images3.alphacoders.com/978/thumb-1920-978584.jpg);
-  background-size: cover;
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100vw;
-  height: 100%;
 }
 
 .py-4 {

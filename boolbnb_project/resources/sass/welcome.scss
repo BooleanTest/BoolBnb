@@ -12,7 +12,11 @@
   position: fixed;
   top: 0;
   z-index: 2;
-  background-image: url(https://www.crwflags.com/fotw/images/u/us_twl-1.gif);
+  border-right: 1px solid white;
+  border-left: 1px solid white;
+  border-top: 2px solid rgba(0, 0, 0, .3);
+  border-bottom: 2px solid rgba(0, 0, 0, .3);
+  border-radius: 30px;
   background-size:contain;
 }
 .footer{
