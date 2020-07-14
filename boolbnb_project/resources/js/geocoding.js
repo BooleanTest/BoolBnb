@@ -1,11 +1,8 @@
 $(document).ready(function(){
-
      $('#calcolo').click(function(e){
-
        var streetName = $(".streetName").val();
        var streetNumber = $(".streetNumber").val();
        var municipality = $(".municipality").val();
-
        $.ajax({
          url: 'https://api.tomtom.com/search/2/structuredGeocode.json?key=HPIuQNQKJvFfEyPKVEciiGGYx8Fs3ptB&countryCode=it&streetNumber=<streetNumber>&streetName=<streetName>&municipality=<municipality>',
          data: {
@@ -16,28 +13,22 @@ $(document).ready(function(){
          method: 'get',
          success: function (data){
            console.log('sono la latitudine = ' + data.results[0].position.lat + 'sono la longitudine = ' + data.results[0].position.lon);
-
            var longitude = data.results[0].position.lon;
            var latitude = data.results[0].position.lat;
            var position = [longitude, latitude];
-
            // document.getElementById("latitude").innerHTML =  latitude ;
            $('#latitude').val(latitude);
            $('#longitude').val(longitude);
            $('#plong').text(longitude);
            $('#plat').text(latitude);
-
            $('#plong').text(longitude);
            $('#plat').text(latitude);
-
          },
          error: function(error){
-
            console.log('errore dati');
          }
        });
      });
-
      // $('#form').submit(function(e){
      //
      //
@@ -63,6 +54,4 @@ $(document).ready(function(){
      //   e.preventDefault();
      //
      // })
-
-
    });
