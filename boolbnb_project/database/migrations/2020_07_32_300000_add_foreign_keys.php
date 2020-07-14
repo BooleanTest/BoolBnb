@@ -41,7 +41,20 @@ class AddForeignKeys extends Migration
                  -> on('services')
                  -> onDelete('cascade');
 
-    });
+        });
+
+        Schema::table('apartment_payment', function (Blueprint $table) {
+            $table-> foreign("apartment_id" , "apartment_A")
+                  -> references("id")
+                  -> on("apartments")
+                  -> onDelete("cascade")
+                  ;
+            $table-> foreign("payment_id" , "payment_A")
+                  -> references("id")
+                  -> on("payments")
+                  -> onDelete("cascade")
+                  ;
+        });
 
     }
 
@@ -70,6 +83,11 @@ class AddForeignKeys extends Migration
         $table -> dropForeign('apartment_');
         $table -> dropForeign('service');
 
+      });
+
+      Schema::table('apartment_payment', function (Blueprint $table) {
+          $table-> dropForeign("apartment_A");
+          $table-> dropForeign("payment_A");
       });
 
     }

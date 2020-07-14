@@ -3,6 +3,7 @@
   use Illuminate\Support\Facades\Route;
 
 
+
   Auth::routes();
 
   Route::get('/', 'apartmentController@index')->name('home');
@@ -33,9 +34,9 @@
   // invio messaggio
   Route::post('/store-messagge/{id}', 'apartmentController@messagges')->name('store-messagge');
 
-  Route::get('/view-messagge/{id}', function () {
-    return view('view-messagge');
-  });
+  Route::get('/view-messagges', function () {
+    return view('view-messagges');
+  })->name('view-messagges');
 
 
   Route::any('/search', 'apartmentController@search')->name('search');

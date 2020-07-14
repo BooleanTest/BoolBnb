@@ -1,6 +1,4 @@
 .container {
-  border: 2px solid black;
-  border-radius: 10px;
   padding: 25px;
   width: 75%;
   margin: auto;
@@ -13,7 +11,7 @@
 }
 
 .container .profilo .top {
-  margin-bottom: 20px;
+  margin-bottom: 5px;
 }
 
 .container .profilo .top:after {
@@ -24,21 +22,24 @@
 
 .container .profilo .top .floatl {
   float: left;
-  width: 80%;
+  width: 70%;
 }
 
 .container .profilo .top .floatl h1 {
   padding: 8px;
-  font-size: 22px;
+  margin-top: 8px;
+  font-size: 30px;
+  color: #2b1706;
 }
 
 .container .profilo .top .floatr {
   float: right;
-  width: 20%;
-  margin-bottom: 20px;
+  width: 30%;
+  margin-bottom: 10px;
 }
 
 .container .profilo .top .floatr a {
+  margin: 10px;
   float: right;
 }
 
@@ -48,12 +49,22 @@
   border-bottom: 2px solid black;
   border-radius: 8px;
   background-color: white;
-  padding: 13px 20px;
+  padding: 13px 15px;
+  transition: 1s;
 }
 
 .container .profilo .top .floatr a button:hover {
-  background-color: #44fc66;
+  background-color: #7cebe3;
   cursor: pointer;
+  transition: 1s;
+}
+
+.container .profilo .top .floatr .messagge button {
+  padding: 10px 13px;
+}
+
+.container .profilo .top .floatr .messagge button i {
+  font-size: 20px;
 }
 
 .container .profilo .appartamento {
@@ -61,20 +72,21 @@
   width: calc(50% - 10px);
   border: 2px solid black;
   border-radius: 10px;
+  background-color: white;
   padding: 30px;
   margin: 5px;
+  opacity: 0.95;
+  background-image: url(https://us.123rf.com/450wm/kav777/kav7771503/kav777150300019/37670430-asse-di-legno-di-bamb%C3%B9-trama-sfondo-bianco.jpg?ver=6);
+  background-size: cover;
 }
 
 .container .profilo .appartamento .titolo {
   width: 100%;
-  border-top: 2px solid black;
-  border-bottom: 2px solid black;
-  border-radius: 8px;
-  margin-bottom: 15px;
+  margin-bottom: 20px;
 }
 
 .container .profilo .appartamento .titolo h2 {
-  margin: 10px;
+  font-size: 26px;
 }
 
 .container .profilo .appartamento .immagine {
@@ -83,8 +95,8 @@
 }
 
 .container .profilo .appartamento .immagine img {
+  border: 1px solid black;
   width: 100%;
-  border-radius: 10px;
 }
 
 .container .profilo .appartamento .scritte {
@@ -140,6 +152,7 @@
 }
 
 .container_logiscr {
+  opacity: 0.95;
   height: 800px;
   width: 60%;
   padding-top: 15px;
@@ -237,11 +250,23 @@
   margin: 0;
 }
 
-.header,
-.footer {
-  background: white;
+.header {
   width: 100vw;
-  padding: 60px 160px 60px 160px;
+  padding: 30px 160px 30px 160px;
+  position: fixed;
+  top: 0;
+  z-index: 2;
+  border-right: 1px solid white;
+  border-left: 1px solid white;
+  border-top: 2px solid rgba(0, 0, 0, 0.3);
+  border-bottom: 2px solid rgba(0, 0, 0, 0.3);
+  border-radius: 30px;
+  background-size: contain;
+}
+
+.footer {
+  width: 100vw;
+  padding: 30px 160px 30px 160px;
 }
 
 .nav-bar {
@@ -249,7 +274,15 @@
   justify-content: space-between;
 }
 
-.nav-bar .login .links .nav-button {
+.nav-bar .logo h1 {
+  margin-top: 1px;
+}
+
+.nav-bar .login .links .username {
+  margin-top: 10px;
+}
+
+.nav-bar .login .links .username .nav-button {
   text-decoration: none;
   padding: 15px;
   text-align: center;
@@ -257,12 +290,12 @@
   border-radius: 20px;
 }
 
-.nav-bar .login .links .nav-button:hover {
+.nav-bar .login .links .username .nav-button:hover {
   transition: 0.8s;
   background-color: Aliceblue;
 }
 
-.nav-bar .login .links .nav-button-register {
+.nav-bar .login .links .username .nav-button .nav-button-register {
   text-decoration: none;
   padding: 15px;
   text-align: center;
@@ -270,7 +303,7 @@
   border-radius: 20px;
 }
 
-.nav-bar .login .links .nav-button-register:hover {
+.nav-bar .login .links .username .nav-button .nav-button-register:hover {
   transition: 0.8s;
   background-color: LightCoral;
 }
@@ -568,12 +601,21 @@
   padding: 25px;
   width: 75%;
   margin: auto;
+  margin-top: 150px;
+  background-image: url(https://us.123rf.com/450wm/kav777/kav7771503/kav777150300019/37670430-asse-di-legno-di-bamb%C3%B9-trama-sfondo-bianco.jpg?ver=6);
+  background-size: cover;
+  opacity: 0.95;
 }
 
 .containeredit:after {
   content: "";
   display: table;
   clear: both;
+}
+
+.containeredit h2 {
+  font-size: 30px;
+  margin-bottom: 10px;
 }
 
 .containeredit .dati {
@@ -617,8 +659,8 @@
   font-size: 18px;
   outline: none;
   border: none;
-  border-top: 2px solid black;
-  border-bottom: 2px solid black;
+  border-top: 1px solid black;
+  border-bottom: 1px solid black;
   padding: 3px;
   border-radius: 5px;
   display: inline-block;
@@ -627,6 +669,7 @@
 
 .containeredit .dati h3 {
   padding-bottom: 15px;
+  font-size: 22px;
 }
 
 .containeredit .servizi {
@@ -668,16 +711,84 @@
   border-radius: 8px;
   border-top: 2px solid black;
   border-bottom: 2px solid black;
+  transition: 1s;
 }
 
 .containeredit .bottoni button:hover {
-  background-color: lightblue;
+  background-color: #30e351;
   cursor: pointer;
+  transition: 1s;
 }
 
 .containeredit .bottoni .red:hover {
-  background-color: red;
+  background-color: #f57878;
   cursor: pointer;
+  transition: 1s;
+}
+
+.search-section {
+  padding: 30px 160px 30px 160px;
+}
+
+.search-section form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.search-section form .searchbar {
+  padding: 30px 0px;
+}
+
+.search-section form .searchbar #query {
+  outline: none;
+  padding-left: 20px;
+  width: 280px;
+  height: 60px;
+  border-radius: 8px;
+  font-size: 30px;
+  border-right: 1px solid white;
+  border-left: 1px solid white;
+  border-top: 3px solid black;
+  border-bottom: 3px solid black;
+}
+
+.search-section form .filters-section {
+  flex-direction: column;
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+
+.search-section form .filters-section .filters-number {
+  padding: 30px 0px;
+}
+
+.search-section form .filters-section .filters-number input {
+  outline: none;
+  padding-left: 20px;
+  width: 140px;
+  height: 30px;
+  border-radius: 8px;
+  font-size: 15px;
+  border-right: 1px solid white;
+  border-left: 1px solid white;
+  border-top: 3px solid black;
+  border-bottom: 3px solid black;
+}
+
+.search-section form .filters-section .filters-checkbox {
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+}
+
+.search-section form .filters-section .filters-checkbox .service {
+  text-align: center;
+}
+
+.results-section {
+  padding: 30px 160px 30px 160px;
 }
 
 * {
@@ -686,5 +797,14 @@
 
 a {
   text-decoration: none;
+}
+
+.py-4 {
+  margin-top: 100px;
+}
+
+#app {
+  position: relative;
+  z-index: 1;
 }
 

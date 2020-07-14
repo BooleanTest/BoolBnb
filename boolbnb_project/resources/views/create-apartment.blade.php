@@ -1,4 +1,4 @@
-@include('header')
+
 @extends('layouts.app')
 @section('content')
 <div class="containeredit">
@@ -71,6 +71,12 @@
       </div>
       <div class="valore">
         <div class="label">
+          <label for="image">Immagine : </label>
+        </div>
+        <input type="text" name="image" value="{{ old('image')}}"><br>
+      </div>
+      <div class="valore">
+        <div class="label">
           <label for="latitude">Latitudine : </label>
         </div>
         <span id="plat"></span>
@@ -85,12 +91,7 @@
         <br>
         <button type="button" id="calcolo" name="calcolo">Calcola</button><br><br><br>
       </div>
-      <div class="valore">
-        <div class="label">
-          <label for="image">Immagine : </label>
-        </div>
-        <input type="file" name="image" value="{{ old('image')}}"><br>
-      </div>
+
     </div>
     <div class="servizi">
       <h2>Servizi</h2>

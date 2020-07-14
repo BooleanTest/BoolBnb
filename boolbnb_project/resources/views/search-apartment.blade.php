@@ -1,66 +1,45 @@
-@include('header')
 @extends('layouts.app')
-
 @section('content')
+  <div class="search-section">
 
+    <form class="" action="" method="post">
 
-    <form class="search-h-form" action="" method="post">
+      <div class="searchbar">
+        <label for="searchbox"></label>
+        <input id="query" type="text" name="searchbox" value="">
+        <button type="submit" name="button">
+          <i class="fas fa-search"></i>
+        </button>
+      </div>
 
-      <div class="search-h-bar">
+      <div class="filters-section">
+        <div class="filters-number">
+          <label for="distance">Distanza</label>
+          <input type="number" name="distance" value="">
+          <label for="bathrooms">Bagni</label>
+          <input type="number" name="bathrooms" min="0" value="0">
+          <label for="rooms">Stanze</label>
+          <input type="number" name="rooms" min="0" value="0">
+        </div>
 
-        <div class="search-filter">
-
-          <label for="">Distanza</label>
-          <input type="range" name="" value="">
-
-          <label for="">Bagni</label>
-          <input type="number" min="1" value="0">
-
-          <label for="">Stanze</label>
-          <input type="number" min="1" value="0">
-
+        <div class="filters-checkbox">
+          <label for="services[]"></label>
+          @foreach ($services as $service)
+          <div class="service">
+            <div>{{$service -> name}}</div>
+            <input  type="checkbox" name="services[]" value="{{$service -> id}}"> <br>
+          </div>
+          @endforeach
         </div>
 
       </div>
-      <div class="search-h-box">
-
-        <label for="">
-          <input id="h-search-input" type="text" name="h-search-input" value="" placeholder="Dove vuoi andare?">
-        </label>
-
-        <div id="search-button">
-          <a href="#">
-            <i class="fas fa-plane fa-4x"></i>
-          </a>
-        </div>
-
-      </div>
-
-      <div class="search-checkbox">
-
-        <label for="">WiFi</label>
-        <input type="checkbox" name="" value="">
-        <label for="">Posto Macchina</label>
-        <input type="checkbox" name="" value="">
-        <label for="">Piscina</label>
-        <input type="checkbox" name="" value="">
-        <label for="">Portineria</label>
-        <input type="checkbox" name="" value="">
-        <label for="">Sauna</label>
-        <input type="checkbox" name="" value="">
-        <label for="">Vista Mare</label>
-        <input type="checkbox" name="" value="">
-
-        <label for="">Reimposta valori</label>
-        <input type="reset">
-
-      </div>
-
 
     </form>
 
+  </div>
+  <div class="results-section">
     @if (@isset($apartments))
-      <div class="ciao">
+      <div class="result-apartment">
         @foreach ($apartments as $apartment)
           <a href="{{route('show-apartment', $apartment -> id)}}">{{$apartment -> title}}</a> <br>
         @endforeach
@@ -68,9 +47,5 @@
     @else
       Nessun appartamento presente
     @endif
-
-
-
-
-
+  </div>
 @endsection

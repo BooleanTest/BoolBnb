@@ -3,10 +3,18 @@
 @import 'welcome';
 @import 'show';
 @import 'edit_create';
+@import 'search';
 
 *{
   font-family: 'Fira Sans', sans-serif;
 }
 a{
   text-decoration: none;
+}
+.py-4{
+  margin-top: 100px;
+}
+#app{
+  position: relative;
+  z-index: 1;
 }
