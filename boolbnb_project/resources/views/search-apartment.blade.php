@@ -1,6 +1,5 @@
-@include('header')
-
 @extends('layouts.app')
+
 @section('content')
   <div class="search-section">
     <form class="" action="{{route('search')}}" method="post">
@@ -41,9 +40,17 @@
   </div>
   <div class="results-section">
     @if (@isset($apartments))
-      <div class="result-apartment">
+      <div class="results-apartments">
         @foreach ($apartments as $apartment)
-          <a href="{{route('show-apartment', $apartment -> apartment_id)}}">{{$apartment -> title}}</a> <br>
+          <div class="box-result-apartment">
+            <div class="image-apartment">
+              <a href="{{route('show-apartment', $apartment -> apartment_id)}}">{{$apartment -> image}}</a>
+            </div>
+            <div class="info-apartment">
+              <a href="{{route('show-apartment', $apartment -> apartment_id)}}">{{$apartment -> title}}</a>
+              <a href="{{route('show-apartment', $apartment -> apartment_id)}}">{{$apartment -> city}}</a>
+            </div>
+          </div>
         @endforeach
       </div>
     @else

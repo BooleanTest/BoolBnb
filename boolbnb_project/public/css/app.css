@@ -381,13 +381,6 @@
   text-align: center;
 }
 
-.footer {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 60px 160px 60px 160px;
-}
-
 .container_show {
   border: 3px solid black;
   border-radius: 15px;
@@ -728,6 +721,7 @@
 
 .search-section {
   padding: 30px 160px 30px 160px;
+  background-color: lightgrey;
 }
 
 .search-section form {
@@ -791,6 +785,23 @@
   padding: 30px 160px 30px 160px;
 }
 
+.results-section .box-result-apartment {
+  display: flex;
+  align-items: center;
+  padding: 30px 0px;
+  width: 100%;
+}
+
+.results-section .box-result-apartment .image-apartment {
+  border: 1px solid black;
+  height: 200px;
+  width: 200px;
+}
+
+.results-section .box-result-apartment .info-apartment {
+  padding-left: 30px;
+}
+
 * {
   font-family: "Fira Sans", sans-serif;
 }
@@ -806,5 +817,18 @@ a {
 #app {
   position: relative;
   z-index: 1;
+}
+
+#lat,
+#long {
+  display: none;
+}
+
+.footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 60px 160px 60px 160px;
+  background-color: grey;
 }
 

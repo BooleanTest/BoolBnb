@@ -18,3 +18,17 @@ a{
   position: relative;
   z-index: 1;
 }
+
+#lat, #long{
+  display: none;
+}
+
+// Footer
+
+.footer{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 60px 160px 60px 160px;
+  background-color: grey;
+}
