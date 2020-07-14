@@ -57,6 +57,7 @@ class apartmentController extends Controller
 
   }
 
+
   // rotta search
   public function search(Request $request){
 
@@ -115,9 +116,6 @@ class apartmentController extends Controller
         ->whereIn('service_id', $srvcs )
         ->orderBy('distance')->having('distance', '<', $distance)->paginate(50);
 
-    if(count($apartments) > 0){
-      // return view('search-apartment')->withDetails('apartments')->withQuery ( $q );
-      return view('search-apartment', compact('apartments', 'services'));
 
 
       } else if (isset($lat) && isset($lng) && !isset($distance)){
@@ -129,11 +127,17 @@ class apartmentController extends Controller
           + sin ( radians(' . $lat . ') )
           * sin( radians( latitude ) )
           )
-          ) AS distance')->orderBy('distance')->having('distance', '<', 50)->paginate(50);
+          ) AS distance')->orderBy('distance')->having('distance', '<', 20)->paginate(50);
       } else {
-        $apartments = [];
-      }
+          $apartments = [];
+        }
 
+        // else if(!isset($lat) || !isset($lng))
+        // $apartments = Apartment::selectRaw('id AS apartment_id, title, rooms, bathrooms, service_id, apartment_id')
+        //               ->join('apartment_service', 'apartment_service.apartment_id', '=', 'apartments.id')
+        //               ->where('rooms', $rooms)
+        //               ->where('bathrooms', $bathrooms)
+        //               ->whereIn('service_id', $srvcs );
 
 
     if(count($apartments) > 0){
@@ -141,10 +145,13 @@ class apartmentController extends Controller
       return view('search-apartment', compact('apartments', 'services'));
 
     } else {
+
       return view ('search-apartment', compact('services'))->withMessage('No Details found. Try to search again !');
+
     };
 
 
   }
+
 
 }
