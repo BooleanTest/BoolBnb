@@ -6,11 +6,26 @@
 <div class="container">
   <h1>Lista Messaggi</h1>
 
-@foreach ($messages as $message)
 
-  {{$message -> mail}}
+  <div class="container_message">
+    <div class="text_mail">
+      <h1>Email</h1>
+    </div>
+    <div class="testo">
+      <h1>Testo</h1>
+    </div>
+    @foreach ($messages as $message)
+    <div class="mail">
+      <h3>{{$message -> mail}}</h3>
+    </div>
+    <div class="text">
+      <h3>{{$message -> text}}</h3>
+    </div>
+    @endforeach
+  </div>
 
-@endforeach
+
+
 </div>
 
 

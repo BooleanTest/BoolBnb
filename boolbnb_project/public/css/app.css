@@ -797,6 +797,48 @@
   padding: 30px 160px 30px 160px;
 }
 
+.container_message {
+  width: 90%;
+  padding: 50px;
+  margin: auto;
+  border: 1px solid black;
+  margin-top: 30px;
+}
+
+.container_message:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.container_message .text_mail {
+  float: left;
+  width: 30%;
+  margin-bottom: 20px;
+}
+
+.container_message .testo {
+  float: left;
+  width: 70%;
+  margin-bottom: 20px;
+}
+
+.container_message .mail {
+  float: left;
+  width: 30%;
+  margin-bottom: 10px;
+  border: 1px solid black;
+  padding: 10px 20px;
+}
+
+.container_message .text {
+  float: left;
+  width: 70%;
+  margin-bottom: 10px;
+  border: 1px solid black;
+  padding: 10px 20px;
+}
+
 .results-section .box-result-apartment {
   display: flex;
   align-items: center;
