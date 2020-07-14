@@ -3,6 +3,7 @@
   use Illuminate\Support\Facades\Route;
 
 
+
   Auth::routes();
 
   Route::get('/', 'apartmentController@index')->name('home');

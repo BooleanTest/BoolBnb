@@ -58,6 +58,7 @@ class apartmentController extends Controller
   }
 
 
+<<<<<<< Updated upstream
   // rotta search
   public function search(Request $request){
 
@@ -94,5 +95,7 @@ class apartmentController extends Controller
      // return view('search-apartment', compact('apartments'));
   }
 
+=======
+>>>>>>> Stashed changes
 
 }
