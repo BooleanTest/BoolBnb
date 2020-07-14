@@ -856,23 +856,6 @@
   padding: 10px 20px;
 }
 
-.results-section .box-result-apartment {
-  display: flex;
-  align-items: center;
-  padding: 30px 0px;
-  width: 100%;
-}
-
-.results-section .box-result-apartment .image-apartment {
-  border: 1px solid black;
-  height: 200px;
-  width: 200px;
-}
-
-.results-section .box-result-apartment .info-apartment {
-  padding-left: 30px;
-}
-
 * {
   font-family: "Fira Sans", sans-serif;
   box-sizing: border-box;

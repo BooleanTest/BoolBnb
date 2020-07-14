@@ -78,7 +78,7 @@ class apartmentController extends Controller
       $srvcs = [];
     }
 
-    
+
     // $new_services = [];
 
   //   foreach ($srvcs as $value) {
@@ -106,7 +106,7 @@ class apartmentController extends Controller
     //
     // dd($myArray);
 
-    if(isset($lat) && isset($lng) && isset($distance)) {
+    if(isset($lat) && isset($lng) && isset($distance) && !count($srvcs) == 0) {
 
       $apartments = Apartment::selectRaw('title, name AS service_name, image, rooms, bathrooms, city, service_id, name, apartment_id, (
         3959 * acos (
@@ -129,7 +129,7 @@ class apartmentController extends Controller
 
 
 
-      } else if (isset($lat) && isset($lng) && !isset($distance)){
+      } else if (isset($lat) && isset($lng) && count($srvcs) == 0){
         $apartments = Apartment::selectRaw('apartments.id AS apartment_id, name AS service_name, title, city, image, rooms, bathrooms, (
           3959 * acos (
           cos ( radians(' . $lat . ') )
@@ -144,7 +144,12 @@ class apartmentController extends Controller
           ->orderBy('distance')
           ->having('distance', '<', 100)
           ->paginate(50);
+      } else {
+        $apartments = [];
       }
+
+
+
       // else if(!isset($lat) || !isset($lng))
       // $apartments = Apartment::selectRaw('id AS apartment_id, title, rooms, bathrooms, service_id, apartment_id')
       //               ->join('apartment_service', 'apartment_service.apartment_id', '=', 'apartments.id')
@@ -152,9 +157,7 @@ class apartmentController extends Controller
       //               ->where('bathrooms', $bathrooms)
       //               ->whereIn('service_id', $srvcs );
 
-        else {
-          $apartments = [];
-        }
+
 
 
 
