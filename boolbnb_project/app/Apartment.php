@@ -23,4 +23,8 @@ class Apartment extends Model
       return $this->belongsToMany(Service::class);
     }
 
+    public function payment(){
+      return $this -> belongsToMany(Payment::class)->withTimestamps();
+    }
+
 }
