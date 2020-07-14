@@ -150,6 +150,14 @@ class profiloController extends Controller
       return view('stats_apartment', compact('apartments'));
 
     }
+    public function view($id){
+      $user = User::findOrFail($id);
+
+
+
+      return view('view-messagges', compact('user'));
+    }
+
 
 
 

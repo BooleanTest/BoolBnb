@@ -3,11 +3,12 @@
 
 @section('content')
 
-  @if (session("success"))
-    <p>{{session("success")}}</p>
-  @endif
+
 
 <div class="container_show">
+  @if (session("success"))
+    <p class="success">{{session("success")}}</p>
+  @endif
   <div class="margin">
     <div class="nave">
       <div class="scritte">

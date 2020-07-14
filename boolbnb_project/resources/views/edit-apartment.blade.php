@@ -75,7 +75,7 @@
         <div class="label">
           <label for="image">Immagine : </label>
         </div>
-        <input type="text" name="image" value="{{ old('image', $apartments -> image) }}">
+        <input type="file" name="image" value="{{ old('image', $apartments -> image) }}">
         <br>
       </div>
       <div class="valore">

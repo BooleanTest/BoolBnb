@@ -34,9 +34,7 @@
   // invio messaggio
   Route::post('/store-messagge/{id}', 'apartmentController@messagges')->name('store-messagge');
 
-  Route::get('/view-messagges', function () {
-    return view('view-messagges');
-  })->name('view-messagges');
+  Route::get('/view-messagges/{id}' , 'profiloController@view')->name('view-messagges');
 
 
   Route::any('/search', 'apartmentController@search')->name('search');

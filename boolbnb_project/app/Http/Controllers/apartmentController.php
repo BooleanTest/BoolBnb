@@ -73,6 +73,7 @@ class apartmentController extends Controller
     $lng = $request -> long;
     $q = $request -> q;
 
+
     // $new_services = [];
 
   //   foreach ($srvcs as $value) {
