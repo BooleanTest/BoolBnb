@@ -16,7 +16,7 @@
       <div class="filters-section">
         <div class="filters-number">
           <label for="distance">Distanza</label>
-          <input type="number" name="distance" value="">
+          <input type="number" name="distance" value="50">
           <label for="bathrooms">Bagni</label>
           <input type="number" name="bathrooms" min="0" value="0">
           <label for="rooms">Stanze</label>
@@ -47,8 +47,10 @@
               <a href="{{route('show-apartment', $apartment -> apartment_id)}}">{{$apartment -> image}}</a>
             </div>
             <div class="info-apartment">
-              <a href="{{route('show-apartment', $apartment -> apartment_id)}}">{{$apartment -> title}}</a>
-              <a href="{{route('show-apartment', $apartment -> apartment_id)}}">{{$apartment -> city}}</a>
+              nome appartamento: <a href="{{route('show-apartment', $apartment -> apartment_id)}}">{{$apartment -> title}}</a> <br>
+              città: <a href="{{route('show-apartment', $apartment -> apartment_id)}}">{{$apartment -> city}}</a> <br>
+              distanza dal centro: {{round($apartment -> distance, 2)}} km <br>
+              servizi: {{$apartment -> service_name}}
             </div>
           </div>
         @endforeach
