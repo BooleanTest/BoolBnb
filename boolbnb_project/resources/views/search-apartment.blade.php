@@ -1,64 +1,35 @@
-
 @extends('layouts.app')
-
 @section('content')
-
-
-    <form class="search-h-form" action="" method="post">
-
-      <div class="search-h-bar">
-
-        <div class="search-filter">
-
-          <label for="">Distanza</label>
-          <input type="range" name="" value="">
-
-          <label for="">Bagni</label>
-          <input type="number" min="1" value="0">
-
-          <label for="">Stanze</label>
-          <input type="number" min="1" value="0">
-
+  <div class="search-section">
+    <form class="" action="" method="post">
+      <div class="searchbar-section">
+        <label for="searchbox">cerca</label>
+        <input id="query" type="text" name="searchbox" value="">
+        <button type="submit" name="button">Cerca</button>
+      </div>
+      <div class="filters-section">
+        <div class="filters-number">
+          <label for="distance">Distanza</label>
+          <input type="number" name="distance" value="">
+          <label for="bathrooms">Bagni</label>
+          <input type="number" name="bathrooms" min="1" value="0">
+          <label for="rooms">Stanze</label>
+          <input type="number" name="rooms" min="1" value="0">
         </div>
-
-      </div>
-      <div class="search-h-box">
-
-        <label for="">
-          <input id="h-search-input" type="text" name="h-search-input" value="" placeholder="Dove vuoi andare?">
-        </label>
-
-        <div id="search-button">
-          <a href="#">
-            <i class="fas fa-plane fa-4x"></i>
-          </a>
+        <div class="filters-checkbox">
+          <label for="services[]"></label> <br>
+          @foreach ($services as $service)
+          <div class="service">
+            <span>{{$service -> name}}</span>
+            <input  type="checkbox" name="services[]" value="{{$service -> id}}"> <br>
+          </div>
+          @endforeach
+             <br>
         </div>
-
       </div>
-
-      <div class="search-checkbox">
-
-        <label for="">WiFi</label>
-        <input type="checkbox" name="" value="">
-        <label for="">Posto Macchina</label>
-        <input type="checkbox" name="" value="">
-        <label for="">Piscina</label>
-        <input type="checkbox" name="" value="">
-        <label for="">Portineria</label>
-        <input type="checkbox" name="" value="">
-        <label for="">Sauna</label>
-        <input type="checkbox" name="" value="">
-        <label for="">Vista Mare</label>
-        <input type="checkbox" name="" value="">
-
-        <label for="">Reimposta valori</label>
-        <input type="reset">
-
-      </div>
-
-
     </form>
-
+  </div>
+  <div class="results-section">
     @if (@isset($apartments))
       <div class="ciao">
         @foreach ($apartments as $apartment)
@@ -68,9 +39,5 @@
     @else
       Nessun appartamento presente
     @endif
-
-
-
-
-
+  </div>
 @endsection
