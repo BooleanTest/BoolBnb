@@ -44,11 +44,12 @@
         @foreach ($apartments as $apartment)
           <div class="box-result-apartment">
             <div class="image-apartment">
-              <a href="{{route('show-apartment', $apartment -> apartment_id)}}">{{$apartment -> image}}</a>
+
+              <a href="{{route('show-apartment', $apartment -> apartment_id)}}"><img src="{{$apartment -> image}}" alt=""></a>
             </div>
             <div class="info-apartment">
               nome appartamento: <a href="{{route('show-apartment', $apartment -> apartment_id)}}">{{$apartment -> title}}</a> <br>
-              città: <a href="{{route('show-apartment', $apartment -> apartment_id)}}">{{$apartment -> city}}</a> <br>
+              città: {{$apartment -> city}}</a> <br>
               distanza dal centro: {{round($apartment -> distance, 2)}} km <br>
               servizi: {{$apartment -> service_name}}
             </div>
