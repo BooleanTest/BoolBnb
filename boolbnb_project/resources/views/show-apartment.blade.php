@@ -29,7 +29,7 @@
           </div>
         </div>
         <a href="{{ route('edit-apartment', $apartments -> id ) }}"><button type="button" name="button" class="right ">Modifica</button></a>
-    
+
 
 
         @endif
@@ -72,7 +72,16 @@
         @method('POST')
 
         <label for="mail"></label>
-        <input type="text" id="mail" name="mail" value="" placeholder="Inserisci email">
+
+
+        @Auth
+        @if(Auth::user()-> id)
+        <input type="text" id="mail" name="mail" value="{{Auth::user()->email}} " disabled placeholder="Inserisci email" >
+        @endauth
+        @else
+        <input type="text" id="mail" name="mail" value="" placeholder="Inserisci il testo..">
+        @endif
+
         <br>
         <label for="text"></label>
         <textarea name="text" id="text" cols="40" rows="15" placeholder= "Inserisci il testo..."></textarea>

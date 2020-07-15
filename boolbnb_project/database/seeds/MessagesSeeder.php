@@ -15,7 +15,7 @@ class MessagesSeeder extends Seeder
      */
     public function run()
     {
-      factory(Message::class, 25)
+      factory(Message::class, 300)
                         ->make()
                         ->each(function ($message){
           $apartment = Apartment::inRandomOrder()-> first();

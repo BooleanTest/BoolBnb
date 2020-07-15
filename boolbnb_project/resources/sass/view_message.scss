@@ -6,24 +6,24 @@
   }
   .text_mail{
     float: left;
-    width: 30%;
+    width: 350px;
     margin-bottom: 20px;
   }
   .testo{
     float: left;
-    width: 70%;
+    width: calc(100% - 350px);
     margin-bottom: 20px;
   }
   .mail{
     float: left;
-    width: 30%;
+    width: 350px;
     margin-bottom: 10px;
     border: 1px solid black;
     padding: 10px 20px;
   }
   .text{
     float: left;
-    width: 70%;
+    width: calc(100% - 350px);
     margin-bottom: 10px;
     border: 1px solid black;
     padding: 10px 20px;
