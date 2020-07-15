@@ -5,8 +5,8 @@
     <form class="" action="{{route('search')}}" method="post">
       {{ csrf_field() }}
       <div class="searchbar-section">
-        <label for="searchbox">cerca</label>
-        <input id="query" type="text" name="searchbox" value="">
+        <label for="q">cerca</label>
+        <input id="query" type="text" name="q" value="">
 
         <button type="submit" name="button">Cerca</button>
 
@@ -16,7 +16,7 @@
       <div class="filters-section">
         <div class="filters-number">
           <label for="distance">Distanza</label>
-          <input type="number" name="distance" value="50">
+          <input type="number" name="distance" value="100">
           <label for="bathrooms">Bagni</label>
           <input type="number" name="bathrooms" min="0" value="0">
           <label for="rooms">Stanze</label>
@@ -28,7 +28,7 @@
           @foreach ($services as $service)
           <div class="service">
             <div>{{$service -> name}}</div>
-            <input  type="checkbox" name="services[]" value="{{$service -> id}}"> <br>
+            <input  type="checkbox" name="services[]" value="{{$service -> name}}"> <br>
           </div>
           @endforeach
         </div>
