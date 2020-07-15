@@ -38,3 +38,10 @@
 
 
   Route::any('/search', 'apartmentController@search')->name('search');
+
+
+
+  // pagamenti
+  Route::get('/apartment/{id}/payment', 'apartmentController@payment')->name('payment');
+  // pagamenti --o post--
+  Route::get('/payment/paid', 'apartmentController@paid')->name('payment-paid');

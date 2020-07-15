@@ -17,6 +17,7 @@ $factory->define(Apartment::class, function (Faker $faker) {
       'number' => $faker -> randomDigit(),
       'latitude' => $faker -> randomFloat($nbMaxDecimal=5, $min=44.3, $max=46),
       'longitude' => $faker -> randomFloat($nbMaxDecimal=5, $min=10, $max=12),
-      'image' => $faker -> imageUrl($width = 640, $height = 480)
+      'image' => $faker -> imageUrl($width = 640, $height = 480),
+      "time" => $faker -> numberBetween(1, 50)
     ];
 });

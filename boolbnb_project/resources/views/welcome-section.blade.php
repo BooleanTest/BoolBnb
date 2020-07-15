@@ -6,10 +6,7 @@
     <h2> Gli appartamenti in evidenza </h2>
   </div>
   <div class="container-w-apartments">
-
-    @foreach ($apartments as $apartment)
-      @if (($apartment -> id) < 5)
-
+    {{-- @foreach ($apartments as $apartment)
       <div class="w-apartment">
 
         <a href="{{ route('show-apartment', $apartment -> id ) }}">
@@ -21,8 +18,18 @@
         </a>
 
       </div>
+    @endforeach --}}
+
+    {{-- ............. --}}
+
+
+    @if ($apartments_pay)
+      @foreach ($apartments_pay as $apartment)
+        <a href="{{route('show-apartment',$apartment['id'])}}"> {{$apartment -> title}}</a>
+      @endforeach
     @endif
-    @endforeach
+
+    {{-- .................. --}}
 
   </div>
 
