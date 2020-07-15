@@ -9,13 +9,19 @@ use App\User;
 use App\Apartment;
 use App\Service;
 use App\Message;
+use App\Payment;
+use Braintree\Transaction;
 
 class apartmentController extends Controller
 {
   public function index(){
     $apartments = Apartment::all();
 
-    return view('welcome', compact('apartments'));
+    $apartments_time = $apartments -> where('time', '<', time());
+    $apartments_pay = $apartments -> where('time', '>=', time());
+
+    return view('welcome', compact('apartments_time', 'apartments_pay'));
+    // return view('welcome', compact('apartments'));
   }
 
   public function welcome(){
@@ -171,9 +177,74 @@ class apartmentController extends Controller
       return view ('search-apartment', compact('services'))->withMessage('No Details found. Try to search again !');
 
     };
-
-
   }
 
+  public function payment($id){
+    $apartment = Apartment::findOrFail($id);
+    $payments = Payment::all();
+    return view('payments', compact('apartment', "payments"));
+  }
 
+  public function paid (Request $request) {
+
+    $apartment_id = $request->input('ApartmentId');
+    $apartment = Apartment::findOrFail($apartment_id);
+    $payments = Payment::all();
+
+    $payload = $request->input('payload', false);
+    $nonce = $payload['nonce'];
+
+
+    $paymentType = $request->input("paymentType");
+    $var = false;
+    $paymentId = 0;
+    foreach ($payments as $payment) {
+      if ($payment["name"]==$paymentType) {
+        $duration = $payment["duration"];
+        $paymentId = $payment["id"];
+        $amount = $payment["price"];
+      }
+    }
+
+    $status = Transaction::sale([
+                            'amount' => 0,
+                            'paymentMethodNonce' => $nonce,
+                            'options' => [
+                                       'submitForSettlement' => False
+                                         ]
+              ]);
+
+              if ($apartment -> time) {
+                if ($apartment -> time <= time()){
+                  $apartment -> time = time() + $duration;
+                  $apartment -> save();
+                  $apartment -> payment() -> attach($paymentId);
+                  $var = true;
+                  $status = Transaction::sale([
+                                          'amount' => $amount,
+                                          'paymentMethodNonce' => $nonce,
+                                          'options' => [
+                                                     'submitForSettlement' => True
+                                                       ]
+                            ]);
+                }
+              } else {
+                $apartment -> time = time() + $duration;
+                $apartment -> save();
+                $apartment -> payment() -> attach($paymentId);
+                $var = true;
+                $status = Transaction::sale([
+                                        'amount' => $amount,
+                                        'paymentMethodNonce' => $nonce,
+                                        'options' => [
+                                                   'submitForSettlement' => True
+                                                     ]
+                          ]);
+              }
+
+
+
+
+    return response()->json($status);
+  }
 }
