@@ -34,6 +34,7 @@
           <div class="pi">
             <p><a href="{{route('stats', $apartment -> id)}}">Statistiche Appartamento</a></p>
             <p><a href="{{route('show-apartment', $apartment -> id)}}">Dati Appartamento</a></p>
+            <p><a href="{{route("payment", $apartment -> id)}}">Promuovi appartamento</a></p>
           </div>
 
         </div>
