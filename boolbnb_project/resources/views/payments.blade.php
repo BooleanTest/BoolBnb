@@ -37,6 +37,9 @@
     <button id='submit-button' disabled>Paga</button>
 
 
+    <a href="{{ url()->previous()}}"><button type="button" name="button" id="indietro">Indietro</button></a>
+
+
     <div class="">
       <input type="text" name="apartmentId" value="{{$apartment -> id }}" disabled style="display: none">
     </div>

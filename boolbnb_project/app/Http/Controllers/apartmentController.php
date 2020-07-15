@@ -171,11 +171,13 @@ class apartmentController extends Controller
 
   }
 
+
   public function payment($id){
     $apartment = Apartment::findOrFail($id);
     $payments = Payment::all();
     return view('payments', compact('apartment', "payments"));
   }
+
 
   public function paid (Request $request) {
 
@@ -188,8 +190,6 @@ class apartmentController extends Controller
 
 
     $paymentType = $request->input("paymentType");
-    $var = false;
-    $paymentId = 0;
     foreach ($payments as $payment) {
       if ($payment["name"]==$paymentType) {
         $duration = $payment["duration"];
@@ -201,43 +201,30 @@ class apartmentController extends Controller
     $status = Transaction::sale([
                             'amount' => 0,
                             'paymentMethodNonce' => $nonce,
-                            'options' => [
-                                       'submitForSettlement' => False
-                                         ]
-              ]);
+                            'options' => ['submitForSettlement' => False]
+                            ]);
 
-              // if ($apartment -> time) {
-              //   if ($apartment -> time <= time()){
-              //
-              //   }
-              // } else {
-              //   $apartment -> time = time() + $duration;
-              //   $apartment -> save();
-              //   $apartment -> payment() -> attach($paymentId);
-              //   $var = true;
-              //   $status = Transaction::sale([
-              //                           'amount' => $amount,
-              //                           'paymentMethodNonce' => $nonce,
-              //                           'options' => [
-              //                                      'submitForSettlement' => True
-              //                                        ]
-              //             ]);
-              // }
-
-              $apartment -> time = time() + $duration;
-              $apartment -> save();
-              $apartment -> payment() -> attach($paymentId);
-              $var = true;
-              $status = Transaction::sale([
-                                      'amount' => $amount,
-                                      'paymentMethodNonce' => $nonce,
-                                      'options' => [
-                                                 'submitForSettlement' => True
-                                                   ]
-                        ]);
-
-
-
+    if ($apartment -> time) {
+      if ($apartment -> time <= time()){
+        $apartment -> time = time() + $duration;
+        $apartment -> save();
+        $apartment -> payment() -> attach($paymentId);
+        $status = Transaction::sale([
+                                'amount' => $amount,
+                                'paymentMethodNonce' => $nonce,
+                                'options' => ['submitForSettlement' => True]
+                                ]);
+      }
+    } else {
+      $apartment -> time = time() + $duration;
+      $apartment -> save();
+      $apartment -> payment() -> attach($paymentId);
+      $status = Transaction::sale([
+                              'amount' => $amount,
+                              'paymentMethodNonce' => $nonce,
+                              'options' => ['submitForSettlement' => True]
+                              ]);
+    }
 
     return response()->json($status);
   }
