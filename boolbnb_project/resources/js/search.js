@@ -35,6 +35,10 @@ $(document).ready(function(){
     })
 
 
+    var d = new Date();
+var n = d.getTime();
+
+console.log(n);
   // var route = $('.search-h-form').data('search');
   //
   // console.log(route);
