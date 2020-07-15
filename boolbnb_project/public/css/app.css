@@ -876,6 +876,53 @@
   padding: 10px 20px;
 }
 
+.title-stats {
+  padding: 30px 160px 30px 160px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.main-stats {
+  padding: 30px 160px 30px 160px;
+}
+
+.main-stats .counters {
+  padding: 30px 0px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.main-stats .counters .counter-stats {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.main-stats .line {
+  padding: 30px 0px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.main-stats .line .line-graph {
+  width: 40%;
+}
+
+.main-stats .bar {
+  padding: 30px 0px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.main-stats .bar .bar-graph {
+  width: 40%;
+}
+
 * {
   font-family: "Fira Sans", sans-serif;
   box-sizing: border-box;
