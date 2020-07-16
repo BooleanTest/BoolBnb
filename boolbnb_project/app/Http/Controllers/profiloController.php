@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 
+use Str;
 use Auth;
 use App\User;
 use App\Apartment;
@@ -54,6 +55,12 @@ class profiloController extends Controller
         'longitude' => 'required'
       ]);
 
+      $image = $request->file('image');
+      $folder = '/uploads/images/';
+      $name = Str::slug($request -> input('title')). '_' .time();
+      $format = $image->getClientOriginalExtension();
+      $filePath = $folder . $name . '.' . $format;
+
       $apartments = Apartment::findOrFail($id);
 
       $apartments -> title  = $validateData["title"];
@@ -64,12 +71,15 @@ class profiloController extends Controller
       $apartments -> number  = $validateData["number"];
       $apartments -> latitude  = $validateData["latitude"];
       $apartments -> longitude  = $validateData["longitude"];
-      $apartments -> image  = $validateData["image"];
+      $apartments -> image  = $filePath;
       $apartments -> city  = $validateData["city"];
       $apartments -> nation  = $validateData["nation"];
 
+      $image -> storeAs($folder , $name . '.' . $format , 'public');
 
       $apartments -> save();
+
+
 
       if (isset($validateData['services'])) {
         $apartments -> services() -> sync($validateData['services']);
@@ -117,7 +127,14 @@ class profiloController extends Controller
         'longitude' => 'required'
       ]);
 
-      // TODO: sistemare con TomTom latitudine e longitudine
+      $image = $request->file('image');
+      $folder = '/uploads/images/';
+      $name = Str::slug($request -> input('title')). '_' .time();
+      $format = $image->getClientOriginalExtension();
+      $filePath = $folder . $name . '.' . $format;
+
+      // dd($filePath);
+
       $apartments = new Apartment;
 
       $apartments -> title  = $validateData["title"];
@@ -128,12 +145,15 @@ class profiloController extends Controller
       $apartments -> number  = $validateData["number"];
       $apartments -> latitude  =  $request["latitude"];  //$validateData["latitude"];
       $apartments -> longitude  = $request["longitude"]; //$validateData["longitude"];
-      $apartments -> image  = $validateData["image"];
+      $apartments -> image  = $filePath;
       $apartments -> city  = $validateData["city"];
       $apartments -> nation  = $validateData["nation"];
       $apartments -> user_id = $userId;
 
+      $image -> storeAs($folder , $name . '.' . $format , 'public');
+
       $apartments -> save();
+
 
       if (isset($validateData['services'])) {
         $apartments -> services() -> attach($validateData['services']);

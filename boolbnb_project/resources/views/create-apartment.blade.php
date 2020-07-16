@@ -8,7 +8,7 @@
   <p>{{$error}}</p>
   @endforeach
   @endif
-  <form id='form' action="{{route('store-apartment')}}"  method='post'>
+  <form id='form' action="{{route('store-apartment')}}"  method='post' enctype="multipart/form-data">
     @csrf
     @method('post')
     <div class="dati">

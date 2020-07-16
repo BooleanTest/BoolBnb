@@ -10,7 +10,7 @@
   <p>{{$error}}</p>
   @endforeach
   @endif
-  <form  action="{{route('update-apartment', $apartments['id'])}}" method="post">
+  <form  action="{{route('update-apartment', $apartments['id'])}}" method="post" enctype='multipart/form-data'>
     @csrf
     @method('POST')
     <div class="dati">
