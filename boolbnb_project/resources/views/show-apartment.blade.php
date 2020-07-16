@@ -67,7 +67,7 @@
     </div>
     @Auth
     @if(Auth::user() -> id === $apartments -> user -> id)
-    <p><a href="{{route("payment", $apartments -> id)}}">Promuovi appartamento</a></p>
+    <p class="promuovi"><a href="{{route("payment", $apartments -> id)}}">Promuovi appartamento</a></p>
 
     @else
     <div class="messaggio table">
