@@ -4,7 +4,7 @@
       {{ csrf_field() }}
       <div class="searchbar">
           <input id="query" type="text" class="form-control" name="q"
-              placeholder="Dove vuoi andare?">
+              placeholder="Dove vuoi andare?" autocomplete="off">
           <input id='lat' type="text" name="lat" value="">
           <input id='long' type="text" name="long" value=""><br>
 

@@ -6,7 +6,7 @@
       {{ csrf_field() }}
       <div class="searchbar-section">
         <label for="q">cerca</label>
-        <input id="query" type="text" name="q" value="">
+        <input id="query" type="text" name="q" value="" autocomplete="off">
 
         <button type="submit" name="button">Cerca</button>
 
