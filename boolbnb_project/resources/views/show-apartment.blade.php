@@ -65,6 +65,11 @@
         </ul>
       </div>
     </div>
+    @Auth
+    @if(Auth::user() -> id === $apartments -> user -> id)
+    <p><a href="{{route("payment", $apartments -> id)}}">Promuovi appartamento</a></p>
+
+    @else
     <div class="messaggio table">
       <h2>Scrivi al proprietario</h2>
       <form  action="{{route('store-messagge', $apartments -> id)}}" method="post">
@@ -90,6 +95,34 @@
 
       </form>
     </div>
+    @endauth
+    @else
+    <div class="messaggio table">
+      <h2>Scrivi al proprietario</h2>
+      <form  action="{{route('store-messagge', $apartments -> id)}}" method="post">
+        @csrf
+        @method('POST')
+
+        <label for="mail"></label>
+
+
+        @Auth
+        @if(Auth::user()-> id)
+        <input type="text" id="mail" name="mail" value="{{Auth::user()->email}} " disabled placeholder="Inserisci email" >
+        @endauth
+        @else
+        <input type="text" id="mail" name="mail" value="" placeholder="Inserisci il testo..">
+        @endif
+
+        <br>
+        <label for="text"></label>
+        <textarea name="text" id="text" cols="40" rows="15" placeholder= "Inserisci il testo..."></textarea>
+        <br>
+        <button type="submit" name="submit">Invia Messaggio</button>
+
+      </form>
+    </div>
+    @endif
 
     <a href="{{ url()->previous()}}"><button type="button" name="button" id="indietro">Indietro</button></a>
   </div>
