@@ -97,6 +97,7 @@
 .container .profilo .appartamento .immagine img {
   border: 1px solid black;
   width: 100%;
+  max-height: 250px;
 }
 
 .container .profilo .appartamento .scritte {
@@ -381,6 +382,10 @@
   text-align: center;
 }
 
+.main-w-apartments {
+  min-height: 64.6vh;
+}
+
 .container_show {
   background-image: url(https://us.123rf.com/450wm/kav777/kav7771503/kav777150300019/37670430-asse-di-legno-di-bamb%C3%B9-trama-sfondo-bianco.jpg?ver=6);
   border: 3px solid black;
@@ -401,6 +406,10 @@
   width: 90%;
   margin: auto;
   padding: 30px 0;
+}
+
+.container_show .margin .promuovi {
+  font-size: 22px;
 }
 
 .container_show .margin .nave {
@@ -734,8 +743,8 @@
 }
 
 .search-section {
-  padding: 30px 160px 30px 160px;
-  background-color: lightgrey;
+  padding-top: 150px;
+  background-color: white;
 }
 
 .search-section form {
@@ -745,10 +754,13 @@
 }
 
 .search-section form .searchbar {
-  padding: 30px 0px;
+  width: 90%;
+  margin: auto;
+  text-align: center;
 }
 
 .search-section form .searchbar #query {
+  font-size: 26px;
   outline: none;
   padding-left: 20px;
   width: 280px;
@@ -759,6 +771,32 @@
   border-left: 1px solid white;
   border-top: 3px solid black;
   border-bottom: 3px solid black;
+  transition: 1s;
+}
+
+.search-section form .searchbar #query:focus {
+  width: 100%;
+  transition: 1s;
+}
+
+.search-section form .botton {
+  text-align: center;
+  margin-top: 40px;
+}
+
+.search-section form .botton button {
+  padding: 10px 18px;
+  font-size: 18px;
+  color: black;
+  background-color: white;
+  transition: 1s;
+}
+
+.search-section form .botton button:hover {
+  cursor: pointer;
+  color: white;
+  background-color: black;
+  transition: 1s;
 }
 
 .search-section form .filters-section {

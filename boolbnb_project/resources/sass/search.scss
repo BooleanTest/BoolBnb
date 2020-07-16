@@ -1,6 +1,6 @@
 .search-section{
-  padding: 30px 160px 30px 160px;
-  background-color: lightgrey;
+  padding-top: 150px;
+  background-color: white;
 
 
   form {
@@ -9,9 +9,14 @@
     align-items: center;
 
     .searchbar{
-      padding: 30px 0px;
+
 
       #query{
+        &:focus{
+          width: 100%;
+          transition: 1s;
+        }
+        font-size: 26px;
         outline: none;
         padding-left: 20px;
         width: 280px;
@@ -22,9 +27,29 @@
         border-left: 1px solid white;
         border-top: 3px solid black;
         border-bottom: 3px solid black;
+        transition: 1s;
       }
+      width: 90%;
+      margin: auto;
+      text-align: center;
     }
-
+    .botton{
+      button{
+        &:hover{
+          cursor: pointer;
+          color: white;
+          background-color: black;
+          transition: 1s;
+        }
+        padding: 10px 18px;
+        font-size: 18px;
+        color: black;
+        background-color: white;
+        transition: 1s;
+      }
+      text-align: center;
+      margin-top: 40px;
+    }
     .filters-section {
       flex-direction: column;
       display: flex;
