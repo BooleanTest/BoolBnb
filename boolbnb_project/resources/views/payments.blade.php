@@ -23,33 +23,50 @@
 
 
   @if (auth()->user()-> id == $apartment -> user_id)
-    <script src='https://js.braintreegateway.com/web/dropin/1.8.1/js/dropin.min.js'></script>
+    <div class="title-payment">
+      <h1>Incrementa le tue entrate</h1>
+    </div>
     <div class="payment">
       @foreach ($payments as $payment)
-        <div class="">
-          <input type="radio" name="payment" value="{{$payment -> name}}">
-          {{$payment -> name}}
-          {{$payment -> price}}
+        <div class="payment-box">
+          <button type="button" name="payment" value="{{ $payment -> name }}">
+          <h1>{{$payment -> name}}</h1>
+          <h2>{{$payment -> price}}</h2>
+          @if ($payment -> name == 'basic')
+            <p>per 24 ore di sponsorizzazione</p>
+          @elseif ($payment -> name == 'premium')
+            <p>per 72 ore di sponsorizzazione</p>
+          @elseif ($payment -> name == 'deluxe')
+            <p>per 144 ore di sponsorizzazione</p>
+          @endif
+          </button>
         </div>
       @endforeach
     </div>
+
+    <div class="alertbox"></div>
+
     <div id='dropin-container'></div>
-    <button id='submit-button' disabled>Paga</button>
 
+    <div class="button-payments">
 
-    <a href="{{ url()->previous()}}"><button type="button" name="button" id="indietro">Indietro</button></a>
+      <button id='submit-button' disabled>Paga</button>
+      <a href="{{ url()->previous()}}"><button type="button" name="button" id="indietro">Indietro</button></a>
+
+    </div>
 
 
     <div class="">
-      <input type="text" name="apartmentId" value="{{$apartment -> id }}" disabled style="display: none">
+      <input type="text" name="apartmentId" value="{{ $apartment -> id }}" disabled style="display: none">
     </div>
+
 
 
     <script>
 
     var ApartmentId = $('input[name=apartmentId]').val();
 
-    $('.payment').on('click', "input[type=radio]", function () {
+    $('.payment').on('click', "button[type=button]", function () {
 
 
       var paymentType = $(this).val();
@@ -67,16 +84,19 @@
               if (response.success) {
                 console.log(response.transaction.amount);
                 console.log("esito positivo");
-                alert('pagamento effettuato');
+                $('.alertbox')
+                .html("<div class='alertgreen'> <span class='closebtn' onclick=" + "this.parentElement.style.display='none';" + ">&times;</span> Il pagamento è stato accettato </div>");
               } else {
                 console.log("esito negativo");
-                alert('pagamento fallito');
+                $('.alertbox')
+                .html("<div class='alertred'><span class='closebtn' onclick=" + "this.parentElement.style.display='none';" + ">&times;</span> Pagamento non riuscito </div>");
               }
             }, 'json');
           });
         });
       });
     });
+
     </script>
 
   @endif

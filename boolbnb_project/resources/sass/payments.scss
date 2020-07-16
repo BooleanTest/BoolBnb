@@ -1,0 +1,127 @@
+.title-payment {
+  padding: 30px 160px 30px 160px;
+  display: flex;
+  justify-content: center;
+}
+
+.payment {
+  padding: 30px 160px 30px 160px;
+  display: flex;
+  justify-content: center;
+}
+
+.payment .payment-box {
+  display: flex;
+  flex-direction: column;
+  width: 25%;
+  margin: 5px;
+}
+
+.payment .payment-box button {
+  padding: 15px 25px;
+  font-size: 24px;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  outline: none;
+  color: #fff;
+  background-color: #4CAF50;
+  border: none;
+  border-radius: 15px;
+  box-shadow: 0 9px #999;
+}
+
+.payment .payment-box button:hover {
+  background-color: #3e8e41;
+}
+
+.payment .payment-box button:active {
+  background-color: #3e8e41;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}
+
+.payment .payment-box button:focus {
+  background-color: #3e8e41;
+}
+
+#dropin-container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.button-payments{
+  padding: 30px 160px 30px 160px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  #submit-button, #indietro{
+    text-decoration: none;
+    padding: 15px;
+    text-align: center;
+    text-decoration: none;
+    border: none;
+    border-radius: 20px;
+    margin: 5px;
+
+    &:hover{
+      transition: 0.8s;
+      background-color: lightblue;
+    }
+
+  }
+
+}
+
+
+.alertred{
+  width: 100%;
+  height: 100%;
+  padding: 20px;
+  background-color: red;
+  color: white;
+
+  .closebtn{
+    margin-left: 15px;
+    color: white;
+    font-weight: bold;
+    float: right;
+    font-size: 22px;
+    line-height: 20px;
+    cursor: pointer;
+    transition: 0.3s;
+
+    &:hover{
+      color: black;
+    }
+
+  }
+
+}
+
+.alertgreen{
+  width: 100%;
+  height: 100%;
+  padding: 20px;
+  background-color: green;
+  color: white;
+
+  .closebtn{
+    margin-left: 15px;
+    color: white;
+    font-weight: bold;
+    float: right;
+    font-size: 22px;
+    line-height: 20px;
+    cursor: pointer;
+    transition: 0.3s;
+
+    &:hover{
+      color: black;
+    }
+
+  }
+
+}
