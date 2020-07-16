@@ -30,6 +30,7 @@ class apartmentController extends Controller
 
   public function show($id){
     $apartments = Apartment::findOrFail($id);
+    Apartment::where('id', $id)->increment('view');
 
 
     return view('show-apartment', compact('apartments'));

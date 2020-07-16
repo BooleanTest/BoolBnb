@@ -148,6 +148,7 @@ class profiloController extends Controller
       $apartments -> image  = $filePath;
       $apartments -> city  = $validateData["city"];
       $apartments -> nation  = $validateData["nation"];
+      $apartments -> view = 1;
       $apartments -> user_id = $userId;
 
       $image -> storeAs($folder , $name . '.' . $format , 'public');
@@ -177,6 +178,7 @@ class profiloController extends Controller
 
       $apartments = Apartment::all();
       // SELECT user_id, mail, text FROM apartments join messages ON messages.apartment_id = apartments.id JOIN users ON users.id = apartments.user_id WHERE user_id = 5
+
 
       $messages = Apartment::selectRaw('user_id, mail, text')
                   ->join('messages', 'messages.apartment_id', '=', 'apartments.id')
