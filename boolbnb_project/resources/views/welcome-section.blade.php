@@ -25,13 +25,17 @@
 
     @if ($apartments_pay)
       @foreach ($apartments_pay as $apartment)
-      <a href="{{ route('show-apartment', $apartment -> id ) }}">
-        <img src="{{ $apartment -> image }}" alt="Immagine_Appartamento">
-        <div class="title-w-apartment">
-          <h3>{{ $apartment -> title }}</h3>
-          <p>{{ $apartment -> address }}</p>
+        <div class="w-apartment">
+
+          <a href="{{ route('show-apartment', $apartment -> id ) }}">
+            <img src="{{ $apartment -> image }}" alt="Immagine_Appartamento">
+            <div class="title-w-apartment">
+              <h3>{{ $apartment -> title }}</h3>
+              <p>{{ $apartment -> address }}</p>
+            </div>
+          </a>
+          
         </div>
-      </a>
       @endforeach
     @endif
 
