@@ -38,25 +38,21 @@
     </form>
 
   </div>
+
+  
   <div class="results-section">
-    @if (@isset($apartments))
+    @if (@isset($appartamenti))
       <div class="results-apartments">
-        @foreach ($apartments as $apartment)
+        @foreach ($appartamenti as $apartment)
           <div class="box-result-apartment">
             <div class="image-apartment">
-              <a href="{{route('show-apartment', $apartment -> apartment_id)}}">
+              <a href="{{route('show-apartment', $apartment['stats']['apartment_id'])}}">
 
-                <img src="{{$apartment -> image}}" alt="Immagine_appartamento">
+                {{$apartment['stats']['title']}}
 
               </a>
             </div>
-            <div class="info-apartment">
-              <a href="{{route('show-apartment', $apartment -> apartment_id)}}">
-                <h3>{{$apartment -> title}}</h3><br>
-                <p>{{$apartment -> city}} a {{round($apartment -> distance, 2)}} km del centro</p>  <br>
-                <p>{{' - ' . $apartment -> service_name}}</p>
-              </a>
-            </div>
+
           </div>
         @endforeach
       </div>

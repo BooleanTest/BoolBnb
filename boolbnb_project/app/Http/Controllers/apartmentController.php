@@ -74,6 +74,7 @@ class apartmentController extends Controller
     $appartamenti = [];
 
 
+
     if (!isset($srvcs)){
       $srvcs = [];
     }
@@ -155,9 +156,10 @@ class apartmentController extends Controller
       }
 
 
+
       if(count($appartamenti) > 0){
 
-        return view('search-apartment', compact('apartments', 'services', 'appartamenti'));
+        return view('search-apartment', compact('services', 'appartamenti'));
 
       } else {
 
