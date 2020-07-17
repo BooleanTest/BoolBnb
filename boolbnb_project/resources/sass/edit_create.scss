@@ -18,6 +18,7 @@
       button{
         &:hover{
           cursor: pointer;
+
         }
         float: right;
         margin: 10px;
@@ -94,24 +95,23 @@
   .bottoni{
     button{
       &:hover{
-        background-color: #30e351;
+        background-color: limegreen;
         cursor: pointer;
-        transition: 1s;
+        color: white;
+        transition: 0.6s;
       }
       margin: 10px;
-      padding: 10px 12px;
+      padding: 10px 16px;
       font-size: 18px;
-      border: none;
-      border-radius: 8px;
-      border-top: 2px solid black;
-      border-bottom: 2px solid black;
-      transition: 1s;
+      border: solid 1px darkblue;
+      border-radius: 20px;
+      transition: 0.6s;
     }
     .red{
       &:hover{
-        background-color: #f57878;
+        background-color: crimson;
         cursor: pointer;
-        transition: 1s;
+        transition: 0.6s;
       }
     }
     text-align: center;

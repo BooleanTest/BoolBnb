@@ -50,8 +50,8 @@
 
     <div class="button-payments">
 
-      <button id='submit-button' disabled>Paga</button>
       <a href="{{ url()->previous()}}"><button type="button" name="button" id="indietro">Indietro</button></a>
+      <button id='submit-button' disabled>Paga</button>
 
     </div>
 
