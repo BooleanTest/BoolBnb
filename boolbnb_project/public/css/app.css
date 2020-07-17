@@ -251,23 +251,11 @@
   margin: 0;
 }
 
-.header {
-  width: 100vw;
-  padding: 30px 160px 30px 160px;
-  position: fixed;
-  top: 0;
-  z-index: 2;
-  border-right: 1px solid white;
-  border-left: 1px solid white;
-  border-top: 2px solid rgba(0, 0, 0, 0.3);
-  border-bottom: 2px solid rgba(0, 0, 0, 0.3);
-  border-radius: 30px;
-  background-size: contain;
-}
-
 .footer {
   width: 100vw;
   padding: 30px 160px 30px 160px;
+  background: #83bafb;
+  background: linear-gradient(135deg, #83bafb 10%, white 90%);
 }
 
 .nav-bar {
@@ -284,10 +272,8 @@
 }
 
 .nav-bar .login .links .username .nav-button {
-  text-decoration: none;
   padding: 15px;
   text-align: center;
-  text-decoration: none;
   border-radius: 20px;
 }
 
@@ -297,10 +283,8 @@
 }
 
 .nav-bar .login .links .username .nav-button .nav-button-register {
-  text-decoration: none;
   padding: 15px;
   text-align: center;
-  text-decoration: none;
   border-radius: 20px;
 }
 
@@ -1121,10 +1105,35 @@
 }
 
 * {
-  font-family: "Fira Sans", sans-serif;
+  font-family: "Josefin Sans", sans-serif;
   box-sizing: border-box;
   padding: 0;
   margin: 0;
+  color: darkblue;
+}
+
+.color-lightskyblue {
+  color: LightSkyBlue;
+}
+
+.color-blue {
+  color: blue;
+}
+
+.color-red {
+  color: crimson;
+}
+
+.color-white {
+  color: white;
+}
+
+.color-lightsteelblue {
+  color: LightSteelBlue;
+}
+
+.color-LightGoldenRodYellow {
+  color: LightGoldenRodYellow;
 }
 
 a {
@@ -1160,13 +1169,8 @@ a {
   position: fixed;
   top: 0;
   z-index: 2;
-  border-right: 1px solid white;
-  border-left: 1px solid white;
-  border-top: 2px solid rgba(0, 0, 0, 0.3);
-  border-bottom: 2px solid rgba(0, 0, 0, 0.3);
-  border-radius: 30px;
-  background-size: contain;
-  background-color: white;
+  background: #83bafb;
+  background: linear-gradient(135deg, #83bafb 10%, white 90%);
 }
 
 .footer {
