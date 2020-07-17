@@ -59,18 +59,31 @@
 
   #submit-button, #indietro{
     text-decoration: none;
-    padding: 15px;
+    padding: 18px;
+    font-size: 19px;
     text-align: center;
     text-decoration: none;
-    border: none;
-    border-radius: 20px;
-    margin: 5px;
-
+    border: 1px solid darkblue;
+    border-radius: 30px;
+    background-color: white;
+    margin: 15px;
+    transition: 0.6s;
     &:hover{
-      transition: 0.8s;
-      background-color: lightblue;
+      cursor: pointer;
+      transition: 0.6s;
     }
-
+  }
+  #submit-button{
+    &:hover{
+      background-color: limegreen;
+      color: white;
+    }
+  }
+  #indietro{
+    &:hover{
+      background-color: crimson;
+      color: white;
+    }
   }
 
 }

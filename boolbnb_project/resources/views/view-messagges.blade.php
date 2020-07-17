@@ -22,6 +22,7 @@
       <h3>{{$message -> text}}</h3>
     </div>
     @endforeach
+    <a href="{{ url()->previous()}}"><button type="button" name="button" id="indietro">Indietro</button></a>
   </div>
 
 

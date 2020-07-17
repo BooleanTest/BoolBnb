@@ -124,8 +124,14 @@
       </form>
     </div>
     @endif
-
+    @Auth
+    @if(Auth::user()-> id === $apartments -> user_id)
+    <a href="{{route('profilo' , $apartments -> user_id)}}"><button type="button" name="button" id="indietro">Indietro</button></a>
+    @endAuth
+    @else
     <a href="{{ url()->previous()}}"><button type="button" name="button" id="indietro">Indietro</button></a>
+    @endif
+
   </div>
 
 
