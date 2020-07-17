@@ -82,17 +82,17 @@
 
         @Auth
         @if(Auth::user()-> id)
-        <input type="text" id="mail" name="mail" value="{{Auth::user()->email}} " disabled placeholder="Inserisci email" >
+        <input type="text" id="mail" name="mail" value="{{Auth::user()->email}}">
         @endauth
         @else
-        <input type="text" id="mail" name="mail" value="" placeholder="Inserisci il testo..">
+        <input type="text" id="mail" name="mail" value="" placeholder="Inserisci l'email..">
         @endif
 
         <br>
         <label for="text"></label>
         <textarea name="text" id="text" cols="40" rows="15" placeholder= "Inserisci il testo..."></textarea>
         <br>
-        <button type="submit" name="submit">Invia Messaggio</button>
+        <a href="#"><button type="submit" name="submit">Invia Messaggio</button></a>
 
       </form>
     </div>
@@ -106,20 +106,13 @@
 
         <label for="mail"></label>
 
-
-        @Auth
-        @if(Auth::user()-> id)
-        <input type="text" id="mail" name="mail" value="{{Auth::user()->email}} " disabled placeholder="Inserisci email" >
-        @endauth
-        @else
-        <input type="text" id="mail" name="mail" value="" placeholder="Inserisci il testo..">
-        @endif
+        <input type="text" id="mail" name="mail" value="" placeholder="Inserisci l'email...">
 
         <br>
         <label for="text"></label>
         <textarea name="text" id="text" cols="40" rows="15" placeholder= "Inserisci il testo..."></textarea>
         <br>
-        <button type="submit" name="submit">Invia Messaggio</button>
+        <a href="#"><button type="submit" name="submit">Invia Messaggio</button></a>
 
       </form>
     </div>
