@@ -22,15 +22,15 @@
 }
 
 .color-blue{
-  color: blue;
+  color: blue; // scritte bottoni, contrasto su sfondi scuri
 }
 
 .color-red{
-  color: crimson;
+  color: crimson; // bottoni di elimina, log out, pagamento fallito, scritte errori
 }
 
 .color-white{
-  color: white;
+  color: white; // scritte bottoni, contrasto su sfondi scuri
 }
 
 .color-lightsteelblue{
@@ -66,8 +66,8 @@ a{
   position: fixed;
   top: 0;
   z-index: 2;
-  background: rgb(131,186,251);
-  background: linear-gradient(135deg, rgba(131,186,251,1) 10%, rgba(255,255,255,1) 90%);
+  background: rgb(255,255,255);
+  background: linear-gradient(90deg, rgba(255,255,255,1) 6%, LightSkyBlue 50%, rgba(255,255,255,1) 94%);
 
 }
 
@@ -81,6 +81,6 @@ a{
   padding: 60px 160px 60px 160px;
   background-color: grey;
   position: relative;
-  margin-top: 80px;
-  z-index: 2;
+  background: rgb(255,255,255);
+  background: linear-gradient(90deg, rgba(255,255,255,1) 6%, LightSkyBlue 50%, rgba(255,255,255,1) 94%);
 }

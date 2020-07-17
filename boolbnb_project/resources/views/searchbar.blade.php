@@ -11,7 +11,7 @@
       </div>
       <div class="botton">
         <button type="submit" class="btn btn-default">
-          CERCA
+          Cerca
         </button>
       </div>
   </form>

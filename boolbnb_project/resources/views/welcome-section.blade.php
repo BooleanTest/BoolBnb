@@ -5,23 +5,8 @@
   <div class="heading-w-apartments">
     <h2> Gli appartamenti in evidenza </h2>
   </div>
+
   <div class="container-w-apartments">
-    {{-- @foreach ($apartments as $apartment)
-      <div class="w-apartment">
-
-        <a href="{{ route('show-apartment', $apartment -> id ) }}">
-          <img src="{{ $apartment -> image }}" alt="Immagine_Appartamento">
-          <div class="title-w-apartment">
-            <h3>{{ $apartment -> title }}</h3>
-            <p>{{ $apartment -> address }}</p>
-          </div>
-        </a>
-
-      </div>
-    @endforeach --}}
-
-    {{-- ............. --}}
-
 
     @if ($apartments_pay)
       @foreach ($apartments_pay as $apartment)
@@ -32,15 +17,18 @@
             <div class="title-w-apartment">
               <h3>{{ $apartment -> title }}</h3>
               <p>{{ $apartment -> address }}</p>
+              <p>{{ $apartment -> city }}</p>
             </div>
           </a>
-          
+
         </div>
       @endforeach
     @endif
 
-    {{-- .................. --}}
+  </div>
 
+  <div class="heading-w-apartments">
+    <h2> Paradisi da sogno </h2>
   </div>
 
 </main>

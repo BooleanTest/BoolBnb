@@ -11,7 +11,7 @@
           @auth
           <div class="username">
             <a class="nav-button" href="{{route('profilo', Auth::user()->id)}}">{{Auth::user()->name}}</a>
-            <a class="nav-button" href="{{ route('logout') }}"
+            <a class="nav-button-logout" href="{{ route('logout') }}"
             <a href="{{ route('logout') }}"
 
             onclick="event.preventDefault();
