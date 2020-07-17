@@ -919,7 +919,8 @@
 }
 
 .main_search_bar_query .map {
-  flex-basis: 40%;
+  height: 700px;
+  width: 1000px;
 }
 
 .container_message {
