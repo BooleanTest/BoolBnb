@@ -887,6 +887,19 @@
   justify-content: center;
 }
 
+.main_search_bar_query {
+  display: flex;
+  width: 100%;
+}
+
+.main_search_bar_query .apartments {
+  flex-basis: 50%;
+}
+
+.main_search_bar_query .map {
+  flex-basis: 40%;
+}
+
 .container_message {
   width: 100%;
   padding: 50px;
@@ -1135,7 +1148,6 @@ a {
 }
 
 .sfondo {
-  background-image: url(https://www.tuttosuigatti.it/files/styles/zoom/public/images/bs/262/gatto-mantello-bicolor.jpg?itok=m1Ob_w6y);
   background-size: cover;
   position: fixed;
   width: 100%;

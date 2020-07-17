@@ -128,3 +128,15 @@
       }
     }
   }
+
+
+  .main_search_bar_query{
+    display: flex;
+    width: 100%;
+    .apartments{
+      flex-basis: 50%;
+    }
+    .map{
+      flex-basis: 40%;
+    }
+  }

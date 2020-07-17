@@ -24,6 +24,8 @@ $(document).ready(function(){
             $('#lat').val(latitude);
             $('#long').val(longitude);
 
+
+
         },
         error: function(error){
 
@@ -31,79 +33,39 @@ $(document).ready(function(){
         }
       });
 
-
     })
 
 
-    var d = new Date();
-var n = d.getTime();
 
-console.log(n);
-  // var route = $('.search-h-form').data('search');
-  //
-  // console.log(route);
-  //
-  //  $('#search-button').submit(function(e){
-  //
-  //   e.preventDefault();
-  //
-  //   var query = $('#h-search-input').val();
-  //   var route = $('.search-h-form').data('search');
-  //   var form_data = $(this);
-  //   console.log(query);
-  //
-  //   $.ajax({
-  //     headers: {
-  //       'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
-  //     } ,
-  //     url: route,
-  //     data: form_data.serialize(),
-  //     method: "post",
-  //     success: function (Response){
-  //       console.log(Response);
-  //
-  //     },
-  //     error: function(error){
-  //       console.log('errore controller');
-  //     }
-  //   })
-  //
-  //   e.preventDefault();
-  //
-  //
-  //
-  //
-  // })
+      var position = [9.4, 43.4];
+      var map = tt.map({
+          key: 'HPIuQNQKJvFfEyPKVEciiGGYx8Fs3ptB',
+          container: 'map',
+          style: 'tomtom://vector/1/basic-main',
+          zoom: 5,
+          center: position,
+          basePath: 'sdk/',
+          source: 'vector'
+      });
 
-//   jQuery(document).ready(function(){
-//
-//     var route = $('.search-h-form').data('search');
-//
-//             jQuery('#search-button').click(function(e){
-//                e.preventDefault();
-//                // $.ajaxSetup({
-//                //    headers: {
-//                //         'X-CSRF-TOKEN': $('meta[name="_token"]').attr('content')
-//                //    }
-//               // });
-//                $.ajax({
-//                   // headers: {
-//                   //   'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
-//                   // },
-//                   url: route,
-//                   method: 'post',
-//                   data: {
-//                      city: jQuery('#city').val()
-//                   },
-//                   success: function(result){
-//                      console.log('ciao');
-//                   },
-//                   error: function(error){
-//                     console.log(error);
-//                   }
-//                 });
-//                });
-//             });
-// //
-//
+
+      console.log(position);
+
+      $('.box-result-apartment').click(function(){
+
+        var marker = ' ';
+        var latitude = $(this).find('.latitude').text();
+        var longitude = $(this).find('.longitude').text();
+
+        newPosition = [longitude, latitude];
+
+        var marker = new tt.Marker()
+        .setLngLat(newPosition)
+        .addTo(map);
+
+         map.flyTo({center: newPosition, zoom: 11});
+
+      });
+
+
 });

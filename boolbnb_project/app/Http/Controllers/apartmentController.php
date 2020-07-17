@@ -80,13 +80,14 @@ class apartmentController extends Controller
       $srvcs = [];
     }
 
-    if ($q == null){
+
+    if ($q == null || $lat == null|| $lng == null ){
       return view ('search-apartment', compact('services'));
 
     } else {
 
       if(!isset($distance)){
-        $apartments = Apartment::selectRaw('apartments.id AS apartment_id, title, city, image, rooms, bathrooms, (
+        $apartments = Apartment::selectRaw('apartments.id AS apartment_id, title, city, image, rooms, bathrooms, latitude, longitude, (
             3959 * acos (
             cos ( radians(' . $lat . ') )
             * cos( radians( latitude ) )
@@ -99,7 +100,7 @@ class apartmentController extends Controller
             ->having('distance', '<', 20)
             ->paginate(50);
       } else {
-        $apartments = Apartment::selectRaw('apartments.id AS apartment_id, title, city, image, rooms, bathrooms, (
+        $apartments = Apartment::selectRaw('apartments.id AS apartment_id, title, city, image, rooms, bathrooms, latitude, longitude, (
             3959 * acos (
             cos ( radians(' . $lat . ') )
             * cos( radians( latitude ) )

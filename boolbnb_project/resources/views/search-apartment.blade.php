@@ -40,26 +40,41 @@
   </div>
 
 
-  <div class="results-section">
-    @if (@isset($appartamenti))
-      <div class="results-apartments">
-        @foreach ($appartamenti as $apartment)
-          <div class="box-result-apartment">
-            <div class="image-apartment">
-              <a href="{{route('show-apartment', $apartment['stats']['apartment_id'])}}">
+  <div class="main_search_bar_query">
+    <div class="apartments">
+      <div class="results-section">
+        @if (@isset($appartamenti))
+          <div class="results-apartments">
+            @foreach ($appartamenti as $apartment)
+              <div class="box-result-apartment">
+                <div class="image-apartment">
+                  <a href="{{route('show-apartment', $apartment['stats']['apartment_id'])}}">
 
-                {{$apartment['stats']['title']}}
+                    {{$apartment['stats']['title']}}
 
-              </a>
-            </div>
 
+                    <p class="latitude">{{$apartment['stats']['latitude']}}</p>
+                    <p class="longitude">{{$apartment['stats']['longitude']}}</p>
+
+                  </a>
+                </div>
+
+              </div>
+            @endforeach
           </div>
-        @endforeach
+        @else
+          Nessun appartamento presente
+        @endif
       </div>
-    @else
-      Nessun appartamento presente
-    @endif
+    </div>
+
+
+      <div class="map" id="map">
+      </div>
+      
   </div>
 
+
+  <script src='https://api.tomtom.com/maps-sdk-for-web/cdn/5.x/5.59.0/maps/maps-web.min.js'></script>
   <script src="{{ asset('js/search.js') }}" defer></script>
 @endsection
