@@ -45,3 +45,12 @@
   Route::get('/apartment/{id}/payment', 'apartmentController@payment')->name('payment');
   // pagamenti --o post--
   Route::get('/payment/paid', 'apartmentController@paid')->name('payment-paid');
+
+
+
+
+
+
+
+  // statistiche prova
+  Route::get('/show-statistics/{id}', 'profiloController@statistics')->name('statistics');

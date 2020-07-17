@@ -9,6 +9,7 @@ use App\User;
 use App\Apartment;
 use App\Service;
 use App\Message;
+use App\View;
 
 
 
@@ -74,6 +75,7 @@ class profiloController extends Controller
       $apartments -> image  = $filePath;
       $apartments -> city  = $validateData["city"];
       $apartments -> nation  = $validateData["nation"];
+      // $apartments -> view = 1;
 
       $image -> storeAs($folder , $name . '.' . $format , 'public');
 
@@ -188,6 +190,33 @@ class profiloController extends Controller
       return view('view-messagges', compact('messages'));
     }
 
+
+
+    // inizio prove statistiche----------------------------------------
+    // public function statistics($id){
+    //   $apartment = Apartment::findOrFail($id);
+    //   $views = $apartment -> views;
+    //
+    //   $ipAddress = $_SERVER['REMOTE_ADDR'];
+    //   // dd($ipAddress);
+    //
+    //   $var = false;
+    //   foreach ($views as $view) {
+    //     if ($ipAddress == $view['ip'] ) {
+    //         $var = true;
+    //     }
+    //   }
+    //
+    //   if ($var == false) {
+    //       $view = new View;
+    //       $view['ip'] = $ipAddress;
+    //       $view['apartment_id'] = $id;
+    //       $view->save();
+    //   }
+    //
+    //
+    //   return view('statistics', compact('apartment', 'views'));
+    // }
 
 
 

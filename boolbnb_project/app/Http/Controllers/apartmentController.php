@@ -32,8 +32,29 @@ class apartmentController extends Controller
     $apartments = Apartment::findOrFail($id);
     Apartment::where('id', $id)->increment('view');
 
+    // ---------------------- prove
+    // $apartment = Apartment::findOrFail($id);
+    $views = $apartments -> views;
 
-    return view('show-apartment', compact('apartments'));
+    $ipAddress = $_SERVER['REMOTE_ADDR'];
+    // dd($ipAddress);
+
+    $var = false;
+    foreach ($views as $view) {
+      if ($ipAddress == $view['ip'] ) {
+          $var = true;
+      }
+    }
+
+    if ($var == false) {
+        $view = new View;
+        $view['ip'] = $ipAddress;
+        $view['apartment_id'] = $id;
+        $view->save();
+    }
+
+
+    return view('show-apartment', compact('apartments',"views"));
   }
 
   //rotta per salvare il messaggio
