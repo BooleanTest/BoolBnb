@@ -41,6 +41,12 @@
   color: LightGoldenRodYellow; //usare come sfondo appartamenti in evidenza o evidenziare qualcosa di prezioso
 }
 
+.color-limegreen{
+  &:hover{
+    color: limegreen
+  }
+}
+
 a{
   text-decoration: none;
 }
@@ -68,7 +74,7 @@ a{
   top: 0;
   z-index: 2;
   background: rgb(255,255,255);
-  background: linear-gradient(90deg, rgba(255,255,255,1) 6%, LightSkyBlue 50%, rgba(255,255,255,1) 94%);
+  background: linear-gradient(180deg, rgba(255,255,255,1) 0%, LightSkyBlue 100%);
 
 }
 
@@ -83,5 +89,6 @@ a{
   background-color: grey;
   position: relative;
   background: rgb(255,255,255);
-  background: linear-gradient(90deg, rgba(255,255,255,1) 6%, LightSkyBlue 50%, rgba(255,255,255,1) 94%);
+  background: linear-gradient(0deg, rgba(255,255,255,1) 0%, LightSkyBlue 100%);
+
 }
