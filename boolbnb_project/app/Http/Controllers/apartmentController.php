@@ -9,6 +9,7 @@ use App\Service;
 use App\Message;
 use App\Payment;
 use Braintree\Transaction;
+use App\View;
 
 class apartmentController extends Controller
 {
