@@ -190,7 +190,7 @@ $(document).ready(function () {
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! C:\Users\alessandro\Desktop\ALESSAND\BOOLEAN\progettone\BoolBnb\boolbnb_project\resources\js\stats.js */"./resources/js/stats.js");
+module.exports = __webpack_require__(/*! D:\Booleans\BoolBnb\boolbnb_project\resources\js\stats.js */"./resources/js/stats.js");
 
 
 /***/ })
