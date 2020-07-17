@@ -64,6 +64,7 @@ class apartmentController extends Controller
   public function search(Request $request){
 
     $services = Service::all();
+    $sponsoredApp = Apartment::all();
 
     $bathrooms = $request -> bathrooms;
     $rooms = $request -> rooms;
@@ -74,6 +75,10 @@ class apartmentController extends Controller
     $q = $request -> q;
     $appartamenti = [];
 
+
+
+
+    $apartments_pay = $sponsoredApp -> where('time', '>=', time());
 
 
     if (!isset($srvcs)){
@@ -161,7 +166,7 @@ class apartmentController extends Controller
 
       if(count($appartamenti) > 0){
 
-        return view('search-apartment', compact('services', 'appartamenti'));
+        return view('search-apartment', compact('services', 'appartamenti', 'apartments_pay'));
 
       } else {
 

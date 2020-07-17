@@ -38,7 +38,19 @@
     </form>
 
   </div>
+  <div class="sponsored">
+    <h1>appartamenti sponsorizzati</h1>
+    @foreach ($apartments_pay as $sponsoredApp)
 
+      <div class="sponsored">
+        <a href="{{route('show-apartment', $sponsoredApp -> id)}}">{{$sponsoredApp -> title}}</a>
+        <p class="latitude">{{$sponsoredApp -> latitude}}</p>
+        <p class="longitude">{{$sponsoredApp -> longitude}}</p>
+      </div>
+
+
+    @endforeach
+  </div>
 
   <div class="main_search_bar_query">
     <div class="apartments">
@@ -71,7 +83,7 @@
 
       <div class="map" id="map">
       </div>
-      
+
   </div>
 
 

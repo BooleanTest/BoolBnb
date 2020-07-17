@@ -15,7 +15,6 @@ $(document).ready(function(){
         method: 'get',
         success: function (data){
 
-
             var longitude = data.results[0].position.lon;
             var latitude = data.results[0].position.lat;
             var position = [longitude, latitude];
@@ -23,8 +22,6 @@ $(document).ready(function(){
 
             $('#lat').val(latitude);
             $('#long').val(longitude);
-
-
 
         },
         error: function(error){
@@ -34,8 +31,6 @@ $(document).ready(function(){
       });
 
     })
-
-
 
       var position = [9.4, 43.4];
       var map = tt.map({
@@ -48,8 +43,6 @@ $(document).ready(function(){
           source: 'vector'
       });
 
-
-      console.log(position);
 
       $('.box-result-apartment').click(function(){
 
@@ -66,6 +59,23 @@ $(document).ready(function(){
          map.flyTo({center: newPosition, zoom: 11});
 
       });
+
+      $('.sponsored').click(function(){
+
+        var marker = ' ';
+        var latitude = $(this).find('.latitude').text();
+        var longitude = $(this).find('.longitude').text();
+
+        newPosition = [longitude, latitude];
+
+        var marker = new tt.Marker()
+        .setLngLat(newPosition)
+        .addTo(map);
+
+         map.flyTo({center: newPosition, zoom: 11});
+
+      });
+
 
 
 });

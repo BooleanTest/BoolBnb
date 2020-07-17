@@ -9,12 +9,8 @@ $(document).ready(function(){
     if (nomeStrada.val() != '' && numeroStrada.val() != '' && municipio.val() != ''){
       $('#button').prop('disabled', false);
       $('#button').removeClass("error");
-      console.log('dovrei aver tolto quella merda di classe error, ma non lo faccio perchè sono stronzo');
-    }
 
-    console.log(nomeStrada.val(),
-numeroStrada.val(),
-municipio.val());
+    }
 
 
     nomeStrada.keyup(apiCoordinate);
@@ -59,7 +55,7 @@ municipio.val());
          },
          error: function(error){
 
-           console.log(error);
+           console.log('chiamo ma non funziono');
 
          }
        });
