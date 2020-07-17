@@ -97,7 +97,7 @@
 .container .profilo .appartamento .immagine img {
   border: 1px solid black;
   width: 100%;
-  max-height: 250px;
+  height: 210px;
 }
 
 .container .profilo .appartamento .scritte {
@@ -616,7 +616,6 @@
   padding: 25px;
   width: 75%;
   margin: auto;
-  margin-top: 150px;
   margin-bottom: 80px;
   background-image: url(https://us.123rf.com/450wm/kav777/kav7771503/kav777150300019/37670430-asse-di-legno-di-bamb%C3%B9-trama-sfondo-bianco.jpg?ver=6);
   background-size: cover;
@@ -695,13 +694,29 @@
   height: 500px;
 }
 
-.containeredit .servizi .servizietto {
-  padding: 8px;
+.containeredit .servizi .none {
+  display: none;
 }
 
-.containeredit .servizi .servizietto span {
-  font-size: 22px;
-  padding: 10px;
+.containeredit .servizi .left {
+  float: left;
+  width: 50%;
+}
+
+.containeredit .servizi .left .servizietto {
+  padding: 8px;
+  width: 150px;
+  display: inline-block;
+  border-left: 1px solid grey;
+}
+
+.containeredit .servizi .left .servizietto h4 {
+  font-size: 18px;
+  padding: 6px;
+}
+
+.containeredit .servizi .left .check {
+  display: inline-block;
 }
 
 .containeredit .servizi h2 {
@@ -873,11 +888,13 @@
 }
 
 .container_message {
-  width: 90%;
+  width: 100%;
   padding: 50px;
   margin: auto;
-  border: 1px solid black;
+  border: 2px solid black;
+  border-radius: 10px;
   margin-top: 30px;
+  background-image: url(https://us.123rf.com/450wm/kav777/kav7771503/kav777150300019/37670430-asse-di-legno-di-bamb%C3%B9-trama-sfondo-bianco.jpg?ver=6);
 }
 
 .container_message:after {
@@ -902,16 +919,22 @@
   float: left;
   width: 350px;
   margin-bottom: 10px;
-  border: 1px solid black;
-  padding: 10px 20px;
+  border-top: 2px solid black;
+  padding: 20px;
 }
 
 .container_message .text {
   float: left;
   width: calc(100% - 350px);
   margin-bottom: 10px;
-  border: 1px solid black;
-  padding: 10px 20px;
+  border-top: 2px solid black;
+  padding-top: 20px;
+  height: 200px;
+}
+
+.container_message .text h3 {
+  font-size: 16px;
+  line-height: 19px;
 }
 
 .title-stats {
@@ -1103,11 +1126,20 @@ a {
   position: relative;
   z-index: 1;
   min-height: 74.6vh;
+  padding-top: 50px;
 }
 
 #lat,
 #long {
   display: none;
+}
+
+.sfondo {
+  background-image: url(https://www.tuttosuigatti.it/files/styles/zoom/public/images/bs/262/gatto-mantello-bicolor.jpg?itok=m1Ob_w6y);
+  background-size: cover;
+  position: fixed;
+  width: 100%;
+  height: 100vh;
 }
 
 .header {
@@ -1132,5 +1164,8 @@ a {
   width: 100vw;
   padding: 60px 160px 60px 160px;
   background-color: grey;
+  position: relative;
+  margin-top: 80px;
+  z-index: 2;
 }
 

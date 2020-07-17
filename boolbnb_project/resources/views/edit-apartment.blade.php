@@ -106,18 +106,22 @@
       <h2>Servizi</h2>
       <label for="services[]"></label> <br>
       @foreach ($services as $service)
-      <div class="servizietto">
-        <span>{{$service -> name}}</span>
-        <input
+      <div class="left">
+        <div class="servizietto">
+          <h4>{{$service -> name}}</h4>
+        </div>
+        <div class="check">
+          <input
 
-        type="checkbox" name="services[]" value="{{$service -> id}}"
+          type="checkbox" name="services[]" value="{{$service -> id}}"
 
-        @foreach ($apartments -> services as $service_apartment)
-        @if ($service_apartment -> id == $service -> id )
-        checked
-        @endif
-        @endforeach
-        > <br>
+          @foreach ($apartments -> services as $service_apartment)
+          @if ($service_apartment -> id == $service -> id )
+          checked
+          @endif
+          @endforeach
+          ><br>
+        </div>
       </div>
 
 

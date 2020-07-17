@@ -16,7 +16,7 @@
       <div class="filters-section">
         <div class="filters-number">
           <label for="distance">Distanza</label>
-          <input type="number" name="distance" value="100">
+          <input type="number" name="distance" value="20">
           <label for="bathrooms">Bagni</label>
           <input type="number" name="bathrooms" min="0" value="0">
           <label for="rooms">Stanze</label>
@@ -39,7 +39,7 @@
 
   </div>
 
-  
+
   <div class="results-section">
     @if (@isset($appartamenti))
       <div class="results-apartments">

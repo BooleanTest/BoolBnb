@@ -95,11 +95,15 @@
     </div>
     <div class="servizi">
       <h2>Servizi</h2>
-      <label for="services[]"></label> <br>
+      <label for="services[]" class="none"></label> <br>
       @foreach ($services as $service)
-      <div class="servizietto">
-        <span>{{$service -> name}}</span>
-        <input  type="checkbox" name="services[]" value="{{$service -> id}}"> <br>
+      <div class="left">
+        <div class="servizietto">
+          <h4>{{$service -> name}}</h4>
+        </div>
+        <div class="check">
+          <input  type="checkbox" name="services[]" value="{{$service -> id}}"> <br>
+        </div>
       </div>
       @endforeach
     </div>

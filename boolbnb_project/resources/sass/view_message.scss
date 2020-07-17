@@ -18,19 +18,26 @@
     float: left;
     width: 350px;
     margin-bottom: 10px;
-    border: 1px solid black;
-    padding: 10px 20px;
+    border-top: 2px solid black;
+    padding: 20px;
   }
   .text{
+    h3{
+      font-size: 16px;
+      line-height: 19px;
+    }
     float: left;
     width: calc(100% - 350px);
     margin-bottom: 10px;
-    border: 1px solid black;
-    padding: 10px 20px;
+    border-top: 2px solid black;
+    padding-top: 20px;
+    height: 200px;
   }
-  width: 90%;
+  width: 100%;
   padding: 50px;
   margin: auto;
-  border: 1px solid black;
+  border: 2px solid black;
+  border-radius: 10px;
   margin-top: 30px;
+  background-image: url(https://us.123rf.com/450wm/kav777/kav7771503/kav777150300019/37670430-asse-di-legno-di-bamb%C3%B9-trama-sfondo-bianco.jpg?ver=6);
 }
