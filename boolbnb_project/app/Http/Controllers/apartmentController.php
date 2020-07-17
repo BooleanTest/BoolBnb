@@ -98,8 +98,6 @@ class apartmentController extends Controller
     $appartamenti = [];
 
 
-
-
     $apartments_pay = $sponsoredApp -> where('time', '>=', time());
 
 
@@ -109,7 +107,7 @@ class apartmentController extends Controller
 
 
     if ($q == null || $lat == null|| $lng == null ){
-      return view ('search-apartment', compact('services'));
+      return view ('search-apartment', compact('services', 'apartments_pay'));
 
     } else {
 
@@ -184,15 +182,13 @@ class apartmentController extends Controller
 
       }
 
-
-
       if(count($appartamenti) > 0){
 
         return view('search-apartment', compact('services', 'appartamenti', 'apartments_pay'));
 
       } else {
 
-        return view ('search-apartment', compact('services'));
+        return view ('search-apartment', compact('services', 'apartments_pay'));
 
       }
 

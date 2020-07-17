@@ -1188,6 +1188,10 @@
   color: LightGoldenRodYellow;
 }
 
+.color-limegreen:hover {
+  color: limegreen;
+}
+
 a {
   text-decoration: none;
 }
