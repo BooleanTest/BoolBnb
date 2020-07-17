@@ -13,6 +13,8 @@
     @method('post')
     <div class="dati">
       <h3>Dati Appartamento</h3>
+
+      <p id='errore'></p>
       <div class="valore">
         <div class="label">
           <label for="title">Titolo : </label>
@@ -77,19 +79,19 @@
       </div>
       <div class="valore">
         <div class="label">
-          <label for="latitude">Latitudine : </label>
+          <label class='none' for="latitude">Latitudine : </label>
         </div>
-        <span id="plat"></span>
-        <input id="latitude" type="text" name="latitude" value="" class="none"><br>
+        <span class='none' id="plat"></span>
+        <input id="latitude" class='none' type="text" name="latitude" value="{{old('latitude')}}" ><br>
       </div>
       <div class="valore">
         <div class="label">
-          <label for="longitude">Longitudine : </label>
+          <label class='none' for="longitude">Longitudine : </label>
         </div>
-        <span id="plong"></span>
-        <input id="longitude" type="text" name="longitude" value="" class="none">
+        <span class='none' id="plong"></span>
+        <input id="longitude" class='none' type="text" name="longitude" value="{{old('longitude')}}" >
         <br>
-        <button type="button" id="calcolo" name="calcolo">Calcola</button><br><br><br>
+      
       </div>
 
     </div>
@@ -108,8 +110,8 @@
       @endforeach
     </div>
     <div class="bottoni">
-      <a href="{{route('home')}}"><button type="button" name="button" class="red">Indietro</button></a>
-      <a href="#"><button  id='button' type="submit" name="submit">Salva</button></a>
+      <a href="{{route('home')}}"><button  type="button" name="button" class="red">Indietro</button></a>
+      <a href="#"><button  disabled id='button' class='error' type="submit" name="submit">Salva</button></a>
     </div>
   </form>
   <script src="{{ asset('js/geocoding.js') }}" defer></script>

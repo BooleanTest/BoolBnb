@@ -723,6 +723,12 @@
   text-align: center;
 }
 
+.containeredit .bottoni .error:hover {
+  background-color: red;
+  cursor: pointer;
+  transition: 1s;
+}
+
 .containeredit .bottoni button {
   margin: 10px;
   padding: 10px 16px;

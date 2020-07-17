@@ -82,18 +82,18 @@
         <div class="label">
           <label for="latitude">Latitudine : </label>
         </div>
-        <span id="plat">{{ old('number', $apartments -> latitude) }}</span>
+        <span class="none" id="plat">{{ old('number', $apartments -> latitude) }}</span>
         <input id="latitude" type="text" name="latitude" value="{{ old('number', $apartments -> latitude) }}" class="none">
         <br>
       </div>
       <div class="valore">
-        <div class="label">
+        <div class="none" class="label">
           <label for="longitude">Longitudine : </label>
         </div>
-        <span id="plong">{{ old('number', $apartments -> longitude) }}</span>
+        <span class="none" id="plong">{{ old('number', $apartments -> longitude) }}</span>
         <input id="longitude" type="text" name="longitude" value="{{ old('number', $apartments -> longitude) }}" class="none">
         <br>
-        <button type="button" id="calcolo" name="calcolo">Calcola</button><br>
+
       </div>
 
       <br> <br>
@@ -130,7 +130,7 @@
     </div>
     <div class="bottoni">
       <a href="{{route('show-apartment', $apartments["id"])}}"><button type="button" name="button" class="red">Indietro</button></a>
-      <a href="#"><button type="submit" name="submit" >Salva</button></a>
+      <a href="#"><button class="error" id="button" type="submit" name="submit" >Salva</button></a>
     </div>
 
 

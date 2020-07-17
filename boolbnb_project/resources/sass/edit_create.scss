@@ -92,7 +92,21 @@
     width: 50%;
     height: 500px;
   }
+
+
+
   .bottoni{
+
+    .error{
+      
+      &:hover{
+        background-color: red;
+        cursor: pointer;
+        transition: 1s;
+      }
+
+    }
+
     button{
       &:hover{
         background-color: limegreen;
@@ -100,6 +114,7 @@
         color: white;
         transition: 0.6s;
       }
+
       margin: 10px;
       padding: 10px 16px;
       font-size: 18px;

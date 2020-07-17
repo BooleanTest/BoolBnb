@@ -94,36 +94,57 @@
 /***/ (function(module, exports) {
 
 $(document).ready(function () {
-  $('#calcolo').click(function (e) {
+  var nomeStrada = $(".streetName");
+  var numeroStrada = $(".streetNumber");
+  var municipio = $(".municipality");
+
+  if (nomeStrada.val() != '' && numeroStrada.val() != '' && municipio.val() != '') {
+    $('#button').prop('disabled', false);
+    $('#button').removeClass("error");
+    console.log('dovrei aver tolto quella merda di classe error, ma non lo faccio perchè sono stronzo');
+  }
+
+  console.log(nomeStrada.val(), numeroStrada.val(), municipio.val());
+  nomeStrada.keyup(apiCoordinate);
+  numeroStrada.keyup(apiCoordinate);
+  municipio.keyup(apiCoordinate);
+  nomeStrada.keydown(apiCoordinate);
+  numeroStrada.keydown(apiCoordinate);
+  municipio.keydown(apiCoordinate);
+
+  function apiCoordinate() {
     var streetName = $(".streetName").val();
     var streetNumber = $(".streetNumber").val();
     var municipality = $(".municipality").val();
-    $.ajax({
-      url: 'https://api.tomtom.com/search/2/structuredGeocode.json?key=HPIuQNQKJvFfEyPKVEciiGGYx8Fs3ptB&countryCode=it&streetNumber=<streetNumber>&streetName=<streetName>&municipality=<municipality>',
-      data: {
-        streetNumber: streetName,
-        streetName: streetNumber,
-        municipality: municipality
-      },
-      method: 'get',
-      success: function success(data) {
-        // console.log('sono la latitudine = ' + data.results[0].position.lat + 'sono la longitudine = ' + data.results[0].position.lon);
-        var longitude = data.results[0].position.lon;
-        var latitude = data.results[0].position.lat;
-        var position = [longitude, latitude]; // document.getElementById("latitude").innerHTML =  latitude ;
 
-        $('#latitude').val(latitude);
-        $('#longitude').val(longitude);
-        $('#plong').text(longitude);
-        $('#plat').text(latitude);
-        $('#plong').text(longitude);
-        $('#plat').text(latitude);
-      },
-      error: function error(_error) {
-        console.log('errore dati');
-      }
-    });
-  }); //   $('#form').submit(function(e){
+    if (nomeStrada.val() != '' && numeroStrada.val() != '' && municipio.val() != '') {
+      $.ajax({
+        url: 'https://api.tomtom.com/search/2/structuredGeocode.json?key=fdEClAfoJx3PxxAZWCgLqh3ApTZlAcuF&countryCode=it&streetNumber=<streetNumber>&streetName=<streetName>&municipality=<municipality>',
+        data: {
+          streetNumber: streetName,
+          streetName: streetNumber,
+          municipality: municipality
+        },
+        method: 'get',
+        success: function success(data) {
+          console.log('sto chiamando');
+          var longitude = data.results[0].position.lon;
+          var latitude = data.results[0].position.lat;
+          var position = [longitude, latitude];
+          $('#latitude').val(latitude);
+          $('#longitude').val(longitude);
+          $('#button').prop('disabled', false);
+          $('#button').removeClass("error");
+        },
+        error: function error(_error) {
+          console.log(_error);
+        }
+      });
+    } else {
+      $('#button').addClass("error");
+      console.log('non chiamo');
+    }
+  } //   $('#form').submit(function(e){
   // e.preventDefault();
   //     var form_data = $(this);
   //
@@ -180,7 +201,6 @@ $(document).ready(function () {
   //
   //       });
   //
-  //
   //     });
   //    $.get
   //    ( ,
@@ -213,6 +233,7 @@ $(document).ready(function () {
   //   e.preventDefault();
   //
   // })
+
 });
 
 /***/ }),
@@ -224,7 +245,7 @@ $(document).ready(function () {
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! D:\Progetti\Boolean\BoolBnb\boolbnb_project\resources\js\geocoding.js */"./resources/js/geocoding.js");
+module.exports = __webpack_require__(/*! C:\Users\alessandro\Desktop\ALESSAND\BOOLEAN\progettone\BoolBnb\boolbnb_project\resources\js\geocoding.js */"./resources/js/geocoding.js");
 
 
 /***/ })

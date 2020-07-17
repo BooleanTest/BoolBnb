@@ -8,7 +8,7 @@ $(document).ready(function(){
       console.log(query);
 
       $.ajax({
-        url: 'https://api.tomtom.com/search/2/structuredGeocode.json?key=HPIuQNQKJvFfEyPKVEciiGGYx8Fs3ptB&countryCode=it&municipality=<municipality>',
+        url: 'https://api.tomtom.com/search/2/structuredGeocode.json?key=fdEClAfoJx3PxxAZWCgLqh3ApTZlAcuF&countryCode=it&municipality=<municipality>',
         data: {
           municipality: query
         },
@@ -39,7 +39,7 @@ $(document).ready(function(){
 
       var position = [9.4, 43.4];
       var map = tt.map({
-          key: 'HPIuQNQKJvFfEyPKVEciiGGYx8Fs3ptB',
+          key: 'fdEClAfoJx3PxxAZWCgLqh3ApTZlAcuF',
           container: 'map',
           style: 'tomtom://vector/1/basic-main',
           zoom: 5,

@@ -98,7 +98,7 @@ $(document).ready(function () {
     var query = $('#query').val();
     console.log(query);
     $.ajax({
-      url: 'https://api.tomtom.com/search/2/structuredGeocode.json?key=HPIuQNQKJvFfEyPKVEciiGGYx8Fs3ptB&countryCode=it&municipality=<municipality>',
+      url: 'https://api.tomtom.com/search/2/structuredGeocode.json?key=fdEClAfoJx3PxxAZWCgLqh3ApTZlAcuF&countryCode=it&municipality=<municipality>',
       data: {
         municipality: query
       },
@@ -118,7 +118,7 @@ $(document).ready(function () {
   });
   var position = [9.4, 43.4];
   var map = tt.map({
-    key: 'HPIuQNQKJvFfEyPKVEciiGGYx8Fs3ptB',
+    key: 'fdEClAfoJx3PxxAZWCgLqh3ApTZlAcuF',
     container: 'map',
     style: 'tomtom://vector/1/basic-main',
     zoom: 5,
@@ -149,11 +149,7 @@ $(document).ready(function () {
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-<<<<<<< HEAD
-module.exports = __webpack_require__(/*! D:\Booleans\BoolBnb\boolbnb_project\resources\js\search.js */"./resources/js/search.js");
-=======
-module.exports = __webpack_require__(/*! D:\Progetti\Boolean\BoolBnb\boolbnb_project\resources\js\search.js */"./resources/js/search.js");
->>>>>>> master
+module.exports = __webpack_require__(/*! C:\Users\alessandro\Desktop\ALESSAND\BOOLEAN\progettone\BoolBnb\boolbnb_project\resources\js\search.js */"./resources/js/search.js");
 
 
 /***/ })
