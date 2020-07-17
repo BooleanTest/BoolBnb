@@ -75,6 +75,7 @@
 }
 
 .container .profilo .appartamento {
+  transition: 0.6s;
   float: left;
   width: calc(50% - 10px);
   padding: 30px;
