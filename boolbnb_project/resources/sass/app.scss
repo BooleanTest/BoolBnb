@@ -64,17 +64,16 @@ a{
   display: none;
 }
 
+
 // Header
 
 .header {
   width: 100vw;
   padding: 30px 160px 30px 160px;
-  background-image: linear-gradient(to right, lightblue , white);
+  background: linear-gradient(180deg, rgba(255,255,255,1) 0%, LightSkyBlue 100%);
   position: fixed;
   top: 0;
   z-index: 2;
-  background: rgb(255,255,255);
-  background: linear-gradient(180deg, rgba(255,255,255,1) 0%, LightSkyBlue 100%);
 
 }
 
@@ -86,9 +85,7 @@ a{
   align-items: center;
   width: 100vw;
   padding: 60px 160px 60px 160px;
-  background-color: grey;
-  position: relative;
-  background: rgb(255,255,255);
   background: linear-gradient(0deg, rgba(255,255,255,1) 0%, LightSkyBlue 100%);
-
+  position: relative;
+  z-index: 2;
 }

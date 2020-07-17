@@ -32,14 +32,14 @@
         <!-- Erroris -->
         <div class="errors">
           @error('email')
-          <span class="invalid-feedback" role="alert">
+          <p class="errori" role="alert">
             <strong>{{ $message }}</strong>
-          </span><br>
+          </p><br>
           @enderror
           @error('password')
-          <span class="invalid-feedback" role="alert">
+          <p class="errori" role="alert">
             <strong>{{ $message }}</strong>
-          </span><br>
+          </p><br>
           @enderror
           @if (Route::has('password.request'))
           <!-- <a class="btn btn-link" href="{{ route('password.request') }}">

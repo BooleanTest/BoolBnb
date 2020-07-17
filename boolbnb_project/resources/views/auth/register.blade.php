@@ -36,29 +36,29 @@
                         <!-- Sezione Errori -->
                         <div class="errors">
                           @error('name')
-                          <span class="" role="alert">
+                          <p class="errori" role="alert">
                             <strong>{{ $message }}</strong>
-                          </span>
+                          </p>
                           @enderror
                           @error('lastname')
-                          <span class="invalid-feedback" role="alert">
+                          <p class="errori" role="alert">
                             <strong>{{ $message }}</strong>
-                          </span>
+                          </p>
                           @enderror
                           @error('date_of_birth')
-                          <span class="" role="alert">
+                          <p class="errori" role="alert">
                             <strong>{{ $message }}</strong>
-                          </span>
+                          </p>
                           @enderror
                           @error('email')
-                          <span class="" role="alert">
+                          <p class="errori" role="alert">
                             <strong>{{ $message }}</strong>
-                          </span>
+                          </p>
                           @enderror
                           @error('password')
-                          <span class="invalid-feedback" role="alert">
+                          <p class="errori" role="alert">
                             <strong>{{ $message }}</strong>
-                          </span>
+                          </p>
                           @enderror
                         </div>
                         <div class="go">
