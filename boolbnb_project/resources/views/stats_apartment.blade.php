@@ -56,9 +56,6 @@
       </div>
     </div>
 
- {{-- <a value='2.99' href="#">2.99</a> <br>
- <a href="#">5.99</a> <br>
- <a href="#">9.99</a> <br> --}}
 
   </div>
 

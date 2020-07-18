@@ -24,11 +24,12 @@
 
   @if (auth()->user()-> id == $apartment -> user_id)
     <div class="title-payment">
-      <h1>Incrementa le tue entrate</h1>
+      <h1>Aumenta la tua visibilità</h1>
     </div>
     <div class="payment">
       @foreach ($payments as $payment)
         <div class="payment-box">
+
           <button type="button" name="payment" value="{{ $payment -> name }}">
           <h1>{{$payment -> name}}</h1>
           <h2>{{$payment -> price}}</h2>
@@ -40,6 +41,7 @@
             <p>per 144 ore di sponsorizzazione</p>
           @endif
           </button>
+
         </div>
       @endforeach
     </div>
@@ -66,7 +68,13 @@
 
     var ApartmentId = $('input[name=apartmentId]').val();
 
+    $(".payment .payment-box").click(function() {
+      $(".payment .payment-box").removeClass("active");
+      $(this).toggleClass( "active" );
+    });
+
     $('.payment').on('click', "button[type=button]", function () {
+
 
 
       var paymentType = $(this).val();

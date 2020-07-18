@@ -183,6 +183,7 @@
 }
 
 .container_logiscr .row .block {
+  background-color: LightSkyBlue;
   width: 60%;
   margin: auto;
   padding: 20px;
@@ -264,12 +265,6 @@
   transition: 0.6s;
 }
 
-.container_logiscr .row .block:hover {
-  background-color: white;
-  border: 1px solid darkblue;
-  transition: 0.6s;
-}
-
 * {
   box-sizing: border-box;
   padding: 0;
@@ -294,7 +289,7 @@
 
 .nav-bar .login .links .nav-button:hover {
   transition: 0.6s;
-  background-color: LightSkyBlue;
+  background-color: blue;
   color: white;
 }
 
@@ -334,6 +329,7 @@
 }
 
 .container-w-apartments .w-apartment {
+  background-color: white;
   width: 450px;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   border-radius: 8px;
@@ -349,7 +345,7 @@
 }
 
 .container-w-apartments .w-apartment .title-w-apartment p {
-  color: white;
+  color: blue;
 }
 
 .main-w-apartments {
@@ -815,7 +811,7 @@
 
 .search-section form .botton button:hover {
   transition: 0.6s;
-  background-color: LightSkyBlue;
+  background-color: blue;
   color: white;
 }
 
@@ -1039,6 +1035,11 @@
   margin: 5px;
 }
 
+.active {
+  border-top: 7px solid limegreen;
+  border-radius: 10px;
+}
+
 .payment .payment-box button {
   padding: 15px 25px;
   font-size: 24px;
@@ -1047,24 +1048,20 @@
   text-decoration: none;
   outline: none;
   color: #fff;
-  background-color: #4CAF50;
+  background-color: #a6a82c;
   border: none;
   border-radius: 15px;
-  box-shadow: 0 9px #999;
+  box-shadow: 0 9px LightSteelBlue;
 }
 
 .payment .payment-box button:hover {
-  background-color: #3e8e41;
+  background-color: limegreen;
 }
 
 .payment .payment-box button:active {
   background-color: #3e8e41;
   box-shadow: 0 5px #666;
   transform: translateY(4px);
-}
-
-.payment .payment-box button:focus {
-  background-color: #3e8e41;
 }
 
 #dropin-container {
@@ -1087,7 +1084,7 @@
   font-size: 19px;
   text-align: center;
   text-decoration: none;
-  border: 1px solid darkblue;
+  border: none;
   border-radius: 30px;
   background-color: white;
   margin: 15px;
@@ -1126,7 +1123,7 @@
   font-size: 22px;
   line-height: 20px;
   cursor: pointer;
-  transition: 0.3s;
+  transition: 0.6s;
 }
 
 .alertred .closebtn:hover {
@@ -1149,7 +1146,7 @@
   font-size: 22px;
   line-height: 20px;
   cursor: pointer;
-  transition: 0.3s;
+  transition: 0.6s;
 }
 
 .alertgreen .closebtn:hover {
@@ -1210,6 +1207,10 @@ a {
 #lat,
 #long {
   display: none;
+}
+
+button {
+  outline: 0;
 }
 
 .header {

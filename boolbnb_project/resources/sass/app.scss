@@ -50,9 +50,11 @@
 a{
   text-decoration: none;
 }
+
 .py-4{
   margin-top: 100px;
 }
+
 #app{
   position: relative;
   z-index: 1;
@@ -62,6 +64,10 @@ a{
 
 #lat, #long{
   display: none;
+}
+
+button{
+  outline: 0;
 }
 
 

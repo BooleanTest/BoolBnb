@@ -24,7 +24,7 @@
 
                         <!-- Sezione input da parte dell'utente -->
                         <div class="input_group">
-                              <h3>* Campi obligatori</h3>
+                              <h3>* Campi obbligatori</h3>
                               <input id="name" type="text" class="form-control @error('name') is-invalid @enderror" name="name" value="{{ old('name') }}" required autocomplete="name" autofocus placeholder="Nome *"><br>
                               <input id="" type="text" class="form-control @error('lastname') is-invalid @enderror" name="lastname" value="{{ old('lastname') }}" required autocomplete="name" autofocus placeholder="Cognome *"><br>
                               <input id="" type="date" class="form-control @error('date_of_birth') is-invalid @enderror" name="date_of_birth" value="{{ old('date_of_birth') }}" required autocomplete="name" autofocus ><br>

@@ -31,7 +31,7 @@
 
         &:hover{
           transition: 0.6s;
-          background-color: LightSkyBlue;
+          background-color: blue;
           color: white;
         }
 
@@ -83,6 +83,7 @@
   padding: 0px 160px 0px 160px;
 
   .w-apartment{
+    background-color: white;
     width: 450px;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     border-radius: 8px;
@@ -96,7 +97,7 @@
       text-align: center;
 
       p{
-        color: white;
+        color: blue;
       }
     }
   }
