@@ -321,7 +321,7 @@
 }
 
 .container-w-apartments {
-  background-color: LightSkyBlue;
+  background-color: white;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
