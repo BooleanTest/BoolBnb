@@ -1,5 +1,5 @@
 
-<div class="search-section">
+<div class="searchbar-section">
   <form action="/search" method="POST" role="search">
       {{ csrf_field() }}
       <div class="searchbar">

@@ -760,11 +760,7 @@
 .search-section {
   background: white;
   background: linear-gradient(180deg, white 50%, LightSkyBlue 100%);
-  margin-top: 93px;
-  padding-top: 185px;
-  padding-bottom: 145px;
-  padding-right: 160px;
-  padding-left: 160px;
+  padding: 60px 160px 60px 160px;
 }
 
 .search-section form {
@@ -773,16 +769,16 @@
   align-items: center;
 }
 
-.search-section form .searchbar {
+.search-section form .searchbar-apartments {
   width: 90%;
   margin: auto;
   text-align: center;
 }
 
-.search-section form .searchbar #query {
+.search-section form .searchbar-apartments #query {
   font-size: 26px;
   outline: none;
-  padding-left: 20px;
+  padding-left: 10px;
   width: 280px;
   height: 60px;
   border-radius: 8px;
@@ -794,12 +790,7 @@
   transition: 0.6s;
 }
 
-.search-section form .searchbar #query:focus {
-  width: 100%;
-  transition: 0.6s;
-}
-
-.search-section form .botton button {
+.search-section form button {
   padding: 15px;
   margin-top: 45px;
   text-align: center;
@@ -809,24 +800,31 @@
   transition: 0.6s;
 }
 
-.search-section form .botton button:hover {
+.search-section form button:hover {
   transition: 0.6s;
   background-color: blue;
   color: white;
 }
 
 .search-section form .filters-section {
-  flex-direction: column;
   display: flex;
+  flex-direction: column;
   align-items: center;
   width: 100%;
 }
 
 .search-section form .filters-section .filters-number {
+  display: flex;
   padding: 30px 0px;
 }
 
-.search-section form .filters-section .filters-number input {
+.search-section form .filters-section .filters-number .filters-number-column {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.search-section form .filters-section .filters-number .filters-number-column #roomsbath {
   outline: none;
   padding-left: 20px;
   width: 140px;
@@ -835,8 +833,20 @@
   font-size: 15px;
   border-right: 1px solid white;
   border-left: 1px solid white;
-  border-top: 3px solid black;
-  border-bottom: 3px solid black;
+  border-top: 3px solid darkblue;
+  border-bottom: 3px solid darkblue;
+}
+
+.search-section form .filters-section .filters-number .filters-number-column #rangeinput {
+  -webkit-appearance: none;
+  height: 30px;
+  outline: none;
+  -webkit-transition: 0.2s;
+  border-right: 1px solid white;
+  border-left: 1px solid white;
+  border-top: 3px solid darkblue;
+  border-bottom: 3px solid darkblue;
+  border-radius: 8px;
 }
 
 .search-section form .filters-section .filters-checkbox {
@@ -847,6 +857,45 @@
 
 .search-section form .filters-section .filters-checkbox .service {
   text-align: center;
+}
+
+.main_search_bar_query .apartments .results-section {
+  padding: 30px 160px 30px 160px;
+}
+
+.main_search_bar_query .apartments .results-section .results-apartments {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.main_search_bar_query .apartments .results-section .results-apartments .box-result-apartment {
+  display: flex;
+  width: 80%;
+  height: 30%;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  border-radius: 8px;
+  margin-bottom: 10px;
+}
+
+.main_search_bar_query .apartments .results-section .results-apartments .box-result-apartment .image-apartment {
+  width: 50%;
+}
+
+.main_search_bar_query .apartments .results-section .results-apartments .box-result-apartment .image-apartment img {
+  width: 100%;
+}
+
+.main_search_bar_query .apartments .results-section .results-apartments .box-result-apartment .info-apartment {
+  width: 50%;
+}
+
+.main_search_bar_query .apartments .results-section .results-apartments .box-result-apartment .info-apartment a {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
 .results-section {
@@ -1151,6 +1200,64 @@
 
 .alertgreen .closebtn:hover {
   color: black;
+}
+
+.searchbar-section {
+  background: white;
+  background: linear-gradient(180deg, white 50%, LightSkyBlue 100%);
+  margin-top: 93px;
+  padding-top: 185px;
+  padding-bottom: 145px;
+  padding-right: 160px;
+  padding-left: 160px;
+}
+
+.searchbar-section form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.searchbar-section form .searchbar {
+  width: 90%;
+  margin: auto;
+  text-align: center;
+}
+
+.searchbar-section form .searchbar #query {
+  font-size: 26px;
+  outline: none;
+  padding-left: 10px;
+  width: 280px;
+  height: 60px;
+  border-radius: 8px;
+  font-size: 30px;
+  border-right: 1px solid white;
+  border-left: 1px solid white;
+  border-top: 3px solid darkblue;
+  border-bottom: 3px solid darkblue;
+  transition: 0.6s;
+}
+
+.searchbar-section form .searchbar #query:focus {
+  width: 100%;
+  transition: 0.6s;
+}
+
+.searchbar-section form .botton button {
+  padding: 15px;
+  margin-top: 45px;
+  text-align: center;
+  border-radius: 20px;
+  border: none;
+  background-color: white;
+  transition: 0.6s;
+}
+
+.searchbar-section form .botton button:hover {
+  transition: 0.6s;
+  background-color: blue;
+  color: white;
 }
 
 * {

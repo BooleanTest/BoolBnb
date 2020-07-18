@@ -4,23 +4,33 @@
   <div class="search-section">
     <form class="" action="{{route('search')}}" method="post">
       {{ csrf_field() }}
-      <div class="searchbar-section">
-        <label for="q">cerca</label>
+      <div class="searchbar-apartments">
         <input id="query" type="text" name="q" value="" autocomplete="off">
 
-        <button type="submit" name="button">Cerca</button>
 
         <input id='lat' type="text" name="lat" value="">
         <input id='long' type="text" name="long" value="">
       </div>
+      <button type="submit" name="button">Cerca</button>
       <div class="filters-section">
         <div class="filters-number">
-          <label for="distance">Distanza</label>
-          <input type="number" name="distance" value="20">
-          <label for="bathrooms">Bagni</label>
-          <input type="number" name="bathrooms" min="0" value="0">
-          <label for="rooms">Stanze</label>
-          <input type="number" name="rooms" min="0" value="0">
+          <div class="filters-number-column">
+
+            <label for="bathrooms">Bagni</label>
+            <input id="roomsbath" type="number" name="bathrooms" min="0" value="0">
+          </div>
+          <div class="filters-number-column">
+
+            <label for="distance">Distanza</label>
+            <input id='rangeinput' type="range" name="distance" value="20" min='1' max='100' oninput="distanceOutputId.value = rangeinput.value">
+            <output name="distanceOutputValue" id="distanceOutputId">20</output>
+          </div>
+          <div class="filters-number-column">
+
+            <label for="rooms">Stanze</label>
+            <input id="roomsbath" type="number" name="rooms" min="0" value="0">
+          </div>
+
         </div>
 
         <div class="filters-checkbox">
@@ -38,8 +48,7 @@
     </form>
 
   </div>
-  <div class="sponsored">
-    <h1>appartamenti sponsorizzati</h1>
+  <div class="sponsored-container">
     @foreach ($apartments_pay as $sponsoredApp)
 
       <div class="sponsored">
