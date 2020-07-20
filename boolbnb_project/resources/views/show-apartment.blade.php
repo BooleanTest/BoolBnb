@@ -11,7 +11,7 @@
     <p class="success">{{session("success")}}</p>
     @endif
     <div class="margin">
-      <div class="nave">
+      <div class="nave ">
         <div class="scritte">
           <h1>{{$apartments -> title }}</h1>
           <p>{{$apartments -> city }} , {{$apartments -> nation }} , {{$apartments -> address }} n° {{$apartments -> number}}</p>
@@ -50,7 +50,7 @@
           @endauth
         </div>
       </div>
-      <div class="nave">
+      <div class="nave foto">
         <div class="immagine">
           <img src="{{$apartments -> image }}" alt="">
         </div>
@@ -69,7 +69,6 @@
           <h3>Numero bagni:  {{$apartments -> bathrooms }}</h3>
         </div>
         <div class="servizi">
-          <h2>SERVIZI</h2>
           <ul>
             @foreach ($apartments -> services as $service)
             <li>
@@ -158,6 +157,8 @@
       @Auth
       @if(Auth::user()-> id === $apartments -> user_id)
       <a href="{{route('profilo' , $apartments -> user_id)}}"><button type="button" name="button" id="indietro">Indietro</button></a>
+      @else
+      <a href="{{ url()->previous()}}"><button type="button" name="button" id="indietro">Indietro</button></a>
       @endAuth
       @else
       <a href="{{ url()->previous()}}"><button type="button" name="button" id="indietro">Indietro</button></a>

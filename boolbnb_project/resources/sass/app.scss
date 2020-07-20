@@ -54,7 +54,7 @@ a{
 #app{
   position: relative;
   z-index: 1;
-  min-height: 74.6vh;
+  min-height: 90%;
   padding-top: 50px;
 }
 
@@ -113,4 +113,11 @@ html{
   background: linear-gradient(0deg, rgba(255,255,255,1) 0%, LightSkyBlue 100%);
   position: relative;
   z-index: 2;
+}
+
+
+@media screen and (max-width: 900px){
+  .header{
+    padding: 30px 40px 30px 40px;
+  }
 }

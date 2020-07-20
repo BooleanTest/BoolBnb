@@ -11,8 +11,8 @@
         <h1>Benvenuto, ecco la lista degli appartamenti da lei inseriti</h1>
       </div>
       <div class="floatr">
-        <a href="{{route("create-apartment")}}"><button type="button" name="button">INSERISCI APPARTAMENTO</button></a>
-            <a href="{{route('view-messagges', Auth::user() -> id)}}"><button type="button" name="button"><i class="far fa-envelope white"></i></button></a>
+        <a href="{{route("create-apartment")}}" class="buttonleft"><button type="button" name="button">INSERISCI APPARTAMENTO</button></a>
+        <a href="{{route('view-messagges', Auth::user() -> id)}}" class="buttonright"><button type="button" name="button"><i class="far fa-envelope white"></i></button></a>
       </div>
 
     </div>
@@ -28,7 +28,7 @@
         </div>
         <div class="scritte">
           <div class="bottoni">
-            <a href="#"><button type="button" name="button" class="right red" id="eliminazionetasto">Elimina</button></a>
+            <a href="#"><button type="button" name="button" class="eliminazionetasto right red">Elimina</button></a>
             <div class="eliminatasto">
               <div class="eliminazione none">
                 <div class="eliscritte">
@@ -36,14 +36,14 @@
                   <h4>Una volta persi i dati non potranno più essere recuperati!</h4>
                 </div>
                 <div class="elibuttons">
-                  <button type="button" name="button" id="back">Indietro</button>
+                  <button type="button" name="button" class="back">Indietro</button>
                   <a href="{{route("delete-apartment", $apartment["id"])}}"><button type="button" name="button" class="right red" id="cancella">Elimina</button></a>
                 </div>
                 <script type="text/javascript">
-                  $('#eliminazionetasto').click(function(){
+                  $('.eliminazionetasto').click(function(){
                     $('.eliminazione').removeClass('none');
                   });
-                  $('#back').click(function(){
+                  $('.back').click(function(){
                     $('.eliminazione').addClass('none');
                   });
                 </script>

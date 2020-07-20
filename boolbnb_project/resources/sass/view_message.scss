@@ -1,58 +1,103 @@
-.container_message{
-  &:after{
-    content: "";
-    display: table;
-    clear: both;
-  }
-  .text_mail{
-    float: left;
-    width: 350px;
-    margin-bottom: 20px;
-  }
-  .testo{
-    float: left;
-    width: calc(100% - 350px);
-    margin-bottom: 20px;
-  }
-  .mail{
-    float: left;
-    width: 350px;
-    margin-bottom: 10px;
-    border-top: 2px solid black;
-    padding: 20px;
-  }
-  .text{
-    h3{
-      font-size: 16px;
-      line-height: 19px;
+
+  .container_message{
+    &:after{
+      content: "";
+      display: table;
+      clear: both;
     }
-    float: left;
-    width: calc(100% - 350px);
-    margin-bottom: 10px;
-    border-top: 2px solid black;
-    padding-top: 20px;
-    height: 200px;
-  }
-  button{
-    &:hover{
-      cursor: pointer;
-      background-color: crimson;
-      color: white;
+    .scritte{
+      &:after{
+        content: "";
+        display: table;
+        clear: both;
+      }
+      .text_mail{
+        float: left;
+        width: 350px;
+        margin-bottom: 20px;
+      }
+      .testo{
+        float: left;
+        width: calc(100% - 350px);
+        margin-bottom: 20px;
+      }
+    }
+    .messaggio{
+      &:after{
+        content: "";
+        display: table;
+        clear: both;
+      }
+      &:hover{
+        transition: 0.6s;
+        background-color: LightSkyBlue;
+      }
+      .mail{
+        float: left;
+        width: 350px;
+        margin-bottom: 10px;
+        border-top: 2px solid darkblue;
+        padding: 20px;
+      }
+      .text{
+        h3{
+          font-size: 16px;
+          line-height: 19px;
+          color: blue;
+        }
+        float: left;
+        width: calc(100% - 350px);
+        margin-bottom: 10px;
+        border-top: 2px solid darkblue;
+        padding-top: 20px;
+        height: 200px;
+      }
       transition: 0.6s;
     }
-    margin-left: 15px;
-    padding: 16px 21px;
-    background-color: white;
-    border: 1px solid darkblue;
-    border-radius: 30px;
-    font-size: 19px;
-    transition: 0.6s;
+    button{
+      &:hover{
+        cursor: pointer;
+        background-color: crimson;
+        color: white;
+        transition: 0.6s;
+      }
+      margin-left: 15px;
+      padding: 16px 21px;
+      background-color: white;
+      border: 1px solid darkblue;
+      border-radius: 30px;
+      font-size: 19px;
+      transition: 0.6s;
+      margin-top: 20px;
+    }
+    width: 100%;
+    padding: 50px;
+    margin: auto;
+    margin-top: 30px;
   }
-  width: 100%;
-  padding: 50px;
-  margin: auto;
-  border: 2px solid black;
-  border-radius: 10px;
-  margin-top: 30px;
-  background-image: url(https://us.123rf.com/450wm/kav777/kav7771503/kav777150300019/37670430-asse-di-legno-di-bamb%C3%B9-trama-sfondo-bianco.jpg?ver=6);
+
+
+@media screen and (max-width: 1200px){
+  .container{
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 900px){
+  .container{
+    .container_message{
+      .messaggio{
+        .mail{
+          margin-bottom: 0;
+          width: 100%;
+          float: none;
+        }
+        .text{
+          padding: 20px;
+          width: 100%;
+          float: none;
+        }
+      }
+    }
+  }
 }
