@@ -53,4 +53,4 @@
 
 
   // statistiche prova
-  Route::get('/show-statistics/{id}', 'profiloController@statistics')->name('statistics');
+    // Route::get('/show-statistics/{id}', 'profiloController@statistics')->name('statistics');
