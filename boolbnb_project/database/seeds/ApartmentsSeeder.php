@@ -15,7 +15,7 @@ class ApartmentsSeeder extends Seeder
      */
     public function run()
     {
-        factory(Apartment::class, 100)
+        factory(Apartment::class, 40)
                           ->make()
                           ->each(function ($apartment){
             $user = User::inRandomOrder()-> first();
