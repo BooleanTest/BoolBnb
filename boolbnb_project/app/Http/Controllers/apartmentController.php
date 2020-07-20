@@ -40,8 +40,12 @@ class apartmentController extends Controller
     $ipAddress = $_SERVER['REMOTE_ADDR'];
     // dd($ipAddress);
 
+
+
+
     $var = false;
     foreach ($views as $view) {
+      
       if ($ipAddress == $view['ip'] ) {
           $var = true;
       }

@@ -3,6 +3,7 @@
 
 @section('content')
 
+{{$views}}
 
 <div class="tutto">
   <div class="container_show">
