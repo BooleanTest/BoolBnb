@@ -1,7 +1,7 @@
 .search-section{
   background: rgb(255,255,255);
   background: linear-gradient(180deg, rgba(255,255,255,1) 50%, LightSkyBlue 100%);
-  padding: 60px 160px 60px 160px;
+  padding: 0px 160px 60px 160px;
 
 
 
@@ -68,7 +68,7 @@
           align-items: center;
 
           output{
-            
+
           }
 
           #rangeinputB, #rangeinputD, #rangeinputR {
@@ -114,21 +114,29 @@
 }
 
 .main_search_bar_query{
+  display: flex;
+  width: 100%;
 
   .apartments {
+    height: 100vh;
+    width: 50vw;
 
     .results-section{
-      padding: 30px 160px 30px 160px;
+      overflow: scroll;
+      overflow-x: hidden;
+      width: 100%;
+      height: 100%;
 
       .results-apartments{
+        width: 100%;
+        height: 100%;
         display: flex;
         flex-direction: column;
         align-items: center;
 
         .box-result-apartment{
           display: flex;
-          width: 80%;
-          height: 30%;
+          width: 100%;
           box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
           border-radius: 8px;
           margin-bottom: 10px;
@@ -164,59 +172,10 @@
 
   }
 
+  .map{
+    height: 100vh;
+    width: 50vw;
+  }
+
+
 }
-
-
-
-
-.results-section{
-  padding: 30px 160px 30px 160px;
-
-    .results-apartments{
-
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-
-      .box-result-apartment{
-        display: flex;
-        width: 80%;
-        height: 30%;
-        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-        border-radius: 8px;
-        margin-bottom: 10px;
-
-
-        .image-apartment{
-          width: 50%;
-          img{
-            width: 100%;
-          }
-        }
-
-        .info-apartment{
-          width: 50%;
-          a{
-            height: 100%;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-          }
-        }
-      }
-    }
-  }
-
-
-  .main_search_bar_query{
-    display: flex;
-    width: 100%;
-    .apartments{
-      flex-basis: 50%;
-    }
-    .map{
-      height: 700px;
-      width: 1000px;
-    }
-  }

@@ -73,16 +73,20 @@
           <div class="results-apartments">
             @foreach ($appartamenti as $apartment)
               <div class="box-result-apartment">
+                <a href="{{route('show-apartment', $apartment['stats']['apartment_id'])}}">
+
+                  {{$apartment['stats']['title']}}
+
+
+                  <p class="latitude">{{$apartment['stats']['latitude']}}</p>
+                  <p class="longitude">{{$apartment['stats']['longitude']}}</p>
+
+                </a>
                 <div class="image-apartment">
-                  <a href="{{route('show-apartment', $apartment['stats']['apartment_id'])}}">
-
-                    {{$apartment['stats']['title']}}
-
-
-                    <p class="latitude">{{$apartment['stats']['latitude']}}</p>
-                    <p class="longitude">{{$apartment['stats']['longitude']}}</p>
-
-                  </a>
+                  <img src="" alt="">
+                </div>
+                <div class="info-apartment">
+                  <a href=""></a>
                 </div>
 
               </div>
