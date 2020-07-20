@@ -17,18 +17,23 @@
           <div class="filters-number-column">
 
             <label for="bathrooms">Bagni</label>
-            <input id="roomsbath" type="number" name="bathrooms" min="0" value="0">
+            {{-- <input id="roomsbath" type="number" name="bathrooms" min="0" value="0"> --}}
+            <input id='rangeinputB' type="range" name="bathrooms" value="0" min='0' max='10' oninput="
+            bathroomsOutputId.value = rangeinputB.value">
+            <output name="bathroomsOutputValue" id="bathroomsOutputId">0</output>
           </div>
           <div class="filters-number-column">
 
             <label for="distance">Distanza</label>
-            <input id='rangeinput' type="range" name="distance" value="20" min='1' max='100' oninput="distanceOutputId.value = rangeinput.value">
+            <input id='rangeinputD' type="range" name="distance" value="20" min='1' max='100' oninput="distanceOutputId.value = rangeinputD.value">
             <output name="distanceOutputValue" id="distanceOutputId">20</output>
           </div>
           <div class="filters-number-column">
 
             <label for="rooms">Stanze</label>
-            <input id="roomsbath" type="number" name="rooms" min="0" value="0">
+            {{-- <input id="roomsbath" type="number" name="rooms" min="0" value="0"> --}}
+            <input id='rangeinputR' type="range" name="rooms" value="0" min='0' max='20' oninput="roomsOutputId.value = rangeinputR.value">
+            <output name="roomsOutputValue" id="roomsOutputId">0</output>
           </div>
 
         </div>

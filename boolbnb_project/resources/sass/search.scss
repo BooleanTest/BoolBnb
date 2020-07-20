@@ -67,20 +67,11 @@
           flex-direction: column;
           align-items: center;
 
-          #roomsbath{
-            outline: none;
-            padding-left: 20px;
-            width: 140px;
-            height: 30px;
-            border-radius: 8px;
-            font-size: 15px;
-            border-right: 1px solid white;
-            border-left: 1px solid white;
-            border-top: 3px solid darkblue;
-            border-bottom: 3px solid darkblue;
+          output{
+            
           }
 
-          #rangeinput{
+          #rangeinputB, #rangeinputD, #rangeinputR {
             -webkit-appearance: none;
             height: 30px;
             outline: none;

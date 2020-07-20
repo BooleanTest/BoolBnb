@@ -824,20 +824,9 @@
   align-items: center;
 }
 
-.search-section form .filters-section .filters-number .filters-number-column #roomsbath {
-  outline: none;
-  padding-left: 20px;
-  width: 140px;
-  height: 30px;
-  border-radius: 8px;
-  font-size: 15px;
-  border-right: 1px solid white;
-  border-left: 1px solid white;
-  border-top: 3px solid darkblue;
-  border-bottom: 3px solid darkblue;
-}
-
-.search-section form .filters-section .filters-number .filters-number-column #rangeinput {
+.search-section form .filters-section .filters-number .filters-number-column #rangeinputB,
+.search-section form .filters-section .filters-number .filters-number-column #rangeinputD,
+.search-section form .filters-section .filters-number .filters-number-column #rangeinputR {
   -webkit-appearance: none;
   height: 30px;
   outline: none;
