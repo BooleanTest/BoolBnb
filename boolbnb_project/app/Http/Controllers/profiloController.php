@@ -193,30 +193,60 @@ class profiloController extends Controller
 
 
     // inizio prove statistiche----------------------------------------
-    // public function statistics($id){
-    //   $apartment = Apartment::findOrFail($id);
-    //   $views = $apartment -> views;
-    //
-    //   $ipAddress = $_SERVER['REMOTE_ADDR'];
-    //   // dd($ipAddress);
-    //
-    //   $var = false;
-    //   foreach ($views as $view) {
-    //     if ($ipAddress == $view['ip'] ) {
-    //         $var = true;
-    //     }
-    //   }
-    //
-    //   if ($var == false) {
-    //       $view = new View;
-    //       $view['ip'] = $ipAddress;
-    //       $view['apartment_id'] = $id;
-    //       $view->save();
-    //   }
-    //
-    //
-    //   return view('statistics', compact('apartment', 'views'));
-    // }
+    public function statistics($id){
+
+      // $user = Auth::user();
+
+      $apartment = Apartment::findOrFail($id);
+
+      $views = View::all() -> where('apartment_id', $id);
+      $messages = Message::all() -> where('apartment_id', $id);
+
+      $count_messages = count($apartment -> messages);
+      $count_views = count($apartment -> views);
+      // dd($count_messages,$count_views);
+
+      foreach ($views as $view) {
+        $views_created = $view -> created_at;
+        $month_views[] = date( "F",  strtotime( $views_created) );
+      }
+      // dd($month_views);
+
+      $prev = 0;
+      sort($month_views);
+      for ($i = 0; $i < count($month_views); $i++ ) {
+        if ( $month_views[$i] !== $prev ) {
+          $monthsOrdered_v[] = $month_views[$i];
+          $viewsFrequency[] = 1;
+        } else {
+          $viewsFrequency[count($viewsFrequency) - 1]++;
+        }
+        $prev = $month_views[$i];
+      }
+
+      foreach ($messages as $message) {
+        $messages_created = $message -> created_at;
+        $month_messages[] = date( "F",  strtotime($messages_created) );
+      }
+      dd($month_messages);
+
+      $prev = 0;
+      sort($month_messages);
+      for ($i = 0; $i < count($month_messages); $i++ ) {
+        if ( $month_messages[$i] !== $prev ) {
+          $monthsOrdered_m[] = $month_messages[$i];
+          $messagesFrequency[] = 1;
+        } else {
+          $messagesFrequency[count($messagesFrequency) - 1]++;
+        }
+        $prev = $month_messages[$i];
+      }
+
+
+      return view('statistics', compact('month_messages', 'count_messages', 'month_views', 'count_views'));
+
+      // ..................fine prove conteggio statistiche
+    }
 
 
 
