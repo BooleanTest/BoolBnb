@@ -14,7 +14,7 @@ class ViewSeeder extends Seeder
      */
     public function run()
     {
-      factory(View::class, 15) 
+      factory(View::class, 10000)
                   -> make()
                   -> each(function($view){
                    $apartment = Apartment::inRandomOrder() -> first();

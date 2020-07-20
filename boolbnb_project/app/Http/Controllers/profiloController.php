@@ -169,9 +169,61 @@ class profiloController extends Controller
 
     //rotta per statistiche appartamento
     public function stats($id){
+
       $apartments = Apartment::findOrFail($id);
 
-      return view('stats_apartment', compact('apartments'));
+      $total_view_20 = View::selectRaw('COUNT("apartment_id") as tot_view')
+                    ->where('apartment_id', $id)
+                    ->where('created_at', 'like', '%2020%')
+                    -> get();
+
+      $total_view_19 = View::selectRaw('COUNT("apartment_id") as tot_view')
+                    ->where('apartment_id', $id)
+                    ->where('created_at', 'like', '%2019%')
+                    -> get();
+
+      $visual_mesi = [];
+      $visual_messaggi = [];
+
+      for ($i=1; $i <= 12; $i++) {
+        $months_view = View::selectRaw('COUNT("apartment_id") as mese')
+                      ->where('created_at', 'like', '%2020-0' . $i . '%')
+                      ->where('apartment_id', $id)
+                      -> get();
+
+
+        array_push($visual_mesi, $months_view -> toarray()[0]['mese']);
+
+      }
+
+      // SELECT COUNT(apartment_id) FROM messages WHERE apartment_id = 1
+
+      $total_messages_2020 = Message::selectRaw('COUNT("apartment_id") as tot_messages')
+                        ->where('apartment_id', $id)
+                        ->where('created_at', 'like', '%2020%')
+                        -> get();
+
+      $total_messages_2019 = Message::selectRaw('COUNT("apartment_id") as tot_messages')
+                        ->where('apartment_id', $id)
+                        ->where('created_at', 'like', '%2019%')
+                        -> get();
+
+      for ($i=1; $i <= 12; $i++) {
+        $message_view = Message::selectRaw('COUNT("apartment_id") as messaggi')
+                      ->where('created_at', 'like', '%2020-0' . $i . '%')
+                      ->where('apartment_id', $id)
+                      -> get();
+
+
+        array_push($visual_messaggi, $message_view -> toarray()[0]['messaggi']);
+
+      }
+
+      // dd($visual_mesi);
+
+
+      return view('stats_apartment', compact('total_view_20', 'total_view_19', 'total_messages_2020', 'total_messages_2019', 'visual_mesi', 'visual_messaggi', 'apartments'));
+
 
     }
 
@@ -179,8 +231,6 @@ class profiloController extends Controller
     public function view($id){
 
       $apartments = Apartment::all();
-      // SELECT user_id, mail, text FROM apartments join messages ON messages.apartment_id = apartments.id JOIN users ON users.id = apartments.user_id WHERE user_id = 5
-
 
       $messages = Apartment::selectRaw('user_id, mail, text')
                   ->join('messages', 'messages.apartment_id', '=', 'apartments.id')
@@ -193,30 +243,12 @@ class profiloController extends Controller
 
 
     // inizio prove statistiche----------------------------------------
-    // public function statistics($id){
-    //   $apartment = Apartment::findOrFail($id);
-    //   $views = $apartment -> views;
-    //
-    //   $ipAddress = $_SERVER['REMOTE_ADDR'];
-    //   // dd($ipAddress);
-    //
-    //   $var = false;
-    //   foreach ($views as $view) {
-    //     if ($ipAddress == $view['ip'] ) {
-    //         $var = true;
-    //     }
-    //   }
-    //
-    //   if ($var == false) {
-    //       $view = new View;
-    //       $view['ip'] = $ipAddress;
-    //       $view['apartment_id'] = $id;
-    //       $view->save();
-    //   }
-    //
-    //
-    //   return view('statistics', compact('apartment', 'views'));
-    // }
+    public function statistics($id){
+
+
+
+
+    }
 
 
 
