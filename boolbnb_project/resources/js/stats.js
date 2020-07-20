@@ -81,21 +81,22 @@ $(document).ready(function(){
 
   };
 
+  var mesiVisual = $('.visual_mesi').text();
+  var messaggiVisual = $('.visual_messaggi').text();
 
-
-  var myLabels = ['1','2','3','4','5','6','7','8','9','10','11','12'];
+  var myLabels = ['gennaio','febbraio','marzo','aprile','maggio','giugno','luglio','agosto','settembre','ottobre','novembre','dicembre'];
   console.log('Labels: ' + myLabels);
   var myDataset = [2,3,5,10,8,11,11,15,16,33,28,22];
   console.log('dataset: ' + myDataset);
 
 
-  printAChart('line', myDataset, myLabels, '#views-line', true, 'Visualizzazioni');
+  printAChart('line', mesiVisual, myLabels, '#views-line', true, 'Visualizzazioni');
 
-  printAChart('bar', myDataset, myLabels, '#views-bar', true, 'Visualizzazioni');
+  printAChart('bar', mesiVisual, myLabels, '#views-bar', true, 'Visualizzazioni');
 
-  printAChart('line', myDataset, myLabels, '#mex-line', true, 'Messaggi');
+  printAChart('line', messaggiVisual, myLabels, '#mex-line', true, 'Messaggi');
 
-  printAChart('bar', myDataset, myLabels, '#mex-bar', true, 'Messaggi');
+  printAChart('bar', messaggiVisual, myLabels, '#mex-bar', true, 'Messaggi');
 
 
   // DATI PER LE Visualizzazioni
