@@ -45,7 +45,7 @@ class apartmentController extends Controller
 
     $var = false;
     foreach ($views as $view) {
-      
+
       if ($ipAddress == $view['ip'] ) {
           $var = true;
       }
@@ -111,7 +111,7 @@ class apartmentController extends Controller
 
 
     if ($q == null || $lat == null|| $lng == null ){
-      return view ('search-apartment', compact('services', 'apartments_pay'));
+      return view ('search-apartment', compact('services', 'apartments_pay', 'request'));
 
     } else {
 
@@ -188,11 +188,11 @@ class apartmentController extends Controller
 
       if(count($appartamenti) > 0){
 
-        return view('search-apartment', compact('services', 'appartamenti', 'apartments_pay'));
+        return view('search-apartment', compact('services', 'appartamenti', 'apartments_pay', 'request'));
 
       } else {
 
-        return view ('search-apartment', compact('services', 'apartments_pay'));
+        return view ('search-apartment', compact('services', 'apartments_pay', 'request'));
 
       }
 
