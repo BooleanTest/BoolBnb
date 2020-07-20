@@ -76,7 +76,7 @@
       .immagine{
         img{
           width: 100%;
-          max-height: 190px;
+          max-height: 180px;
         }
         float: left;
         width: 50%;
@@ -203,6 +203,37 @@
   }
   padding: 25px;
   width: 75%;
-
   margin: auto;
+}
+
+@media screen and (max-width: 1400px){
+  .container{
+    width:100%;
+  }
+}
+@media screen and (max-width:900px){
+  .container{
+    .profilo{
+      .appartamento{
+        width: 100%;
+        float: none;
+      }
+      .top{
+        .floatl{
+          width: 100%;
+          text-align: center;
+        }
+        .floatr{
+          width: 100%;
+          margin: auto;
+          .buttonleft{
+            float: left;
+          }
+          .buttonright{
+            float: right;
+          }
+        }
+      }
+    }
+  }
 }

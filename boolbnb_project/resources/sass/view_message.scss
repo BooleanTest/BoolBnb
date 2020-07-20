@@ -75,3 +75,29 @@
     margin: auto;
     margin-top: 30px;
   }
+
+
+@media screen and (max-width: 1200px){
+  .container{
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 900px){
+  .container{
+    .container_message{
+      .messaggio{
+        .mail{
+          margin-bottom: 0;
+          width: 100%;
+          float: none;
+        }
+        .text{
+          padding: 20px;
+          width: 100%;
+          float: none;
+        }
+      }
+    }
+  }
+}
