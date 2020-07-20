@@ -5,7 +5,7 @@
     <form class="" action="{{route('search')}}" method="post">
       {{ csrf_field() }}
       <div class="searchbar-apartments">
-        <input id="query" type="text" name="q" value="" autocomplete="off">
+        <input id="query" type="text" name="q" value="{{ old('query') }}" autocomplete="off">
 
 
         <input id='lat' type="text" name="lat" value="">
@@ -73,21 +73,34 @@
           <div class="results-apartments">
             @foreach ($appartamenti as $apartment)
               <div class="box-result-apartment">
-                <a href="{{route('show-apartment', $apartment['stats']['apartment_id'])}}">
 
-                  {{$apartment['stats']['title']}}
-
-
-                  <p class="latitude">{{$apartment['stats']['latitude']}}</p>
-                  <p class="longitude">{{$apartment['stats']['longitude']}}</p>
-
-                </a>
                 <div class="image-apartment">
-                  <img src="" alt="">
+                  <img src="{{$apartment['stats']['image']}}" alt="">
                 </div>
                 <div class="info-apartment">
-                  <a href=""></a>
+                  <h2>{{$apartment['stats']['title']}}</h2>
+                  <br>
+                  <p>a {{$apartment['stats']['distance']}} km da {{$apartment['stats']['city']}}</p>
+                  <br>
+                  <hr>
+                  <br>
+                  <p>Numero di stanze &#183; {{$apartment['stats']['rooms']}}</p>
+                    <p id='lat' class="latitude">{{$apartment['stats']['latitude']}}</p>
+                    <p id='long' class="longitude">{{$apartment['stats']['longitude']}}</p>
+                    <br>
+                    <hr>
+                    <br>
+                    <p>
+                    @foreach ($apartment['services'] as $service)
+                      &#183; {{ $service }}
+                    @endforeach
+                    </p>
+                    <a href="{{route('show-apartment', $apartment['stats']['apartment_id'])}}">
+                      <button type="button" name="button">Mostra Appartamento</button>
+                    </a>
                 </div>
+
+                {{-- 'apartments.id AS apartment_id, title, city, image, rooms, bathrooms, latitude, longitude,distance --}}
 
               </div>
             @endforeach

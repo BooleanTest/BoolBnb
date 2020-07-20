@@ -82,6 +82,7 @@ $(document).ready(function(){
   };
 
 
+
   var myLabels = ['1','2','3','4','5','6','7','8','9','10','11','12'];
   console.log('Labels: ' + myLabels);
   var myDataset = [2,3,5,10,8,11,11,15,16,33,28,22];
