@@ -23,15 +23,15 @@
 }
 
 .color-blue{
-  color: blue; // scritte bottoni, contrasto su sfondi scuri
+  color: blue;
 }
 
 .color-red{
-  color: crimson; // bottoni di elimina, log out, pagamento fallito, scritte errori
+  color: crimson;
 }
 
 .color-white{
-  color: white; // scritte bottoni, contrasto su sfondi scuri
+  color: white;
 }
 
 .color-lightsteelblue{
@@ -40,12 +40,6 @@
 
 .color-LightGoldenRodYellow{
   color: LightGoldenRodYellow; //usare come sfondo appartamenti in evidenza o evidenziare qualcosa di prezioso
-}
-
-.color-limegreen{
-  &:hover{
-    color: limegreen
-  }
 }
 
 a{
