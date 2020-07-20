@@ -227,12 +227,22 @@
   .container {
     width: 100%;
   }
+
+  .container .profilo .appartamento .scritte .bottoni .eliminatasto .eliminazione {
+    left: 36%;
+    width: 30%;
+  }
 }
 
 @media screen and (max-width: 900px) {
   .container .profilo .appartamento {
     width: 100%;
     float: none;
+  }
+
+  .container .profilo .appartamento .scritte .bottoni .eliminatasto .eliminazione {
+    left: 22%;
+    width: 60%;
   }
 
   .container .profilo .top .floatl {
@@ -777,6 +787,11 @@
   .tutto .container_show {
     width: 100%;
   }
+
+  .tutto .container_show .margin .nave .modifica .eliminatasto .eliminazione {
+    left: 31%;
+    width: 40%;
+  }
 }
 
 @media screen and (max-width: 900px) {
@@ -784,6 +799,11 @@
     content: "";
     display: table;
     clear: both;
+  }
+
+  .tutto .container_show .margin .nave .modifica .eliminatasto .eliminazione {
+    left: 22%;
+    width: 60%;
   }
 
   .tutto .container_show .margin .foto {

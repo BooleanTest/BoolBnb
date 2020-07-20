@@ -266,6 +266,19 @@
 @media screen and (max-width: 1200px){
   .tutto{
     .container_show{
+      .margin{
+        .nave{
+          .modifica{
+            .eliminatasto{
+              .eliminazione{
+                left: 31%;
+                width: 40%;
+              }
+            }
+          }
+        }
+
+      }
       width: 100%;
     }
   }
@@ -279,6 +292,16 @@
           content: "";
           display: table;
           clear: both;
+        }
+        .nave{
+          .modifica{
+            .eliminatasto{
+              .eliminazione{
+                left: 22%;
+                width: 60%;
+              }
+            }
+          }
         }
         .foto{
           .mappa{
