@@ -28,7 +28,27 @@
         </div>
         <div class="scritte">
           <div class="bottoni">
-            <a href="{{route('delete-apartment', $apartment['id'])}}"><button type="button" name="button" class="right red">Elimina</button></a>
+            <a href="#"><button type="button" name="button" class="right red" id="eliminazionetasto">Elimina</button></a>
+            <div class="eliminatasto">
+              <div class="eliminazione none">
+                <div class="eliscritte">
+                  <h3>Sei sicuro di volere eliminare l'appartamento?</h3>
+                  <h4>Una volta persi i dati non potranno più essere recuperati!</h4>
+                </div>
+                <div class="elibuttons">
+                  <button type="button" name="button" id="back">Indietro</button>
+                  <a href="{{route("delete-apartment", $apartment["id"])}}"><button type="button" name="button" class="right red" id="cancella">Elimina</button></a>
+                </div>
+                <script type="text/javascript">
+                  $('#eliminazionetasto').click(function(){
+                    $('.eliminazione').removeClass('none');
+                  });
+                  $('#back').click(function(){
+                    $('.eliminazione').addClass('none');
+                  });
+                </script>
+              </div>
+            </div>
             <a href="{{ route('edit-apartment', $apartment -> id ) }}"><button type="button" name="button" class="right light">Modifica</button></a>
           </div>
           <div class="pi">
