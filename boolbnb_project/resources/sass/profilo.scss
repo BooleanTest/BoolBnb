@@ -76,7 +76,7 @@
       .immagine{
         img{
           width: 100%;
-          height: 210px;
+          max-height: 190px;
         }
         float: left;
         width: 50%;
@@ -109,7 +109,7 @@
                 margin-bottom: 10px;
               }
               .elibuttons{
-                #back{
+                .back{
                   &:hover{
                     cursor: pointer;
                     background-color: LightSkyBlue;
@@ -196,6 +196,7 @@
       float: left;
       width: calc(50% - 10px);
       padding: 30px;
+      height: 300px;
       margin: 5px;
       opacity: 0.95;
     }

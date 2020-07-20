@@ -79,6 +79,7 @@
   float: left;
   width: calc(50% - 10px);
   padding: 30px;
+  height: 300px;
   margin: 5px;
   opacity: 0.95;
 }
@@ -99,7 +100,7 @@
 
 .container .profilo .appartamento .immagine img {
   width: 100%;
-  height: 210px;
+  max-height: 190px;
 }
 
 .container .profilo .appartamento .scritte {
@@ -153,7 +154,7 @@
   margin-bottom: 5px;
 }
 
-.container .profilo .appartamento .scritte .bottoni .eliminatasto .eliminazione .elibuttons #back {
+.container .profilo .appartamento .scritte .bottoni .eliminatasto .eliminazione .elibuttons .back {
   float: left;
   margin-left: 5px;
   margin-top: 4px;
@@ -165,7 +166,7 @@
   transition: 0.6s;
 }
 
-.container .profilo .appartamento .scritte .bottoni .eliminatasto .eliminazione .elibuttons #back:hover {
+.container .profilo .appartamento .scritte .bottoni .eliminatasto .eliminazione .elibuttons .back:hover {
   cursor: pointer;
   background-color: LightSkyBlue;
   color: white;
@@ -413,7 +414,15 @@
   min-height: 64.6vh;
 }
 
-.container_show {
+.tutto {
+  background-color: LightSkyBlue;
+  margin-top: -120px;
+  margin-bottom: -50px;
+  padding-bottom: 50px;
+  padding-top: 50px;
+}
+
+.tutto .container_show {
   background-color: white;
   width: 70%;
   margin: auto;
@@ -421,55 +430,59 @@
   margin-bottom: 50px;
 }
 
-.container_show .success {
+.tutto .container_show .success {
   padding-top: 45px;
   padding-left: 45px;
   color: red;
 }
 
-.container_show .margin {
+.tutto .container_show .margin {
   width: 90%;
   margin: auto;
   padding: 30px 0;
 }
 
-.container_show .margin .promuovi {
+.tutto .container_show .margin .promuovi {
   font-size: 22px;
 }
 
-.container_show .margin .nave {
+.tutto .container_show .margin .foto {
+  max-height: 360px;
+}
+
+.tutto .container_show .margin .nave {
   margin-bottom: 8px;
 }
 
-.container_show .margin .nave:after {
+.tutto .container_show .margin .nave:after {
   content: "";
   display: table;
   clear: both;
 }
 
-.container_show .margin .nave .scritte {
+.tutto .container_show .margin .nave .scritte {
   float: left;
   width: 50%;
 }
 
-.container_show .margin .nave .scritte h1 {
+.tutto .container_show .margin .nave .scritte h1 {
   margin-bottom: 7px;
 }
 
-.container_show .margin .nave .scritte p {
+.tutto .container_show .margin .nave .scritte p {
   margin-bottom: 12px;
 }
 
-.container_show .margin .nave .modifica {
+.tutto .container_show .margin .nave .modifica {
   float: left;
   width: 50%;
 }
 
-.container_show .margin .nave .modifica .eliminatasto .none {
+.tutto .container_show .margin .nave .modifica .eliminatasto .none {
   display: none;
 }
 
-.container_show .margin .nave .modifica .eliminatasto .eliminazione {
+.tutto .container_show .margin .nave .modifica .eliminatasto .eliminazione {
   position: fixed;
   padding: 15px;
   z-index: 2;
@@ -481,124 +494,129 @@
   background-color: white;
 }
 
-.container_show .margin .nave .modifica .eliminatasto .eliminazione .eliscritte {
+.tutto .container_show .margin .nave .modifica .eliminatasto .eliminazione .eliscritte {
   margin-bottom: 10px;
 }
 
-.container_show .margin .nave .modifica .eliminatasto .eliminazione .eliscritte h3 {
+.tutto .container_show .margin .nave .modifica .eliminatasto .eliminazione .eliscritte h3 {
   margin-bottom: 5px;
 }
 
-.container_show .margin .nave .modifica .eliminatasto .eliminazione .elibuttons #back {
+.tutto .container_show .margin .nave .modifica .eliminatasto .eliminazione .elibuttons #back {
   float: left;
   margin-left: 5px;
   margin-bottom: 5px;
 }
 
-.container_show .margin .nave .modifica .right {
+.tutto .container_show .margin .nave .modifica .right {
   float: right;
   margin: 5px;
 }
 
-.container_show .margin .nave .modifica .red {
+.tutto .container_show .margin .nave .modifica .red {
   transition: 0.6s;
   background-color: white;
 }
 
-.container_show .margin .nave .modifica .red:hover {
+.tutto .container_show .margin .nave .modifica .red:hover {
   cursor: pointer;
   background-color: crimson;
   transition: 0.6s;
   color: white;
 }
 
-.container_show .margin .nave .mappa {
+.tutto .container_show .margin .nave .mappa {
   float: left;
   width: 40%;
   padding-left: 20px;
-  height: 400px;
+  height: 360px;
+  max-height: 360px;
   margin-bottom: 25px;
 }
 
-.container_show .margin .nave .mappa #map {
+.tutto .container_show .margin .nave .mappa #map {
   height: 100%;
 }
 
-.container_show .margin .nave .immagine {
+.tutto .container_show .margin .nave .immagine {
   float: left;
   width: 60%;
   height: 400px;
 }
 
-.container_show .margin .nave .immagine img {
-  border: 1px solid black;
+.tutto .container_show .margin .nave .immagine img {
+  max-height: 360px;
   width: 100%;
-  height: 100%;
 }
 
-.container_show .margin:after {
+.tutto .container_show .margin:after {
   content: "";
   display: table;
   clear: both;
 }
 
-.container_show .margin button {
+.tutto .container_show .margin button {
+  border: none;
   margin-top: 5px;
   padding: 8px 13px;
   transition: 0.6s;
   background-color: white;
   border-radius: 20px;
-  border: solid darkblue 1px;
 }
 
-.container_show .margin button:hover {
+.tutto .container_show .margin button:hover {
   cursor: pointer;
   background-color: LightSkyBlue;
   color: white;
-  border: 1px solid grey;
 }
 
-.container_show .margin .table {
-  background-color: LightSkyBlue;
+.tutto .container_show .margin .table {
+  transition: 0.6s;
+  margin-top: 35px;
   padding: 10px 25px;
 }
 
-.container_show .margin .table::after {
+.tutto .container_show .margin .table:hover {
+  background-color: LightSkyBlue;
+  transition: 0.6s;
+}
+
+.tutto .container_show .margin .table::after {
   content: "";
   display: table;
   clear: both;
 }
 
-.container_show .margin .table .dati {
+.tutto .container_show .margin .table .dati {
   width: 50%;
   margin-top: 10px;
   float: left;
 }
 
-.container_show .margin .table .dati h2 {
+.tutto .container_show .margin .table .dati h2 {
   margin-bottom: 7px;
 }
 
-.container_show .margin .table .dati h3 {
+.tutto .container_show .margin .table .dati h3 {
   margin-bottom: 5px;
 }
 
-.container_show .margin .table .servizi {
+.tutto .container_show .margin .table .servizi {
   margin-top: 10px;
   float: left;
   width: 50%;
 }
 
-.container_show .margin .table .servizi h2 {
+.tutto .container_show .margin .table .servizi h2 {
   margin-bottom: 7px;
   text-align: center;
 }
 
-.container_show .margin .table .servizi ul {
+.tutto .container_show .margin .table .servizi ul {
   list-style-type: none;
 }
 
-.container_show .margin .table .servizi ul li {
+.tutto .container_show .margin .table .servizi ul li {
   font-size: 18px;
   float: left;
   width: 50%;
@@ -606,56 +624,65 @@
   padding-top: 5px;
 }
 
-.container_show .margin .table .servizi ul li i {
+.tutto .container_show .margin .table .servizi ul li i {
   padding-right: 5px;
 }
 
-.container_show .margin .messaggio {
-  background-color: #fdddea;
-  border: 1px solid black;
-  border-radius: 8px;
+.tutto .container_show .margin .messaggio {
+  transition: 0.6s;
   margin-top: 35px;
 }
 
-.container_show .margin .messaggio #mail {
+.tutto .container_show .margin .messaggio h2 {
+  margin-top: 10px;
+}
+
+.tutto .container_show .margin .messaggio #mail {
   width: 100%;
   padding: 6px 10px;
+  outline: none;
   border-radius: 5px;
-  border: solid 1px grey;
+  border: solid 1px darkblue;
   margin-bottom: 10px;
   margin-top: 15px;
   font-size: 18px;
+  color: blue;
 }
 
-.container_show .margin .messaggio #text {
+.tutto .container_show .margin .messaggio #text {
+  outline: none;
   width: 100%;
   padding: 6px 10px;
   margin-bottom: 10px;
   border-radius: 5px;
-  border: solid 1px grey;
+  border: solid 1px darkblue;
   font-size: 18px;
+  color: blue;
 }
 
-.container_show .margin .messaggio button {
+.tutto .container_show .margin .messaggio button {
   margin: 15px 0;
   float: right;
   padding: 10px 25px;
-  border: 2px solid #dc0e63;
-  border-radius: 10px;
+  border-radius: 30px;
   font-size: 20px;
-  background-color: #ffcce1;
+  background-color: white;
   transition: ease-in-out 0.4s;
 }
 
-.container_show .margin .messaggio button:hover {
+.tutto .container_show .margin .messaggio button:hover {
   cursor: pointer;
-  background-color: #dc0e63;
-  border: 2px solid black;
+  background-color: darkblue;
   color: white;
   transition: ease-in-out 0.4s;
 }
 
-.container_show .margin .promuovi {
+.tutto .container_show .margin .messaggio:hover {
+  background-color: LightSkyBlue;
+  transition: 0.6s;
+}
+
+.tutto .container_show .margin .promuovi {
   transition: 0.6s;
   width: 300px;
   padding: 10px;
@@ -664,45 +691,80 @@
   text-align: center;
 }
 
-.container_show .margin .promuovi:hover {
+.tutto .container_show .margin .promuovi:hover {
   background-color: #a6a82c;
   transition: 0.6s;
 }
 
-.container_show .margin .promuovi:hover a {
+.tutto .container_show .margin .promuovi:hover a {
   color: white;
   transition: 0.6s;
 }
 
-.container_show .margin .promuovi a {
+.tutto .container_show .margin .promuovi a {
   transition: 0.6s;
 }
 
-.container_show .margin #indietro {
+.tutto .container_show .margin #indietro {
   margin-top: 25px;
   padding: 10px 25px;
-  border: 1px solid darkblue;
+  border: none;
   border-radius: 20px;
   font-size: 20px;
   background-color: white;
   transition: 0.6s;
 }
 
-.container_show .margin #indietro:hover {
+.tutto .container_show .margin #indietro:hover {
   cursor: pointer;
   background-color: crimson;
   color: white;
   transition: 0.6s;
 }
 
+@media screen and (max-width: 1200px) {
+  .tutto .container_show {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .tutto .container_show .margin:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+
+  .tutto .container_show .margin .foto {
+    max-height: 2000px;
+  }
+
+  .tutto .container_show .margin .foto .mappa {
+    width: 100%;
+    float: none;
+    padding-left: 0;
+  }
+
+  .tutto .container_show .margin .foto .immagine {
+    width: 100%;
+    float: none;
+  }
+
+  .tutto .container_show .margin .table .dati {
+    width: 100%;
+  }
+
+  .tutto .container_show .margin .table .servizi {
+    margin-top: 25px;
+    width: 100%;
+  }
+}
+
 .containeredit {
-  border: 2px solid black;
-  border-radius: 10px;
   padding: 25px;
   width: 75%;
   margin: auto;
   margin-bottom: 80px;
-  background-image: url(https://us.123rf.com/450wm/kav777/kav7771503/kav777150300019/37670430-asse-di-legno-di-bamb%C3%B9-trama-sfondo-bianco.jpg?ver=6);
   background-size: cover;
   opacity: 0.95;
 }
@@ -722,7 +784,7 @@
   margin-top: 20px;
   width: 50%;
   float: left;
-  border-right: 1px solid black;
+  border-right: 2px solid blue;
   padding-right: 30px;
 }
 
@@ -753,6 +815,7 @@
 
 .containeredit .dati .valore .label label {
   font-size: 18px;
+  color: blue;
 }
 
 .containeredit .dati .valore input {
@@ -765,6 +828,7 @@
   border-radius: 5px;
   display: inline-block;
   width: 49%;
+  color: blue;
 }
 
 .containeredit .dati h3 {
@@ -792,12 +856,12 @@
   padding: 8px;
   width: 150px;
   display: inline-block;
-  border-left: 1px solid grey;
 }
 
 .containeredit .servizi .left .servizietto h4 {
   font-size: 18px;
   padding: 6px;
+  color: blue;
 }
 
 .containeredit .servizi .left .check {
@@ -816,22 +880,24 @@
 }
 
 .containeredit .bottoni {
+  margin-right: 1.5%;
   text-align: center;
 }
 
 .containeredit .bottoni .error:hover {
-  background-color: red;
+  background-color: crimson;
   cursor: pointer;
   transition: 1s;
 }
 
 .containeredit .bottoni button {
   margin: 10px;
+  border: none;
   padding: 10px 16px;
   font-size: 18px;
-  border: solid 1px darkblue;
   border-radius: 20px;
   transition: 0.6s;
+  background-color: white;
 }
 
 .containeredit .bottoni button:hover {
@@ -841,10 +907,41 @@
   transition: 0.6s;
 }
 
+.containeredit .bottoni .red {
+  background-color: white;
+}
+
 .containeredit .bottoni .red:hover {
   background-color: crimson;
   cursor: pointer;
   transition: 0.6s;
+}
+
+@media screen and (max-width: 1200px) {
+  .containeredit {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .containeredit .servizi {
+    width: 100%;
+  }
+
+  .containeredit .dati {
+    padding-top: 20px;
+    width: 100%;
+    border: none;
+  }
+
+  .containeredit .dati .valore {
+    padding-top: 10px;
+  }
+
+  .containeredit .dati .valore .label {
+    text-align: left;
+    padding-left: 45px;
+  }
 }
 
 .search-section {
@@ -1000,10 +1097,7 @@
   width: 100%;
   padding: 50px;
   margin: auto;
-  border: 2px solid black;
-  border-radius: 10px;
   margin-top: 30px;
-  background-image: url(https://us.123rf.com/450wm/kav777/kav7771503/kav777150300019/37670430-asse-di-legno-di-bamb%C3%B9-trama-sfondo-bianco.jpg?ver=6);
 }
 
 .container_message:after {
@@ -1012,38 +1106,60 @@
   clear: both;
 }
 
-.container_message .text_mail {
+.container_message .scritte:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.container_message .scritte .text_mail {
   float: left;
   width: 350px;
   margin-bottom: 20px;
 }
 
-.container_message .testo {
+.container_message .scritte .testo {
   float: left;
   width: calc(100% - 350px);
   margin-bottom: 20px;
 }
 
-.container_message .mail {
+.container_message .messaggio {
+  transition: 0.6s;
+}
+
+.container_message .messaggio:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.container_message .messaggio:hover {
+  transition: 0.6s;
+  background-color: LightSkyBlue;
+}
+
+.container_message .messaggio .mail {
   float: left;
   width: 350px;
   margin-bottom: 10px;
-  border-top: 2px solid black;
+  border-top: 2px solid darkblue;
   padding: 20px;
 }
 
-.container_message .text {
+.container_message .messaggio .text {
   float: left;
   width: calc(100% - 350px);
   margin-bottom: 10px;
-  border-top: 2px solid black;
+  border-top: 2px solid darkblue;
   padding-top: 20px;
   height: 200px;
 }
 
-.container_message .text h3 {
+.container_message .messaggio .text h3 {
   font-size: 16px;
   line-height: 19px;
+  color: blue;
 }
 
 .container_message button {
@@ -1054,6 +1170,7 @@
   border-radius: 30px;
   font-size: 19px;
   transition: 0.6s;
+  margin-top: 20px;
 }
 
 .container_message button:hover {
@@ -1349,7 +1466,7 @@ a {
 #app {
   position: relative;
   z-index: 1;
-  min-height: 74.6vh;
+  min-height: 90%;
   padding-top: 50px;
 }
 
@@ -1399,5 +1516,11 @@ html {
   background: linear-gradient(0deg, white 0%, LightSkyBlue 100%);
   position: relative;
   z-index: 2;
+}
+
+@media screen and (max-width: 900px) {
+  .header {
+    padding: 30px 40px 30px 40px;
+  }
 }
 

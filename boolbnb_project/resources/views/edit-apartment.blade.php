@@ -79,7 +79,7 @@
         <br>
       </div>
       <div class="valore">
-        <div class="label">
+        <div class="none" class="label">
           <label for="latitude">Latitudine : </label>
         </div>
         <span class="none" id="plat">{{ old('number', $apartments -> latitude) }}</span>
