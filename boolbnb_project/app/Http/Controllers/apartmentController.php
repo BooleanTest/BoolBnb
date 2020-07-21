@@ -96,7 +96,6 @@ class apartmentController extends Controller
     $q = $request -> q;
     $appartamenti = [];
 
-
     $apartments_pay = $sponsoredApp -> where('time', '>=', time());
 
 
@@ -191,12 +190,9 @@ class apartmentController extends Controller
 
       }
 
-
     }
 
-
   }
-
 
   public function payment($id){
     $apartment = Apartment::findOrFail($id);

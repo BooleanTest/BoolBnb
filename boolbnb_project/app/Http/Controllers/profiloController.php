@@ -13,8 +13,6 @@ use App\Service;
 use App\Message;
 use App\View;
 
-
-
 class profiloController extends Controller
 {
     // autentificazione
@@ -87,13 +85,10 @@ class profiloController extends Controller
       $apartments -> image  = $filePath;
       $apartments -> city  = $validateData["city"];
       $apartments -> nation  = $validateData["nation"];
-      // $apartments -> view = 1;
 
       $image -> storeAs($folder , $name . '.' . $format , 'public');
 
       $apartments -> save();
-
-
 
       if (isset($validateData['services'])) {
         $apartments -> services() -> sync($validateData['services']);
@@ -123,7 +118,6 @@ class profiloController extends Controller
     // per nuovo appartamento (store)
     public function store(Request $request){
 
-
       $userId = Auth::id();
 
       $validateData = $request -> validate([
@@ -147,8 +141,6 @@ class profiloController extends Controller
       $format = $image->getClientOriginalExtension();
       $filePath = $folder . $name . '.' . $format;
 
-      // dd($filePath);
-
       $apartments = new Apartment;
 
       $apartments -> title  = $validateData["title"];
@@ -164,11 +156,9 @@ class profiloController extends Controller
       $apartments -> nation  = $validateData["nation"];
       $apartments -> view = 1;
       $apartments -> user_id = $userId;
-
       $image -> storeAs($folder , $name . '.' . $format , 'public');
 
       $apartments -> save();
-
 
       if (isset($validateData['services'])) {
         $apartments -> services() -> attach($validateData['services']);
@@ -203,7 +193,6 @@ class profiloController extends Controller
                       ->where('apartment_id', $id)
                       -> get();
 
-
         array_push($visual_mesi, $months_view -> toarray()[0]['mese']);
 
       }
@@ -226,12 +215,9 @@ class profiloController extends Controller
                       ->where('apartment_id', $id)
                       -> get();
 
-
         array_push($visual_messaggi, $message_view -> toarray()[0]['messaggi']);
 
       }
-
-      // dd($visual_mesi);
 
       $user = Auth::user();
       if ($apartments -> user_id === $user -> id) {
@@ -246,20 +232,22 @@ class profiloController extends Controller
 
       $apartments = Apartment::all();
 
-      $messages = Apartment::selectRaw('user_id, mail, text')
+      $messages = Apartment::selectRaw('user_id, mail, text, users.id as utente_id')
                   ->join('messages', 'messages.apartment_id', '=', 'apartments.id')
                   ->join('users', 'users.id', '=', 'apartments.user_id')
                   ->where('user_id', $id) -> get();
 
+      $user = Auth::user();
+
+      if ($id == $user -> id) {
+        return view('view-messagges', compact('messages'));
+      } else {
+        return view("not_found");
+      }
+
       return view('view-messagges', compact('messages'));
 
 
-
-      // ............................PROVE................................................
-
-      //  SELECT * FROM messages JOIN apartments ON apartments.id = messages.apartment_id JOIN users ON users.id = apartments.user_id
-
-      
     }
 
 }
