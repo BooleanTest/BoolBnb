@@ -3,6 +3,8 @@
 namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 
+// use Illuminate\Support\Facades\DB;
+
 use Str;
 use Auth;
 use App\User;
@@ -27,7 +29,12 @@ class profiloController extends Controller
       $user = User::findOrFail($id);
       $messagge = Message::all();
 
-      return view('profilo', compact('user', 'messagge'));
+      $users = Auth::user();
+      if ($user -> id === $users -> id) {
+        return view('profilo', compact('user', 'messagge'));
+      } else {
+        return view("not_found");
+      }
     }
 
     // modifica appartamento
@@ -35,7 +42,12 @@ class profiloController extends Controller
         $services = Service::all();
         $apartments = Apartment::findOrFail($id);
 
-        return view('edit-apartment', compact('apartments', 'services'));
+        $user = Auth::user();
+        if ($apartments -> user_id === $user -> id) {
+          return view('edit-apartment', compact('apartments', 'services'));
+        } else {
+          return view("not_found");
+        }
     }
 
     // per modifica appartamento
@@ -221,10 +233,12 @@ class profiloController extends Controller
 
       // dd($visual_mesi);
 
-
-      return view('stats_apartment', compact('total_view_20', 'total_view_19', 'total_messages_2020', 'total_messages_2019', 'visual_mesi', 'visual_messaggi', 'apartments'));
-
-
+      $user = Auth::user();
+      if ($apartments -> user_id === $user -> id) {
+        return view('stats_apartment', compact('total_view_20', 'total_view_19', 'total_messages_2020', 'total_messages_2019', 'visual_mesi', 'visual_messaggi', 'apartments'));
+      } else {
+        return view("not_found");
+      }
     }
 
     //messaggi
@@ -238,18 +252,14 @@ class profiloController extends Controller
                   ->where('user_id', $id) -> get();
 
       return view('view-messagges', compact('messages'));
+
+
+
+      // ............................PROVE................................................
+
+      //  SELECT * FROM messages JOIN apartments ON apartments.id = messages.apartment_id JOIN users ON users.id = apartments.user_id
+
+      
     }
-
-
-
-    // inizio prove statistiche----------------------------------------
-    public function statistics($id){
-
-
-
-
-    }
-
-
 
 }

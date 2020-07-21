@@ -33,15 +33,10 @@ class apartmentController extends Controller
     $apartments = Apartment::findOrFail($id);
     Apartment::where('id', $id)->increment('view');
 
-    // ---------------------- prove
-    // $apartment = Apartment::findOrFail($id);
     $views = $apartments -> views;
 
     $ipAddress = $_SERVER['REMOTE_ADDR'];
     // dd($ipAddress);
-
-
-
 
     $var = false;
     foreach ($views as $view) {
