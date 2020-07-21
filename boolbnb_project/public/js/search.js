@@ -154,7 +154,7 @@ $(document).ready(function () {
   //   $(document).scrollTop( $("#header").offset().top );
   // })
 
-  moveTop(430);
+  moveTop(460);
   $('.move_up').click(function () {
     $("html, body").animate({
       scrollTop: 0
@@ -168,15 +168,13 @@ $(document).ready(function () {
     } else {
       $('.move_up').css('opacity', '1');
     }
-  }); // console.log($(window).offset());
+  });
 
   function moveTop(where) {
     $("html, body").animate({
       scrollTop: where
     }, 1000);
-  } // $(document).animate({scrollBottom: 500}, 'slow')
-  // scrollTop( $(".main_search_bar_query").offset().top );
-
+  }
 });
 
 /***/ }),
