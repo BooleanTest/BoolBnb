@@ -232,10 +232,11 @@ class profiloController extends Controller
 
       $apartments = Apartment::all();
 
-      $messages = Apartment::selectRaw('user_id, mail, text, users.id as utente_id')
+      $messages = Apartment::selectRaw('user_id, mail, text, apartments.title as title, users.id as utente_id')
                   ->join('messages', 'messages.apartment_id', '=', 'apartments.id')
                   ->join('users', 'users.id', '=', 'apartments.user_id')
                   ->where('user_id', $id) -> get();
+
 
       $user = Auth::user();
 
@@ -244,8 +245,6 @@ class profiloController extends Controller
       } else {
         return view("not_found");
       }
-
-      return view('view-messagges', compact('messages'));
 
 
     }
