@@ -71,6 +71,7 @@
   background-color: white;
   display: flex;
   flex-wrap: wrap;
+  min-height: 17vh;
   justify-content: center;
   padding: 0px 160px 0px 160px;
 
@@ -110,9 +111,6 @@
   }
 }
 
-.main-w-apartments{
-  min-height: 64.6vh;
-}
 
 @media screen and (max-width: 900px){
 
@@ -156,9 +154,6 @@
     }
   }
 
-  .main-w-apartments{
-    min-height: 64.6vh;
-  }
 
 }
 
@@ -206,9 +201,4 @@
       }
     }
   }
-
-  .main-w-apartments{
-    min-height: 64.6vh;
-  }
-
 }
