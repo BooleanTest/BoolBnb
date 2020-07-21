@@ -851,12 +851,12 @@
 }
 
 .tutto .container_show .margin .promuovi:hover {
-  background-color: #a6a82c;
+  background-color: LightGoldenRodYellow;
   transition: 0.6s;
 }
 
 .tutto .container_show .margin .promuovi:hover a {
-  color: white;
+  color: darkblue;
   transition: 0.6s;
 }
 
@@ -2061,7 +2061,7 @@
   text-decoration: none;
   outline: none;
   color: #fff;
-  background-color: #a6a82c;
+  background-color: LightGoldenRodYellow;
   border: none;
   border-radius: 15px;
   box-shadow: 0 9px LightSteelBlue;
