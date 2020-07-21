@@ -3,8 +3,6 @@
 
 @section('content')
 
-{{$views}}
-
 <div class="tutto">
   <div class="container_show">
     @if (session("success"))
@@ -15,7 +13,6 @@
         <div class="scritte">
           <h1>{{$apartments -> title }}</h1>
           <p>{{$apartments -> city }} , {{$apartments -> nation }} , {{$apartments -> address }} n° {{$apartments -> number}}</p>
-          <p>Visualizzato {{ $apartments -> view}} volte. </p>
         </div>
         <div class="modifica">
           {{-- controllo per far vedere i comandi --}}

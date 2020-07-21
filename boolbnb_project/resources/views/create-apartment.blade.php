@@ -91,7 +91,7 @@
         <span class='none' id="plong"></span>
         <input id="longitude" class='none' type="text" name="longitude" value="{{old('longitude')}}" >
         <br>
-      
+
       </div>
 
     </div>

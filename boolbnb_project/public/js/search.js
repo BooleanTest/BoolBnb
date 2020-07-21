@@ -147,7 +147,43 @@ $(document).ready(function () {
       center: newPosition,
       zoom: 11
     });
+  }); // $('#mainbutton').click({
+  //   $('html,body').animate({ scrollTop: 50}, 'slow');
+  // })
+  // $('#mainbutton').click({
+  //   $(document).scrollTop( $("#header").offset().top );
+  // })
+
+  var width = $(window).width();
+
+  if (width < 901) {
+    moveTop(605);
+  } else if (width < 1201) {
+    moveTop(425);
+  } else {
+    moveTop(460);
+  }
+
+  $('.move_up').click(function () {
+    $("html, body").animate({
+      scrollTop: 0
+    }, 1000);
+    console.log(); // $('.move_up').fadeOut(1000);
   });
+  $(window).scroll(function () {
+    if ($('.move_up').offset().top <= 550) {
+      $('.move_up').css('opacity', '0');
+      console.log('ciao');
+    } else {
+      $('.move_up').css('opacity', '1');
+    }
+  });
+
+  function moveTop(where) {
+    $("html, body").animate({
+      scrollTop: where
+    }, 1000);
+  }
 });
 
 /***/ }),
@@ -159,7 +195,7 @@ $(document).ready(function () {
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! D:\Booleans\BoolBnb\boolbnb_project\resources\js\search.js */"./resources/js/search.js");
+module.exports = __webpack_require__(/*! C:\Users\alessandro\Desktop\ALESSAND\BOOLEAN\progettone\BoolBnb\boolbnb_project\resources\js\search.js */"./resources/js/search.js");
 
 
 /***/ })
