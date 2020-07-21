@@ -38,8 +38,21 @@
           <div class="filters-number-column">
 
             <label for="distance">Distanza</label>
-            <input id='rangeinputD' type="range" name="distance" value="20" min='1' max='250' oninput="distanceOutputId.value = rangeinputD.value">
-            <output name="distanceOutputValue" id="distanceOutputId">20</output>
+            <input id='rangeinputD' type="range" name="distance"
+            @if(isset($request -> distance) )
+              value="{{old('distance', $request -> distance)}}"
+            @else
+              value="0"
+            @endif
+             min='1' max='250' oninput="distanceOutputId.value = rangeinputD.value">
+            <output name="distanceOutputValue" id="distanceOutputId">
+              @if (isset($request -> distance) )
+                  {{old('distance', $request -> distance)}}
+              @else
+              20
+              @endif
+
+            </output>
           </div>
           <div class="filters-number-column">
 
@@ -145,8 +158,12 @@
 
       <div class="map" id="map">
       </div>
+      <div class="move_up" style='opacity: 0'>
+        <i class="fa fa-angle-double-up" ></i>
+      </div>
 
   </div>
+
 
 
   <script src='https://api.tomtom.com/maps-sdk-for-web/cdn/5.x/5.59.0/maps/maps-web.min.js'></script>

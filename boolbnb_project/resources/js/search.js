@@ -30,6 +30,9 @@ $(document).ready(function(){
 
     })
 
+
+
+
       var position = [9.4, 43.4];
       var map = tt.map({
           key: 'fdEClAfoJx3PxxAZWCgLqh3ApTZlAcuF',
@@ -74,7 +77,39 @@ $(document).ready(function(){
 
       });
 
+      // $('#mainbutton').click({
+      //   $('html,body').animate({ scrollTop: 50}, 'slow');
+      // })
+      // $('#mainbutton').click({
+      //   $(document).scrollTop( $("#header").offset().top );
+      // })
+
+      moveTop(430);
+
+      $('.move_up').click(function(){
+          $("html, body").animate({ scrollTop: 0 }, 1000);
+          console.log();
+          // $('.move_up').fadeOut(1000);
+      });
+
+      $(window).scroll(function(){
+        if($('.move_up').offset().top <= 550){
+          $('.move_up').css('opacity', '0');
+          console.log('ciao');
+        } else {
+          $('.move_up').css('opacity', '1');
+        }
+      })
 
 
 
+
+      // console.log($(window).offset());
+
+      function moveTop(where){
+        $("html, body").animate({ scrollTop: where }, 1000);
+
+      }
+      // $(document).animate({scrollBottom: 500}, 'slow')
+      // scrollTop( $(".main_search_bar_query").offset().top );
 });
