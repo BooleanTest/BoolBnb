@@ -154,7 +154,16 @@ $(document).ready(function () {
   //   $(document).scrollTop( $("#header").offset().top );
   // })
 
-  moveTop(460);
+  var width = $(window).width();
+
+  if (width < 901) {
+    moveTop(605);
+  } else if (width < 1201) {
+    moveTop(425);
+  } else {
+    moveTop(460);
+  }
+
   $('.move_up').click(function () {
     $("html, body").animate({
       scrollTop: 0

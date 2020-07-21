@@ -46,7 +46,7 @@
             @if(isset($request -> distance) )
               value="{{old('distance', $request -> distance)}}"
             @else
-              value="0"
+              value="20"
             @endif
              min='1' max='250' oninput="distanceOutputId.value = rangeinputD.value">
             <output name="distanceOutputValue" id="distanceOutputId">
