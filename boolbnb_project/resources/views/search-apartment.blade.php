@@ -85,7 +85,9 @@
           <label for="services[]"></label>
           @foreach ($services as $service)
           <div class="service">
-            <div>{{$service -> name}}</div>
+            <div>
+
+              {{$service -> name}}</div>
             <input  type="checkbox" name="services[]" value="{{$service -> name}}"
             @if (isset($request-> services))
               @foreach ($request -> services as $service_r)
@@ -168,6 +170,7 @@
                     <hr>
                     <p>
                     @foreach ($apartment['services'] as $service)
+                    
                       &#183; {{ $service }}
                     @endforeach
                     </p>

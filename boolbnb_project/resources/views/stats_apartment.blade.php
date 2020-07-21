@@ -95,5 +95,9 @@
     </button>
 
   </div>
+  <div class="indietrostats">
+    <a href="{{route('profilo' , $apartments -> user_id)}}"><button type="button" name="button" id="indietro">Indietro</button></a>
+  </div>
+
 
 @endsection
