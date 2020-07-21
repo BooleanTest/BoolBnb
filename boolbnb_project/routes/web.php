@@ -2,8 +2,6 @@
 
   use Illuminate\Support\Facades\Route;
 
-
-
   Auth::routes();
 
   Route::get('/', 'apartmentController@index')->name('home');
@@ -21,36 +19,19 @@
   Route::get('/create-apartment', 'profiloController@create')->name("create-apartment");
   Route::post('/store-apartment', 'profiloController@store')->name("store-apartment");
 
-// TODO:
-  // ricerca appartamento
-  // Route::post('/search-apartment', 'apartmentController@search')->name("search-apartment");
-
   // profilo utente
   Route::get('/profilo_utente/{id}', 'profiloController@profilo')->name('profilo');
 
   // statistiche appartamento
   Route::get('/stats_apartment/{id}', 'profiloController@stats')->name('stats');
 
-  // invio messaggio
+  // messaggi
   Route::post('/store-messagge/{id}', 'apartmentController@messagges')->name('store-messagge');
-
   Route::get('/view-messagges/{id}' , 'profiloController@view')->name('view-messagges');
-
-
+  // cerca
   Route::any('/search', 'apartmentController@search')->name('search');
-
-
 
   // pagamenti
   Route::get('/apartment/{id}/payment', 'apartmentController@payment')->name('payment');
   // pagamenti --o post--
   Route::get('/payment/paid', 'apartmentController@paid')->name('payment-paid');
-
-
-
-
-
-
-
-  // statistiche prova
-    // Route::get('/show-statistics/{id}', 'profiloController@statistics')->name('statistics');

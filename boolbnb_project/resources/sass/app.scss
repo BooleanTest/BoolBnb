@@ -40,7 +40,7 @@
 }
 
 .color-LightGoldenRodYellow{
-  color: LightGoldenRodYellow; 
+  color: LightGoldenRodYellow;
 }
 
 a{
@@ -54,7 +54,6 @@ a{
 #app{
   position: relative;
   z-index: 1;
-  min-height: 90%;
   padding-top: 50px;
 }
 
@@ -118,6 +117,33 @@ html{
 
 @media screen and (max-width: 900px){
   .header{
+    padding: 30px 40px 30px 40px;
+  }
+}
+
+@media screen and (max-width: 500px){
+  .header{
+    .nav-bar{
+      .login{
+        .links{
+          .username{
+            a{
+              &:hover{
+                background: none;
+                transition: 0;
+              }
+              padding: 0;
+              padding-right: 10px;
+              width: 100%;
+              margin-top: 10px;
+            }
+            height: 40px;
+            float: right;
+            text-align: right;
+          }
+        }
+      }
+    }
     padding: 30px 40px 30px 40px;
   }
 }

@@ -143,7 +143,7 @@
                     @endforeach
                     </p>
                     <a href="{{route('show-apartment', $sponsoredApp -> id)}}">
-                      <button type="button" name="button">Mostra Appartamento in evidenza</button>
+                      <button  type="button" name="button">Mostra Appartamento in evidenza</button>
                     </a>
                 </div>
 
@@ -172,7 +172,7 @@
                     @endforeach
                     </p>
                     <a href="{{route('show-apartment', $apartment['stats']['apartment_id'])}}">
-                      <button type="button" name="button">Mostra Appartamento</button>
+                      <button  type="button" name="button">Mostra Appartamento</button>
                     </a>
                 </div>
 
