@@ -3,25 +3,11 @@
 
 @section('content')
 
-  mesi view:
-  @foreach ($visual_mesi as $value)
-    {{$value}}
-  @endforeach
-  <br>
-  mesi messaggi:
-  @foreach ($visual_messaggi as $messaggio)
-    {{$messaggio}}
-  @endforeach
- <br>
-  total message 2020: {{$total_messages_2020}}
-  total message 2019: {{$total_messages_2019}}
-  <br>
-  total view 2019: {{$total_view_19}}
-  total view 2020: {{$total_view_20}}
-  <br>
-  <div class="title-stats">
-    <h1>Statistiche appartamento</h1>
-  </div>
+  @php
+    echo '<div style = "display:none" class="visual_mesi">' . implode('', $visual_mesi) . '</div>' ;
+    echo '<div style="display:none" class="visual_messaggi">' . implode('', $visual_messaggi) . '</div>'
+  @endphp
+
 
   <div class="main-stats">
 
@@ -29,13 +15,14 @@
     <div class="counters">
 
       <div class="counter-stats">
-        <h3>Visualizzazioni totati</h3>
-        <p>50</p>
+        <h3>Visualizzazioni totati 2020:</h3>
+        <p class='total_view'>{{$total_view_20 -> toarray()[0]['tot_view']}}</p>
+
 
       </div>
       <div class="counter-stats">
-        <h3>Messaggi ricevuti</h3>
-        <p>50</p>
+        <h3>Messaggi ricevuti 2020:</h3>
+        <p class='total_messages'>{{$total_messages_2020 -> toarray()[0]['tot_messages']}}</p>
 
       </div>
     </div>
