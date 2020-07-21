@@ -12,7 +12,11 @@
         <input id='lat' type="text" name="lat" value="{{old('lat', $request -> lat)}}">
         <input id='long' type="text" name="long" value="{{old('long', $request -> long)}}">
       </div>
-      <button id="mainbutton" type="submit" name="button">Cerca</button>
+      <button id="mainbutton" type="submit" name="button">
+        <h1>
+          Cerca
+        </h1>
+      </button>
       <div class="filters-section">
         <div class="filters-number">
           <div class="filters-number-column">
