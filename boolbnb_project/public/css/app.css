@@ -471,12 +471,6 @@
   }
 }
 
-* {
-  box-sizing: border-box;
-  padding: 0;
-  margin: 0;
-}
-
 .nav-bar {
   display: flex;
   justify-content: space-between;
@@ -542,20 +536,124 @@
   margin: 10px;
 }
 
-.container-w-apartments .w-apartment img {
+.container-w-apartments .w-apartment a img {
   width: 100%;
 }
 
-.container-w-apartments .w-apartment .title-w-apartment {
-  text-align: center;
+.container-w-apartments .w-apartment a .title-w-apartment {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
-.container-w-apartments .w-apartment .title-w-apartment p {
-  color: blue;
+.container-w-apartments .w-apartment a .title-w-apartment hr {
+  border-top: 2px solid LightSteelBlue;
+  margin: 10px 0px;
+  width: 50%;
+}
+
+.container-w-apartments .w-apartment a .title-w-apartment p {
+  color: SteelBlue;
 }
 
 .main-w-apartments {
   min-height: 64.6vh;
+}
+
+@media screen and (max-width: 900px) {
+  .heading-w-apartments {
+    text-align: center;
+    background-color: darkblue;
+  }
+
+  .heading-w-apartments h2 {
+    color: white;
+  }
+
+  .container-w-apartments {
+    background-color: white;
+    padding: 0px 0px 0px 0px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .container-w-apartments .w-apartment {
+    background-color: white;
+    width: 450px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    border-radius: 8px;
+    margin: 10px;
+  }
+
+  .container-w-apartments .w-apartment hr {
+    width: 30%;
+  }
+
+  .container-w-apartments .w-apartment img {
+    width: 100%;
+  }
+
+  .container-w-apartments .w-apartment .title-w-apartment {
+    text-align: center;
+  }
+
+  .container-w-apartments .w-apartment .title-w-apartment p {
+    color: SteelBlue;
+  }
+
+  .main-w-apartments {
+    min-height: 64.6vh;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .heading-w-apartments {
+    text-align: center;
+    padding: 60px 0px 60px 0px;
+    background-color: darkblue;
+  }
+
+  .heading-w-apartments h2 {
+    color: white;
+  }
+
+  .container-w-apartments {
+    background-color: white;
+    padding: 0px 0px 0px 0px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .container-w-apartments .w-apartment {
+    background-color: white;
+    width: 450px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    border-radius: 8px;
+    margin: 10px;
+  }
+
+  .container-w-apartments .w-apartment hr {
+    width: 30%;
+  }
+
+  .container-w-apartments .w-apartment img {
+    width: 100%;
+  }
+
+  .container-w-apartments .w-apartment .title-w-apartment {
+    text-align: center;
+  }
+
+  .container-w-apartments .w-apartment .title-w-apartment p {
+    color: SteelBlue;
+  }
+
+  .main-w-apartments {
+    min-height: 64.6vh;
+  }
 }
 
 .tutto {
@@ -841,12 +939,12 @@
 }
 
 .tutto .container_show .margin .promuovi:hover {
-  background-color: #a6a82c;
+  background-color: LightGoldenRodYellow;
   transition: 0.6s;
 }
 
 .tutto .container_show .margin .promuovi:hover a {
-  color: white;
+  color: darkblue;
   transition: 0.6s;
 }
 
@@ -1315,6 +1413,10 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+}
+
+.main_search_bar_query .apartments .results-section .results-apartments #sponsoredbox {
+  background-color: LightGoldenRodYellow;
 }
 
 .main_search_bar_query .apartments .results-section .results-apartments .box-result-apartment {
@@ -1831,7 +1933,6 @@
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    padding: 30px 0px;
   }
 
   .search-section form .filters-section .filters-number .filters-number-column {
@@ -2156,7 +2257,7 @@
   text-decoration: none;
   outline: none;
   color: #fff;
-  background-color: #a6a82c;
+  background-color: LightGoldenRodYellow;
   border: none;
   border-radius: 15px;
   box-shadow: 0 9px LightSteelBlue;
@@ -2393,6 +2494,121 @@
   transition: 0.6s;
   background-color: blue;
   color: white;
+}
+
+@media screen and (max-width: 1200px) {
+  .searchbar-section {
+    background: white;
+    background: linear-gradient(180deg, white 50%, LightSkyBlue 100%);
+    margin-top: 90px;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    padding-right: 0px;
+    padding-left: 0px;
+  }
+
+  .searchbar-section form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .searchbar-section form .searchbar {
+    width: 90%;
+    margin: auto;
+    text-align: center;
+  }
+
+  .searchbar-section form .searchbar #query {
+    font-size: 26px;
+    outline: none;
+    padding-left: 10px;
+    width: 60%;
+    height: 60px;
+    border-radius: 8px;
+    font-size: 30px;
+    border-right: 1px solid white;
+    border-left: 1px solid white;
+    border-top: 3px solid darkblue;
+    border-bottom: 3px solid darkblue;
+    transition: 0.6s;
+  }
+
+  .searchbar-section form .searchbar #query:focus {
+    width: 100%;
+    transition: 0.6s;
+  }
+
+  .searchbar-section form .botton button {
+    padding: 35px;
+    margin-top: 45px;
+    text-align: center;
+    border-radius: 20px;
+    border: none;
+    background-color: white;
+    transition: 0.6s;
+  }
+
+  .searchbar-section form .botton button:hover {
+    transition: 0.6s;
+    background-color: blue;
+    color: white;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .searchbar-section {
+    background: white;
+    background: linear-gradient(180deg, white 50%, LightSkyBlue 100%);
+    margin-top: 90px;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    padding-right: 0px;
+    padding-left: 0px;
+  }
+
+  .searchbar-section form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .searchbar-section form .searchbar {
+    width: 90%;
+    margin: auto;
+    text-align: center;
+  }
+
+  .searchbar-section form .searchbar #query {
+    font-size: 26px;
+    outline: none;
+    padding-left: 10px;
+    width: 100%;
+    height: 60px;
+    border-radius: 8px;
+    font-size: 30px;
+    border-right: 1px solid white;
+    border-left: 1px solid white;
+    border-top: 3px solid darkblue;
+    border-bottom: 3px solid darkblue;
+    transition: 0.6s;
+  }
+
+  .searchbar-section form .botton button {
+    padding: 35px;
+    margin-top: 45px;
+    text-align: center;
+    border-radius: 20px;
+    border: none;
+    background-color: white;
+    transition: 0.6s;
+  }
+
+  .searchbar-section form .botton button:hover {
+    transition: 0.6s;
+    background-color: blue;
+    color: white;
+  }
 }
 
 * {

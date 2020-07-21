@@ -162,7 +162,8 @@ $(document).ready(function () {
     moveTop(425);
   } else {
     moveTop(460);
-  }
+  } // animazione che al search dell'appartamento muove la pagina nel div risultati
+
 
   $('.move_up').click(function () {
     $("html, body").animate({
