@@ -103,8 +103,8 @@ $(document).ready(function () {
           labels: labels,
           datasets: [{
             label: mainLabel,
-            backgroundColor: ['rgba(255, 99, 132, 0.2)', 'rgba(54, 162, 235, 0.2)', 'rgba(255, 206, 86, 0.2)', 'rgba(75, 192, 192, 0.2)', 'rgba(153, 102, 255, 0.2)', 'rgba(255, 159, 64, 0.2)'],
-            borderColor: ['rgba(255, 99, 132, 1)', 'rgba(54, 162, 235, 1)', 'rgba(255, 206, 86, 1)', 'rgba(75, 192, 192, 1)', 'rgba(153, 102, 255, 1)', 'rgba(255, 159, 64, 1)'],
+            backgroundColor: ['rgb(0, 0, 254, 0.2)', 'rgb(0, 1, 198, 0.2)', 'rgb(0, 1, 142, 0.2)', 'rgb(0, 1, 89, 0.2)', 'rgb(0, 1, 50, 0.2)', 'rgb(87, 87, 255, 0.2)'],
+            borderColor: ['rgb(0, 0, 254, 1)', 'rgb(0, 1, 198, 1)', 'rgb(0, 1, 142, 1)', 'rgb(0, 1, 89, 1)', 'rgb(0, 1, 50, 1)', 'rgb(87, 87, 255, 1)'],
             data: dataset,
             borderWidth: 1
           }]
@@ -132,8 +132,8 @@ $(document).ready(function () {
           labels: labels,
           datasets: [{
             label: mainLabel,
-            backgroundColor: ['rgba(255, 99, 132, 0.2)', 'rgba(54, 162, 235, 0.2)', 'rgba(255, 206, 86, 0.2)', 'rgba(75, 192, 192, 0.2)', 'rgba(153, 102, 255, 0.2)', 'rgba(255, 159, 64, 0.2)'],
-            borderColor: ['rgba(255, 99, 132, 1)', 'rgba(54, 162, 235, 1)', 'rgba(255, 206, 86, 1)', 'rgba(75, 192, 192, 1)', 'rgba(153, 102, 255, 1)', 'rgba(255, 159, 64, 1)'],
+            backgroundColor: ['rgb(1, 254, 254, 0.2)', 'rgb(1, 223, 254, 0.2)', 'rgb(1, 167, 254, 0.2)', 'rgb(1, 101, 254, 0.2)', 'rgb(1, 53, 254, 0.2)', 'rgb(88, 53, 254, 0.2)'],
+            borderColor: ['rgb(1, 254, 254, 1)', 'rgb(1, 223, 254, 1)', 'rgb(1, 167, 254, 1)', 'rgb(1, 101, 254, 1)', 'rgb(1, 53, 254, 1)', 'rgb(88, 53, 254, 1)'],
             data: dataset,
             borderWidth: 1
           }]
@@ -155,32 +155,7 @@ $(document).ready(function () {
   printAChart('line', mesiVisual, myLabels, '#views-line', true, 'Visualizzazioni');
   printAChart('bar', mesiVisual, myLabels, '#views-bar', true, 'Visualizzazioni');
   printAChart('line', messaggiVisual, myLabels, '#mex-line', true, 'Messaggi');
-  printAChart('bar', messaggiVisual, myLabels, '#mex-bar', true, 'Messaggi'); // DATI PER LE Visualizzazioni
-  // $.ajax({
-  //   url : "server.php",
-  //   method : "GET",
-  //   success: function (myDataset) {
-  //     printAChart('line', myDataset, mylabels, '#views-line', False);
-  //     printAChart('bar', myDataset, mylabels, '#views-bar', False);
-  //   },
-  //   error : function (richiesta, stato, errore) {
-  //     alert("E' avvenuto un errore. " + errore);
-  //   }
-  // });
-  //
-  // // DATI PER I MESSAGGI
-  //
-  // $.ajax({
-  //   url : "server.php",
-  //   method : "GET",
-  //   success: function (myDataset) {
-  //     printAChart('line', myDataset, mylabels, '#mex-line', False);
-  //     printAChart('bar', myDataset, mylabels, '#mex-bar', False);
-  //   },
-  //   error : function (richiesta, stato, errore) {
-  //     alert("E' avvenuto un errore. " + errore);
-  //   }
-  // });
+  printAChart('bar', messaggiVisual, myLabels, '#mex-bar', true, 'Messaggi');
 });
 
 /***/ }),
@@ -192,7 +167,7 @@ $(document).ready(function () {
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! C:\Users\alessandro\Desktop\ALESSAND\BOOLEAN\progettone\BoolBnb\boolbnb_project\resources\js\stats.js */"./resources/js/stats.js");
+module.exports = __webpack_require__(/*! D:\Booleans\BoolBnb\boolbnb_project\resources\js\stats.js */"./resources/js/stats.js");
 
 
 /***/ })

@@ -97,7 +97,7 @@
       .filters-checkbox{
         display: flex;
         justify-content: space-around;
-        width: 50%;
+        width: 100%;
 
         .service{
           text-align: center;
@@ -560,7 +560,7 @@
           display: flex;
           justify-content: space-between;
           flex-wrap: wrap;
-          width: 100%;
+          width: 300px;
 
           .service{
             text-align: center;
@@ -785,7 +785,7 @@
           display: flex;
           justify-content: space-between;
           flex-wrap: wrap;
-          width: 100%;
+          width: 200px;
 
           .service{
             text-align: center;
