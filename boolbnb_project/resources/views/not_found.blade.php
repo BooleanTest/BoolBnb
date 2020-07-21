@@ -2,5 +2,5 @@
 
 @section('content')
 
-<h1>Non fare il furbo</h1>
+<h1>Non detieni i permessi necessari</h1>
 @endsection
