@@ -3,6 +3,7 @@
   <head>
     <meta http-equiv='X-UA-Compatible' content='IE=Edge' />
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Classe11_Team7</title>
     <link rel="stylesheet" href="/css/app.css">
     <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@600&display=swap" rel="stylesheet">

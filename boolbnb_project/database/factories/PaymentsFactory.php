@@ -10,7 +10,7 @@ $factory->define(Payment::class, function (Faker $faker) {
   $tipoRandom = array_rand(["x","y","z"],1);
   $name = ["basic", "premium", "deluxe"];
   $price = ["2.99","5.99","9.99"];
-  $duration = ["30","60","90"];
+  $duration = ["3000","6000","9000"];
 
     return [
       "name" => $name[$tipoRandom],

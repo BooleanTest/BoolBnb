@@ -16,6 +16,7 @@
             <img src="{{ $apartment -> image }}" alt="Immagine_Appartamento">
             <div class="title-w-apartment">
               <h3>{{ $apartment -> title }}</h3>
+              <hr>
               <p>{{ $apartment -> address }}</p>
               <p>{{ $apartment -> city }}</p>
             </div>
