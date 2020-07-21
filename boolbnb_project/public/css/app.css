@@ -1237,6 +1237,10 @@
   align-items: center;
 }
 
+.main_search_bar_query .apartments .results-section .results-apartments #sponsoredbox {
+  background-color: LightGoldenRodYellow;
+}
+
 .main_search_bar_query .apartments .results-section .results-apartments .box-result-apartment {
   display: flex;
   width: 100%;
