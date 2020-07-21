@@ -11,7 +11,7 @@
         <input id='lat' type="text" name="lat" value="">
         <input id='long' type="text" name="long" value="">
       </div>
-      <button type="submit" name="button">Cerca</button>
+      <button id="mainbutton" type="submit" name="button">Cerca</button>
       <div class="filters-section">
         <div class="filters-number">
           <div class="filters-number-column">
@@ -79,17 +79,13 @@
                 </div>
                 <div class="info-apartment">
                   <h2>{{$apartment['stats']['title']}}</h2>
-                  <br>
+
                   <p>a {{$apartment['stats']['distance']}} km da {{$apartment['stats']['city']}}</p>
-                  <br>
                   <hr>
-                  <br>
                   <p>Numero di stanze &#183; {{$apartment['stats']['rooms']}}</p>
                     <p id='lat' class="latitude">{{$apartment['stats']['latitude']}}</p>
                     <p id='long' class="longitude">{{$apartment['stats']['longitude']}}</p>
-                    <br>
                     <hr>
-                    <br>
                     <p>
                     @foreach ($apartment['services'] as $service)
                       &#183; {{ $service }}

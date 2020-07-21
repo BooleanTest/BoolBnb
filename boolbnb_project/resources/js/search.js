@@ -1,8 +1,6 @@
 $(document).ready(function(){
 
 
-
-
     $('#query').keyup(function(){
       var query = $('#query').val();
       console.log(query);
@@ -75,6 +73,7 @@ $(document).ready(function(){
          map.flyTo({center: newPosition, zoom: 11});
 
       });
+
 
 
 
