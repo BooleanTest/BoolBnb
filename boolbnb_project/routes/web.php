@@ -35,3 +35,5 @@
   Route::get('/apartment/{id}/payment', 'apartmentController@payment')->name('payment');
   // pagamenti --o post--
   Route::get('/payment/paid', 'apartmentController@paid')->name('payment-paid');
+  // rotta visibility
+  Route::get('/profilo_utente_vis/{id}', 'profiloController@visibility')->name('visibility');

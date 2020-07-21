@@ -157,6 +157,7 @@ class profiloController extends Controller
       $apartments -> view = 1;
       $apartments -> user_id = $userId;
       $image -> storeAs($folder , $name . '.' . $format , 'public');
+      $apartments -> visibility = 1;
 
       $apartments -> save();
 
@@ -246,6 +247,26 @@ class profiloController extends Controller
         return view("not_found");
       }
 
+
+    }
+
+    //visibility
+    public function visibility($id){
+
+      $user_id = Auth::user();
+      $apartments = Apartment::findOrFail($id);
+      $user = User::findOrFail($user_id -> id);
+      $messagge = Message::all();
+
+      if($apartments -> visibility){
+        $apartments -> visibility = 0;
+        $apartments -> save();
+        return view('profilo', compact('user', 'messagge'));
+      } else {
+        $apartments -> visibility = 1;
+        $apartments -> save();
+        return view('profilo', compact('user', 'messagge'));
+      }
 
     }
 

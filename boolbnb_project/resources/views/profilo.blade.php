@@ -55,6 +55,14 @@
             <p><a href="{{route('show-apartment', $apartment -> id)}}">Dati Appartamento</a></p>
             <p><a href="{{route('stats', $apartment -> id)}}">Statistiche Appartamento</a></p>
             <p><a href="{{route("payment", $apartment -> id)}}">Promuovi appartamento</a></p>
+
+            @if ($apartment -> visibility)
+              <p><a href="{{route('visibility', $apartment -> id)}}">Rendi appartamento invisibile</a></p>
+            @else
+              <p><a href="{{route('visibility', $apartment -> id)}}">Rendi l'appartamento visibile</a></p>
+            @endif
+
+
           </div>
 
         </div>

@@ -135,6 +135,12 @@
 
         #sponsoredbox{
           background-color: LightGoldenRodYellow;
+          &:hover{
+            background: #c7c76194;
+          }
+          &:active{
+            transform: scale(1.01);
+          }
         }
 
         .box-result-apartment{

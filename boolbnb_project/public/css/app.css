@@ -1409,6 +1409,14 @@
   background-color: LightGoldenRodYellow;
 }
 
+.main_search_bar_query .apartments .results-section .results-apartments #sponsoredbox:hover {
+  background: #c7c76194;
+}
+
+.main_search_bar_query .apartments .results-section .results-apartments #sponsoredbox:active {
+  transform: scale(1.01);
+}
+
 .main_search_bar_query .apartments .results-section .results-apartments .box-result-apartment {
   display: flex;
   width: 100%;

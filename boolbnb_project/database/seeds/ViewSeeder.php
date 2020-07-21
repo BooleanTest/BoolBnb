@@ -14,13 +14,12 @@ class ViewSeeder extends Seeder
      */
     public function run()
     {
-      factory(View::class, 2000)
+      factory(View::class, 500)
                   -> make()
                   -> each(function($view){
                    $apartment = Apartment::inRandomOrder() -> first();
                    $view -> apartment() -> associate($apartment);
                    $view -> save();
                   });
-
     }
 }
