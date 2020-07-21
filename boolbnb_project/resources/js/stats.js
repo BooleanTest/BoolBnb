@@ -85,9 +85,6 @@ $(document).ready(function(){
   var messaggiVisual = $('.visual_messaggi').text();
 
   var myLabels = ['gennaio','febbraio','marzo','aprile','maggio','giugno','luglio','agosto','settembre','ottobre','novembre','dicembre'];
-  console.log('Labels: ' + myLabels);
-  var myDataset = [2,3,5,10,8,11,11,15,16,33,28,22];
-  console.log('dataset: ' + myDataset);
 
 
   printAChart('line', mesiVisual, myLabels, '#views-line', true, 'Visualizzazioni');
@@ -98,7 +95,17 @@ $(document).ready(function(){
 
   printAChart('bar', messaggiVisual, myLabels, '#mex-bar', true, 'Messaggi');
 
-  
+  $('#barre').click(function(){
+    $('.line').hide();
+    $('.bar').fadeIn();
+  });
+
+  $('#linee').click(function(){
+    $('.bar').hide();
+    $('.line').fadeIn();
+  });
+
+
 
 
 });

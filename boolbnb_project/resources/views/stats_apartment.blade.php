@@ -8,6 +8,11 @@
     echo '<div style="display:none" class="visual_messaggi">' . implode('', $visual_messaggi) . '</div>'
   @endphp
 
+  <div class="select-stats">
+    <button id="barre" type="button" name="button">Barre</button>
+    <button id="linee" type="button" name="button">Linee</button>
+  </div>
+
 
   <div class="main-stats">
 
