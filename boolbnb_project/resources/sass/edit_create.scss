@@ -11,6 +11,9 @@
     margin-bottom: 10px;
   }
   .dati{
+    .none{
+      display: none;
+    }
     .valore{
       .none{
         display: none;
@@ -152,6 +155,7 @@
 @media screen and (max-width: 900px){
   .containeredit{
     .servizi{
+      margin-top: 20px;
       width: 100%;
       height: 300px;
     }
@@ -164,6 +168,34 @@
         padding-top: 10px;
       }
       padding-top: 20px;
+      width: 100%;
+      border: none;
+    }
+  }
+}
+
+@media screen and (max-width: 500px){
+  .containeredit{
+    .servizi{
+      .left{
+        .servizietto{
+          width: 120px;
+        }
+      }
+      width: 100%;
+      padding: 0;
+      height: 270px;
+    }
+    .dati{
+      .valore{
+        .label{
+          text-align: left;
+          padding-left: 0;
+        }
+        padding-top: 10px;
+      }
+      padding-top: 20px;
+      padding-right: 0;
       width: 100%;
       border: none;
     }

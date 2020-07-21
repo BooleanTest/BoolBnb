@@ -162,7 +162,8 @@ $(document).ready(function () {
     moveTop(425);
   } else {
     moveTop(460);
-  }
+  } // animazione che al search dell'appartamento muove la pagina nel div risultati
+
 
   $('.move_up').click(function () {
     $("html, body").animate({
@@ -195,7 +196,7 @@ $(document).ready(function () {
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! C:\Users\alessandro\Desktop\ALESSAND\BOOLEAN\progettone\BoolBnb\boolbnb_project\resources\js\search.js */"./resources/js/search.js");
+module.exports = __webpack_require__(/*! D:\Progetti\Boolean\BoolBnb\boolbnb_project\resources\js\search.js */"./resources/js/search.js");
 
 
 /***/ })

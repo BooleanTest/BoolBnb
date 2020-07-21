@@ -101,3 +101,23 @@
     }
   }
 }
+
+@media screen and (max-width: 500px){
+  .container{
+    .container_message{
+      .messaggio{
+        .mail{
+          margin-bottom: 0;
+          width: 100%;
+          float: none;
+        }
+        .text{
+          padding: 20px;
+          width: 100%;
+          float: none;
+        }
+      }
+      padding: 0;
+    }
+  }
+}

@@ -93,7 +93,7 @@ $(document).ready(function(){
         moveTop(460);
       }
 
-
+      // animazione che al search dell'appartamento muove la pagina nel div risultati
 
       $('.move_up').click(function(){
           $("html, body").animate({ scrollTop: 0 }, 1000);

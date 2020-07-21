@@ -105,7 +105,7 @@
     </form>
 
   </div>
-  <div class="sponsored-container">
+  {{-- <div class="sponsored-container">
     @foreach ($apartments_pay as $sponsoredApp)
 
       <div class="sponsored">
@@ -116,13 +116,41 @@
 
 
     @endforeach
-  </div>
+  </div> --}}
 
   <div class="main_search_bar_query">
     <div class="apartments">
       <div class="results-section">
         @if (@isset($appartamenti))
           <div class="results-apartments">
+            @foreach ($apartments_pay  as $sponsoredApp)
+              <div id="sponsoredbox" class="box-result-apartment">
+
+                <div class="image-apartment">
+                  <img src="{{$sponsoredApp -> image}}" alt="">
+                </div>
+                <div class="info-apartment">
+                  <h2>{{$sponsoredApp -> title}}</h2>
+                  <p>{{$sponsoredApp -> city}}</p>
+                  <hr>
+                  <p>Numero di stanze &#183; {{$sponsoredApp -> rooms}}</p>
+                    <p id='lat' class="latitude">{{$sponsoredApp -> latitude}}</p>
+                    <p id='long' class="longitude">{{$sponsoredApp -> longitude}}</p>
+                    <hr>
+                    <p>
+                    @foreach ($sponsoredApp['services'] as $service)
+                      &#183; {{ $service['name'] }}
+                    @endforeach
+                    </p>
+                    <a href="{{route('show-apartment', $sponsoredApp -> id)}}">
+                      <button type="button" name="button">Mostra Appartamento in evidenza</button>
+                    </a>
+                </div>
+
+                {{-- 'apartments.id AS apartment_id, title, city, image, rooms, bathrooms, latitude, longitude,distance --}}
+
+              </div>
+            @endforeach
             @foreach ($appartamenti as $apartment)
               <div class="box-result-apartment">
 
@@ -156,8 +184,8 @@
         @else
           Nessun appartamento presente
         @endif
-      </div>
-    </div>
+      </div> {{-- fine sezione results --}}
+    </div> {{-- fine sezione appartamenti --}}
 
 
       <div class="map" id="map">
@@ -166,7 +194,7 @@
         <i class="fa fa-angle-double-up" ></i>
       </div>
 
-  </div>
+  </div> {{-- fine sezione generale ricerca --}}
 
 
 
