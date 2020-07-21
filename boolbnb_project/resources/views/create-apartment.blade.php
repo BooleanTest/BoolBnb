@@ -77,14 +77,14 @@
         </div>
         <input type="file" name="image" value="{{ old('image')}}"><br>
       </div>
-      <div class="valore">
+      <div class="valore none">
         <div class="label">
           <label class='none' for="latitude">Latitudine : </label>
         </div>
         <span class='none' id="plat"></span>
         <input id="latitude" class='none' type="text" name="latitude" value="{{old('latitude')}}" ><br>
       </div>
-      <div class="valore">
+      <div class="valore none">
         <div class="label">
           <label class='none' for="longitude">Longitudine : </label>
         </div>

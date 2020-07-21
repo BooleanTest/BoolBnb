@@ -78,7 +78,7 @@
         <input type="file" name="image" value="{{ old('image', $apartments -> image) }}">
         <br>
       </div>
-      <div class="valore">
+      <div class="valore none">
         <div class="none" class="label">
           <label for="latitude">Latitudine : </label>
         </div>
@@ -86,7 +86,7 @@
         <input id="latitude" type="text" name="latitude" value="{{ old('number', $apartments -> latitude) }}" class="none">
         <br>
       </div>
-      <div class="valore">
+      <div class="valore none">
         <div class="none" class="label">
           <label for="longitude">Longitudine : </label>
         </div>

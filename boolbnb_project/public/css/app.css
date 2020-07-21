@@ -142,8 +142,8 @@
   left: 40%;
   width: 20%;
   text-align: center;
-  border: 2px solid crimson;
-  background-color: white;
+  background-color: blue;
+  border-radius: 20px;
 }
 
 .container .profilo .appartamento .scritte .bottoni .eliminatasto .eliminazione .eliscritte {
@@ -151,7 +151,12 @@
 }
 
 .container .profilo .appartamento .scritte .bottoni .eliminatasto .eliminazione .eliscritte h3 {
+  color: white;
   margin-bottom: 5px;
+}
+
+.container .profilo .appartamento .scritte .bottoni .eliminatasto .eliminazione .eliscritte h4 {
+  color: white;
 }
 
 .container .profilo .appartamento .scritte .bottoni .eliminatasto .eliminazione .elibuttons .back {
@@ -159,7 +164,7 @@
   margin-left: 5px;
   margin-top: 4px;
   background-color: white;
-  border: 1px solid darkblue;
+  border: none;
   border-radius: 20px;
   transition: 0.6s;
   padding: 5px 8px;
@@ -248,6 +253,65 @@
   .container .profilo .top .floatl {
     width: 100%;
     text-align: center;
+  }
+
+  .container .profilo .top .floatr {
+    width: 100%;
+    margin: auto;
+  }
+
+  .container .profilo .top .floatr .buttonleft {
+    float: left;
+  }
+
+  .container .profilo .top .floatr .buttonright {
+    float: right;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .container {
+    padding-top: 0px;
+  }
+
+  .container .profilo .appartamento {
+    padding: 0;
+    margin-top: 25px;
+    width: 100%;
+    height: 450px;
+    border-bottom: 1px solid darkblue;
+    float: none;
+  }
+
+  .container .profilo .appartamento .immagine {
+    width: 100%;
+  }
+
+  .container .profilo .appartamento .titolo {
+    float: left;
+  }
+
+  .container .profilo .appartamento .scritte {
+    width: 100%;
+    padding-left: 0;
+  }
+
+  .container .profilo .appartamento .scritte .bottoni {
+    margin-top: 20px;
+  }
+
+  .container .profilo .appartamento .scritte .bottoni .eliminatasto .eliminazione {
+    left: 22%;
+    width: 60%;
+  }
+
+  .container .profilo .top .floatl {
+    width: 100%;
+    text-align: left;
+  }
+
+  .container .profilo .top .floatl h1 {
+    font-size: 22px;
   }
 
   .container .profilo .top .floatr {
@@ -385,6 +449,25 @@
 
   .container_logiscr .row .block {
     width: 100%;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .container_logiscr {
+    padding-top: 30px;
+  }
+
+  .container_logiscr .row .block {
+    padding: 0;
+  }
+
+  .container_logiscr .row .block form .go {
+    text-align: center;
+    margin-top: 20px;
+  }
+
+  .container_logiscr .row .block form .go button {
+    margin: 0;
   }
 }
 
@@ -551,8 +634,8 @@
   left: 40%;
   width: 20%;
   text-align: center;
-  border: 2px solid crimson;
-  background-color: white;
+  background-color: blue;
+  border-radius: 20px;
 }
 
 .tutto .container_show .margin .nave .modifica .eliminatasto .eliminazione .eliscritte {
@@ -561,6 +644,11 @@
 
 .tutto .container_show .margin .nave .modifica .eliminatasto .eliminazione .eliscritte h3 {
   margin-bottom: 5px;
+  color: white;
+}
+
+.tutto .container_show .margin .nave .modifica .eliminatasto .eliminazione .eliscritte h4 {
+  color: white;
 }
 
 .tutto .container_show .margin .nave .modifica .eliminatasto .eliminazione .elibuttons #back {
@@ -831,6 +919,63 @@
   }
 }
 
+@media screen and (max-width: 500px) {
+  .tutto {
+    padding-top: 0;
+  }
+
+  .tutto .container_show {
+    padding-top: 20px;
+  }
+
+  .tutto .container_show .margin:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+
+  .tutto .container_show .margin .nave .scritte {
+    width: 100%;
+  }
+
+  .tutto .container_show .margin .nave .modifica {
+    float: none;
+    width: 100%;
+  }
+
+  .tutto .container_show .margin .nave .modifica .eliminatasto .eliminazione {
+    left: 22%;
+    width: 60%;
+  }
+
+  .tutto .container_show .margin .foto {
+    max-height: 2000px;
+  }
+
+  .tutto .container_show .margin .foto .mappa {
+    height: 300px;
+    width: 100%;
+    float: none;
+    padding-left: 0;
+  }
+
+  .tutto .container_show .margin .foto .immagine {
+    width: 100%;
+    height: 100%;
+    padding-bottom: 25px;
+    float: none;
+  }
+
+  .tutto .container_show .margin .table .dati {
+    width: 100%;
+  }
+
+  .tutto .container_show .margin .table .servizi {
+    margin-top: 25px;
+    width: 100%;
+  }
+}
+
 .containeredit {
   padding: 25px;
   width: 75%;
@@ -857,6 +1002,10 @@
   float: left;
   border-right: 2px solid blue;
   padding-right: 30px;
+}
+
+.containeredit .dati .none {
+  display: none;
 }
 
 .containeredit .dati .valore {
@@ -996,6 +1145,7 @@
 
 @media screen and (max-width: 900px) {
   .containeredit .servizi {
+    margin-top: 20px;
     width: 100%;
     height: 300px;
   }
@@ -1013,6 +1163,34 @@
   .containeredit .dati .valore .label {
     text-align: left;
     padding-left: 37px;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .containeredit .servizi {
+    width: 100%;
+    padding: 0;
+    height: 270px;
+  }
+
+  .containeredit .servizi .left .servizietto {
+    width: 120px;
+  }
+
+  .containeredit .dati {
+    padding-top: 20px;
+    padding-right: 0;
+    width: 100%;
+    border: none;
+  }
+
+  .containeredit .dati .valore {
+    padding-top: 10px;
+  }
+
+  .containeredit .dati .valore .label {
+    text-align: left;
+    padding-left: 0;
   }
 }
 
@@ -1881,6 +2059,24 @@
   }
 }
 
+@media screen and (max-width: 500px) {
+  .container .container_message {
+    padding: 0;
+  }
+
+  .container .container_message .messaggio .mail {
+    margin-bottom: 0;
+    width: 100%;
+    float: none;
+  }
+
+  .container .container_message .messaggio .text {
+    padding: 20px;
+    width: 100%;
+    float: none;
+  }
+}
+
 .title-stats {
   padding: 30px 160px 30px 160px;
   display: flex;
@@ -2105,6 +2301,42 @@
   }
 }
 
+@media screen and (max-width: 500px) {
+  .title-payment {
+    text-align: center;
+    padding: 30px;
+    padding-bottom: 0;
+  }
+
+  .payment {
+    flex-direction: column;
+    justify-content: space-around;
+    padding: 30px;
+    display: flex;
+  }
+
+  .payment .payment-box {
+    width: 100%;
+    margin-top: 30px;
+  }
+
+  .payment .payment-box h1 {
+    font-size: 20px;
+  }
+
+  .payment .payment-box h2 {
+    font-size: 18px;
+  }
+
+  .payment .payment-box p {
+    font-size: 14px;
+  }
+
+  .button-payments {
+    padding: 0px 160px 0 160px;
+  }
+}
+
 .searchbar-section {
   background: white;
   background: linear-gradient(180deg, white 50%, LightSkyBlue 100%);
@@ -2262,6 +2494,30 @@ html {
 @media screen and (max-width: 900px) {
   .header {
     padding: 30px 40px 30px 40px;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .header {
+    padding: 30px 40px 30px 40px;
+  }
+
+  .header .nav-bar .login .links .username {
+    height: 40px;
+    float: right;
+    text-align: right;
+  }
+
+  .header .nav-bar .login .links .username a {
+    padding: 0;
+    padding-right: 10px;
+    width: 100%;
+    margin-top: 10px;
+  }
+
+  .header .nav-bar .login .links .username a:hover {
+    background: none;
+    transition: 0;
   }
 }
 
