@@ -67,12 +67,13 @@
 
       </div>
 
-      <div class="counter-stats">
-        <h3>Messaggi ricevuti 2020:</h3>
-        <p class='total_messages'>{{$total_messages_2020 -> toarray()[0]['tot_messages']}}</p>
-      </div>
-
       <div class="bar-graph">
+
+        <div class="counter-stats">
+          <h3>Messaggi ricevuti 2020:</h3>
+          <p class='total_messages'>{{$total_messages_2020 -> toarray()[0]['tot_messages']}}</p>
+        </div>
+
 
         <canvas id="mex-bar"></canvas>
 
