@@ -110,7 +110,26 @@
   }
 
 }
-
+.indietrostats{
+  #indietro{
+    &:hover{
+      cursor: pointer;
+      background-color: crimson;
+      color: white;
+      transition: 0.6s;
+    }
+    margin-top: 25px;
+    padding: 10px 25px;
+    border: none;
+    border-radius: 20px;
+    font-size: 20px;
+    background-color: white;
+    transition: 0.6s;
+  }
+  width: 80%;
+  margin: auto;
+  padding-bottom: 80px;
+}
 @media screen and (max-width: 1200px){
 
   .main-stats{
@@ -158,6 +177,9 @@
 
 @media screen and (max-width: 700px){
 
+.indietrostats{
+  text-align: center;
+}
 
   .main-stats{
     padding: 0px 0px 0px 0px;

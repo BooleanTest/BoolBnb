@@ -12,6 +12,7 @@
     <div class="messaggio">
       <div class="mail">
         <h3>{{$message -> mail}}</h3>
+        <a href="{{route('show-apartment' , $message -> apartment_id )}}"><p>{{$message -> title}}</p></a>
       </div>
       <div class="text">
         <h3>{{$message -> text}}</h3>

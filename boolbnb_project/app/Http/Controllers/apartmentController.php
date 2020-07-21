@@ -63,7 +63,6 @@ class apartmentController extends Controller
     $validateData = $request -> validate([
       'mail' => 'required',
       'text' => 'required'
-
     ]);
 
     $messagge = new Message;

@@ -962,6 +962,7 @@
 
 @media screen and (max-width: 1200px) {
   .tutto .container_show {
+    padding-top: 0;
     width: 100%;
   }
 
@@ -2108,6 +2109,16 @@
   padding: 20px;
 }
 
+.container_message .messaggio .mail a p {
+  margin-top: 15px;
+  font-size: 18px;
+  color: blue;
+}
+
+.container_message .messaggio .mail a p:hover {
+  color: white;
+}
+
 .container_message .messaggio .text {
   float: left;
   width: calc(100% - 350px);
@@ -2276,6 +2287,29 @@
   transition: 0.6s;
 }
 
+.indietrostats {
+  width: 80%;
+  margin: auto;
+  padding-bottom: 80px;
+}
+
+.indietrostats #indietro {
+  margin-top: 25px;
+  padding: 10px 25px;
+  border: none;
+  border-radius: 20px;
+  font-size: 20px;
+  background-color: white;
+  transition: 0.6s;
+}
+
+.indietrostats #indietro:hover {
+  cursor: pointer;
+  background-color: crimson;
+  color: white;
+  transition: 0.6s;
+}
+
 @media screen and (max-width: 1200px) {
   .main-stats {
     padding: 0px 80px 0px 80px;
@@ -2311,6 +2345,10 @@
 }
 
 @media screen and (max-width: 700px) {
+  .indietrostats {
+    text-align: center;
+  }
+
   .main-stats {
     padding: 0px 0px 0px 0px;
   }

@@ -33,6 +33,16 @@
         background-color: LightSkyBlue;
       }
       .mail{
+        a{
+          p{
+            &:hover{
+              color: white;
+            }
+            margin-top: 15px;
+            font-size: 18px;
+            color: blue;
+          }
+        }
         float: left;
         width: 350px;
         margin-bottom: 10px;
