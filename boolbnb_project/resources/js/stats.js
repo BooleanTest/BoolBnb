@@ -95,6 +95,8 @@ $(document).ready(function(){
 
   printAChart('bar', messaggiVisual, myLabels, '#mex-bar', true, 'Messaggi');
 
+  $('.bar').hide();
+
   $('#barre').click(function(){
     $('.line').hide();
     $('.bar').fadeIn();
