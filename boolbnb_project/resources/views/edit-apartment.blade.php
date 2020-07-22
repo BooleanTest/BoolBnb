@@ -108,7 +108,6 @@
       @foreach ($services as $service)
       <div class="left">
         <div class="servizietto">
-          
           <h4>{{$service -> name}}</h4>
         </div>
         <div class="check">
