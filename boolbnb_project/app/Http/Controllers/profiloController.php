@@ -60,19 +60,28 @@ class profiloController extends Controller
         "number" => "required",
         'city' => 'required',
         'nation' => 'required',
-        "image" => "required",
+        "image" => "nullable",
         'services' => 'nullable',
         'latitude' => 'required',
         'longitude' => 'required'
       ]);
 
-      $image = $request->file('image');
-      $folder = '/uploads/images/';
-      $name = Str::slug($request -> input('title')). '_' .time();
-      $format = $image->getClientOriginalExtension();
-      $filePath = $folder . $name . '.' . $format;
 
       $apartments = Apartment::findOrFail($id);
+
+      if(isset($request -> image)){
+        $image = $request->file('image');
+        $folder = '/uploads/images/';
+        $name = Str::slug($request -> input('title')). '_' .time();
+        $format = $image->getClientOriginalExtension();
+        $filePath = $folder . $name . '.' . $format;
+
+        $apartments -> image  = $filePath;
+        $image -> storeAs($folder , $name . '.' . $format , 'public');
+      }
+
+
+
 
       $apartments -> title  = $validateData["title"];
       $apartments -> rooms  = $validateData["rooms"];
@@ -82,11 +91,10 @@ class profiloController extends Controller
       $apartments -> number  = $validateData["number"];
       $apartments -> latitude  = $validateData["latitude"];
       $apartments -> longitude  = $validateData["longitude"];
-      $apartments -> image  = $filePath;
       $apartments -> city  = $validateData["city"];
       $apartments -> nation  = $validateData["nation"];
 
-      $image -> storeAs($folder , $name . '.' . $format , 'public');
+
 
       $apartments -> save();
 
@@ -154,7 +162,6 @@ class profiloController extends Controller
       $apartments -> image  = $filePath;
       $apartments -> city  = $validateData["city"];
       $apartments -> nation  = $validateData["nation"];
-      $apartments -> view = 1;
       $apartments -> user_id = $userId;
       $image -> storeAs($folder , $name . '.' . $format , 'public');
       $apartments -> visibility = 1;
@@ -274,5 +281,5 @@ class profiloController extends Controller
       }
 
     }
-    
+
 }
