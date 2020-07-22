@@ -60,10 +60,10 @@
 
 .heading-w-apartments{
   text-align: center;
-  padding: 60px 160px 60px 160px;
-  background-color: darkblue;
+  padding: 30px 160px 30px 160px;
+  background-color: lightgrey;
   h2{
-    color: white;
+    color: black;
   }
 }
 
@@ -115,8 +115,8 @@
 @media screen and (max-width: 900px){
 
   .heading-w-apartments{
+    padding: 30px 40px 30px 40px;
     text-align: center;
-    background-color: darkblue;
     h2{
       color: white;
     }
@@ -162,9 +162,8 @@
 @media screen and (max-width: 500px){
 
   .heading-w-apartments{
+    padding: 20px 0px 20px 0px;
     text-align: center;
-    padding: 60px 0px 60px 0px;
-    background-color: darkblue;
     h2{
       color: white;
     }
