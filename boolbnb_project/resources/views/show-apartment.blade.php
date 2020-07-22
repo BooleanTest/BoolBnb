@@ -99,9 +99,16 @@
       </div>
       @Auth
       @if(Auth::user() -> id === $apartments -> user -> id)
-      <div class="promuovi">
-        <p><a href="{{route("payment", $apartments -> id)}}">Promuovi appartamento</a></p>
-      </div>
+
+      @if ($apartments -> time < time())
+        <div class="promuovi">
+          <p><a href="{{route("payment", $apartments -> id)}}">Promuovi appartamento</a></p>
+        </div>
+      @else
+
+          <p style='color: #e70036f0; margin-left: 26px;'>Questo appartamento è sponsorizzato!</p>
+
+      @endif
 
 
       @else

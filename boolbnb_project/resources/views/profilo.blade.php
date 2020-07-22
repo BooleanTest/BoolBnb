@@ -54,13 +54,22 @@
           <div class="pi">
             <p><a href="{{route('show-apartment', $apartment -> id)}}">Dati Appartamento</a></p>
             <p><a href="{{route('stats', $apartment -> id)}}">Statistiche</a></p>
-            <p><a href="{{route("payment", $apartment -> id)}}">Promuovi</a></p>
 
-            @if ($apartment -> visibility)
-              <p><a href="{{route('visibility', $apartment -> id)}}">Rendi l'appartamento invisibile</a></p>
+            @if ($apartment -> time < time())
+
+              <p><a href="{{route("payment", $apartment -> id)}}">Promuovi</a></p>
+
+              @if ($apartment -> visibility)
+                <p><a href="{{route('visibility', $apartment -> id)}}">Rendi l'appartamento invisibile</a></p>
+              @else
+                <p><a href="{{route('visibility', $apartment -> id)}}">Rendi l'appartamento visibile</a></p>
+              @endif
             @else
-              <p><a href="{{route('visibility', $apartment -> id)}}">Rendi l'appartamento visibile</a></p>
+              <p style='color: #e70036f0'>Questo appartamento è sponsorizzato!</p>
             @endif
+
+
+
 
 
           </div>

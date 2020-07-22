@@ -173,7 +173,7 @@
                 <div class="info-apartment">
                   <h2>{{$apartment['stats']['title']}}</h2>
 
-                  <p>a <span class="km-distance">{{$apartment['stats']['distance']}}</span> km da {{$apartment['stats']['city']}}</p>
+                  <p>a <span class="km-distance">{{$apartment['stats']['distance']}}</span> km da {{$request -> q}}</p>
                   <hr>
                   <p>Numero di stanze &#183; {{$apartment['stats']['rooms']}}</p>
                     <p id='lat' class="latitude">{{$apartment['stats']['latitude']}}</p>
