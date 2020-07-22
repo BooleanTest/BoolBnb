@@ -566,10 +566,6 @@
     text-align: center;
   }
 
-  .heading-w-apartments h2 {
-    color: white;
-  }
-
   .container-w-apartments {
     background-color: white;
     padding: 0px 0px 0px 0px;
@@ -609,10 +605,6 @@
     text-align: center;
   }
 
-  .heading-w-apartments h2 {
-    color: white;
-  }
-
   .container-w-apartments {
     background-color: white;
     padding: 0px 0px 0px 0px;
@@ -647,7 +639,7 @@
 }
 
 .tutto {
-  background-color: LightSkyBlue;
+  background-color: white;
   margin-top: -120px;
   margin-bottom: -50px;
   padding-bottom: 50px;
@@ -1518,7 +1510,6 @@
 @media screen and (max-width: 1200px) {
   .search-section {
     background: white;
-    background: linear-gradient(180deg, white 50%, LightSkyBlue 100%);
     padding: 0px 80px 30px 80px;
   }
 
@@ -1704,7 +1695,6 @@
 @media screen and (max-width: 900px) {
   .search-section {
     background: white;
-    background: linear-gradient(180deg, white 50%, LightSkyBlue 100%);
   }
 
   .search-section form {
@@ -1889,7 +1879,6 @@
 @media screen and (max-width: 500px) {
   .search-section {
     background: white;
-    background: linear-gradient(180deg, white 50%, LightSkyBlue 100%);
   }
 
   .search-section form {
@@ -2712,8 +2701,7 @@
 
 @media screen and (max-width: 1200px) {
   .searchbar-section {
-    background: white;
-    background: linear-gradient(180deg, white 50%, LightSkyBlue 100%);
+    background-color: white;
     margin-top: 90px;
     padding-top: 50px;
     padding-bottom: 50px;
@@ -2772,8 +2760,7 @@
 
 @media screen and (max-width: 900px) {
   .searchbar-section {
-    background: white;
-    background: linear-gradient(180deg, white 50%, LightSkyBlue 100%);
+    background-color: white;
     margin-top: 90px;
     padding-top: 50px;
     padding-bottom: 50px;
