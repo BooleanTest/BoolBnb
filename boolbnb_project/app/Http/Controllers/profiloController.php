@@ -241,11 +241,14 @@ class profiloController extends Controller
 
       $apartments = Apartment::all();
 
-      $messages = Apartment::selectRaw('user_id, mail, text, apartments.title as title, users.id as utente_id, apartments.id as apartment_id')
+      $messages = Apartment::selectRaw('user_id, mail, text, apartments.title as title, messages.created_at as data, users.id as utente_id, apartments.id as apartment_id')
                   ->join('messages', 'messages.apartment_id', '=', 'apartments.id')
                   ->join('users', 'users.id', '=', 'apartments.user_id')
-                  ->where('user_id', $id) -> get();
+                  ->where('user_id', $id)
+                  ->orderByRaw('data DESC')
+                  -> get();
 
+                   // ORDER BY `messages`.`created_at` DESC
 
       $user = Auth::user();
 

@@ -2109,19 +2109,26 @@
 .container_message .messaggio .mail {
   float: left;
   width: 350px;
-  margin-bottom: 10px;
   border-top: 2px solid darkblue;
   padding: 20px;
+  padding-top: 30px;
 }
 
 .container_message .messaggio .mail a p {
-  margin-top: 15px;
-  font-size: 18px;
+  font-size: 15px;
   color: blue;
 }
 
 .container_message .messaggio .mail a p:hover {
   color: white;
+}
+
+.container_message .messaggio .mail .info {
+  margin: 10px;
+}
+
+.container_message .messaggio .mail .info .text_mex {
+  font-size: 15px;
 }
 
 .container_message .messaggio .text {

@@ -38,19 +38,27 @@
             &:hover{
               color: white;
             }
-            margin-top: 15px;
-            font-size: 18px;
+            font-size: 15px;
             color: blue;
           }
         }
+        .info{
+          margin: 10px;
+
+          .text_mex{
+            font-size: 15px;
+          }
+        }
+
         float: left;
         width: 350px;
-        margin-bottom: 10px;
         border-top: 2px solid darkblue;
         padding: 20px;
+        padding-top: 30px;
       }
       .text{
         h3{
+
           font-size: 16px;
           line-height: 19px;
           color: blue;
