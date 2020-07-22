@@ -147,13 +147,7 @@ $(document).ready(function () {
       center: newPosition,
       zoom: 11
     });
-  }); // $('#mainbutton').click({
-  //   $('html,body').animate({ scrollTop: 50}, 'slow');
-  // })
-  // $('#mainbutton').click({
-  //   $(document).scrollTop( $("#header").offset().top );
-  // })
-
+  });
   var width = $(window).width();
 
   if (width < 901) {
@@ -169,7 +163,7 @@ $(document).ready(function () {
     $("html, body").animate({
       scrollTop: 0
     }, 1000);
-    console.log(); // $('.move_up').fadeOut(1000);
+    console.log();
   });
   $(window).scroll(function () {
     if ($('.move_up').offset().top <= 550) {
@@ -203,7 +197,7 @@ $(document).ready(function () {
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! D:\Booleans\BoolBnb\boolbnb_project\resources\js\search.js */"./resources/js/search.js");
+module.exports = __webpack_require__(/*! C:\Users\alessandro\Desktop\ALESSAND\BOOLEAN\progettone\BoolBnb\boolbnb_project\resources\js\search.js */"./resources/js/search.js");
 
 
 /***/ })

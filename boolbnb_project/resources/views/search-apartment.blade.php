@@ -131,18 +131,6 @@
     </form>
 
   </div>
-  {{-- <div class="sponsored-container">
-    @foreach ($apartments_pay as $sponsoredApp)
-
-      <div class="sponsored">
-        <a href="{{route('show-apartment', $sponsoredApp -> id)}}">{{$sponsoredApp -> title}}</a>
-        <p class="latitude">{{$sponsoredApp -> latitude}}</p>
-        <p class="longitude">{{$sponsoredApp -> longitude}}</p>
-      </div>
-
-
-    @endforeach
-  </div> --}}
 
   <div class="main_search_bar_query">
     <div class="apartments">
@@ -173,8 +161,6 @@
                     </a>
                 </div>
 
-                {{-- 'apartments.id AS apartment_id, title, city, image, rooms, bathrooms, latitude, longitude,distance --}}
-
               </div>
             @endforeach
         @if (@count($appartamenti) > 0)
@@ -204,13 +190,12 @@
                     </a>
                 </div>
 
-                {{-- 'apartments.id AS apartment_id, title, city, image, rooms, bathrooms, latitude, longitude,distance --}}
 
               </div>
             @endforeach
 
         @else
-        <h1 style="margin-top: 10px;">La ricerca non ha prodotto risultati</h1>
+        <p style="margin: 100px 140px;">Non ci sono appartamenti che rispecchiano i parametri inseriti</p>
       @endif
         </div>
       </div> {{-- fine sezione results --}}

@@ -79,12 +79,6 @@ $(document).ready(function(){
 
       });
 
-      // $('#mainbutton').click({
-      //   $('html,body').animate({ scrollTop: 50}, 'slow');
-      // })
-      // $('#mainbutton').click({
-      //   $(document).scrollTop( $("#header").offset().top );
-      // })
 
       var width = $(window).width();
       if (width < 901){
@@ -100,7 +94,6 @@ $(document).ready(function(){
       $('.move_up').click(function(){
           $("html, body").animate({ scrollTop: 0 }, 1000);
           console.log();
-          // $('.move_up').fadeOut(1000);
       });
 
       $(window).scroll(function(){
