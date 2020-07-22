@@ -173,11 +173,7 @@ $(document).ready(function () {
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-<<<<<<< HEAD
 module.exports = __webpack_require__(/*! D:\Progetti\Boolean\BoolBnb\boolbnb_project\resources\js\stats.js */"./resources/js/stats.js");
-=======
-module.exports = __webpack_require__(/*! C:\Users\utente\Desktop\Esercitazioni\prog_finale\BoolBnb\boolbnb_project\resources\js\stats.js */"./resources/js/stats.js");
->>>>>>> master
 
 
 /***/ })

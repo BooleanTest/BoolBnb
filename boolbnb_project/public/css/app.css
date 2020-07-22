@@ -477,8 +477,9 @@
   justify-content: space-between;
 }
 
-.nav-bar .logo h1 {
+.nav-bar .logo a h1 {
   margin-top: 1px;
+  float: left;
 }
 
 .nav-bar .login .links .nav-button {
