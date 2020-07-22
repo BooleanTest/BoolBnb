@@ -123,7 +123,7 @@
   <div class="main_search_bar_query">
     <div class="apartments">
       <div class="results-section">
-        @if (@isset($appartamenti))
+
           <div class="results-apartments">
             @foreach ($apartments_pay  as $sponsoredApp)
               <div id="sponsoredbox" class="box-result-apartment">
@@ -153,6 +153,7 @@
 
               </div>
             @endforeach
+        @if (@count($appartamenti) > 0)
             @foreach ($appartamenti as $apartment)
               <div class="box-result-apartment">
 
@@ -183,16 +184,17 @@
 
               </div>
             @endforeach
-          </div>
+
         @else
-          Nessun appartamento presente
-        @endif
+        <h3 style="margin-top: 350px;">La ricerca non ha prodotto risultati</h3>
+      @endif
+        </div>
       </div> {{-- fine sezione results --}}
     </div> {{-- fine sezione appartamenti --}}
 
 
-      <div class="map" id="map">
-      </div>
+    <div class="map" id="map">
+    </div>
       <div class="move_up" style='opacity: 0'>
         <i class="fa fa-angle-double-up" ></i>
       </div>

@@ -31,7 +31,7 @@ class apartmentController extends Controller
 
   public function show($id){
     $apartments = Apartment::findOrFail($id);
-    Apartment::where('id', $id)->increment('view');
+    // Apartment::where('id', $id)->increment('view');
 
     $views = $apartments -> views;
 
@@ -102,14 +102,13 @@ class apartmentController extends Controller
       $srvcs = [];
     }
 
-
     if ($q == null || $lat == null|| $lng == null ){
       return view ('search-apartment', compact('services', 'apartments_pay', 'request'));
 
     } else {
 
       if(!isset($distance)){
-        $apartments = Apartment::selectRaw('apartments.id AS apartment_id, title, city, image, rooms, bathrooms, latitude, longitude, (
+        $apartments = Apartment::selectRaw('apartments.id AS apartment_id, title, time, visibility, city, image, rooms, bathrooms, latitude, longitude, (
             3959 * acos (
             cos ( radians(' . $lat . ') )
             * cos( radians( latitude ) )
@@ -122,7 +121,7 @@ class apartmentController extends Controller
             ->having('distance', '<', 20)
             ->paginate(50);
       } else {
-        $apartments = Apartment::selectRaw('apartments.id AS apartment_id, title, city, image, rooms, bathrooms, latitude, longitude, (
+        $apartments = Apartment::selectRaw('apartments.id AS apartment_id, title, time, visibility, city, image, rooms, bathrooms, latitude, longitude, (
             3959 * acos (
             cos ( radians(' . $lat . ') )
             * cos( radians( latitude ) )
@@ -157,7 +156,11 @@ class apartmentController extends Controller
 
         $result = array_intersect($apartmentService, $srvcs);
 
-        if(!count($srvcs) == 0){
+
+
+        if (($apartment -> visibility) && ($apartment -> time < time())){
+
+          if(!count($srvcs) == 0){
 
           if($result){
             $appartamenti[] = [
@@ -176,6 +179,7 @@ class apartmentController extends Controller
 
           ];
         }
+       }
 
       }
 
@@ -185,7 +189,7 @@ class apartmentController extends Controller
 
       } else {
 
-        return view ('search-apartment', compact('services', 'apartments_pay', 'request'));
+        return view ('search-apartment', compact('services', 'appartamenti', 'apartments_pay',  'request'));
 
       }
 
