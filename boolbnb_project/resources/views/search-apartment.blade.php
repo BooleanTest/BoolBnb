@@ -210,7 +210,7 @@
             @endforeach
 
         @else
-        <h1 style="margin-top: 200px;">La ricerca non ha prodotto risultati</h1>
+        <h1 style="margin-top: 10px;">La ricerca non ha prodotto risultati</h1>
       @endif
         </div>
       </div> {{-- fine sezione results --}}
