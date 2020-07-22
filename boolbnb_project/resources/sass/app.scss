@@ -104,9 +104,67 @@ html{
 // Footer
 
 .footer{
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  &:after{
+    content: "";
+    display: table;
+    clear: both;
+  }
+  .containerfoot{
+    .produttori{
+      h3{
+        font-size: 24px;
+        margin-bottom: 10px;
+      }
+      ul{
+        li{
+          a{
+            &:hover{
+              color: limegreen;
+            }
+            color: blue;
+          }
+          color: blue;
+          margin-top: 10px;
+        }
+        list-style-type: none;
+      }
+      float: left;
+      width: 33%;
+    }
+    .tecnologie{
+      h3{
+        font-size: 24px;
+        margin-bottom: 10px;
+      }
+      ul{
+        li{
+          color: blue;
+          margin-top: 10px;
+        }
+        list-style-type: none;
+      }
+      float: left;
+      width: 33%;
+    }
+    .grazie{
+      h3{
+        font-size: 24px;
+        margin-bottom: 10px;
+      }
+      ul{
+        li{
+          color: blue;
+          margin-top: 10px;
+        }
+        list-style-type: none;
+      }
+      float: left;
+      width: 33%;
+    }
+    width: 80%;
+    margin: auto;
+
+  }
   width: 100vw;
   padding: 60px 160px 60px 160px;
   background: linear-gradient(0deg, rgba(255,255,255,1) 0%, LightSkyBlue 100%);
@@ -114,10 +172,33 @@ html{
   z-index: 2;
 }
 
-
+@media screen and (max-width: 1200px){
+  .footer{
+    .containerfoot{
+      width: 100%;
+    }
+    padding: 60px;
+  }
+}
 @media screen and (max-width: 900px){
   .header{
     padding: 30px 40px 30px 40px;
+  }
+  .footer{
+    .containerfoot{
+      .produttori{
+        width: 50%;
+      }
+      .tecnologie{
+        width: 50%;
+      }
+      .grazie{
+        width: 100%;
+        margin-top: 50px;
+      }
+      width: 100%;
+    }
+    padding: 60px 30px 60px 30px;
   }
 }
 
@@ -145,5 +226,23 @@ html{
       }
     }
     padding: 30px 40px 30px 40px;
+  }
+  .footer{
+    .containerfoot{
+      .produttori{
+        width: 100%;
+        margin-top: 50px;
+      }
+      .tecnologie{
+        width: 100%;
+        margin-top: 50px;
+      }
+      .grazie{
+        width: 100%;
+        margin-top: 50px;
+      }
+      width: 100%;
+    }
+    padding: 30px;
   }
 }

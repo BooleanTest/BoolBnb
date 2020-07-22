@@ -154,7 +154,6 @@ $(document).ready(function () {
   printAChart('line', messaggiVisual, myLabels, '#mex-line', true, 'Messaggi');
   printAChart('bar', messaggiVisual, myLabels, '#mex-bar', true, 'Messaggi');
   $('.bar').hide();
-  $('.bar').hide();
   $('#barre').click(function () {
     $('.line').hide();
     $('.bar').fadeIn();
@@ -174,7 +173,7 @@ $(document).ready(function () {
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! C:\Users\alessandro\Desktop\ALESSAND\BOOLEAN\progettone\BoolBnb\boolbnb_project\resources\js\stats.js */"./resources/js/stats.js");
+module.exports = __webpack_require__(/*! D:\Progetti\Boolean\BoolBnb\boolbnb_project\resources\js\stats.js */"./resources/js/stats.js");
 
 
 /***/ })
