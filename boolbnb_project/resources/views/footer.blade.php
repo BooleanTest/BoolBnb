@@ -7,7 +7,7 @@
         <li><a href="https://github.com/MatteoRosella99">Matteo Rosella</a></li>
         <li><a href="https://github.com/emazack">Emanuele Zaccaria</a></li>
         <li><a href="https://github.com/Alessandro9300">Alessandro Andreoli</a></li>
-        <li><a href="https://github.com/FedericaTosti">Federisca Tosti</a></li>
+        <li><a href="https://github.com/FedericaTosti">Federica Tosti</a></li>
       </ul>
     </div>
     <div class="tecnologie">
@@ -25,7 +25,7 @@
         <li>Giovanni Cappelletti</li>
         <li>Nikolas Mosca</li>
         <li>Simone Taccori</li>
-        <li>Michele Pagagno</li>
+        <li>Michele Papagni</li>
         <li>Chiara Passaro</li>
       </ul>
     </div>
