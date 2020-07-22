@@ -86,8 +86,32 @@
           @foreach ($services as $service)
           <div class="service">
             <div>
+              @if ($service -> name === 'WiFi')
+                <i class="fas fa-wifi"></i>
 
-              {{$service -> name}}</div>
+              @elseif ($service -> name === 'Posto macchina')
+                <i class="fas fa-taxi"></i>
+
+              @elseif ($service -> name === 'Piscina')
+                <i class="fas fa-swimming-pool"></i>
+
+              @elseif ($service -> name === 'Portineria')
+                <i class="fas fa-concierge-bell"></i>
+
+              @elseif ($service -> name === 'Sauna')
+                <i class="fas fa-hot-tub"></i>
+
+              @elseif ($service -> name === 'Vista mare')
+                <i class="fas fa-water"></i>
+
+              @elseif ($service -> name === 'Aria condizionata')
+                <i class="fas fa-wind"></i>
+
+              @endif
+
+              {{$service -> name}}
+            </div>
+            
             <input  type="checkbox" name="services[]" value="{{$service -> name}}"
             @if (isset($request-> services))
               @foreach ($request -> services as $service_r)

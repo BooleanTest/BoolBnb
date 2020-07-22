@@ -154,7 +154,6 @@ $(document).ready(function () {
   printAChart('line', messaggiVisual, myLabels, '#mex-line', true, 'Messaggi');
   printAChart('bar', messaggiVisual, myLabels, '#mex-bar', true, 'Messaggi');
   $('.bar').hide();
-  $('.bar').hide();
   $('#barre').click(function () {
     $('.line').hide();
     $('.bar').fadeIn();
