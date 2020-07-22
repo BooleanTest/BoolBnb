@@ -57,7 +57,7 @@
             <p><a href="{{route("payment", $apartment -> id)}}">Promuovi appartamento</a></p>
 
             @if ($apartment -> visibility)
-              <p><a href="{{route('visibility', $apartment -> id)}}">Rendi appartamento invisibile</a></p>
+              <p><a href="{{route('visibility', $apartment -> id)}}">Rendi l'appartamento invisibile</a></p>
             @else
               <p><a href="{{route('visibility', $apartment -> id)}}">Rendi l'appartamento visibile</a></p>
             @endif
