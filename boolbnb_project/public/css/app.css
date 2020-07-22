@@ -2914,11 +2914,15 @@ html {
 
 @media screen and (max-width: 500px) {
   .header {
+    padding: 0px 0px 0px 0px;
     padding: 30px 40px 30px 40px;
   }
 
   .header .nav-bar .login .links .username {
-    height: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    height: 0px;
     float: right;
     text-align: right;
   }
