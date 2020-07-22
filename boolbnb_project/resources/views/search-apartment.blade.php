@@ -163,7 +163,7 @@
                 <div class="info-apartment">
                   <h2>{{$apartment['stats']['title']}}</h2>
 
-                  <p>a {{$apartment['stats']['distance']}} km da {{$apartment['stats']['city']}}</p>
+                  <p>a <span class="km-distance">{{$apartment['stats']['distance']}}</span> km da {{$apartment['stats']['city']}}</p>
                   <hr>
                   <p>Numero di stanze &#183; {{$apartment['stats']['rooms']}}</p>
                     <p id='lat' class="latitude">{{$apartment['stats']['latitude']}}</p>
@@ -171,7 +171,7 @@
                     <hr>
                     <p>
                     @foreach ($apartment['services'] as $service)
-                    
+
                       &#183; {{ $service }}
                     @endforeach
                     </p>

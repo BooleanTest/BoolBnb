@@ -185,6 +185,13 @@ $(document).ready(function () {
       scrollTop: where
     }, 1000);
   }
+
+  $('.km-distance').each(function (i) {
+    var kmLong = $(this).text();
+    var kmResult = parseFloat(kmLong).toFixed(1);
+    console.log(kmResult);
+    $(this).text(kmResult);
+  });
 });
 
 /***/ }),
