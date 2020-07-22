@@ -13,13 +13,19 @@
     <div class="tecnologie">
       <h3>Tecnologie utilizzate</h3>
       <ul>
-        <li>Html - css</li>
-        <li>Javascript - JQuery</li>
-        <li>Php - Laravel</li>
+        <li>Html</li>
+        <li>Css</li>
+        <li>Javascript</li>
+        <li>JQuery</li>
+        <li>Php</li>
+        <li>Laravel</li>
+        <li>Braintree</li>
+        <li>TomTom for Dev</li>
+        <li>GitKraken</li>
       </ul>
     </div>
     <div class="grazie">
-      <h3>Un GRAZIE speciale a</h3>
+      <h3>Un ringraziamento a</h3>
       <ul>
         <li>Simone Icardi</li>
         <li>Giovanni Cappelletti</li>
