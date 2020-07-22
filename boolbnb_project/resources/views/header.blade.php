@@ -2,7 +2,7 @@
 
   <div class="nav-bar">
     <div class="logo">
-      <a href="{{route ('home')}}"><h1 class="">BoolBnB</h1></a>
+      <a href="{{route ('home')}}"><h1 class="">BoolBnB</h1> <img src="uploads/images/airbnb_logo.png" alt="logo"> </a>
 
     </div>
     <div class="login">
