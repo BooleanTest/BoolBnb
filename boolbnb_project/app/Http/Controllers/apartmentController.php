@@ -156,9 +156,9 @@ class apartmentController extends Controller
 
         $result = array_intersect($apartmentService, $srvcs);
 
+        // ($apartment -> time < time())
 
-
-        if (($apartment -> visibility) && ($apartment -> time < time())){
+        if (($apartment -> visibility)){
 
           if(!count($srvcs) == 0){
 

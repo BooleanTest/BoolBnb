@@ -93,15 +93,13 @@ class profiloController extends Controller
       $apartments -> longitude  = $validateData["longitude"];
       $apartments -> city  = $validateData["city"];
       $apartments -> nation  = $validateData["nation"];
-
-
-
       $apartments -> save();
 
-      if (isset($validateData['services'])) {
-        $apartments -> services() -> sync($validateData['services']);
+      if (!isset($validateData['services'])){
+        $validateData['services'] = [];
       }
-      // Apartment::whereId($id) -> update($validateData);
+
+      $apartments -> services() -> sync($validateData['services']);
 
       return redirect() -> route("show-apartment", $id)
                         -> withSuccess("Appartamento " . $validateData["title"] . " correttamente aggiornato");
@@ -123,8 +121,11 @@ class profiloController extends Controller
       return view('create-apartment', compact("apartments", 'services'));
     }
 
+
     // per nuovo appartamento (store)
     public function store(Request $request){
+
+
 
       $userId = Auth::id();
 

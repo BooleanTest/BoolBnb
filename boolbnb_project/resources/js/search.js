@@ -88,11 +88,11 @@ $(document).ready(function(){
 
       var width = $(window).width();
       if (width < 901){
-        moveTop(605);
+        moveTop(700);
       } else if (width < 1201){
-        moveTop(425);
+        moveTop(450);
       } else {
-        moveTop(460);
+        moveTop(480);
       }
 
       // animazione che al search dell'appartamento muove la pagina nel div risultati
