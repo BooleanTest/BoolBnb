@@ -515,11 +515,11 @@
 .heading-w-apartments {
   text-align: center;
   padding: 30px 160px 30px 160px;
-  background-color: lightgrey;
+  background-color: LightSteelBlue;
 }
 
 .heading-w-apartments h2 {
-  color: black;
+  color: darkblue;
 }
 
 .container-w-apartments {
@@ -2654,7 +2654,7 @@
 }
 
 .searchbar-section {
-  background: white;
+  background-color: white;
   margin-top: 93px;
   padding-top: 75px;
   padding-bottom: 69px;
