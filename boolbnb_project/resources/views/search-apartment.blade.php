@@ -111,7 +111,7 @@
 
               {{$service -> name}}
             </div>
-            
+
             <input  type="checkbox" name="services[]" value="{{$service -> name}}"
             @if (isset($request-> services))
               @foreach ($request -> services as $service_r)
@@ -210,7 +210,7 @@
             @endforeach
 
         @else
-        <h3 style="margin-top: 350px;">La ricerca non ha prodotto risultati</h3>
+        <h1 style="margin-top: 200px;">La ricerca non ha prodotto risultati</h1>
       @endif
         </div>
       </div> {{-- fine sezione results --}}

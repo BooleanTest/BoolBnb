@@ -515,11 +515,11 @@
 .heading-w-apartments {
   text-align: center;
   padding: 30px 160px 30px 160px;
-  background-color: lightgrey;
+  background-color: LightSteelBlue;
 }
 
 .heading-w-apartments h2 {
-  color: black;
+  color: darkblue;
 }
 
 .container-w-apartments {
@@ -961,6 +961,11 @@
 }
 
 @media screen and (max-width: 1200px) {
+  .tutto {
+    margin-top: -255px;
+    margin-bottom: -100px;
+  }
+
   .tutto .container_show {
     padding-top: 0;
     width: 100%;
@@ -1011,6 +1016,7 @@
 
 @media screen and (max-width: 500px) {
   .tutto {
+    margin-top: -120px;
     padding-top: 0;
   }
 
@@ -2648,7 +2654,7 @@
 }
 
 .searchbar-section {
-  background: white;
+  background-color: white;
   margin-top: 93px;
   padding-top: 75px;
   padding-bottom: 69px;
@@ -2910,7 +2916,7 @@ html {
   background: white;
   border: 1px solid darkblue;
   position: relative;
-  z-index: 2;
+  z-index: 1;
 }
 
 .footer:after {
@@ -2939,16 +2945,16 @@ html {
 }
 
 .footer .containerfoot .produttori ul li {
-  color: blue;
-  margin-top: 10px;
+  margin-top: 9px;
+  font-size: 13px;
 }
 
 .footer .containerfoot .produttori ul li a {
-  color: blue;
+  color: steelblue;
 }
 
 .footer .containerfoot .produttori ul li a:hover {
-  color: limegreen;
+  color: blue;
 }
 
 .footer .containerfoot .tecnologie {
@@ -2966,8 +2972,9 @@ html {
 }
 
 .footer .containerfoot .tecnologie ul li {
-  color: blue;
-  margin-top: 10px;
+  margin-top: 9px;
+  font-size: 13px;
+  color: steelblue;
 }
 
 .footer .containerfoot .grazie {
@@ -2985,8 +2992,9 @@ html {
 }
 
 .footer .containerfoot .grazie ul li {
-  color: blue;
-  margin-top: 10px;
+  margin-top: 9px;
+  font-size: 13px;
+  color: steelblue;
 }
 
 @media screen and (max-width: 1200px) {

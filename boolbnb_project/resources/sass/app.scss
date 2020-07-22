@@ -121,12 +121,13 @@ html{
         li{
           a{
             &:hover{
-              color: limegreen;
+              color: blue;
             }
-            color: blue;
+             color: steelblue;
+
           }
-          color: blue;
-          margin-top: 10px;
+          margin-top: 9px;
+          font-size: 13px;
         }
         list-style-type: none;
       }
@@ -140,8 +141,9 @@ html{
       }
       ul{
         li{
-          color: blue;
-          margin-top: 10px;
+          margin-top: 9px;
+          font-size: 13px;
+          color: steelblue;
         }
         list-style-type: none;
       }
@@ -155,8 +157,9 @@ html{
       }
       ul{
         li{
-          color: blue;
-          margin-top: 10px;
+          margin-top: 9px;
+          font-size: 13px;
+          color: steelblue;
         }
         list-style-type: none;
       }
@@ -173,7 +176,7 @@ html{
   background: white;
   border: 1px solid darkblue;
   position: relative;
-  z-index: 2;
+  z-index: 1;
 }
 
 @media screen and (max-width: 1200px){
