@@ -477,8 +477,9 @@
   justify-content: space-between;
 }
 
-.nav-bar .logo h1 {
+.nav-bar .logo a h1 {
   margin-top: 1px;
+  float: left;
 }
 
 .nav-bar .login .links .nav-button {
@@ -2904,9 +2905,6 @@ html {
 }
 
 .footer {
-  display: flex;
-  justify-content: center;
-  align-items: center;
   width: 100vw;
   padding: 60px 160px 60px 160px;
   background: white;
@@ -2915,9 +2913,116 @@ html {
   z-index: 2;
 }
 
+.footer:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.footer .containerfoot {
+  width: 80%;
+  margin: auto;
+}
+
+.footer .containerfoot .produttori {
+  float: left;
+  width: 33%;
+}
+
+.footer .containerfoot .produttori h3 {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.footer .containerfoot .produttori ul {
+  list-style-type: none;
+}
+
+.footer .containerfoot .produttori ul li {
+  color: blue;
+  margin-top: 10px;
+}
+
+.footer .containerfoot .produttori ul li a {
+  color: blue;
+}
+
+.footer .containerfoot .produttori ul li a:hover {
+  color: limegreen;
+}
+
+.footer .containerfoot .tecnologie {
+  float: left;
+  width: 33%;
+}
+
+.footer .containerfoot .tecnologie h3 {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.footer .containerfoot .tecnologie ul {
+  list-style-type: none;
+}
+
+.footer .containerfoot .tecnologie ul li {
+  color: blue;
+  margin-top: 10px;
+}
+
+.footer .containerfoot .grazie {
+  float: left;
+  width: 33%;
+}
+
+.footer .containerfoot .grazie h3 {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.footer .containerfoot .grazie ul {
+  list-style-type: none;
+}
+
+.footer .containerfoot .grazie ul li {
+  color: blue;
+  margin-top: 10px;
+}
+
+@media screen and (max-width: 1200px) {
+  .footer {
+    padding: 60px;
+  }
+
+  .footer .containerfoot {
+    width: 100%;
+  }
+}
+
 @media screen and (max-width: 900px) {
   .header {
     padding: 30px 40px 30px 40px;
+  }
+
+  .footer {
+    padding: 60px 30px 60px 30px;
+  }
+
+  .footer .containerfoot {
+    width: 100%;
+  }
+
+  .footer .containerfoot .produttori {
+    width: 50%;
+  }
+
+  .footer .containerfoot .tecnologie {
+    width: 50%;
+  }
+
+  .footer .containerfoot .grazie {
+    width: 100%;
+    margin-top: 50px;
   }
 }
 
@@ -2946,6 +3051,29 @@ html {
   .header .nav-bar .login .links .username a:hover {
     background: none;
     transition: 0;
+  }
+
+  .footer {
+    padding: 30px;
+  }
+
+  .footer .containerfoot {
+    width: 100%;
+  }
+
+  .footer .containerfoot .produttori {
+    width: 100%;
+    margin-top: 50px;
+  }
+
+  .footer .containerfoot .tecnologie {
+    width: 100%;
+    margin-top: 50px;
+  }
+
+  .footer .containerfoot .grazie {
+    width: 100%;
+    margin-top: 50px;
   }
 }
 

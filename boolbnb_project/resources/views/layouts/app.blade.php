@@ -10,7 +10,6 @@
 
     {{-- <title>{{ config('app.name', 'Laravel') }}</title> --}}
     <title>BoolBnb classe11-team7</title>
-    <link rel="icon" href="uploads/images/airbnb_logo.png">
 
 
     <!-- Scripts -->

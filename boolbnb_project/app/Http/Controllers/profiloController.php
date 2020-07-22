@@ -258,15 +258,21 @@ class profiloController extends Controller
       $user = User::findOrFail($user_id -> id);
       $messagge = Message::all();
 
-      if($apartments -> visibility){
-        $apartments -> visibility = 0;
-        $apartments -> save();
-        return view('profilo', compact('user', 'messagge'));
+
+      if ($apartments -> user_id === $user_id -> id) {
+        if($apartments -> visibility){
+          $apartments -> visibility = 0;
+          $apartments -> save();
+          return view('profilo', compact('user', 'messagge'));
+        } else {
+          $apartments -> visibility = 1;
+          $apartments -> save();
+          return view('profilo', compact('user', 'messagge'));
+        }
       } else {
-        $apartments -> visibility = 1;
-        $apartments -> save();
-        return view('profilo', compact('user', 'messagge'));
+        return view("not_found");
       }
 
     }
+    
 }
