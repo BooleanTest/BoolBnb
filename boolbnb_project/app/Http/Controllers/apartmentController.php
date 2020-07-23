@@ -109,7 +109,7 @@ class apartmentController extends Controller
 
       if(!isset($distance)){
         $apartments = Apartment::selectRaw('apartments.id AS apartment_id, title, time, visibility, city, image, rooms, bathrooms, latitude, longitude, (
-            3959 * acos (
+            6371 * acos (
             cos ( radians(' . $lat . ') )
             * cos( radians( latitude ) )
             * cos( radians( longitude ) - radians(' . $lng . ') )
@@ -122,7 +122,7 @@ class apartmentController extends Controller
             ->paginate(50);
       } else {
         $apartments = Apartment::selectRaw('apartments.id AS apartment_id, title, time, visibility, city, image, rooms, bathrooms, latitude, longitude, (
-            3959 * acos (
+            6371 * acos (
             cos ( radians(' . $lat . ') )
             * cos( radians( latitude ) )
             * cos( radians( longitude ) - radians(' . $lng . ') )
