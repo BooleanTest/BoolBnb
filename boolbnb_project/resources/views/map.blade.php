@@ -19,7 +19,7 @@
     <script>
       var position = [{{$apartments -> longitude}}, {{$apartments -> latitude}}];
       var map = tt.map({
-          key: 'fdEClAfoJx3PxxAZWCgLqh3ApTZlAcuF',
+          key: 'OHqeU45nG4k4HTXbNlp2TemUwqV3EtAw',
           container: 'map',
           style: 'tomtom://vector/1/basic-main',
           zoom: 10,

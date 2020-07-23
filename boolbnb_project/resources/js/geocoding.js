@@ -28,10 +28,10 @@ $(document).ready(function(){
      var municipality = $(".municipality").val();
 
 
-
+     
      if (nomeStrada.val() != '' && numeroStrada.val() != '' && municipio.val() != ''){
        $.ajax({
-         url: 'https://api.tomtom.com/search/2/structuredGeocode.json?key=fdEClAfoJx3PxxAZWCgLqh3ApTZlAcuF&countryCode=it&streetNumber=<streetNumber>&streetName=<streetName>&municipality=<municipality>',
+         url: 'https://api.tomtom.com/search/2/structuredGeocode.json?key=OHqeU45nG4k4HTXbNlp2TemUwqV3EtAw&countryCode=it&streetNumber=<streetNumber>&streetName=<streetName>&municipality=<municipality>',
          data: {
            streetNumber: streetName,
            streetName: streetNumber,
