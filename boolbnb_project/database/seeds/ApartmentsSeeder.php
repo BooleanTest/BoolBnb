@@ -69,7 +69,7 @@ class ApartmentsSeeder extends Seeder
           '43.54175',
           '10.29226',
           '/uploads/images/mare3.jpg',
-          '1595516499',
+          '0',
           '1',
           '2'
         ],
@@ -133,7 +133,7 @@ class ApartmentsSeeder extends Seeder
           '44.55517',
           '12.28228',
           '/uploads/images/mare7.jpg',
-          '0',
+          '1595516499',
           '1',
           '4'
         ],
