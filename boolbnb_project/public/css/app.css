@@ -143,7 +143,7 @@
   left: 40%;
   width: 20%;
   text-align: center;
-  background-color: blue;
+  background-color: steelblue;
   border-radius: 20px;
 }
 
@@ -2194,10 +2194,21 @@
     padding: 0;
   }
 
+  .container .container_message .messaggio {
+    border: 2px solid darkblue;
+    margin-bottom: 20px;
+  }
+
   .container .container_message .messaggio .mail {
     margin-bottom: 0;
     width: 100%;
+    border-bottom: none;
     float: none;
+    border: none;
+  }
+
+  .container .container_message .messaggio .mail .data {
+    display: none;
   }
 
   .container .container_message .messaggio .text {

@@ -37,7 +37,7 @@ class PaymentsSeeder extends Seeder
         'deluxe' =>[
           'deluxe',
           '9.99',
-          '10600'
+          '10800'
         ]
 
       ];

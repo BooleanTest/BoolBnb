@@ -109,8 +109,15 @@ class profiloController extends Controller
     public function delete($id){
       $apartment = Apartment::findOrFail($id);
       $apartment -> delete();
-      return redirect() -> route("home")
-                        -> withSuccess("Appartamento " . $apartment["title"] . " correttamente eliminato");
+      $user = Auth::user();
+                        if ($apartment -> user_id === $user -> id) {
+                          return redirect() -> route("home")
+                                            -> withSuccess("Appartamento " . $apartment["title"] . " correttamente eliminato");
+                        } else {
+                          return view("not_found");
+                        }
+      // return redirect() -> route("home")
+      //                   -> withSuccess("Appartamento " . $apartment["title"] . " correttamente eliminato");
     }
 
     // nuovo appartamento (create)

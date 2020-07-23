@@ -20,7 +20,7 @@
           <p class="text_mex" >{{$message -> mail}}</p>
 
         </div>
-        <div class="info">
+        <div class="info data">
           <p>Ricevuto in data: </p>
           <p class="text_mex" >{{$message -> data}}</p>
         </div>

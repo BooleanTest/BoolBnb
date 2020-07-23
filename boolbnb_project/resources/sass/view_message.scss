@@ -126,16 +126,24 @@
     .container_message{
       .messaggio{
         .mail{
+          .data{
+            display: none;
+          }
           margin-bottom: 0;
           width: 100%;
+          border-bottom: none;
           float: none;
+          border: none;
         }
         .text{
           padding: 20px;
           width: 100%;
           float: none;
         }
+        border: 2px solid darkblue;
+        margin-bottom: 20px;
       }
+
       padding: 0;
     }
   }
